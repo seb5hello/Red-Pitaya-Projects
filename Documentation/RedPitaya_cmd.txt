@@ -1,0 +1,30 @@
+Vivado 2020.1 TCL Console
+ 
+cd ../../../../Documents/fpga_projects/RedPitaya
+vivado -mode batch -source red_pitaya_vivado_project_Z10.tcl -tclargs v0.94
+
+
+Terminal Login
+
+http://rp-f0c2c1.local/
+username: root
+password: root
+ssh root@rp-f0c2c1.local
+ssh root@192.168.2.29
+
+
+Load Files into Red Pitaya (Not ssh)
+
+scp <path> root@192.168.2.29:/root/fpga_projects/
+
+
+Run server
+
+sudo python3 Test_server.py
+pkill -f python3
+
+API Request
+
+curl -X POST http://192.168.2.29:5000/api/config -H "Content-Type: application/json" -d "{\"kp\": 10, \"ki\": 20, \"kd\": 5, \"leds\": 255}"
+
+curl http://192.168.2.29:5000/api/status
