@@ -1,0 +1,173 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun May 10 13:43:32 2026
+# Process ID: 16204
+# Current directory: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12256 C:\Users\Gaming\Documents\fpga_projects\RedPitaya\prj\v0.94\First_test_project\redpitaya.xpr
+# Log file: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/vivado.log
+# Journal file: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project\vivado.jou
+#-----------------------------------------------------------start_gui
+open_project C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.xpr
+Scanning sources...
+FFinished scanning sourcesINFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/ip_repo/Reg_Network_Connect_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.vho'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.veo'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/simulation/fifo_generator_vlog_beh.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/hdl/fifo_generator_v13_2_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/hdl/fifo_generator_v13_2_rfs.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/sim/asg_dat_fifo.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/doc/fifo_generator_v13_2_changelog.txt'. Please regenerate to continue.
+WWARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/sync_fifo/sync_fifo.vho'. Please regenerate to continue.WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/sync_fifo/sync_fifo.veo'. Please regenerate to continue.
+WWARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/sync_fifo/simulation/fifo_generator_vlog_beh.v'. Please regenerate to continue.WWARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/sync_fifo/hdl/fifo_generator_v13_2_rfs.vhd'. Please regenerate to continue.WWARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/sync_fifo/hdl/fifo_generator_v13_2_rfs.v'. Please regenerate to continue.WWARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/sync_fifo/sim/sync_fifo.v'. Please regenerate to continue.WWARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/sync_fifo/doc/fifo_generator_v13_2_changelog.txt'. Please regenerate to continue.open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 937.145 ; gain = 0.000
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+Wrote  : <C:\Users\Gaming\Documents\fpga_projects\RedPitaya\prj\v0.94\First_test_project\redpitaya.srcs\sources_1\bd\ps_system\ps_system.bd> 
+VHDL Output written to : C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/synth/ps_system.v
+VHDL Output written to : C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/sim/ps_system.v
+VHDL Output written to : C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/hdl/ps_system_wrapper.v
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Reg_Network_Connect_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_M_AXI_GP0_ACLK_0_100M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/ip/ps_system_auto_pc_0/ps_system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/hw_handoff/ps_system.hwh
+Generated Block Design Tcl file C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/hw_handoff/ps_system_bd.tcl
+Generated Hardware Definition File C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/synth/ps_system.hwdef
+[Sun May 10 13:54:28 2026] Launched ps_system_auto_pc_0_synth_1, ps_system_processing_system7_0_0_synth_1, ps_system_Reg_Network_Connect_0_1_synth_1, ps_system_rst_M_AXI_GP0_ACLK_0_100M_0_synth_1, synth_1...
+Run output will be captured here:
+ps_system_auto_pc_0_synth_1: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.runs/ps_system_auto_pc_0_synth_1/runme.log
+ps_system_processing_system7_0_0_synth_1: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.runs/ps_system_processing_system7_0_0_synth_1/runme.log
+ps_system_Reg_Network_Connect_0_1_synth_1: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.runs/ps_system_Reg_Network_Connect_0_1_synth_1/runme.log
+ps_system_rst_M_AXI_GP0_ACLK_0_100M_0_synth_1: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.runs/ps_system_rst_M_AXI_GP0_ACLK_0_100M_0_synth_1/runme.log
+synth_1: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.runs/synth_1/runme.log
+[Sun May 10 13:54:28 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:31 ; elapsed = 00:00:29 . Memory (MB): peak = 1029.699 ; gain = 92.555
+open_bd_design {C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/ps_system.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+Adding component instance block -- xilinx.com:user:Reg_Network_Connect:1.0 - Reg_Network_Connect_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_M_AXI_GP0_ACLK_0_100M
+Successfully read diagram <ps_system> from BD file <C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/ps_system.bd>
+set_property CONFIG.ASSOCIATED_RESET {FCLK_RESET0_N_0} [get_bd_ports /FCLK_CLK0]
+set_property name FCLK_RESET0_N [get_bd_ports FCLK_RESET0_N_0]
+save_bd_design
+Wrote  : <C:\Users\Gaming\Documents\fpga_projects\RedPitaya\prj\v0.94\First_test_project\redpitaya.srcs\sources_1\bd\ps_system\ps_system.bd> 
+Wrote  : <C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/ui/bd_acb4fdab.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+WARNING: [BD 41-2121] Port FCLK_CLK0 associated reset port FCLK_RESET0_N_0 does not exist
+Wrote  : <C:\Users\Gaming\Documents\fpga_projects\RedPitaya\prj\v0.94\First_test_project\redpitaya.srcs\sources_1\bd\ps_system\ps_system.bd> 
+VHDL Output written to : C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/synth/ps_system.v
+VHDL Output written to : C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/sim/ps_system.v
+VHDL Output written to : C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/hdl/ps_system_wrapper.v
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/ip/ps_system_auto_pc_0/ps_system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/hw_handoff/ps_system.hwh
+Generated Block Design Tcl file C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/hw_handoff/ps_system_bd.tcl
+Generated Hardware Definition File C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/synth/ps_system.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP ps_system_auto_pc_0, cache-ID = 4334efbd1258b0fe; cache size = 2.273 MB.
+[Sun May 10 13:59:11 2026] Launched synth_1...
+Run output will be captured here: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.runs/synth_1/runme.log
+[Sun May 10 13:59:11 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.runs/impl_1/runme.log
+set_property name read_reg7 [get_bd_ports read_reg7_0]
+save_bd_design
+Wrote  : <C:\Users\Gaming\Documents\fpga_projects\RedPitaya\prj\v0.94\First_test_project\redpitaya.srcs\sources_1\bd\ps_system\ps_system.bd> 
+Wrote  : <C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/ui/bd_acb4fdab.ui> 
+set_property name write_reg15 [get_bd_ports write_reg15_0]
+save_bd_design
+Wrote  : <C:\Users\Gaming\Documents\fpga_projects\RedPitaya\prj\v0.94\First_test_project\redpitaya.srcs\sources_1\bd\ps_system\ps_system.bd> 
+Wrote  : <C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/ui/bd_acb4fdab.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+WARNING: [BD 41-2121] Port FCLK_CLK0 associated reset port FCLK_RESET0_N_0 does not exist
+Wrote  : <C:\Users\Gaming\Documents\fpga_projects\RedPitaya\prj\v0.94\First_test_project\redpitaya.srcs\sources_1\bd\ps_system\ps_system.bd> 
+VHDL Output written to : C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/synth/ps_system.v
+VHDL Output written to : C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/sim/ps_system.v
+VHDL Output written to : C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/hdl/ps_system_wrapper.v
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/ip/ps_system_auto_pc_0/ps_system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/hw_handoff/ps_system.hwh
+Generated Block Design Tcl file C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/hw_handoff/ps_system_bd.tcl
+Generated Hardware Definition File C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/synth/ps_system.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP ps_system_auto_pc_0, cache-ID = 4334efbd1258b0fe; cache size = 2.273 MB.
+[Sun May 10 14:02:00 2026] Launched synth_1...
+Run output will be captured here: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.runs/synth_1/runme.log
+[Sun May 10 14:02:00 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Sun May 10 14:12:23 2026] Launched synth_1...
+Run output will be captured here: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.runs/synth_1/runme.log
+[Sun May 10 14:12:23 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1246.508 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 76 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.300 . Memory (MB): peak = 1926.625 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.300 . Memory (MB): peak = 1926.625 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1926.625 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:22 ; elapsed = 00:00:16 . Memory (MB): peak = 2029.691 ; gain = 920.418
+open_bd_design {C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/bd/ps_system/ps_system.bd}
+ipx::edit_ip_in_project -upgrade true -name Reg_Network_Connect_v1_0_project -directory C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.tmp/Reg_Network_Connect_v1_0_project c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/ip_repo/Reg_Network_Connect_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/gaming/documents/fpga_projects/redpitaya/prj/v0.94/first_test_project/redpitaya.tmp/reg_network_connect_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/ip_repo/Reg_Network_Connect_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/ip_repo/Reg_Network_Connect_1.0/hdl/Reg_Network_Connect_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/ip_repo/Reg_Network_Connect_1.0/hdl/Reg_Network_Connect_v1_0.v:]
+update_compile_order -fileset sources_1
+current_project redpitaya
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+current_project Reg_Network_Connect_v1_0_project
+close_project
+ipx::edit_ip_in_project -upgrade true -name Reg_Network_Connect_v1_0_project -directory C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.tmp/Reg_Network_Connect_v1_0_project c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/ip_repo/Reg_Network_Connect_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/gaming/documents/fpga_projects/redpitaya/prj/v0.94/first_test_project/redpitaya.tmp/reg_network_connect_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/ip_repo/Reg_Network_Connect_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/ip_repo/Reg_Network_Connect_1.0/hdl/Reg_Network_Connect_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/ip_repo/Reg_Network_Connect_1.0/hdl/Reg_Network_Connect_v1_0.v:]
+update_compile_order -fileset sources_1
+current_project redpitaya
+current_project Reg_Network_Connect_v1_0_project
+close_project

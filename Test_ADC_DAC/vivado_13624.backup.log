@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu May 28 19:36:48 2026
+# Process ID: 13624
+# Current directory: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5808 C:\Users\Gaming\Documents\fpga_projects\RedPitaya\prj\v0.94\project\redpitaya.xpr
+# Log file: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/project/vivado.log
+# Journal file: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/project/redpitaya.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.vho'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.veo'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/simulation/fifo_generator_vlog_beh.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/hdl/fifo_generator_v13_2_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/hdl/fifo_generator_v13_2_rfs.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/sim/asg_dat_fifo.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/doc/fifo_generator_v13_2_changelog.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-2162] IP 'asg_dat_fifo' is locked:
+* Current project part 'xc7z010clg400-1' and the part 'xc7z020clg400-1' used to customize the IP 'asg_dat_fifo' do not match.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/project/redpitaya.srcs/sources_1/ip/sync_fifo/sync_fifo.vho'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/project/redpitaya.srcs/sources_1/ip/sync_fifo/sync_fifo.veo'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/project/redpitaya.srcs/sources_1/ip/sync_fifo/simulation/fifo_generator_vlog_beh.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/project/redpitaya.srcs/sources_1/ip/sync_fifo/hdl/fifo_generator_v13_2_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/project/redpitaya.srcs/sources_1/ip/sync_fifo/hdl/fifo_generator_v13_2_rfs.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/project/redpitaya.srcs/sources_1/ip/sync_fifo/sim/sync_fifo.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/project/redpitaya.srcs/sources_1/ip/sync_fifo/doc/fifo_generator_v13_2_changelog.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-2162] IP 'sync_fifo' is locked:
+* Current project part 'xc7z010clg400-1' and the part 'xc7z020clg400-1' used to customize the IP 'sync_fifo' do not match.
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu May 28 20:21:34 2026...

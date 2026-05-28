@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun May 10 18:14:34 2026
+# Process ID: 3488
+# Current directory: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.runs/ps_system_Reg_Network_Connect_0_2_synth_1
+# Command line: vivado.exe -log ps_system_Reg_Network_Connect_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ps_system_Reg_Network_Connect_0_2.tcl
+# Log file: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.runs/ps_system_Reg_Network_Connect_0_2_synth_1/ps_system_Reg_Network_Connect_0_2.vds
+# Journal file: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.runs/ps_system_Reg_Network_Connect_0_2_synth_1\vivado.jou
+#-----------------------------------------------------------
+source ps_system_Reg_Network_Connect_0_2.tcl -notrace

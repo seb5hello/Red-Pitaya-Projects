@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu May 28 19:07:00 2026
+# Process ID: 10604
+# Current directory: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2280 C:\Users\Gaming\Documents\fpga_projects\RedPitaya\prj\v0.94\First_test_project\redpitaya.xpr
+# Log file: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/vivado.log
+# Journal file: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/export_redpitaya.tcl'.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] impl_1 strategy "Vivado Implementation Defaults," step write_bitstream, attribute : Could not find the file 'C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/export_redpitaya.tcl'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/ip_repo/Reg_Network_Connect_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.vho'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.veo'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/simulation/fifo_generator_vlog_beh.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/hdl/fifo_generator_v13_2_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/hdl/fifo_generator_v13_2_rfs.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/sim/asg_dat_fifo.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/doc/fifo_generator_v13_2_changelog.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/sync_fifo/sync_fifo.vho'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/sync_fifo/sync_fifo.veo'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/sync_fifo/simulation/fifo_generator_vlog_beh.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/sync_fifo/hdl/fifo_generator_v13_2_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/sync_fifo/hdl/fifo_generator_v13_2_rfs.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/sync_fifo/sim/sync_fifo.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/First_test_project/redpitaya.srcs/sources_1/ip/sync_fifo/doc/fifo_generator_v13_2_changelog.txt'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 938.621 ; gain = 0.000
+update_compile_order -fileset sources_1
+add_files -fileset utils_1 -norecurse C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/generate_bin.tcl
+set_property STEPS.WRITE_BITSTREAM.TCL.POST [ get_files C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/generate_bin.tcl -of [get_fileset utils_1] ] [get_runs impl_1]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Gaming\Documents\fpga_projects\RedPitaya\prj\v0.94\First_test_project\redpitaya.srcs\sources_1\imports\RedPitaya\rtl\red_pitaya_pll.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Gaming\Documents\fpga_projects\RedPitaya\prj\v0.94\First_test_project\redpitaya.srcs\sources_1\new\top_test.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu May 28 20:21:30 2026...

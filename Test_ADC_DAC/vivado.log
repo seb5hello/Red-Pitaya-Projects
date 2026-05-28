@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu May 28 20:24:56 2026
+# Process ID: 6664
+# Current directory: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11772 C:\Users\Gaming\Documents\fpga_projects\RedPitaya\prj\v0.94\Red Pitaya Projects\Test_ADC_DAC\redpitaya.xpr
+# Log file: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC/vivado.log
+# Journal file: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC/redpitaya.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC'
+INFO: [Project 1-313] Project file moved from 'C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/project' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [filemgmt 56-1] Board Part Repository Path: Directory not found as 'C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/brd'; using path 'C:/Users/Gaming/Documents/fpga_projects/RedPitaya/brd' instead.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC/redpitaya.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.vho'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC/redpitaya.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.veo'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC/redpitaya.srcs/sources_1/ip/asg_dat_fifo/simulation/fifo_generator_vlog_beh.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC/redpitaya.srcs/sources_1/ip/asg_dat_fifo/hdl/fifo_generator_v13_2_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC/redpitaya.srcs/sources_1/ip/asg_dat_fifo/hdl/fifo_generator_v13_2_rfs.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC/redpitaya.srcs/sources_1/ip/asg_dat_fifo/sim/asg_dat_fifo.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC/redpitaya.srcs/sources_1/ip/asg_dat_fifo/doc/fifo_generator_v13_2_changelog.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-2162] IP 'asg_dat_fifo' is locked:
+* Current project part 'xc7z010clg400-1' and the part 'xc7z020clg400-1' used to customize the IP 'asg_dat_fifo' do not match.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC/redpitaya.srcs/sources_1/ip/sync_fifo/sync_fifo.vho'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC/redpitaya.srcs/sources_1/ip/sync_fifo/sync_fifo.veo'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC/redpitaya.srcs/sources_1/ip/sync_fifo/simulation/fifo_generator_vlog_beh.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC/redpitaya.srcs/sources_1/ip/sync_fifo/hdl/fifo_generator_v13_2_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC/redpitaya.srcs/sources_1/ip/sync_fifo/hdl/fifo_generator_v13_2_rfs.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC/redpitaya.srcs/sources_1/ip/sync_fifo/sim/sync_fifo.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'c:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC/redpitaya.srcs/sources_1/ip/sync_fifo/doc/fifo_generator_v13_2_changelog.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-2162] IP 'sync_fifo' is locked:
+* Current project part 'xc7z010clg400-1' and the part 'xc7z020clg400-1' used to customize the IP 'sync_fifo' do not match.
+update_compile_order -fileset sources_1
+add_files -fileset utils_1 -norecurse C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/generate_bin.tcl
+set_property STEPS.WRITE_BITSTREAM.TCL.POST [ get_files C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/generate_bin.tcl -of [get_fileset utils_1] ] [get_runs impl_1]

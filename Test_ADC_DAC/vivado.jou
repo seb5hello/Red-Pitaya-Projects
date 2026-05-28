@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu May 28 20:24:56 2026
+# Process ID: 6664
+# Current directory: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11772 C:\Users\Gaming\Documents\fpga_projects\RedPitaya\prj\v0.94\Red Pitaya Projects\Test_ADC_DAC\redpitaya.xpr
+# Log file: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC/vivado.log
+# Journal file: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/Test_ADC_DAC/redpitaya.xpr}
+update_compile_order -fileset sources_1
+add_files -fileset utils_1 -norecurse C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/generate_bin.tcl
+set_property STEPS.WRITE_BITSTREAM.TCL.POST [ get_files C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/generate_bin.tcl -of [get_fileset utils_1] ] [get_runs impl_1]
