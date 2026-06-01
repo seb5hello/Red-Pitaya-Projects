@@ -2,7 +2,7 @@ import requests
 import time
 
 # Replace with your Red Pitaya's local IP address
-RP_IP = "192.168.1.100" 
+RP_IP = "192.168.2.29" 
 BASE_URL = f"http://{RP_IP}:5000/api"
 
 def configure_system():

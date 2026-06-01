@@ -14,7 +14,8 @@ MAP_SIZE = 4096 # 1 Page is enough for our offsets
 
 def read_mem(base_addr, offset):
     """Reads a 32-bit integer from the specified physical memory address."""
-    with open("/dev/mem", "O_SYNC | O_RDWR") as f:
+    # Use "r+b" for read/write binary mode
+    with open("/dev/mem", "r+b") as f:
         mem = mmap.mmap(f.fileno(), MAP_SIZE, mmap.MAP_SHARED, mmap.PROT_READ | mmap.PROT_WRITE, offset=base_addr)
         mem.seek(offset)
         # Unpack as 32-bit unsigned integer (little-endian)
@@ -24,7 +25,8 @@ def read_mem(base_addr, offset):
 
 def write_mem(base_addr, offset, value):
     """Writes a 32-bit integer to the specified physical memory address."""
-    with open("/dev/mem", "O_SYNC | O_RDWR") as f:
+    # Use "r+b" for read/write binary mode
+    with open("/dev/mem", "r+b") as f:
         mem = mmap.mmap(f.fileno(), MAP_SIZE, mmap.MAP_SHARED, mmap.PROT_READ | mmap.PROT_WRITE, offset=base_addr)
         mem.seek(offset)
         # Pack as 32-bit unsigned integer (little-endian)
