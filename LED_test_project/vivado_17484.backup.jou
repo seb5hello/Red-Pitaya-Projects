@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat May 30 14:28:37 2026
+# Process ID: 17484
+# Current directory: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/Base_Project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21116 D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\Base_Project\redpitaya.xpr
+# Log file: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/Base_Project/vivado.log
+# Journal file: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/Base_Project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/Base_Project/redpitaya.xpr
+update_compile_order -fileset sources_1

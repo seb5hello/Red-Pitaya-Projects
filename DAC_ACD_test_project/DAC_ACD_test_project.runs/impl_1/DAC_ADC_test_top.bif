@@ -1,0 +1,1 @@
+all:{ DAC_ADC_test_top.bit }

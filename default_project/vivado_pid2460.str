@@ -1,0 +1,1959 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:49 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 2460
+License: Customer
+
+Current time: 	Sun May 31 16:47:08 CEST 2026
+Time zone: 	Central European Standard Time (Europe/Berlin)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 125
+Available screens: 1
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Xilinx/Vivado/2020.1/tps/win64/jre9.0.4
+Java executable location: 	D:/Xilinx/Vivado/2020.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	20190748
+User home directory: C:/Users/20190748
+User working directory: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2020.1
+RDI_DATADIR: D:/Xilinx/Vivado/2020.1/data
+RDI_BINDIR: D:/Xilinx/Vivado/2020.1/bin
+
+Vivado preferences file location: C:/Users/20190748/AppData/Roaming/Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: C:/Users/20190748/AppData/Roaming/Xilinx/Vivado/2020.1/
+Vivado layouts directory: C:/Users/20190748/AppData/Roaming/Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	D:/Xilinx/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/vivado.log
+Vivado journal file location: 	D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/vivado.jou
+Engine tmp dir: 	D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/.Xil/Vivado-2460-20190748
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Xilinx/Vivado/2020.1/ids_lite/ISE
+XILINXD_LICENSE_FILE: 2100@sambava.ics.ele.tue.nl
+XILINX_DSP: D:/Xilinx/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Xilinx/Vivado/2020.1
+XILINX_VIVADO: D:/Xilinx/Vivado/2020.1
+XILINX_VIVADO_HLS: D:/Xilinx/Vivado/2020.1
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,000 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\default_project\redpitaya.xpr. Version: Vivado v2020.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,000 MB. GUI used memory: 55 MB. Current time: 5/31/26, 4:47:09 PM CEST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 67 MB (+67294kb) [00:00:14]
+// [Engine Memory]: 1,000 MB (+897317kb) [00:00:14]
+// [GUI Memory]: 85 MB (+15821kb) [00:00:14]
+// [GUI Memory]: 103 MB (+14919kb) [00:00:15]
+// WARNING: HEventQueue.dispatchEvent() is taking  5618 ms.
+// Tcl Message: open_project D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'D:/Xilinx/RedPitaya/prj/v0.94/project' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [filemgmt 56-1] Board Part Repository Path: Directory not found as 'D:/Xilinx/RedPitaya/prj/brd'; using path 'D:/Xilinx/RedPitaya/brd' instead. INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.1/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:10 . Memory (MB): peak = 1012.504 ; gain = 0.000 
+// Project name: redpitaya; location: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project; part: xc7z010clg400-1
+dismissDialog("Open Project"); // bz (cs)
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// [GUI Memory]: 110 MB (+1174kb) [00:00:21]
+// [GUI Memory]: 132 MB (+17642kb) [00:00:24]
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), pll : red_pitaya_pll (red_pitaya_pll.sv)]", 2, false, false, false, false, false, true); // B (F, cs) - Double Click
+// Elapsed time: 13 seconds
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'c'); // bP (w, cs)
+// Elapsed time: 18 seconds
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'c'); // bP (w, cs)
+// Elapsed time: 65 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_4ADC (red_pitaya_top_4ADC.sv)]", 2, true); // B (F, cs) - Node
+// Elapsed time: 17 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_ll (red_pitaya_top_ll.sv)]", 3); // B (F, cs)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_ll (red_pitaya_top_ll.sv)]", 3); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_ll (red_pitaya_top_ll.sv)]", 3, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_ll (red_pitaya_top_ll.sv)]", 3, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv", 1); // m (l, cs)
+selectCodeEditor("red_pitaya_top.sv", 353, 176); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 151, 54); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 289, 53); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 493, 41); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top_ll.sv", 2); // m (l, cs)
+selectCodeEditor("red_pitaya_top_ll.sv", 318, 58); // bP (w, cs)
+selectCodeEditor("red_pitaya_top_ll.sv", 327, 79); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top_ll.sv", 2); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top_ll.sv", 2); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top_ll.sv", 2); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top_ll.sv", 2); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top_ll.sv", 2); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv", 1); // m (l, cs)
+// [GUI Memory]: 141 MB (+1916kb) [00:03:17]
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_ll (red_pitaya_top_ll.sv), for_sys[6].sys_bus_stub_5_7 : sys_bus_stub (sys_bus_stub.sv)]", 15, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_ll (red_pitaya_top_ll.sv), for_sys[6].sys_bus_stub_5_7 : sys_bus_stub (sys_bus_stub.sv)]", 15, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_ll (red_pitaya_top_ll.sv), for_sys[6].sys_bus_stub_5_7 : sys_bus_stub (sys_bus_stub.sv)]", 15, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("sys_bus_stub.sv", 135, 182); // bP (w, cs)
+selectCodeEditor("sys_bus_stub.sv", 254, 286); // bP (w, cs)
+selectCodeEditor("sys_bus_stub.sv", 227, 269); // bP (w, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_ll (red_pitaya_top_ll.sv), for_sys[7].sys_bus_stub_5_7 : sys_bus_stub (sys_bus_stub.sv)]", 16, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_ll (red_pitaya_top_ll.sv), for_sys[7].sys_bus_stub_5_7 : sys_bus_stub (sys_bus_stub.sv)]", 16, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_ll (red_pitaya_top_ll.sv), for_sys[7].sys_bus_stub_5_7 : sys_bus_stub (sys_bus_stub.sv)]", 16, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_ll (red_pitaya_top_ll.sv), for_sys[7].sys_bus_stub_5_7 : sys_bus_stub (sys_bus_stub.sv)]", 16, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_ll (red_pitaya_top_ll.sv), for_sys[7].sys_bus_stub_5_7 : sys_bus_stub (sys_bus_stub.sv)]", 16, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_ll (red_pitaya_top_ll.sv), for_sys[6].sys_bus_stub_5_7 : sys_bus_stub (sys_bus_stub.sv)]", 15, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_ll (red_pitaya_top_ll.sv), for_sys[6].sys_bus_stub_5_7 : sys_bus_stub (sys_bus_stub.sv)]", 15, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_ll (red_pitaya_top_ll.sv), for_sys[6].sys_bus_stub_5_7 : sys_bus_stub (sys_bus_stub.sv)]", 15, false); // B (F, cs)
+// Elapsed time: 14 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_Z20 (red_pitaya_top_Z20.sv)]", 17); // B (F, cs)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_Z20 (red_pitaya_top_Z20.sv)]", 17); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_ll (red_pitaya_top_ll.sv), sys_bus_interconnect : sys_bus_interconnect (sys_bus_interconnect.sv)]", 6, true); // B (F, cs) - Node
+// Elapsed time: 10 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_ll (red_pitaya_top_ll.sv)]", 3); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1); // B (F, cs)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_4ADC (red_pitaya_top_4ADC.sv)]", 2); // B (F, cs)
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_4ADC (red_pitaya_top_4ADC.sv), i_hk : red_pitaya_hk_4adc (red_pitaya_hk_4adc.v)]", 8, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_4ADC (red_pitaya_top_4ADC.sv)]", 2, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_4ADC (red_pitaya_top_4ADC.sv)]", 2, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_4ADC (red_pitaya_top_4ADC.sv)]", 2, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top_4ADC.sv", 4); // m (l, cs)
+selectCodeEditor("red_pitaya_top_4ADC.sv", 290, 26); // bP (w, cs)
+selectCodeEditor("red_pitaya_top_4ADC.sv", 329, 25); // bP (w, cs)
+selectCodeEditor("red_pitaya_top_4ADC.sv", 286, 4); // bP (w, cs)
+selectCodeEditor("red_pitaya_top_4ADC.sv", 605, 19); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top_ll.sv", 2); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top_4ADC.sv", 3); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top_ll.sv", 2); // m (l, cs)
+// Elapsed time: 174 seconds
+selectCodeEditor("red_pitaya_top_ll.sv", 148, 130); // bP (w, cs)
+selectCodeEditor("red_pitaya_top_ll.sv", 148, 130, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "red_pitaya_top_ll.sv", 'c'); // bP (w, cs)
+// Elapsed time: 29 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv", 1); // m (l, cs)
+selectCodeEditor("red_pitaya_top.sv", 219, 161); // bP (w, cs)
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'c'); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top_ll.sv", 2); // m (l, cs)
+selectCodeEditor("red_pitaya_top_ll.sv", 236, 217); // bP (w, cs)
+typeControlKey((HResource) null, "red_pitaya_top_ll.sv", 'c'); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top_4ADC.sv", 3); // m (l, cs)
+selectCodeEditor("red_pitaya_top_4ADC.sv", 392, 293); // bP (w, cs)
+typeControlKey((HResource) null, "red_pitaya_top_4ADC.sv", 'c'); // bP (w, cs)
+// Elapsed time: 190 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 1); // B (F, cs)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 1); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_4ADC (red_pitaya_top_4ADC.sv)]", 2, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top_Z20 (red_pitaya_top_Z20.sv)]", 4, true, true, false, false, false, false); // B (F, cs) - Shift Key - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, sys_reg_array_o (sys_reg_array_o.sv)]", 39, false, true, false, false, false, false); // B (F, cs) - Shift Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, sys_reg_array_o (sys_reg_array_o.sv)]", 39, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_DISABLE, "Disable File"); // ai (ao, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_SRC_DISABLE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_scope (red_pitaya_scope.v)]", 2, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, str_dec (str_dec.sv)]", 22, false, true, false, false, false, false); // B (F, cs) - Shift Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, str_dec (str_dec.sv)]", 22, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_DISABLE, "Disable File"); // ai (ao, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_SRC_DISABLE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, asg_bst (asg_bst.sv)]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, sync (sync.v)]", 8, false, true, false, false, false, false); // B (F, cs) - Shift Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, sync (sync.v)]", 8, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_DISABLE, "Disable File"); // ai (ao, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_SRC_DISABLE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 4); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, red_pitaya.xdc]", 5, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, red_pitaya.xdc]", 5, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, red_pitaya.xdc]", 6, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, red_pitaya.xdc]", 6, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya.xdc", 5); // m (l, cs)
+typeControlKey((HResource) null, "red_pitaya.xdc", 'c'); // bP (w, cs)
+selectCodeEditor("red_pitaya.xdc", 10, 310); // bP (w, cs)
+selectCodeEditor("red_pitaya.xdc", 2, 221); // bP (w, cs)
+selectCodeEditor("red_pitaya.xdc", 2, 221, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya.xdc (2)", 6); // m (l, cs)
+typeControlKey((HResource) null, "red_pitaya.xdc (2)", 'c'); // bP (w, cs)
+// Elapsed time: 22 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectCodeEditor("red_pitaya_top.sv", 298, 180); // bP (w, cs)
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'c'); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 262, 208); // bP (w, cs)
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// f (cs): Launch Runs: addNotify
+dismissDialog("No Implementation Results Available"); // A (cs)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: FILE_SET_NEW
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// bz (cs):  Generate Bitstream : addNotify
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a (bz)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sun May 31 17:01:30 2026] Launched impl_1... Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:12 ; elapsed = 00:00:25 . Memory (MB): peak = 1012.504 ; gain = 0.000 
+// Elapsed time: 19 seconds
+dismissDialog("Generate Bitstream"); // bz (cs)
+// Elapsed time: 17 seconds
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aL (aI, cs)
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, false); // g (aR, cs): FALSE
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, false); // g (aR, cs): FALSE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 151 MB (+3003kb) [00:15:34]
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 159 MB (+1070kb) [00:16:14]
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 257 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1); // B (F, cs)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1); // B (F, cs)
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 14 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports dac_clk_1x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:206]. ]", 2, true); // ah (J, cs) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\default_project\redpitaya.srcs\constrs_1\imports\RedPitaya\sdc\red_pitaya.xdc;-;;-;16;-;line;-;206;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Common 17-55] 'set_property' expects at least one object. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:1]. ]", 3, true); // ah (J, cs) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\default_project\redpitaya.srcs\constrs_1\imports\RedPitaya\prj\v0.94\sdc\red_pitaya.xdc;-;;-;16;-;line;-;1;-;;-;16;-;"); // ah (J, cs)
+selectCodeEditor("red_pitaya.xdc (2)", 550, 11); // bP (w, cs)
+typeControlKey((HResource) null, "red_pitaya.xdc (2)", 'c'); // bP (w, cs)
+// Elapsed time: 50 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports dac_clk_1x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:206]. ]", 2); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports dac_clk_1x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:206]. , [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_2x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:211]. ]", 5, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\default_project\redpitaya.srcs\constrs_1\imports\RedPitaya\sdc\red_pitaya.xdc;-;;-;16;-;line;-;211;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports dac_clk_1x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:206]. , [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_2p]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:212]. ]", 6, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\default_project\redpitaya.srcs\constrs_1\imports\RedPitaya\sdc\red_pitaya.xdc;-;;-;16;-;line;-;212;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports dac_clk_1x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:206]. , [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_1x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:218]. ]", 7, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\default_project\redpitaya.srcs\constrs_1\imports\RedPitaya\sdc\red_pitaya.xdc;-;;-;16;-;line;-;218;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports dac_clk_1x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:206]. , [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_2x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:219]. ]", 8, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\default_project\redpitaya.srcs\constrs_1\imports\RedPitaya\sdc\red_pitaya.xdc;-;;-;16;-;line;-;219;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports dac_clk_1x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:206]. , [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_2p]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:220]. ]", 9, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\default_project\redpitaya.srcs\constrs_1\imports\RedPitaya\sdc\red_pitaya.xdc;-;;-;16;-;line;-;220;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports dac_clk_1x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:206]. , [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks ser_clk]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:221]. ]", 10, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\default_project\redpitaya.srcs\constrs_1\imports\RedPitaya\sdc\red_pitaya.xdc;-;;-;16;-;line;-;221;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports dac_clk_1x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:206]. , [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_pins {sys_bus_interconnect/for_bus[*].inst_sys_bus_cdc/reg_rdata*[*]*/C}]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:71]. ]", 15, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\default_project\redpitaya.srcs\constrs_1\imports\RedPitaya\prj\v0.94\sdc\red_pitaya.xdc;-;;-;16;-;line;-;71;-;;-;16;-;"); // ah (J, cs)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports dac_clk_1x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:206]. ]", 2); // ah (J, cs)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Common 17-55] 'set_property' expects at least one object. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:1]. ]", 3); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Common 17-55] 'set_property' expects at least one object. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:1]. ]", 3, true); // ah (J, cs) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\default_project\redpitaya.srcs\constrs_1\imports\RedPitaya\prj\v0.94\sdc\red_pitaya.xdc;-;;-;16;-;line;-;1;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Common 17-55] 'set_property' expects at least one object. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:1]. , [Common 17-55] 'set_property' expects at least one object. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:18]. ]", 4, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\default_project\redpitaya.srcs\constrs_1\imports\RedPitaya\prj\v0.94\sdc\red_pitaya.xdc;-;;-;16;-;line;-;18;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Common 17-55] 'set_property' expects at least one object. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:1]. , [Common 17-55] 'set_property' expects at least one object. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:19]. ]", 5, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\default_project\redpitaya.srcs\constrs_1\imports\RedPitaya\prj\v0.94\sdc\red_pitaya.xdc;-;;-;16;-;line;-;19;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Common 17-55] 'set_property' expects at least one object. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:1]. , [Common 17-55] 'set_property' expects at least one object. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:20]. ]", 6, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\default_project\redpitaya.srcs\constrs_1\imports\RedPitaya\prj\v0.94\sdc\red_pitaya.xdc;-;;-;16;-;line;-;20;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Common 17-55] 'set_property' expects at least one object. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:1]. , [Common 17-55] 'set_property' expects at least one object. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:23]. ]", 9, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\default_project\redpitaya.srcs\constrs_1\imports\RedPitaya\prj\v0.94\sdc\red_pitaya.xdc;-;;-;16;-;line;-;23;-;;-;16;-;"); // ah (J, cs)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Common 17-55] 'set_property' expects at least one object. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:1]. ]", 3); // ah (J, cs)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization]", 1); // ah (J, cs)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization]", 1); // ah (J, cs)
+// Elapsed time: 62 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design, [Place 30-722] Terminal 'adc_dat_i[0][10]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O. ]", 5); // ah (J, cs)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design, [Place 30-722] Terminal 'adc_dat_i[0][10]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O. ]", 5); // ah (J, cs)
+// Elapsed time: 23 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports dac_clk_1x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:206]. ]", 2); // ah (J, cs)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports dac_clk_1x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:206]. ]", 2); // ah (J, cs)
+selectTab((HResource) null, (HResource) null, "Reports", 3); // aL (aI, cs)
+selectTab((HResource) null, (HResource) null, "Log", 2); // aL (aI, cs)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aL (aI, cs)
+// Elapsed time: 26 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Route Design, [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.. ]", 7, false); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Route Design, [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.. ]", 7, false, false, false, false, false, true); // ah (J, cs) - Double Click
+selectTab((HResource) null, (HResource) null, "Design Runs", 4); // aL (aI, cs)
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "impl_1 ; constrs_1 ; Running write_bitstream... ; -0.2073488086462021 ; -0.7848601937294006 ; 0.04998401552438736 ; 0.0 ; 0.0 ; 1.8907215595245361 ; 0 ; 8054 ; 11356 ; 35.0 ; 0 ; 28 ; Sun May 31 17:05:34 CEST 2026 ; 00:05:01 ; Vivado Implementation Defaults (Vivado Implementation 2020) ; Vivado Implementation Default Reports (Vivado Implementation 2020) ; xc7z010clg400-1 ; Default settings for Implementation.", 1, "Running write_bitstream...", 2, false); // az (J, cs)
+// PAPropertyPanels.initPanels (impl_1) elapsed time: 0.3s
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aL (aI, cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 38 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bz (cs):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a (bz)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,196 MB. GUI used memory: 99 MB. Current time: 5/31/26, 5:11:30 PM CEST
+// [Engine Memory]: 1,196 MB (+152563kb) [00:24:41]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,342 MB. GUI used memory: 98 MB. Current time: 5/31/26, 5:11:50 PM CEST
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,812 MB. GUI used memory: 99 MB. Current time: 5/31/26, 5:11:57 PM CEST
+// [Engine Memory]: 1,812 MB (+583746kb) [00:25:00]
+// TclEventType: DESIGN_NEW
+// Xgd.load filename: D:/Xilinx/Vivado/2020.1/data/parts/xilinx/zynq/devint/zynq/xc7z010/xc7z010.xgd; ZipEntry: xc7z010_detail.xgd elapsed time: 0.7s
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 0.8s
+// [Engine Memory]: 1,937 MB (+36240kb) [00:25:02]
+// [GUI Memory]: 180 MB (+13687kb) [00:25:02]
+// Device: addNotify
+// DeviceView Instantiated
+// PAPropertyPanels.initPanels (impl_1) elapsed time: 0.3s
+// WARNING: HEventQueue.dispatchEvent() is taking  3524 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z010clg400-1 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.574 . Memory (MB): peak = 1116.035 ; gain = 0.000 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 975 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2020.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1861.770 ; gain = 4.898 
+// Tcl Message: Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1861.770 ; gain = 4.898 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1861.770 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 80 instances were transformed.   IOBUF => IOBUF (IBUF, OBUFT): 16 instances   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 2 instances   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 62 instances  
+// ExpRunCommands.openImplResults elapsed time: 40.9s
+// TclEventType: DRC_ADDED
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 4s
+// Device view-level: 0,0
+// Tcl Message: open_run: Time (s): cpu = 00:00:43 ; elapsed = 00:00:40 . Memory (MB): peak = 2019.102 ; gain = 1006.598 
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// [GUI Memory]: 191 MB (+1932kb) [00:25:06]
+// [Engine Memory]: 2,050 MB (+16761kb) [00:25:06]
+// TclEventType: METHODOLOGY_ADDED
+// Device view-level: 0,1
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// [Engine Memory]: 2,153 MB (+132kb) [00:25:09]
+// [GUI Memory]: 203 MB (+2088kb) [00:25:14]
+// [GUI Memory]: 213 MB (+175kb) [00:25:15]
+// [GUI Memory]: 224 MB (+35kb) [00:25:15]
+// WARNING: HEventQueue.dispatchEvent() is taking  7615 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,187 MB. GUI used memory: 207 MB. Current time: 5/31/26, 5:12:14 PM CEST
+// TclEventType: TIMING_SUMMARY_UPDATED
+// WARNING: HEventQueue.dispatchEvent() is taking  1477 ms.
+// Elapsed time: 52 seconds
+selectTab((HResource) null, (HResource) null, "Timing", 8); // aL (aI, cs)
+// V (cs): Critical Messages: addNotify
+dismissDialog("Open Implemented Design"); // bz (cs)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (V)
+dismissDialog("Critical Messages"); // V (cs)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths]", 5, true); // a (J, cs) - Node
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Check Timing]", 4, true); // a (J, cs) - Node
+selectTable(PAResourceAtoD.CheckTimingSectionPanel_CHECK_TIMING_SELECTION_TABLE, "no_clock ; 52 ; High", 0, "no_clock", 0); // c (J, cs)
+selectTable(PAResourceAtoD.CheckTimingSectionPanel_CHECK_TIMING_SELECTION_TABLE, "no_input_delay ; 17 ; High", 3, "High", 2); // c (J, cs)
+expandTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths]", 5); // a (J, cs)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, pll_dac_clk_2p]", 13, true); // a (J, cs) - Node
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, adc_clk]", 6, true); // a (J, cs) - Node
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, pll_adc_clk]", 11, true); // a (J, cs) - Node
+// Elapsed time: 14 seconds
+selectButton(PAResourceItoN.IctElementSummarySectionPanel_SETUP, "-0,207 ns"); // h (F, cs)
+// [GUI Memory]: 238 MB (+3323kb) [00:25:52]
+// PAPropertyPanels.initPanels (Path 61) elapsed time: 1.5s
+// WARNING: HEventQueue.dispatchEvent() is taking  1698 ms.
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 65 ; -0.054392047 ; 21 ; 108 ; i_asg/chA/dac_do_reg/C ; i_asg/chA/dac_pnt_reg[35]/D ; 7.956487 ; 4.5519996 ; 3.4044821 ; 8.0 ; pll_adc_clk ; pll_adc_clk ;  ; 0.06890382", 4, "108", 3); // i (J, cs)
+expandTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Check Timing]", 4); // a (J, cs)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Check Timing, no_clock]", 5, false); // a (J, cs)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Check Timing, unconstrained_internal_endpoints]", 8, false); // a (J, cs)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Check Timing, no_input_delay]", 9, false); // a (J, cs)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Check Timing, no_output_delay]", 10, false); // a (J, cs)
+selectTreeTable(PAResourceAtoD.CheckTimingResultTreeTablePanel_CHECK_TIMING_RESULT_TREE_TABLE, "adc_clk_o[0] ; High", 1, "adc_clk_o[0]", 0, false); // j (J, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,197 MB. GUI used memory: 174 MB. Current time: 5/31/26, 5:13:09 PM CEST
+selectTreeTable(PAResourceAtoD.CheckTimingResultTreeTablePanel_CHECK_TIMING_RESULT_TREE_TABLE, "adc_clk_o[1] ; High", 2, "adc_clk_o[1]", 0, false); // j (J, cs)
+selectTreeTable(PAResourceAtoD.CheckTimingResultTreeTablePanel_CHECK_TIMING_RESULT_TREE_TABLE, "adc_clk_o[0] ; High", 1, "adc_clk_o[0]", 0, false); // j (J, cs)
+selectTreeTable(PAResourceAtoD.CheckTimingResultTreeTablePanel_CHECK_TIMING_RESULT_TREE_TABLE, "dac_dat_o[0] ; High", 3, "dac_dat_o[0]", 0, false); // j (J, cs)
+selectTreeTable(PAResourceAtoD.CheckTimingResultTreeTablePanel_CHECK_TIMING_RESULT_TREE_TABLE, "adc_clk_o[1] ; High", 2, "adc_clk_o[1]", 0, false); // j (J, cs)
+selectTreeTable(PAResourceAtoD.CheckTimingResultTreeTablePanel_CHECK_TIMING_RESULT_TREE_TABLE, "adc_clk_o[0] ; High", 1, "adc_clk_o[0]", 0, false); // j (J, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,200 MB. GUI used memory: 219 MB. Current time: 5/31/26, 5:13:14 PM CEST
+selectTreeTable(PAResourceAtoD.CheckTimingResultTreeTablePanel_CHECK_TIMING_RESULT_TREE_TABLE, "adc_clk_o[1] ; High", 2, "adc_clk_o[1]", 0, false); // j (J, cs)
+selectTreeTable(PAResourceAtoD.CheckTimingResultTreeTablePanel_CHECK_TIMING_RESULT_TREE_TABLE, "adc_clk_o[1] ; High", 2, "adc_clk_o[1]", 0, false); // j (J, cs)
+selectTreeTable(PAResourceAtoD.CheckTimingResultTreeTablePanel_CHECK_TIMING_RESULT_TREE_TABLE, "dac_dat_o[0] ; High", 3, "dac_dat_o[0]", 0, false); // j (J, cs)
+selectTreeTable(PAResourceAtoD.CheckTimingResultTreeTablePanel_CHECK_TIMING_RESULT_TREE_TABLE, "dac_dat_o[10] ; High", 4, "dac_dat_o[10]", 0, false); // j (J, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,200 MB. GUI used memory: 174 MB. Current time: 5/31/26, 5:13:19 PM CEST
+selectTreeTable(PAResourceAtoD.CheckTimingResultTreeTablePanel_CHECK_TIMING_RESULT_TREE_TABLE, "dac_dat_o[11] ; High", 5, "dac_dat_o[11]", 0, false); // j (J, cs)
+selectTreeTable(PAResourceAtoD.CheckTimingResultTreeTablePanel_CHECK_TIMING_RESULT_TREE_TABLE, "dac_dat_o[12] ; High", 6, "dac_dat_o[12]", 0, false); // j (J, cs)
+selectTreeTable(PAResourceAtoD.CheckTimingResultTreeTablePanel_CHECK_TIMING_RESULT_TREE_TABLE, "adc_clk_o[0] ; High", 1, "adc_clk_o[0]", 0, false); // j (J, cs)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Check Timing, no_input_delay]", 9, false); // a (J, cs)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Check Timing, no_output_delay]", 10, false); // a (J, cs)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Check Timing, no_input_delay]", 9, false); // a (J, cs)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Check Timing, unconstrained_internal_endpoints]", 8, false); // a (J, cs)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Check Timing, no_clock]", 5, false); // a (J, cs)
+collapseTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Check Timing]", 4); // a (J, cs)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths]", 5, true); // a (J, cs) - Node
+// Elapsed time: 19 seconds
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Design Timing Summary]", 2, false); // a (J, cs)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, pll_adc_clk]", 11, true); // a (J, cs) - Node
+selectButton(PAResourceItoN.IctElementSummarySectionPanel_SETUP, "-0,207 ns"); // h (F, cs)
+// PAPropertyPanels.initPanels (Path 61) elapsed time: 0.2s
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, pll_adc_clk, Hold 0,050 ns]", 13, false); // a (J, cs)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, pll_adc_clk, Setup -0,207 ns]", 12, false); // a (J, cs)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, pll_adc_clk, Hold 0,050 ns]", 13, false); // a (J, cs)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, pll_adc_clk, Pulse Width 2,750 ns]", 14, false); // a (J, cs)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, pll_adc_clk, Hold 0,050 ns]", 13, false); // a (J, cs)
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Intra-Clock Paths, pll_adc_clk, Setup -0,207 ns]", 12, false); // a (J, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,201 MB. GUI used memory: 174 MB. Current time: 5/31/26, 5:14:38 PM CEST
+// Device view-level: 0,0
+// Elapsed time: 15 seconds
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 61 ; -0.20734881 ; 21 ; 108 ; i_asg/chA/dac_do_reg/C ; i_asg/chA/dac_pnt_reg[33]/D ; 8.117444 ; 4.5519996 ; 3.5654387 ; 8.0 ; pll_adc_clk ; pll_adc_clk ;  ; 0.06890382", 0, "Path 61", 0); // i (J, cs)
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 61 ; -0.20734881 ; 21 ; 108 ; i_asg/chA/dac_do_reg/C ; i_asg/chA/dac_pnt_reg[33]/D ; 8.117444 ; 4.5519996 ; 3.5654387 ; 8.0 ; pll_adc_clk ; pll_adc_clk ;  ; 0.06890382", 0, "Path 61", 0, false, false, false, false, true); // i (J, cs) - Double Click
+// PAPropertyPanels.initPanels (Path 67) elapsed time: 0.2s
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 67 ; -0.039005242 ; 20 ; 108 ; i_asg/chA/dac_do_reg/C ; i_asg/chA/dac_pnt_reg[34]/D ; 7.948101 ; 4.428 ; 3.5200953 ; 8.0 ; pll_adc_clk ; pll_adc_clk ;  ; 0.06890382", 6, "i_asg/chA/dac_do_reg/C", 4); // i (J, cs)
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 68 ; -0.03885603 ; 20 ; 108 ; i_asg/chA/dac_do_reg/C ; i_asg/chA/dac_do_reg/D ; 7.9029512 ; 4.428 ; 3.4749463 ; 8.0 ; pll_adc_clk ; pll_adc_clk ;  ; 0.06890382", 7, "i_asg/chA/dac_do_reg/D", 5); // i (J, cs)
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 61 ; -0.20734881 ; 21 ; 108 ; i_asg/chA/dac_do_reg/C ; i_asg/chA/dac_pnt_reg[33]/D ; 8.117444 ; 4.5519996 ; 3.5654387 ; 8.0 ; pll_adc_clk ; pll_adc_clk ;  ; 0.06890382", 0, "i_asg/chA/dac_pnt_reg[33]/D", 5); // i (J, cs)
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 61 ; -0.20734881 ; 21 ; 108 ; i_asg/chA/dac_do_reg/C ; i_asg/chA/dac_pnt_reg[33]/D ; 8.117444 ; 4.5519996 ; 3.5654387 ; 8.0 ; pll_adc_clk ; pll_adc_clk ;  ; 0.06890382", 0, "Path 61", 0, false, false, false, true, false); // i (J, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SelectMenu_MARK, "Mark"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceOtoP.PathMenu_SET_FALSE_PATH, "Set False Path"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceOtoP.PathMenu_SET_MULTICYCLE_PATH, "Set Multicycle Path"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceOtoP.PathMenu_SET_MAXIMUM_DELAY, "Set Maximum Delay"); // af (ao, Popup.HeavyWeightWindow)
+selectMenuItem(RDIResource.AbstractSelectableTablePanel_EXPORT_TO_SPREADSHEET, "Export to Spreadsheet..."); // ai (ao, Popup.HeavyWeightWindow)
+// B (cs): Export Table to Spreadsheet: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (B)
+dismissDialog("Export Table to Spreadsheet"); // B (cs)
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 61 ; -0.20734881 ; 21 ; 108 ; i_asg/chA/dac_do_reg/C ; i_asg/chA/dac_pnt_reg[33]/D ; 8.117444 ; 4.5519996 ; 3.5654387 ; 8.0 ; pll_adc_clk ; pll_adc_clk ;  ; 0.06890382", 0, "Path 61", 0, false, false, false, true, false); // i (J, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SelectMenu_MARK, "Mark"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceOtoP.PathMenu_SET_FALSE_PATH, "Set False Path"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceOtoP.PathMenu_SET_MULTICYCLE_PATH, "Set Multicycle Path"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceOtoP.PathMenu_SET_FALSE_PATH, "Set False Path"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SelectMenu_MARK, "Mark"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceTtoZ.TimingItemFlatTablePanel_FLOORPLANNING, "Floorplanning"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceTtoZ.TimingItemFlatTablePanel_FLOORPLANNING, "Floorplanning"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceTtoZ.TimingItemFlatTablePanel_FLOORPLANNING, "Floorplanning"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(RDIResource.HTable_SET_ELIDING_FOR_TABLE_CELLS, "Elide Setting"); // F (ao, Popup.HeavyWeightWindow)
+selectMenu(RDIResource.HTable_SET_ELIDING_FOR_TABLE_CELLS, "Elide Setting"); // F (ao, Popup.HeavyWeightWindow)
+selectMenu(RDIResource.HTable_SET_ELIDING_FOR_TABLE_CELLS, "Elide Setting"); // F (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceTtoZ.TimingItemFlatTablePanel_FLOORPLANNING, "Floorplanning"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SelectMenu_MARK, "Mark"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SelectMenu_MARK, "Mark"); // af (ao, Popup.HeavyWeightWindow)
+// Elapsed time: 1229 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv", 2); // m (l, cs)
+closeView(PAResourceOtoP.PAViews_DEVICE, "Device"); // U
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+selectCodeEditor("red_pitaya_top.sv", 169, 254); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 169, 254, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("red_pitaya_top.sv", 169, 254); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 72, 202); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 73, 193); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 373, 210); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 209, 336); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 209, 336, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("red_pitaya_top.sv", 221, 229); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 221, 229, false, false, false, false, true); // bP (w, cs) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,204 MB. GUI used memory: 165 MB. Current time: 5/31/26, 5:44:40 PM CEST
+// Elapsed time: 715 seconds
+selectCodeEditor("red_pitaya_top.sv", 343, 274); // bP (w, cs)
+// WARNING: HEventQueue.dispatchEvent() is taking  1100 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  545960 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 545960 ms to process. Increasing delay to 2000 ms.
+// Elapsed time: 1184 seconds
+closeFrame(PAResourceOtoP.PAViews_NETLIST, "Netlist"); // aA (aL, cs)
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aB, cs)
+closeTask("Implementation", "Implemented Design", "DesignTask.RESULTS_ANALYSIS");
+// A (cs): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bz (cs):  Close : addNotify
+dismissDialog("Confirm Close"); // A (cs)
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,204 MB. GUI used memory: 125 MB. Current time: 5/31/26, 6:08:11 PM CEST
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 2,204 MB. GUI used memory: 125 MB. Current time: 5/31/26, 6:08:11 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  4816 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+// Tcl Message: close_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2255.988 ; gain = 1.277 
+dismissDialog("Close"); // bz (cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv", 1); // m (l, cs)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), pll : red_pitaya_pll (red_pitaya_pll.sv)]", 2, false, false, false, false, false, true); // B (F, cs) - Double Click
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // af (cs)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // af (cs)
+selectMenuItem(PAResourceCommand.PACommandNames_SAVE_PROJECT_AS, "Save As..."); // ai (cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+// Run Command: PAResourceCommand.PACommandNames_SAVE_PROJECT_AS
+// aD (cs): Save Project As: addNotify
+// Elapsed time: 31 seconds
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "DAC_ACD_test_project"); // ac (Q, aD)
+selectCheckBox(PAResourceOtoP.ProjectNameChooser_CREATE_PROJECT_SUBDIRECTORY, "Create project subdirectory", false); // g (Q, aD): FALSE
+selectCheckBox(PAResourceOtoP.ProjectNameChooser_CREATE_PROJECT_SUBDIRECTORY, "Create project subdirectory", true); // g (Q, aD): TRUE
+selectCheckBox(PAResourceOtoP.ProjectNameChooser_CREATE_PROJECT_SUBDIRECTORY, "Create project subdirectory", false); // g (Q, aD): FALSE
+selectCheckBox(PAResourceOtoP.ProjectNameChooser_CREATE_PROJECT_SUBDIRECTORY, "Create project subdirectory", true); // g (Q, aD): TRUE
+selectCheckBox(PAResourceOtoP.ProjectNameChooser_CREATE_PROJECT_SUBDIRECTORY, "Create project subdirectory", false); // g (Q, aD): FALSE
+selectCheckBox(PAResourceOtoP.ProjectNameChooser_CREATE_PROJECT_SUBDIRECTORY, "Create project subdirectory", true); // g (Q, aD): TRUE
+// Elapsed time: 12 seconds
+selectCheckBox(PAResourceOtoP.ProjectNameChooser_CREATE_PROJECT_SUBDIRECTORY, "Create project subdirectory", false); // g (Q, aD): FALSE
+selectCheckBox(PAResourceOtoP.ProjectNameChooser_CREATE_PROJECT_SUBDIRECTORY, "Create project subdirectory", true); // g (Q, aD): TRUE
+selectCheckBox(PAResourceOtoP.ProjectNameChooser_CREATE_PROJECT_SUBDIRECTORY, "Create project subdirectory", false); // g (Q, aD): FALSE
+selectCheckBox(PAResourceOtoP.ProjectNameChooser_CREATE_PROJECT_SUBDIRECTORY, "Create project subdirectory", true); // g (Q, aD): TRUE
+// Elapsed time: 12 seconds
+selectCheckBox(PAResourceOtoP.ProjectNameChooser_CREATE_PROJECT_SUBDIRECTORY, "Create project subdirectory", false); // g (Q, aD): FALSE
+selectCheckBox(PAResourceOtoP.ProjectNameChooser_CREATE_PROJECT_SUBDIRECTORY, "Create project subdirectory", true); // g (Q, aD): TRUE
+selectCheckBox(PAResourceOtoP.ProjectNameChooser_CREATE_PROJECT_SUBDIRECTORY, "Create project subdirectory", false); // g (Q, aD): FALSE
+selectCheckBox(PAResourceOtoP.ProjectNameChooser_CREATE_PROJECT_SUBDIRECTORY, "Create project subdirectory", true); // g (Q, aD): TRUE
+selectCheckBox(PAResourceOtoP.ProjectNameChooser_CREATE_PROJECT_SUBDIRECTORY, "Create project subdirectory", false); // g (Q, aD): FALSE
+selectCheckBox(PAResourceOtoP.ProjectNameChooser_CREATE_PROJECT_SUBDIRECTORY, "Create project subdirectory", true); // g (Q, aD): TRUE
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "DAC_ACD_test_projec"); // ac (Q, aD)
+selectCheckBox(PAResourceOtoP.ProjectNameChooser_CREATE_PROJECT_SUBDIRECTORY, "Create project subdirectory", false); // g (Q, aD): FALSE
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "DAC_ACD_test_project"); // ac (Q, aD)
+selectCheckBox(PAResourceOtoP.ProjectNameChooser_CREATE_PROJECT_SUBDIRECTORY, "Create project subdirectory", true); // g (Q, aD): TRUE
+// Elapsed time: 15 seconds
+setText(PAResourceOtoP.ProjectNameChooser_CHOOSE_PROJECT_LOCATION, "D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects"); // ao (an, aD)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aD)
+// 'o' command handler elapsed time: 114 seconds
+// TclEventType: PROJECT_RENAME
+dismissDialog("Save Project As"); // aD (cs)
+// TclEventType: FILE_SET_CHANGE
+// bz (cs):  Save Project As : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: save_project_as DAC_ACD_test_project D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project -force 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: PROJECT_RENAME
+// WARNING: HEventQueue.dispatchEvent() is taking  1158 ms.
+// Tcl Message: save_project_as: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2255.988 ; gain = 0.000 
+// bz (cs):  Save Constraints : addNotify
+dismissDialog("Save Constraints"); // bz (cs)
+// Tcl Message: import_files 
+// Elapsed time: 197 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+selectCodeEditor("red_pitaya_top.sv", 343, 220); // bP (w, cs)
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1); // B (F, cs)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1); // B (F, cs)
+// Elapsed time: 28 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "custom_ramp_gen"); // ac (Q, F)
+// Elapsed time: 28 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// Tcl Command: 'file mkdir D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new'
+dismissDialog("Create Source File"); // F (c)
+// Tcl Message: file mkdir D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new 
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "custom_timestamp_detector"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 46 seconds
+dismissDialog("Add Sources"); // c (cs)
+// Tcl Message: close [ open D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_ramp_gen.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_ramp_gen.v 
+// Tcl Message: close [ open D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_timestamp_detector.v w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_timestamp_detector.v 
+// I (cs): Define Modules: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+selectButton("OptionPane.button", "Yes"); // JButton (v, C)
+dismissDialog("Define Modules"); // I (cs)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 12 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 1); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, custom_timestamp_detector.v]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, custom_timestamp_detector.v]", 2, false, false, false, false, false, true); // B (F, cs) - Double Click
+// Elapsed time: 27 seconds
+typeControlKey((HResource) null, "custom_timestamp_detector.v", 'v'); // bP (w, cs)
+typeControlKey(null, null, 'z');
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), i_ramp : custom_ramp_gen (custom_ramp_gen.v)]", 9, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), i_ramp : custom_ramp_gen (custom_ramp_gen.v)]", 9, false, false, false, false, false, true); // B (F, cs) - Double Click
+typeControlKey((HResource) null, "custom_ramp_gen.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_timestamp_detector.v", 2); // m (l, cs)
+typeControlKey((HResource) null, "custom_timestamp_detector.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_ramp_gen.v", 3); // m (l, cs)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton("CANCEL", "Cancel"); // JButton (j, c)
+// 'h' command handler elapsed time: 4 seconds
+dismissDialog("Add Sources"); // c (cs)
+// Elapsed time: 14 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "SystemVerilog", 2); // cm (Q, F)
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "custom_ramp_gen"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "SystemVerilog", 2); // cm (Q, F)
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "custom_timestamp_detector"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 25 seconds
+dismissDialog("Add Sources"); // c (cs)
+// Tcl Message: close [ open D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_ramp_gen.sv w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_ramp_gen.sv 
+// Tcl Message: close [ open D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_timestamp_detector.sv w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_timestamp_detector.sv 
+// I (cs): Define Modules: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+selectButton("OptionPane.button", "Yes"); // JButton (v, C)
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Modules"); // I (cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, custom_ramp_gen.v]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, custom_ramp_gen.v]", 2, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, custom_timestamp_detector.v]", 3, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, custom_timestamp_detector.v]", 3, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, custom_timestamp_detector.sv]", 6, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, custom_timestamp_detector.sv]", 6, false, false, false, false, false, true); // B (F, cs) - Double Click
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), i_ramp : custom_ramp_gen (custom_ramp_gen.sv)]", 13, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), i_ramp : custom_ramp_gen (custom_ramp_gen.sv)]", 13, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_ramp_gen.v", 3); // m (l, cs)
+typeControlKey((HResource) null, "custom_ramp_gen.v", 'c'); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_ramp_gen.sv", 5); // m (l, cs)
+typeControlKey((HResource) null, "custom_ramp_gen.sv", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_timestamp_detector.v", 2); // m (l, cs)
+typeControlKey((HResource) null, "custom_timestamp_detector.v", 'c'); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_timestamp_detector.sv", 4); // m (l, cs)
+typeControlKey((HResource) null, "custom_timestamp_detector.sv", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_ramp_gen.sv", 5); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_timestamp_detector.sv", 4); // m (l, cs)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, custom_ramp_gen.v]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, custom_timestamp_detector.v]", 3, false, false, true, false, false, false); // B (F, cs) - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, custom_timestamp_detector.v]", 3, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ai (ao, Popup.HeavyWeightWindow)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cs): Remove Sources: addNotify
+selectCheckBox(PAResourceQtoS.RemoveSourcesDialog_ALSO_DELETE, "Also delete  project local files/directories from disk", true); // g (Q, aE): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cs)
+// Tcl Message: export_ip_user_files -of_objects  [get_files D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_ramp_gen.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_timestamp_detector.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_ramp_gen.v D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_timestamp_detector.v} 
+// Tcl Message: file delete -force D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_ramp_gen.v D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_timestamp_detector.v 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv (2)", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_timestamp_detector.sv", 2); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv (2)", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_ramp_gen.sv", 3); // m (l, cs)
+// Elapsed time: 45 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_timestamp_detector.sv", 3); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv (2)", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv (2)", 1); // m (l, cs)
+// Elapsed time: 47 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_ramp_gen.sv", 2); // m (l, cs)
+// Elapsed time: 71 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_timestamp_detector.sv", 3); // m (l, cs)
+// Elapsed time: 47 seconds
+selectCodeEditor("custom_timestamp_detector.sv", 412, 193); // bP (w, cs)
+selectCodeEditor("custom_timestamp_detector.sv", 488, 200); // bP (w, cs)
+selectCodeEditor("custom_timestamp_detector.sv", 488, 200, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("custom_timestamp_detector.sv", 488, 200); // bP (w, cs)
+selectCodeEditor("custom_timestamp_detector.sv", 504, 246); // bP (w, cs)
+selectCodeEditor("custom_timestamp_detector.sv", 483, 192); // bP (w, cs)
+selectCodeEditor("custom_timestamp_detector.sv", 483, 192, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("custom_timestamp_detector.sv", 483, 192); // bP (w, cs)
+selectCodeEditor("custom_timestamp_detector.sv", 483, 192); // bP (w, cs)
+selectCodeEditor("custom_timestamp_detector.sv", 483, 192, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 20 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_ramp_gen.sv", 2); // m (l, cs)
+selectCodeEditor("custom_ramp_gen.sv", 194, 320); // bP (w, cs)
+selectCodeEditor("custom_ramp_gen.sv", 194, 320, false, false, false, false, true); // bP (w, cs) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv (2)", 1); // m (l, cs)
+selectCodeEditor("red_pitaya_top.sv", 169, 225); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 169, 225, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 30 seconds
+selectCodeEditor("red_pitaya_top.sv", 72, 195); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 72, 195, false, false, false, false, true); // bP (w, cs) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,204 MB. GUI used memory: 106 MB. Current time: 5/31/26, 6:38:13 PM CEST
+// Elapsed time: 905 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_ramp_gen.sv", 2); // m (l, cs)
+selectCodeEditor("custom_ramp_gen.sv", 129, 88); // bP (w, cs)
+selectCodeEditor("custom_ramp_gen.sv", 129, 88, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "custom_ramp_gen.sv", 'c'); // bP (w, cs)
+// Elapsed time: 205 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "SystemVerilog", 2); // cm (Q, F)
+// Elapsed time: 78 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "system_controller"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 84 seconds
+dismissDialog("Add Sources"); // c (cs)
+// Tcl Message: close [ open D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/system_controller.sv w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/system_controller.sv 
+// I (cs): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+selectButton("OptionPane.button", "Yes"); // JButton (v, C)
+dismissDialog("Define Module"); // I (cs)
+// TclEventType: FILE_SET_CHANGE
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1); // B (F, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_controller (system_controller.sv)]", 8, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_controller (system_controller.sv)]", 8, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_controller (system_controller.sv)]", 8, false, false, false, false, false, true); // B (F, cs) - Double Click
+// Elapsed time: 16 seconds
+typeControlKey((HResource) null, "system_controller.sv", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "system_controller.sv", 4); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_ramp_gen.sv", 3); // m (l, cs)
+// Elapsed time: 12 seconds
+selectCodeEditor("custom_ramp_gen.sv", 362, 222); // bP (w, cs)
+typeControlKey((HResource) null, "custom_ramp_gen.sv", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_timestamp_detector.sv", 4); // m (l, cs)
+selectCodeEditor("custom_timestamp_detector.sv", 637, 79); // bP (w, cs)
+typeControlKey((HResource) null, "custom_timestamp_detector.sv", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv (2)", 1); // m (l, cs)
+// Elapsed time: 15 seconds
+selectCodeEditor("red_pitaya_top.sv", 120, 334); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 3, 262, true, false, false, false, false); // bP (w, cs) - Shift Key
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 12 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), i_sys_ctrl : system_controller (system_controller.sv)]", 6, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), i_hk : red_pitaya_hk (red_pitaya_hk.v)]", 5, true); // B (F, cs) - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rp_scope_com (rp_scope_com.v)]", 2, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_pdm (red_pitaya_pdm.sv)]", 7, false, true, false, false, false, false); // B (F, cs) - Shift Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_pdm (red_pitaya_pdm.sv)]", 7, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_DISABLE, "Disable File"); // ai (ao, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_SRC_DISABLE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_asg_ch (red_pitaya_asg_ch.sv)]", 2, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rp_trig_src (rp_trig_src.v)]", 17, false, true, false, false, false, false); // B (F, cs) - Shift Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rp_trig_src (rp_trig_src.v)]", 17, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rp_trig_src (rp_trig_src.v)]", 17, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rp_trig_src (rp_trig_src.v)]", 17, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rp_trig_src (rp_trig_src.v)]", 17, false, false, false, false, false, true); // B (F, cs) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("rp_trig_src.v", 262, 241); // bP (w, cs)
+selectCodeEditor("rp_trig_src.v", 262, 241, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("rp_trig_src.v", 170, 220); // bP (w, cs)
+selectCodeEditor("rp_trig_src.v", 170, 220, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("rp_trig_src.v", 188, 309); // bP (w, cs)
+selectCodeEditor("rp_trig_src.v", 188, 309, false, false, false, false, true); // bP (w, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rp_trig_src (rp_trig_src.v)]", 17, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_asg_ch (red_pitaya_asg_ch.sv)]", 2, true, true, false, false, false, false); // B (F, cs) - Shift Key - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_asg_ch (red_pitaya_asg_ch.sv)]", 2, true, false, false, false, true, false); // B (F, cs) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_DISABLE, "Disable File"); // ai (ao, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_SRC_DISABLE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1); // B (F, cs)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, divide (divide.v)]", 2, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rand_lfsr (rand_lfsr.v)]", 5, false, true, false, false, false, false); // B (F, cs) - Shift Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rand_lfsr (rand_lfsr.v)]", 5, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_DISABLE, "Disable File"); // ai (ao, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_SRC_DISABLE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property is_enabled false [get_files  {D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/imports/RedPitaya/rtl/divide.v D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/imports/RedPitaya/rtl/classic/rp_asg_axi.sv D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/imports/RedPitaya/rtl/classic/axi_wr_fifo.v D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/imports/RedPitaya/rtl/rand_lfsr.v}] 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, asg_dat_fifo (asg_dat_fifo.xci)]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, sync_fifo (sync_fifo.xci)]", 4, false, true, false, false, false, false); // B (F, cs) - Shift Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, sync_fifo (sync_fifo.xci)]", 4, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SrcMenu_IP_DOCUMENTATION, "IP Documentation"); // af (ao, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_DISABLE, "Disable File"); // ai (ao, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_SRC_DISABLE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: set_property is_enabled false [get_files  {D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.xci D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/imports/RedPitaya/rtl/classic/axi_rd_burst.sv D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/ip/sync_fifo/sync_fifo.xci}] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, axi_rd_burst (axi_sys_if.sv)]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, axi_rd_burst (axi_sys_if.sv)]", 2, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_DISABLE, "Disable File"); // ai (ao, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_SRC_DISABLE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property is_enabled false [get_files  D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/imports/RedPitaya/rtl/interface/axi_sys_if.sv] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv (2)", 1); // m (l, cs)
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Elapsed time: 212 seconds
+selectCodeEditor("red_pitaya_top.sv", 209, 146); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 371, 271); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 371, 271, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("red_pitaya_top.sv", 331, 130); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 331, 130); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 324, 283); // bP (w, cs)
+// Elapsed time: 317 seconds
+selectCodeEditor("red_pitaya_top.sv", 58, 244); // bP (w, cs)
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'v'); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 283, 241); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// G (cs): Invalid Top Module: addNotify
+// Elapsed time: 15 seconds
+dismissDialog("Invalid Top Module"); // G (cs)
+selectCodeEditor("red_pitaya_top.sv", 55, 437); // bP (w, cs)
+// G (cs): Invalid Top Module: addNotify
+dismissDialog("Invalid Top Module"); // G (cs)
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 16 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_DIRECTORIES, "Add Directories"); // a (E, c)
+// WARNING: HEventQueue.dispatchEvent() is taking  1188 ms.
+dismissFolderChooser();
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "SystemVerilog", 2); // cm (Q, F)
+// Elapsed time: 18 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "custom_test_peak_gen"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 30 seconds
+dismissDialog("Add Sources"); // c (cs)
+// Tcl Message: close [ open D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv 
+// I (cs): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+selectButton("OptionPane.button", "Yes"); // JButton (v, C)
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // I (cs)
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1); // B (F, cs)
+selectCodeEditor("red_pitaya_top.sv", 46, 432); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 213, 400); // bP (w, cs)
+// Elapsed time: 12 seconds
+selectCodeEditor("red_pitaya_top.sv", 107, 219); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 107, 219, false, false, false, false, true); // bP (w, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), i_test_gen : custom_test_peak_gen (custom_test_peak_gen.sv)]", 13, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), i_test_gen : custom_test_peak_gen (custom_test_peak_gen.sv)]", 13, false, false, false, false, false, true); // B (F, cs) - Double Click
+typeControlKey((HResource) null, "custom_test_peak_gen.sv", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv (2)", 0); // m (l, cs)
+selectCodeEditor("red_pitaya_top.sv", 308, 260); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 19 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), axi3_sys : xil_defaultlib.axi_sys_if]", 5, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), axi3_sys : xil_defaultlib.axi_sys_if]", 5, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), axi3_sys : xil_defaultlib.axi_sys_if]", 5, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), axi3_sys : xil_defaultlib.axi_sys_if]", 5, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), axi3_sys : xil_defaultlib.axi_sys_if]", 5, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("red_pitaya_top.sv", 111, 96); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 111, 96, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("red_pitaya_top.sv", 39, 87); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 39, 87, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("red_pitaya_top.sv", 88, 174); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 88, 174, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("red_pitaya_top.sv", 88, 174); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 88, 174); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 88, 174, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("red_pitaya_top.sv", 485, 215); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 194, 298); // bP (w, cs)
+// Elapsed time: 29 seconds
+selectCodeEditor("red_pitaya_top.sv", 150, 241); // bP (w, cs)
+// Elapsed time: 32 seconds
+selectCodeEditor("red_pitaya_top.sv", 121, 326); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 121, 326, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("red_pitaya_top.sv", 29, 322); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 29, 322, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("red_pitaya_top.sv", 135, 328); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 135, 328, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("red_pitaya_top.sv", 37, 332); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 37, 332, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("red_pitaya_top.sv", 3, 303); // bP (w, cs)
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'c'); // bP (w, cs)
+// Elapsed time: 88 seconds
+selectCodeEditor("red_pitaya_top.sv", 260, 387); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 260, 387); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 381, 401); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 360, 357); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 615, 465); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 568, 430); // bP (w, cs)
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'c'); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 612, 453); // bP (w, cs)
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'v'); // bP (w, cs)
+typeControlKey(null, null, 'z');
+// Elapsed time: 10 seconds
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'v'); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 135, 222); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 564, 217); // bP (w, cs)
+// Elapsed time: 39 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Disabled Sources]", 17); // B (F, cs)
+// Elapsed time: 21 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Disabled Sources, axi_sys_if.sv]", 65, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Disabled Sources, axi_sys_if.sv]", 65, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_ENABLE, "Enable File"); // ai (ao, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_SRC_ENABLE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property is_enabled true [get_files  D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/imports/RedPitaya/rtl/interface/axi_sys_if.sv] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 56 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Disabled Sources]", 13); // B (F, cs)
+selectCodeEditor("red_pitaya_top.sv", 115, 30); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cD' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (cs)
+// bz (cs):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// TclEventType: RUN_LAUNCH
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a (bz)
+// TclEventType: RUN_STATUS_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "system_controller.sv", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_ramp_gen.sv", 2); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_timestamp_detector.sv", 3); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_test_peak_gen.sv", 4); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_ramp_gen.sv", 2); // m (l, cs)
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sun May 31 19:05:05 2026] Launched synth_1... Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.runs/synth_1/runme.log [Sun May 31 19:05:05 2026] Launched impl_1... Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:19 . Memory (MB): peak = 2255.988 ; gain = 0.000 
+dismissDialog("Generate Bitstream"); // bz (cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "system_controller.sv", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv (2)", 0); // m (l, cs)
+// Elapsed time: 21 seconds
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aL (aI, cs)
+// Elapsed time: 15 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [IP_Flow 19-4299] Failed to copy 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/doc/fifo_generator_v13_2_changelog.txt' to 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/ip/asg_dat_fifo/doc/fifo_generator_v13_2_changelog.txt'. ]", 2); // ah (J, cs)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [IP_Flow 19-4299] Failed to copy 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/doc/fifo_generator_v13_2_changelog.txt' to 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/ip/asg_dat_fifo/doc/fifo_generator_v13_2_changelog.txt'. ]", 2); // ah (J, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), i_sys_ctrl : system_controller (system_controller.sv)]", 6, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), for_sys[5].sys_bus_stub_i : sys_bus_stub (sys_bus_stub.sv)]", 10, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), for_sys[5].sys_bus_stub_i : sys_bus_stub (sys_bus_stub.sv)]", 10, false, false, false, false, false, true); // B (F, cs) - Double Click
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 17 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv (2)", 0); // m (l, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), sys_bus_interconnect : sys_bus_interconnect (sys_bus_interconnect.sv)]", 4); // B (F, cs)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), sys_bus_interconnect : sys_bus_interconnect (sys_bus_interconnect.sv)]", 4); // B (F, cs)
+selectCodeEditor("red_pitaya_top.sv", 49, 250); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 49, 250, false, false, false, false, true); // bP (w, cs) - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), i_hk : red_pitaya_hk (red_pitaya_hk.v)]", 5); // B (F, cs)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), i_hk : red_pitaya_hk (red_pitaya_hk.v)]", 5); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), i_ramp : custom_ramp_gen (custom_ramp_gen.sv)]", 7, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), i_timestamp : custom_timestamp_detector (custom_timestamp_detector.sv)]", 8, false); // B (F, cs)
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 13 seconds
+selectCodeEditor("red_pitaya_top.sv", 308, 343); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 282, 217); // bP (w, cs)
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'c'); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,204 MB. GUI used memory: 107 MB. Current time: 5/31/26, 7:08:15 PM CEST
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Failed: addNotify
+// Elapsed time: 85 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_LOG_WINDOW
+dismissDialog("Bitstream Generation Failed"); // ag (cs)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aL (aI, cs)
+// Elapsed time: 14 seconds
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages]", 1); // ah (J, cs)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages]", 1); // ah (J, cs)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [IP_Flow 19-4299] Failed to copy 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/doc/fifo_generator_v13_2_changelog.txt' to 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/ip/asg_dat_fifo/doc/fifo_generator_v13_2_changelog.txt'. ]", 2); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [IP_Flow 19-4299] Failed to copy 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/doc/fifo_generator_v13_2_changelog.txt' to 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/ip/asg_dat_fifo/doc/fifo_generator_v13_2_changelog.txt'. , [IP_Flow 19-4299] Failed to copy 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.vho' to 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.vho'. ]", 3, false); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [IP_Flow 19-4299] Failed to copy 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/doc/fifo_generator_v13_2_changelog.txt' to 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/ip/asg_dat_fifo/doc/fifo_generator_v13_2_changelog.txt'. , [IP_Flow 19-4299] Failed to copy 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.vho' to 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.vho'. ]", 3, false); // ah (J, cs)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [IP_Flow 19-4299] Failed to copy 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/doc/fifo_generator_v13_2_changelog.txt' to 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/ip/asg_dat_fifo/doc/fifo_generator_v13_2_changelog.txt'. ]", 2); // ah (J, cs)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages]", 1); // ah (J, cs)
+// Elapsed time: 101 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, red_pitaya.xdc]", 16, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, red_pitaya.xdc]", 16, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, red_pitaya.xdc]", 17, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, red_pitaya.xdc]", 17, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya.xdc", 5); // m (l, cs)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya.xdc (2)", 6); // m (l, cs)
+selectCodeEditor("red_pitaya.xdc (2)", 451, 11); // bP (w, cs)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 24 seconds
+selectCodeEditor("red_pitaya.xdc (2)", 259, 287); // bP (w, cs)
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv (2)", 0); // m (l, cs)
+selectCodeEditor("red_pitaya_top.sv", 137, 444); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 111, 459); // bP (w, cs)
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'v'); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 297, 271); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cD' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (cs)
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// bz (cs):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sun May 31 19:12:17 2026] Launched synth_1... Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.runs/synth_1/runme.log [Sun May 31 19:12:17 2026] Launched impl_1... Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:19 . Memory (MB): peak = 2255.988 ; gain = 0.000 
+// Elapsed time: 19 seconds
+dismissDialog("Generate Bitstream"); // bz (cs)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages]", 1); // ah (J, cs)
+// Elapsed time: 37 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [IP_Flow 19-4299] Failed to copy 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/doc/fifo_generator_v13_2_changelog.txt' to 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/ip/asg_dat_fifo/doc/fifo_generator_v13_2_changelog.txt'. ]", 2, true, false, false, false, true, false); // ah (J, cs) - Popup Trigger - Node
+selectMenu(PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, "Message Severity"); // af (K, Popup.HeavyWeightWindow)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 64 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 5, true); // ah (J, cs) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\sources_1\new\custom_test_peak_gen.sv;-;;-;16;-;line;-;75;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6858] multi-driven net p_0_in[13] is connected to at least one constant driver which has been preserved, other driver is ignored [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 6, true); // ah (J, cs) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\sources_1\new\custom_test_peak_gen.sv;-;;-;16;-;line;-;75;-;;-;16;-;"); // ah (J, cs)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 5); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. , [Synth 8-6859] multi-driven net on pin p_0_in[13] with 2nd driver pin 'GND' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 6, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\sources_1\new\custom_test_peak_gen.sv;-;;-;16;-;line;-;75;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 5, true); // ah (J, cs) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\sources_1\new\custom_test_peak_gen.sv;-;;-;16;-;line;-;75;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. , [Synth 8-6859] multi-driven net on pin p_0_in[13] with 2nd driver pin 'GND' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 6, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\sources_1\new\custom_test_peak_gen.sv;-;;-;16;-;line;-;75;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. , [Synth 8-6859] multi-driven net on pin p_0_in[12] with 1st driver pin 'i_test_gen/dac_dat_o_reg[12]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 7, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\sources_1\new\custom_test_peak_gen.sv;-;;-;16;-;line;-;75;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. , [Synth 8-6859] multi-driven net on pin p_0_in[12] with 2nd driver pin 'GND' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 8, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\sources_1\new\custom_test_peak_gen.sv;-;;-;16;-;line;-;75;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 5, true); // ah (J, cs) - Node
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 5); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 5, true); // ah (J, cs) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 5, true, false, false, false, true, false); // ah (J, cs) - Popup Trigger - Node
+// Elapsed time: 50 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 5); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. , [Synth 8-6859] multi-driven net on pin p_0_in[12] with 1st driver pin 'i_test_gen/dac_dat_o_reg[12]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 7, false); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. , [Synth 8-6859] multi-driven net on pin p_0_in[13] with 2nd driver pin 'GND' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 6, false); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. , [Synth 8-6859] multi-driven net on pin p_0_in[13] with 2nd driver pin 'GND' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 6, false, false, false, false, true, false); // ah (J, cs) - Popup Trigger
+// Elapsed time: 25 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 5, true); // ah (J, cs) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\sources_1\new\custom_test_peak_gen.sv;-;;-;16;-;line;-;75;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. , [Synth 8-6859] multi-driven net on pin p_0_in[13] with 2nd driver pin 'GND' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 6, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\sources_1\new\custom_test_peak_gen.sv;-;;-;16;-;line;-;75;-;;-;16;-;"); // ah (J, cs)
+selectCodeEditor("custom_test_peak_gen.sv", 256, 198); // bP (w, cs)
+typeControlKey((HResource) null, "custom_test_peak_gen.sv", 'c'); // bP (w, cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 34 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ag)
+dismissDialog("Bitstream Generation Completed"); // ag (cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. , [Synth 8-6859] multi-driven net on pin p_0_in[12] with 1st driver pin 'i_test_gen/dac_dat_o_reg[12]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 7, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\sources_1\new\custom_test_peak_gen.sv;-;;-;16;-;line;-;75;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. , [Synth 8-6859] multi-driven net on pin p_0_in[12] with 2nd driver pin 'GND' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 8, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\sources_1\new\custom_test_peak_gen.sv;-;;-;16;-;line;-;75;-;;-;16;-;"); // ah (J, cs)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 5); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6858] multi-driven net p_0_in[13] is connected to at least one constant driver which has been preserved, other driver is ignored [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 6, true); // ah (J, cs) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\sources_1\new\custom_test_peak_gen.sv;-;;-;16;-;line;-;75;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6858] multi-driven net p_0_in[13] is connected to at least one constant driver which has been preserved, other driver is ignored [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 6, true); // ah (J, cs) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\sources_1\new\custom_test_peak_gen.sv;-;;-;16;-;line;-;75;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6858] multi-driven net p_0_in[13] is connected to at least one constant driver which has been preserved, other driver is ignored [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. , [Synth 8-6858] multi-driven net p_0_in[6] is connected to at least one constant driver which has been preserved, other driver is ignored [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 13, false, false, false, false, false, true); // ah (J, cs) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6858] multi-driven net p_0_in[13] is connected to at least one constant driver which has been preserved, other driver is ignored [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. , [Synth 8-6858] multi-driven net p_0_in[12] is connected to at least one constant driver which has been preserved, other driver is ignored [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 7, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\sources_1\new\custom_test_peak_gen.sv;-;;-;16;-;line;-;75;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6858] multi-driven net p_0_in[13] is connected to at least one constant driver which has been preserved, other driver is ignored [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 6, true, false, false, false, true, false); // ah (J, cs) - Popup Trigger - Node
+// Elapsed time: 47 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 5); // ah (J, cs)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 5); // ah (J, cs)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6858] multi-driven net p_0_in[13] is connected to at least one constant driver which has been preserved, other driver is ignored [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 6); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports dac_clk_1x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:206]. ]", 9, true); // ah (J, cs) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\constrs_1\imports\RedPitaya\sdc\red_pitaya.xdc;-;;-;16;-;line;-;206;-;;-;16;-;"); // ah (J, cs)
+// Elapsed time: 10 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design, [Place 30-722] Terminal 'dac_pwm_o[0]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O. ]", 12); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design, [Place 30-722] Terminal 'dac_pwm_o[0]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O. , [Place 30-722] Terminal 'dac_pwm_o[1]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O. ]", 13, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "block;-;dac_pwm_o[1];-;;-;10;-;"); // ah (J, cs)
+selectButton("OptionPane.button", "No"); // JButton (v, B)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design]", 11); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design]", 11, true); // ah (J, cs) - Node
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design]", 11); // ah (J, cs)
+// Elapsed time: 55 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design, [Place 30-722] Terminal 'dac_pwm_o[0]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O. ]", 12, true); // ah (J, cs) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design, [Place 30-722] Terminal 'dac_pwm_o[0]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O. ]", 12, true, false, false, false, true, false); // ah (J, cs) - Popup Trigger - Node
+selectMenu(PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, "Message Severity"); // af (K, Popup.HeavyWeightWindow)
+selectMenu(PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, "Message Severity"); // af (K, Popup.HeavyWeightWindow)
+selectMenu(PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, "Message Severity"); // af (K, Popup.HeavyWeightWindow)
+// Elapsed time: 21 seconds
+selectCodeEditor("red_pitaya.xdc", 210, 158); // bP (w, cs)
+// Elapsed time: 81 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_timestamp_detector.sv", 4); // m (l, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:75]. ]", 5, true); // ah (J, cs) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\sources_1\new\custom_test_peak_gen.sv;-;;-;16;-;line;-;75;-;;-;16;-;"); // ah (J, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("custom_test_peak_gen.sv", 305, 201); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 79 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya.xdc", 5); // m (l, cs)
+// Elapsed time: 21 seconds
+selectCodeEditor("red_pitaya.xdc", 235, 248); // bP (w, cs)
+// Elapsed time: 10 seconds
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): Synthesis is Out-of-date: addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_timestamp_detector.sv", 4); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_test_peak_gen.sv", 3); // m (l, cs)
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cs)
+// bz (cs):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sun May 31 19:23:35 2026] Launched synth_1... Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.runs/synth_1/runme.log [Sun May 31 19:23:35 2026] Launched impl_1... Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 2255.988 ; gain = 0.000 
+// Elapsed time: 19 seconds
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 75 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:82]. ]", 5, true); // ah (J, cs) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\sources_1\new\custom_test_peak_gen.sv;-;;-;16;-;line;-;82;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6858] multi-driven net p_0_in[13] is connected to at least one constant driver which has been preserved, other driver is ignored [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:82]. ]", 6, true); // ah (J, cs) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\sources_1\new\custom_test_peak_gen.sv;-;;-;16;-;line;-;82;-;;-;16;-;"); // ah (J, cs)
+selectCodeEditor("custom_test_peak_gen.sv", 320, 330); // bP (w, cs)
+typeControlKey((HResource) null, "custom_test_peak_gen.sv", 'c'); // bP (w, cs)
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 32 seconds
+selectCodeEditor("custom_test_peak_gen.sv", 148, 348); // bP (w, cs)
+selectCodeEditor("custom_test_peak_gen.sv", 148, 348, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "custom_test_peak_gen.sv", 'c'); // bP (w, cs)
+// Elapsed time: 20 seconds
+selectCodeEditor("custom_test_peak_gen.sv", 158, 140); // bP (w, cs)
+selectCodeEditor("custom_test_peak_gen.sv", 158, 140, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "custom_test_peak_gen.sv", 'c'); // bP (w, cs)
+// Elapsed time: 49 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:82]. ]", 5, true); // ah (J, cs) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\sources_1\new\custom_test_peak_gen.sv;-;;-;16;-;line;-;82;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6858] multi-driven net p_0_in[13] is connected to at least one constant driver which has been preserved, other driver is ignored [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:82]. ]", 6, true); // ah (J, cs) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\sources_1\new\custom_test_peak_gen.sv;-;;-;16;-;line;-;82;-;;-;16;-;"); // ah (J, cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 297 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ag)
+dismissDialog("Bitstream Generation Completed"); // ag (cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports dac_clk_1x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:206]. ]", 9, true); // ah (J, cs) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\constrs_1\imports\RedPitaya\sdc\red_pitaya.xdc;-;;-;16;-;line;-;206;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Common 17-55] 'set_property' expects at least one object. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:18]. ]", 10, true); // ah (J, cs) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\DAC_ACD_test_project\DAC_ACD_test_project.srcs\constrs_1\imports\RedPitaya\prj\v0.94\sdc\red_pitaya.xdc;-;;-;16;-;line;-;18;-;;-;16;-;"); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Common 17-55] 'set_property' expects at least one object. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:18]. ]", 10, true); // ah (J, cs) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Design Initialization, [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports dac_clk_1x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:206]. ]", 9, true); // ah (J, cs) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:82]. ]", 5, true); // ah (J, cs) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6858] multi-driven net p_0_in[13] is connected to at least one constant driver which has been preserved, other driver is ignored [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:82]. ]", 6, true); // ah (J, cs) - Node
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:82]. ]", 5); // ah (J, cs)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin p_0_in[13] with 1st driver pin 'i_test_gen/dac_dat_o_reg[13]/Q' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv:82]. ]", 5); // ah (J, cs)
+// Elapsed time: 48 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv (2)", 0); // m (l, cs)
+// Elapsed time: 10 seconds
+selectCodeEditor("red_pitaya_top.sv", 743, 50); // bP (w, cs)
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'v'); // bP (w, cs)
+// Elapsed time: 10 seconds
+selectCodeEditor("red_pitaya_top.sv", 80, 82); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 80, 82, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("red_pitaya_top.sv", 210, 68); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 262, 39); // bP (w, cs)
+// Elapsed time: 19 seconds
+selectCodeEditor("red_pitaya_top.sv", 205, 218); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_test_peak_gen.sv", 3); // m (l, cs)
+selectCodeEditor("custom_test_peak_gen.sv", 183, 138); // bP (w, cs)
+selectCodeEditor("custom_test_peak_gen.sv", 254, 137); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cD' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (cs)
+// bz (cs):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_STATUS_CHANGE
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a (bz)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [IP_Flow 19-4299] Failed to copy 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/doc/fifo_generator_v13_2_changelog.txt' to 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/ip/asg_dat_fifo/doc/fifo_generator_v13_2_changelog.txt'. ]", 2, true, false, false, false, true, false); // ah (J, cs) - Popup Trigger - Node
+selectMenu(PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, "Message Severity"); // af (K, Popup.HeavyWeightWindow)
+selectMenu(PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, "Message Severity"); // af (K, Popup.HeavyWeightWindow)
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sun May 31 19:34:40 2026] Launched synth_1... Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.runs/synth_1/runme.log [Sun May 31 19:34:40 2026] Launched impl_1... Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:19 . Memory (MB): peak = 2255.988 ; gain = 0.000 
+// Elapsed time: 15 seconds
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 2,204 MB. GUI used memory: 110 MB. Current time: 5/31/26, 7:38:15 PM CEST
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 457 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ag)
+dismissDialog("Bitstream Generation Completed"); // ag (cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1, true, false, false, false, true, false); // B (F, cs) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectCodeEditor("custom_test_peak_gen.sv", 165, 127); // bP (w, cs)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "custom_timestamp_detector.sv", 1); // m (l, cs)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectCodeEditor("red_pitaya_top.sv", 247, 115); // bP (w, cs)
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'c'); // bP (w, cs)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_DIRECTORIES, "Add Directories"); // a (E, c)
+dismissFolderChooser();
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "SystemVerilog", 2); // cm (Q, F)
+// Elapsed time: 19 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "DAC_ADC_test_top"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectTable(PAResourceQtoS.SrcChooserTable_SRC_CHOOSER_TABLE, "VSourceFile ; 1 ; DAC_ADC_test_top.sv ; xil_defaultlib ; <Local to Project>", 0, "DAC_ADC_test_top.sv", 2); // bQ (J, c)
+selectTable(PAResourceQtoS.SrcChooserTable_SRC_CHOOSER_TABLE, "VSourceFile ; 1 ; DAC_ADC_test_top.sv ; xil_defaultlib ; <Local to Project>", 0, "DAC_ADC_test_top.sv", 2, false, false, false, false, true); // bQ (J, c) - Double Click
+selectTable(PAResourceQtoS.SrcChooserTable_SRC_CHOOSER_TABLE, "VSourceFile ; 1 ; DAC_ADC_test_top.sv ; xil_defaultlib ; <Local to Project>", 0, "DAC_ADC_test_top.sv", 2, false, false, false, true, false); // bQ (J, c) - Popup Trigger
+selectTable(PAResourceQtoS.SrcChooserTable_SRC_CHOOSER_TABLE, "VSourceFile ; 1 ; DAC_ADC_test_top.sv ; xil_defaultlib ; <Local to Project>", 0, "DAC_ADC_test_top.sv", 2, false, false, false, true, false); // bQ (J, c) - Popup Trigger
+selectMenu(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, "Add"); // af (ao, c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 46 seconds
+dismissDialog("Add Sources"); // c (cs)
+// Tcl Message: close [ open D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/DAC_ADC_test_top.sv w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/DAC_ADC_test_top.sv 
+// I (cs): Define Module: addNotify
+setText(PAResourceAtoD.DefineModulesDialog_ENTITY_NAME, "DAC_ADC_test_top"); // ac (Q, I)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+selectButton("OptionPane.button", "Yes"); // JButton (v, C)
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // I (cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("red_pitaya_top.sv", 93, 112); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 202, 91); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 107, 226, true, false, false, false, false); // bP (w, cs) - Shift Key
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'c'); // bP (w, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DAC_ADC_test_top (DAC_ADC_test_top.sv)]", 13, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DAC_ADC_test_top (DAC_ADC_test_top.sv)]", 13, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("DAC_ADC_test_top.sv", 209, 225); // bP (w, cs)
+typeControlKey((HResource) null, "DAC_ADC_test_top.sv", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 24 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv (2)", 0); // m (l, cs)
+selectCodeEditor("red_pitaya_top.sv", 760, 52); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 359, 43); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 458, 30); // bP (w, cs)
+// Elapsed time: 15 seconds
+selectCodeEditor("red_pitaya_top.sv", 454, 38); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 20 seconds
+selectCodeEditor("red_pitaya_top.sv", 756, 50); // bP (w, cs)
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'c'); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "DAC_ADC_test_top.sv", 1); // m (l, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 0, 38); // bP (w, cs)
+typeControlKey((HResource) null, "DAC_ADC_test_top.sv", 'v'); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 377, 37); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 21 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv (2)", 0); // m (l, cs)
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1, true, false, false, false, true, false); // B (F, cs) - Popup Trigger - Node
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1, true, false, false, false, true, false); // B (F, cs) - Popup Trigger - Node
+selectCodeEditor("red_pitaya_top.sv", 146, 184); // bP (w, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1, true, false, false, false, true, false); // B (F, cs) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_DISABLE, "Disable File"); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_SRC_DISABLE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property is_enabled false [get_files  D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/imports/RedPitaya/prj/v0.94/rtl/red_pitaya_top.sv] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("red_pitaya_top.sv", 2, 34); // bP (w, cs)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// G (cs): Invalid Top Module: addNotify
+dismissDialog("Invalid Top Module"); // G (cs)
+selectCodeEditor("red_pitaya_top.sv", 455, 157, true, false, false, false, false); // bP (w, cs) - Shift Key
+// G (cs): Invalid Top Module: addNotify
+dismissDialog("Invalid Top Module"); // G (cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DAC_ADC_test_top (DAC_ADC_test_top.sv)]", 1, true, false, false, false, true, false); // B (F, cs) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top DAC_ADC_test_top [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+selectCodeEditor("red_pitaya_top.sv", 390, 172); // bP (w, cs)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("red_pitaya_top.sv", 106, 67); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 234, 100); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 234, 100); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 293, 72); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 293, 72); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 416, 80); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 469, 35); // bP (w, cs)
+// Elapsed time: 15 seconds
+typeControlKey(null, null, 'z');
+selectCodeEditor("red_pitaya_top.sv", 4, 161, true, false, false, false, false); // bP (w, cs) - Shift Key
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'c'); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "DAC_ADC_test_top.sv", 1); // m (l, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 756, 96); // bP (w, cs)
+typeControlKey((HResource) null, "DAC_ADC_test_top.sv", 'v'); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 311, 36); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 311, 36, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 27 seconds
+selectCodeEditor("DAC_ADC_test_top.sv", 313, 140); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 313, 140, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("DAC_ADC_test_top.sv", 349, 167); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 349, 134); // bP (w, cs)
+// Elapsed time: 26 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("DAC_ADC_test_top.sv", 289, 204); // bP (w, cs)
+// Elapsed time: 15 seconds
+selectCodeEditor("DAC_ADC_test_top.sv", 351, 201); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 351, 204); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 406, 182); // bP (w, cs)
+typeControlKey((HResource) null, "DAC_ADC_test_top.sv", 'v'); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 406, 206); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 456, 211); // bP (w, cs)
+// Elapsed time: 26 seconds
+selectCodeEditor("DAC_ADC_test_top.sv", 348, 114); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 353, 114); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 343, 14); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 343, 87); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 359, 121); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 395, 74); // bP (w, cs)
+// WARNING: HEventQueue.dispatchEvent() is taking  1795 ms.
+// Elapsed time: 49 seconds
+selectCodeEditor("DAC_ADC_test_top.sv", 343, 146); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 346, 178); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 394, 92); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 406, 82); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 406, 113); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 415, 60); // bP (w, cs)
+typeControlKey((HResource) null, "DAC_ADC_test_top.sv", 'c'); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 425, 81); // bP (w, cs)
+typeControlKey((HResource) null, "DAC_ADC_test_top.sv", 'v'); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 150, 92); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 150, 92, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("DAC_ADC_test_top.sv", 342, 95); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 375, 103); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 432, 77); // bP (w, cs)
+typeControlKey((HResource) null, "DAC_ADC_test_top.sv", 'c'); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 448, 96); // bP (w, cs)
+typeControlKey((HResource) null, "DAC_ADC_test_top.sv", 'v'); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 342, 95); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 349, 53); // bP (w, cs)
+typeControlKey((HResource) null, "DAC_ADC_test_top.sv", 'c'); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 345, 141); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 352, 141); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 409, 141, true, false, false, false, false); // bP (w, cs) - Shift Key
+typeControlKey((HResource) null, "DAC_ADC_test_top.sv", 'v'); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 257, 151); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 305, 157); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 305, 157, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 16 seconds
+selectCodeEditor("DAC_ADC_test_top.sv", 352, 222); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 500, 206); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 507, 99); // bP (w, cs)
+typeControlKey((HResource) null, "DAC_ADC_test_top.sv", 'c'); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 534, 116); // bP (w, cs)
+typeControlKey((HResource) null, "DAC_ADC_test_top.sv", 'v'); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 299, 167); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 312, 184); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 295, 178); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 279, 179); // bP (w, cs)
+// Elapsed time: 13 seconds
+selectCodeEditor("DAC_ADC_test_top.sv", 314, 112); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 306, 113); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 293, 115); // bP (w, cs)
+// Elapsed time: 14 seconds
+selectCodeEditor("DAC_ADC_test_top.sv", 301, 74); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 336, 54); // bP (w, cs)
+// Elapsed time: 14 seconds
+selectCodeEditor("DAC_ADC_test_top.sv", 426, 92); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 486, 199); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 666, 113); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 430, 33); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 442, 35); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 503, 33); // bP (w, cs)
+// Elapsed time: 14 seconds
+selectCodeEditor("DAC_ADC_test_top.sv", 392, 82); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 76, 105); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 303, 139, true, false, false, false, false); // bP (w, cs) - Shift Key
+selectCodeEditor("DAC_ADC_test_top.sv", 303, 139); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 313, 143); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 298, 140); // bP (w, cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("DAC_ADC_test_top.sv", 460, 189); // bP (w, cs)
+// Elapsed time: 12 seconds
+selectCodeEditor("DAC_ADC_test_top.sv", 11, 51); // bP (w, cs)
+typeControlKey((HResource) null, "DAC_ADC_test_top.sv", 'c'); // bP (w, cs)
+// Elapsed time: 149 seconds
+selectCodeEditor("DAC_ADC_test_top.sv", 422, 155); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 44, 115); // bP (w, cs)
+typeControlKey((HResource) null, "DAC_ADC_test_top.sv", 'v'); // bP (w, cs)
+typeControlKey(null, null, 'z');
+// Elapsed time: 28 seconds
+selectCodeEditor("DAC_ADC_test_top.sv", 392, 98); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 395, 80); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 502, 95); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 486, 97); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 486, 80); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 486, 57); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 479, 57); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 487, 156); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 473, 141); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 470, 141); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 452, 117); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 449, 97); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 449, 82); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 397, 58); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 393, 76); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 399, 104); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 489, 134); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 397, 118); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 402, 131); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 399, 138); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 344, 133); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 433, 96); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 418, 134); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 410, 174); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 489, 163); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 500, 140); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 174, 75); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 174, 75, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("DAC_ADC_test_top.sv", 157, 102); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 150, 92); // bP (w, cs)
+typeControlKey((HResource) null, "DAC_ADC_test_top.sv", 'v'); // bP (w, cs)
+selectCodeEditor("DAC_ADC_test_top.sv", 217, 141); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("DAC_ADC_test_top.sv", 441, 180); // bP (w, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DAC_ADC_test_top (DAC_ADC_test_top.sv)]", 1); // B (F, cs)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DAC_ADC_test_top (DAC_ADC_test_top.sv)]", 1); // B (F, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "red_pitaya_top.sv (2)", 0); // m (l, cs)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectCodeEditor("DAC_ADC_test_top.sv", 678, 160); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("DAC_ADC_test_top.sv", 202, 121); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,204 MB. GUI used memory: 109 MB. Current time: 5/31/26, 8:08:15 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,204 MB. GUI used memory: 109 MB. Current time: 5/31/26, 8:38:16 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,204 MB. GUI used memory: 108 MB. Current time: 5/31/26, 9:08:16 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,204 MB. GUI used memory: 108 MB. Current time: 5/31/26, 9:38:16 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,204 MB. GUI used memory: 108 MB. Current time: 5/31/26, 10:08:17 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  1020 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1157 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,204 MB. GUI used memory: 108 MB. Current time: 5/31/26, 10:38:18 PM CEST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1097 ms. Increasing delay to 3291 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,204 MB. GUI used memory: 108 MB. Current time: 5/31/26, 11:08:18 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  1539 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  7071859 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,204 MB. GUI used memory: 108 MB. Current time: 6/1/26, 1:29:46 AM CEST
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 7074225 ms. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2437 ms. Increasing delay to 7311 ms.
+// Elapsed time: 20543 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // af (cs)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // af (cs)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // af (cs)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // af (cs)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // af (cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_HELP, "Help"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_HELP, "Help"); // aa (q, cs)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // u (J, cs)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// d (cs): Settings: addNotify
+selectTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, Bitstream]", 5, false); // B (E, d)
+// ar (d): Select A Tcl Script: addNotify
+selectButton(PAResourceOtoP.ProjectFileChooserPanel_NEW_SCRIPT, (String) null); // t (au, ar)
+// WARNING: HEventQueue.dispatchEvent() is taking  1313 ms.
+setFileChooser("D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/generate_bin.tcl");
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ar)
+dismissDialog("Select A Tcl Script"); // ar (d)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset utils_1 -norecurse D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/generate_bin.tcl 
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (d)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// WARNING: HEventQueue.dispatchEvent() is taking  1262 ms.
+// Tcl Message: set_property STEPS.WRITE_BITSTREAM.TCL.POST [ get_files D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/generate_bin.tcl -of [get_fileset utils_1] ] [get_runs impl_1] 
+dismissDialog("Settings"); // d (cs)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 30, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cD' command handler elapsed time: 5 seconds
+dismissDialog("Launch Runs"); // f (cs)
+// bz (cs):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon Jun  1 01:42:52 2026] Launched synth_1... Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.runs/synth_1/runme.log [Mon Jun  1 01:42:52 2026] Launched impl_1... Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 2255.988 ; gain = 0.000 
+// Elapsed time: 20 seconds
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 189 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DAC_ADC_test_top (DAC_ADC_test_top.sv)]", 1); // B (F, cs)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DAC_ADC_test_top (DAC_ADC_test_top.sv)]", 1); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DAC_ADC_test_top (DAC_ADC_test_top.sv)]", 1); // B (F, cs)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DAC_ADC_test_top (DAC_ADC_test_top.sv)]", 1); // B (F, cs)
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Failed: addNotify
+// Elapsed time: 169 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_LOG_WINDOW
+dismissDialog("Bitstream Generation Failed"); // ag (cs)
+// Elapsed time: 11 seconds
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aL (aI, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, [runtcl-4] . . ****** Xilinx Bootgen v2020.1.   **** Build date : May 27 2020-20:24:34.     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.. . [ERROR]  : Cannot read BIT file - red_pitaya_top.bit . ]", 8, false); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, [runtcl-4] . . ****** Xilinx Bootgen v2020.1.   **** Build date : May 27 2020-20:24:34.     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.. . [ERROR]  : Cannot read BIT file - red_pitaya_top.bit . ]", 8, false); // ah (J, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, [runtcl-4] . . ****** Xilinx Bootgen v2020.1.   **** Build date : May 27 2020-20:24:34.     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.. . [ERROR]  : Cannot read BIT file - red_pitaya_top.bit . ]", 8, false); // ah (J, cs)
+// Elapsed time: 78 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DAC_ADC_test_top (DAC_ADC_test_top.sv)]", 1, true, false, false, false, true, false); // B (F, cs) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 4, true); // B (F, cs) - Node
+// Elapsed time: 90 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 30, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cs): Launch Runs: addNotify
+// 'cD' command handler elapsed time: 5 seconds
+dismissDialog("Launch Runs"); // f (cs)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // u (J, cs)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// d (cs): Settings: addNotify
+// ar (d): Select A Tcl Script: addNotify
+selectButton(PAResourceOtoP.ProjectFileChooserPanel_NEW_SCRIPT, (String) null); // t (au, ar)
+setFileChooser("D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/generate_bin.tcl");
+selectCheckBox(PAResourceOtoP.ProjectFileChooserPanel_COPY_SOURCES_INTO_PROJECT, "Copy sources into project", true); // g (au, ar): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ar)
+dismissDialog("Select A Tcl Script"); // ar (d)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: import_files -fileset utils_1 D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/generate_bin.tcl 
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (d)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// Tcl Message: set_property STEPS.WRITE_BITSTREAM.TCL.POST [ get_files D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/utils_1/imports/DAC_ACD_test_project/generate_bin.tcl -of [get_fileset utils_1] ] [get_runs impl_1] 
+dismissDialog("Settings"); // d (cs)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 30, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RUN_MODIFY
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run impl_1 -prev_step  
+// bz (cs):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 10 seconds
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a (bz)
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon Jun  1 01:53:09 2026] Launched impl_1... Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 2255.988 ; gain = 0.000 
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 82 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_REPORTS_WINDOW, "View Reports"); // a (Q, ag)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+// aH (cs): Feedback Request: addNotify
+dismissDialog("Bitstream Generation Completed"); // ag (cs)
+selectButton(PAResourceTtoZ.TouchpointSurveyDialog_NO, "No"); // a (aH)
+dismissDialog("Feedback Request"); // aH (cs)
+selectButton("OptionPane.button", "OK"); // JButton (v, B)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,204 MB. GUI used memory: 147 MB. Current time: 6/1/26, 1:59:46 AM CEST

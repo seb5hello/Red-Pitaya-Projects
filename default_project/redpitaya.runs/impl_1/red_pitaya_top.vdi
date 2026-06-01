@@ -1,0 +1,1013 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun May 31 17:05:31 2026
+# Process ID: 14180
+# Current directory: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.runs/impl_1
+# Command line: vivado.exe -log red_pitaya_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source red_pitaya_top.tcl -notrace
+# Log file: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.runs/impl_1/red_pitaya_top.vdi
+# Journal file: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source red_pitaya_top.tcl -notrace
+Command: link_design -top red_pitaya_top -part xc7z010clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-454] Reading design checkpoint 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.dcp' for cell 'i_asg/chA/inst_axi_dac/inst_asg_dat_fifo'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/sync_fifo/sync_fifo.dcp' for cell 'i_asg/chA/inst_axi_dac/inst_sync_fifo'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/bd/system/ip/system_axi_protocol_converter_0_0/system_axi_protocol_converter_0_0.dcp' for cell 'ps/system_i/axi_protocol_converter_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/bd/system/ip/system_axi_register_slice_0_0/system_axi_register_slice_0_0.dcp' for cell 'ps/system_i/axi_register_slice_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/bd/system/ip/system_proc_sys_reset_0/system_proc_sys_reset_0.dcp' for cell 'ps/system_i/proc_sys_reset'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0/system_processing_system7_0.dcp' for cell 'ps/system_i/processing_system7'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/system_xadc_0.dcp' for cell 'ps/system_i/xadc'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.564 . Memory (MB): peak = 1013.430 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 979 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.xdc] for cell 'i_asg/chA/inst_axi_dac/inst_asg_dat_fifo/U0'
+Finished Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.xdc] for cell 'i_asg/chA/inst_axi_dac/inst_asg_dat_fifo/U0'
+Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.xdc] for cell 'i_asg/chB/inst_axi_dac/inst_asg_dat_fifo/U0'
+Finished Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.xdc] for cell 'i_asg/chB/inst_axi_dac/inst_asg_dat_fifo/U0'
+Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/sync_fifo/sync_fifo.xdc] for cell 'i_asg/chA/inst_axi_dac/inst_sync_fifo/U0'
+Finished Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/sync_fifo/sync_fifo.xdc] for cell 'i_asg/chA/inst_axi_dac/inst_sync_fifo/U0'
+Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/sync_fifo/sync_fifo.xdc] for cell 'i_asg/chB/inst_axi_dac/inst_sync_fifo/U0'
+Finished Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/sync_fifo/sync_fifo.xdc] for cell 'i_asg/chB/inst_axi_dac/inst_sync_fifo/U0'
+Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/bd/system/ip/system_proc_sys_reset_0/system_proc_sys_reset_0_board.xdc] for cell 'ps/system_i/proc_sys_reset/U0'
+Finished Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/bd/system/ip/system_proc_sys_reset_0/system_proc_sys_reset_0_board.xdc] for cell 'ps/system_i/proc_sys_reset/U0'
+Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/bd/system/ip/system_proc_sys_reset_0/system_proc_sys_reset_0.xdc] for cell 'ps/system_i/proc_sys_reset/U0'
+Finished Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/bd/system/ip/system_proc_sys_reset_0/system_proc_sys_reset_0.xdc] for cell 'ps/system_i/proc_sys_reset/U0'
+Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0/system_processing_system7_0.xdc] for cell 'ps/system_i/processing_system7/inst'
+Finished Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/bd/system/ip/system_processing_system7_0/system_processing_system7_0.xdc] for cell 'ps/system_i/processing_system7/inst'
+Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/system_xadc_0.xdc] for cell 'ps/system_i/xadc/inst'
+Finished Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/bd/system/ip/system_xadc_0/system_xadc_0.xdc] for cell 'ps/system_i/xadc/inst'
+Parsing XDC File [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc]
+WARNING: [Vivado 12-584] No ports matched 'dac_clk_1x'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:206]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports dac_clk_1x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:206]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'dac_clk_2x'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:207]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports dac_clk_2x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:207]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'dac_clk_2p'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:208]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports dac_clk_2p]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:208]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+INFO: [Timing 38-35] Done setting XDC timing constraints. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:211]
+INFO: [Timing 38-2] Deriving generated clocks [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:211]
+WARNING: [Vivado 12-627] No clocks matched 'dac_clk_2x'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:211]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:211]
+get_clocks: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1359.766 ; gain = 346.336
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_2x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:211]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'dac_clk_2p'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:212]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:212]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_2p]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:212]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'dac_clk_1x'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:218]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:218]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_1x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:218]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'dac_clk_2x'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:219]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:219]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_2x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:219]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'dac_clk_2p'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:220]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:220]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_2p]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:220]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'ser_clk'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:221]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:221]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks ser_clk]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:221]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'pdm_clk'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:222]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:222]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks pdm_clk]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:222]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'dac_clk_2x'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:223]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:223]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_2x]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:223]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'dac_clk_2p'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:224]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:224]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks dac_clk_2p]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc:224]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc]
+Parsing XDC File [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc]
+WARNING: [Vivado 12-180] No cells matched 'i_ams/XADC_inst'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:1]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:1]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'exp_p_io[8]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'exp_n_io[8]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'exp_p_io[9]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'exp_n_io[9]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'exp_p_io[10]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'exp_n_io[10]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-508] No pins matched 'spi_done_csff*/D'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:66]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_pins spi_done_csff*/D]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:66]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-508] No pins matched 'sys_bus_interconnect/for_bus[*].inst_sys_bus_cdc/reg_rdata*[*]*/C'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:71]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_pins {sys_bus_interconnect/for_bus[*].inst_sys_bus_cdc/reg_rdata*[*]*/C}]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:71]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-508] No pins matched 'i_adc366x/adc_dat_o*[*]/C'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:74]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_pins {i_adc366x/adc_dat_o*[*]/C}]'. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:74]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc]
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/sync_fifo/sync_fifo.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/sync_fifo/sync_fifo.dcp'
+Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo_clocks.xdc] for cell 'i_asg/chA/inst_axi_dac/inst_asg_dat_fifo/U0'
+Finished Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo_clocks.xdc] for cell 'i_asg/chA/inst_axi_dac/inst_asg_dat_fifo/U0'
+Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo_clocks.xdc] for cell 'i_asg/chB/inst_axi_dac/inst_asg_dat_fifo/U0'
+Finished Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo_clocks.xdc] for cell 'i_asg/chB/inst_axi_dac/inst_asg_dat_fifo/U0'
+Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/sync_fifo/sync_fifo_clocks.xdc] for cell 'i_asg/chA/inst_axi_dac/inst_sync_fifo/U0'
+Finished Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/sync_fifo/sync_fifo_clocks.xdc] for cell 'i_asg/chA/inst_axi_dac/inst_sync_fifo/U0'
+Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/sync_fifo/sync_fifo_clocks.xdc] for cell 'i_asg/chB/inst_axi_dac/inst_sync_fifo/U0'
+Finished Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/ip/sync_fifo/sync_fifo_clocks.xdc] for cell 'i_asg/chB/inst_axi_dac/inst_sync_fifo/U0'
+Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/bd/system/ip/system_axi_register_slice_0_0/system_axi_register_slice_0_0_clocks.xdc] for cell 'ps/system_i/axi_register_slice_0/inst'
+WARNING: [Vivado 12-180] No cells matched '.*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*'. [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/bd/system/ip/system_axi_register_slice_0_0/system_axi_register_slice_0_0_clocks.xdc:10]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CLR -of_objects [get_cells -hierarchical -regexp .*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*]'. [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/bd/system/ip/system_axi_register_slice_0_0/system_axi_register_slice_0_0_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/bd/system/ip/system_axi_register_slice_0_0/system_axi_register_slice_0_0_clocks.xdc:10]
+Finished Parsing XDC File [d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/bd/system/ip/system_axi_register_slice_0_0/system_axi_register_slice_0_0_clocks.xdc] for cell 'ps/system_i/axi_register_slice_0/inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'i_asg/chA/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'i_asg/chB/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1359.766 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 80 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 16 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 2 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 62 instances
+
+29 Infos, 25 Warnings, 22 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:40 . Memory (MB): peak = 1359.766 ; gain = 346.336
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1359.766 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 1c67a897e
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1359.766 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 101c0c888
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1517.445 ; gain = 0.758
+INFO: [Opt 31-389] Phase Retarget created 7 cells and removed 69 cells
+INFO: [Opt 31-1021] In phase Retarget, 26 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: b8f36ec6
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1517.445 ; gain = 0.758
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 100 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 24 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 19ead3d26
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1517.445 ; gain = 0.758
+INFO: [Opt 31-389] Phase Sweep created 8 cells and removed 379 cells
+INFO: [Opt 31-1021] In phase Sweep, 56 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: ee616ff3
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1517.445 ; gain = 0.758
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 1 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: ee616ff3
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1517.445 ; gain = 0.758
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 1173be451
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1517.445 ; gain = 0.758
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 24 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               7  |              69  |                                             26  |
+|  Constant propagation         |               0  |             100  |                                             24  |
+|  Sweep                        |               8  |             379  |                                             56  |
+|  BUFG optimization            |               0  |               1  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                             24  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1517.445 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 129917b51
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1517.445 ; gain = 0.758
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Power 33-23] Power model is not available for i_DNA
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 36 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-201] Structural ODC has moved 2 WE to EN ports
+Number of BRAM Ports augmented: 20 newly gated: 2 Total Ports: 72
+Ending PowerOpt Patch Enables Task | Checksum: bb372f9f
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1775.160 ; gain = 0.000
+Ending Power Optimization Task | Checksum: bb372f9f
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 1775.160 ; gain = 257.715
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: bb372f9f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 1775.160 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 6c700595
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 1775.160 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+57 Infos, 25 Warnings, 22 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:28 . Memory (MB): peak = 1775.160 ; gain = 415.395
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 1775.160 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.runs/impl_1/red_pitaya_top_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file red_pitaya_top_drc_opted.rpt -pb red_pitaya_top_drc_opted.pb -rpx red_pitaya_top_drc_opted.rpx
+Command: report_drc -file red_pitaya_top_drc_opted.rpt -pb red_pitaya_top_drc_opted.pb -rpx red_pitaya_top_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.runs/impl_1/red_pitaya_top_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC REQP-1723] DSP_Abus_sign_bit_restriction: i_pid/i_pid22/int_sum: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1724] DSP_Dbus_sign_bit_restriction: i_pid/i_pid21/kd_mult: When using the PreAdder and USE_DPORT is TRUE, the D operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 2 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1775.160 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 4165e37f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1775.160 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[0][10]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[0][11]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[0][12]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[0][13]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[0][14]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[0][15]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[0][2]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[0][3]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[0][4]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[0][5]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[0][6]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[0][7]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[0][8]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[0][9]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[1][10]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[1][11]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[1][12]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[1][13]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[1][14]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[1][15]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[1][2]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[1][3]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[1][4]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[1][5]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[1][6]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[1][7]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[1][8]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'adc_dat_i[1][9]' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 19bcf3227
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1d32cd0c0
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1d32cd0c0
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1775.160 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 1d32cd0c0
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1aed79fc3
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Phase 2.2 Global Placement Core
+
+Phase 2.2.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 5 LUTNM shape to break, 595 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 5, two critical 0, total 5, new lutff created 0
+INFO: [Physopt 32-775] End 1 Pass. Optimized 216 nets or cells. Created 5 new cells, deleted 211 existing cells and moved 0 existing cell
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-457] Pass 1. Identified 2 candidate cells for DSP register optimization.
+INFO: [Physopt 32-665] Processed cell i_scope/genblk1[1].i_dfilt1_ch/kk_mult_reg. 17 registers were pushed out.
+INFO: [Physopt 32-666] Processed cell i_scope/genblk1[1].i_dfilt1_ch/pp_mult. No change.
+INFO: [Physopt 32-457] Pass 2. Identified 1 candidate cell for DSP register optimization.
+INFO: [Physopt 32-666] Processed cell i_scope/genblk1[1].i_dfilt1_ch/pp_mult. No change.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 1 net or cell. Created 17 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1775.160 ; gain = 0.000
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            5  |            211  |                   216  |           0  |           1  |  00:00:01  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |           17  |              0  |                     1  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |           22  |            211  |                   217  |           0  |           8  |  00:00:01  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 1ddb44682
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:25 . Memory (MB): peak = 1775.160 ; gain = 0.000
+Phase 2.2 Global Placement Core | Checksum: 1b8ae48f9
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:25 . Memory (MB): peak = 1775.160 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 1b8ae48f9
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:25 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 2692b01a8
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:26 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 201ba773c
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:28 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 2276d8628
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:29 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 28687a09d
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:29 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 27eb341c2
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:32 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: fedafe0e
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:39 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 1e6f0ca9b
+
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:40 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 22003ac1b
+
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:40 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 1d4a7ebbe
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:46 . Memory (MB): peak = 1775.160 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1d4a7ebbe
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:46 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: bb8fbe89
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.643 | TNS=-3.920 |
+Phase 1 Physical Synthesis Initialization | Checksum: 12f188ad4
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1775.160 ; gain = 0.000
+INFO: [Place 46-33] Processed net i_scope/i_cfg/adc_rstn_reg, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 1, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 9f3f9b41
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1775.160 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: bb8fbe89
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:52 . Memory (MB): peak = 1775.160 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.107. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 54417846
+
+Time (s): cpu = 00:01:56 ; elapsed = 00:01:30 . Memory (MB): peak = 1775.160 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 54417846
+
+Time (s): cpu = 00:01:56 ; elapsed = 00:01:31 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 54417846
+
+Time (s): cpu = 00:01:56 ; elapsed = 00:01:31 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 54417846
+
+Time (s): cpu = 00:01:56 ; elapsed = 00:01:31 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1775.160 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: 8f189bce
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:01:31 . Memory (MB): peak = 1775.160 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 8f189bce
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:01:31 . Memory (MB): peak = 1775.160 ; gain = 0.000
+Ending Placer Task | Checksum: 5484720c
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:01:31 . Memory (MB): peak = 1775.160 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+101 Infos, 27 Warnings, 50 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:02:01 ; elapsed = 00:01:33 . Memory (MB): peak = 1775.160 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 1775.160 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.runs/impl_1/red_pitaya_top_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file red_pitaya_top_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 1775.160 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file red_pitaya_top_utilization_placed.rpt -pb red_pitaya_top_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file red_pitaya_top_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 1775.160 ; gain = 0.000
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+110 Infos, 27 Warnings, 50 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1775.160 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.runs/impl_1/red_pitaya_top_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[0][10] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[0][11] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[0][12] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[0][13] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[0][14] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[0][15] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[0][2] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[0][3] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[0][4] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[0][5] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[0][6] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[0][7] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[0][8] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[0][9] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[1][10] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[1][11] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[1][12] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[1][13] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[1][14] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[1][15] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[1][2] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[1][3] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[1][4] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[1][5] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[1][6] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[1][7] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[1][8] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal adc_dat_i[1][9] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 28 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: 1565a406 ConstDB: 0 ShapeSum: 3f1ece06 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 18cec8038
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 1775.160 ; gain = 0.000
+Post Restoration Checksum: NetGraph: 9b8ed179 NumContArr: f15daebf Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 18cec8038
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 18cec8038
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 1775.160 ; gain = 0.000
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 18cec8038
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 1775.160 ; gain = 0.000
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1f750f6bb
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:22 . Memory (MB): peak = 1800.059 ; gain = 24.898
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.036  | TNS=0.000  | WHS=-0.730 | THS=-353.550|
+
+
+Phase 2.5 Update Timing for Bus Skew
+
+Phase 2.5.1 Update Timing
+Phase 2.5.1 Update Timing | Checksum: 1e86f5421
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:26 . Memory (MB): peak = 1868.203 ; gain = 93.043
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.036  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 2.5 Update Timing for Bus Skew | Checksum: 27ae4cb29
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:26 . Memory (MB): peak = 1868.273 ; gain = 93.113
+Phase 2 Router Initialization | Checksum: 248b886c1
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:26 . Memory (MB): peak = 1868.273 ; gain = 93.113
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.0129505 %
+  Global Horizontal Routing Utilization  = 0.00436581 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 18503
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 18501
+  Number of Partially Routed Nets     = 2
+  Number of Node Overlaps             = 1
+
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1d3e6820d
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:29 . Memory (MB): peak = 1879.336 ; gain = 104.176
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 2436
+ Number of Nodes with overlaps = 534
+ Number of Nodes with overlaps = 186
+ Number of Nodes with overlaps = 83
+ Number of Nodes with overlaps = 15
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.449 | TNS=-7.314 | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 21d75eab4
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:45 . Memory (MB): peak = 1879.336 ; gain = 104.176
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 238
+ Number of Nodes with overlaps = 61
+ Number of Nodes with overlaps = 28
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.381 | TNS=-5.567 | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 1570c000b
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:49 . Memory (MB): peak = 1879.336 ; gain = 104.176
+
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 162
+ Number of Nodes with overlaps = 43
+ Number of Nodes with overlaps = 21
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.358 | TNS=-4.881 | WHS=N/A    | THS=N/A    |
+
+Phase 4.3 Global Iteration 2 | Checksum: 2136ec406
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:00:54 . Memory (MB): peak = 1879.336 ; gain = 104.176
+
+Phase 4.4 Global Iteration 3
+ Number of Nodes with overlaps = 155
+ Number of Nodes with overlaps = 30
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.403 | TNS=-5.611 | WHS=N/A    | THS=N/A    |
+
+Phase 4.4 Global Iteration 3 | Checksum: 1e8fc40a7
+
+Time (s): cpu = 00:01:26 ; elapsed = 00:00:55 . Memory (MB): peak = 1879.336 ; gain = 104.176
+Phase 4 Rip-up And Reroute | Checksum: 1e8fc40a7
+
+Time (s): cpu = 00:01:26 ; elapsed = 00:00:56 . Memory (MB): peak = 1879.336 ; gain = 104.176
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1e7b0feb9
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:00:57 . Memory (MB): peak = 1879.336 ; gain = 104.176
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.243 | TNS=-1.139 | WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 2280852fc
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:00:57 . Memory (MB): peak = 1879.336 ; gain = 104.176
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 2280852fc
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:00:57 . Memory (MB): peak = 1879.336 ; gain = 104.176
+Phase 5 Delay and Skew Optimization | Checksum: 2280852fc
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:00:57 . Memory (MB): peak = 1879.336 ; gain = 104.176
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1d9573c52
+
+Time (s): cpu = 00:01:30 ; elapsed = 00:00:58 . Memory (MB): peak = 1879.336 ; gain = 104.176
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.208 | TNS=-0.813 | WHS=-0.006 | THS=-0.006 |
+
+
+Phase 6.1.2 Lut RouteThru Assignment for hold
+Phase 6.1.2 Lut RouteThru Assignment for hold | Checksum: 284e4bad8
+
+Time (s): cpu = 00:01:31 ; elapsed = 00:00:59 . Memory (MB): peak = 1879.336 ; gain = 104.176
+Phase 6.1 Hold Fix Iter | Checksum: 284e4bad8
+
+Time (s): cpu = 00:01:31 ; elapsed = 00:00:59 . Memory (MB): peak = 1879.336 ; gain = 104.176
+Phase 6 Post Hold Fix | Checksum: 1f7325a25
+
+Time (s): cpu = 00:01:31 ; elapsed = 00:00:59 . Memory (MB): peak = 1879.336 ; gain = 104.176
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 12.9506 %
+  Global Horizontal Routing Utilization  = 15.5257 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 72.973%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 73.8739%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 77.9412%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 73.5294%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 228592b4b
+
+Time (s): cpu = 00:01:31 ; elapsed = 00:00:59 . Memory (MB): peak = 1879.336 ; gain = 104.176
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 228592b4b
+
+Time (s): cpu = 00:01:31 ; elapsed = 00:00:59 . Memory (MB): peak = 1879.336 ; gain = 104.176
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 19ee3531b
+
+Time (s): cpu = 00:01:32 ; elapsed = 00:01:01 . Memory (MB): peak = 1879.336 ; gain = 104.176
+
+Phase 10 Post Router Timing
+
+Phase 10.1 Update Timing
+Phase 10.1 Update Timing | Checksum: 20fa75da0
+
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:02 . Memory (MB): peak = 1879.336 ; gain = 104.176
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.208 | TNS=-0.813 | WHS=0.050  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 20fa75da0
+
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:02 . Memory (MB): peak = 1879.336 ; gain = 104.176
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:02 . Memory (MB): peak = 1879.336 ; gain = 104.176
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+128 Infos, 56 Warnings, 50 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:39 ; elapsed = 00:01:22 . Memory (MB): peak = 1879.336 ; gain = 104.176
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 1879.336 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.runs/impl_1/red_pitaya_top_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file red_pitaya_top_drc_routed.rpt -pb red_pitaya_top_drc_routed.pb -rpx red_pitaya_top_drc_routed.rpx
+Command: report_drc -file red_pitaya_top_drc_routed.rpt -pb red_pitaya_top_drc_routed.pb -rpx red_pitaya_top_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.runs/impl_1/red_pitaya_top_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file red_pitaya_top_methodology_drc_routed.rpt -pb red_pitaya_top_methodology_drc_routed.pb -rpx red_pitaya_top_methodology_drc_routed.rpx
+Command: report_methodology -file red_pitaya_top_methodology_drc_routed.rpt -pb red_pitaya_top_methodology_drc_routed.pb -rpx red_pitaya_top_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.runs/impl_1/red_pitaya_top_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 1966.066 ; gain = 81.926
+INFO: [runtcl-4] Executing : report_power -file red_pitaya_top_power_routed.rpt -pb red_pitaya_top_power_summary_routed.pb -rpx red_pitaya_top_power_routed.rpx
+Command: report_power -file red_pitaya_top_power_routed.rpt -pb red_pitaya_top_power_summary_routed.pb -rpx red_pitaya_top_power_routed.rpx
+INFO: [Power 33-23] Power model is not available for i_DNA
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+141 Infos, 57 Warnings, 50 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 1966.211 ; gain = 0.145
+INFO: [runtcl-4] Executing : report_route_status -file red_pitaya_top_route_status.rpt -pb red_pitaya_top_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file red_pitaya_top_timing_summary_routed.rpt -pb red_pitaya_top_timing_summary_routed.pb -rpx red_pitaya_top_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file red_pitaya_top_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file red_pitaya_top_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file red_pitaya_top_bus_skew_routed.rpt -pb red_pitaya_top_bus_skew_routed.pb -rpx red_pitaya_top_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Command: write_bitstream -force red_pitaya_top.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC DPIP-1] Input pipelining: DSP i_asg/chA/dac_mult_reg input i_asg/chA/dac_mult_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP i_asg/chB/dac_mult_reg input i_asg/chB/dac_mult_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP i_scope/genblk1[0].i_calib_ch/gain_calc_r1 input i_scope/genblk1[0].i_calib_ch/gain_calc_r1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP i_scope/genblk1[0].i_calib_ch/gain_calc_r1__0 input i_scope/genblk1[0].i_calib_ch/gain_calc_r1__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP i_scope/genblk1[0].i_dfilt1_ch/kk_mult_reg input i_scope/genblk1[0].i_dfilt1_ch/kk_mult_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP i_scope/genblk1[1].i_calib_ch/gain_calc_r1 input i_scope/genblk1[1].i_calib_ch/gain_calc_r1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP i_scope/genblk1[1].i_calib_ch/gain_calc_r1__0 input i_scope/genblk1[1].i_calib_ch/gain_calc_r1__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP i_scope/genblk1[1].i_dfilt1_ch/kk_mult_reg input i_scope/genblk1[1].i_dfilt1_ch/kk_mult_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP i_scope/genblk1[1].i_dfilt1_ch/kk_mult_reg input i_scope/genblk1[1].i_dfilt1_ch/kk_mult_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_pid/i_pid11/int_sum output i_pid/i_pid11/int_sum/PATTERNBDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_pid/i_pid11/int_sum output i_pid/i_pid11/int_sum/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_pid/i_pid11/int_sum output i_pid/i_pid11/int_sum/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_pid/i_pid12/int_sum output i_pid/i_pid12/int_sum/PATTERNBDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_pid/i_pid12/int_sum output i_pid/i_pid12/int_sum/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_pid/i_pid12/int_sum output i_pid/i_pid12/int_sum/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_pid/i_pid21/int_sum output i_pid/i_pid21/int_sum/PATTERNBDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_pid/i_pid21/int_sum output i_pid/i_pid21/int_sum/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_pid/i_pid21/int_sum output i_pid/i_pid21/int_sum/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_pid/i_pid22/int_sum output i_pid/i_pid22/int_sum/PATTERNBDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_pid/i_pid22/int_sum output i_pid/i_pid22/int_sum/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_pid/i_pid22/int_sum output i_pid/i_pid22/int_sum/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_scope/genblk1[0].i_dfilt1_ch/pp_mult output i_scope/genblk1[0].i_dfilt1_ch/pp_mult/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_scope/genblk1[0].i_dfilt1_ch/r3_sum__0 output i_scope/genblk1[0].i_dfilt1_ch/r3_sum__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_scope/genblk1[1].i_dfilt1_ch/pp_mult output i_scope/genblk1[1].i_dfilt1_ch/pp_mult/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP i_scope/genblk1[1].i_dfilt1_ch/r3_sum__0 output i_scope/genblk1[1].i_dfilt1_ch/r3_sum__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_asg/chA/dac_mult_reg multiplier stage i_asg/chA/dac_mult_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_asg/chB/dac_mult_reg multiplier stage i_asg/chB/dac_mult_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_pid/i_pid11/kd_mult multiplier stage i_pid/i_pid11/kd_mult/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_pid/i_pid11/kp_mult multiplier stage i_pid/i_pid11/kp_mult/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_pid/i_pid12/kd_mult multiplier stage i_pid/i_pid12/kd_mult/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_pid/i_pid12/kp_mult multiplier stage i_pid/i_pid12/kp_mult/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_pid/i_pid21/kd_mult multiplier stage i_pid/i_pid21/kd_mult/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_pid/i_pid21/kp_mult multiplier stage i_pid/i_pid21/kp_mult/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_pid/i_pid22/kd_mult multiplier stage i_pid/i_pid22/kd_mult/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_pid/i_pid22/kp_mult multiplier stage i_pid/i_pid22/kp_mult/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_scope/genblk1[0].i_calib_ch/gain_calc_r1__0 multiplier stage i_scope/genblk1[0].i_calib_ch/gain_calc_r1__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_scope/genblk1[0].i_dfilt1_ch/bb_mult multiplier stage i_scope/genblk1[0].i_dfilt1_ch/bb_mult/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_scope/genblk1[0].i_dfilt1_ch/kk_mult_reg multiplier stage i_scope/genblk1[0].i_dfilt1_ch/kk_mult_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_scope/genblk1[0].i_dfilt1_ch/pp_mult multiplier stage i_scope/genblk1[0].i_dfilt1_ch/pp_mult/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_scope/genblk1[1].i_calib_ch/gain_calc_r1__0 multiplier stage i_scope/genblk1[1].i_calib_ch/gain_calc_r1__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_scope/genblk1[1].i_dfilt1_ch/bb_mult multiplier stage i_scope/genblk1[1].i_dfilt1_ch/bb_mult/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_scope/genblk1[1].i_dfilt1_ch/kk_mult_reg multiplier stage i_scope/genblk1[1].i_dfilt1_ch/kk_mult_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP i_scope/genblk1[1].i_dfilt1_ch/pp_mult multiplier stage i_scope/genblk1[1].i_dfilt1_ch/pp_mult/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC PDRC-153] Gated clock check: Net i_daisy/genblk4[0].txp_dv_reg[0]_i_2_n_0 is a gated clock net sourced by a combinational pin i_daisy/genblk4[0].txp_dv_reg[0]_i_2/O, cell i_daisy/genblk4[0].txp_dv_reg[0]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC REQP-1723] DSP_Abus_sign_bit_restriction: i_pid/i_pid22/int_sum: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1724] DSP_Dbus_sign_bit_restriction: i_pid/i_pid21/kd_mult: When using the PreAdder and USE_DPORT is TRUE, the D operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC RTSTAT-10] No routable loads: 26 net(s) have no routable loads. The problem bus(es) and/or net(s) are i_asg/chB/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ENA_I, i_asg/chA/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ENA_I, i_asg/chA/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[2:0], i_asg/chA/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[2:0], i_asg/chB/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[2:0], i_asg/chB/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[2:0], i_asg/chA/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[2:0], i_asg/chA/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[2:0], i_asg/chB/inst_axi_dac/inst_asg_dat_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[2:0], and i_asg/chB/inst_axi_dac/inst_sync_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[2:0].
+INFO: [DRC REQP-24] enum_BREG_0_connects_CEB1_GND_connects_CEB2_GND: i_scope/genblk1[1].i_dfilt1_ch/kk_mult_reg: When DSP48E1 attribute BREG is set to 0, the CEB1 and CEB2 pins should be tied to GND to save power.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 47 Warnings, 1 Advisories
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./red_pitaya_top.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+161 Infos, 105 Warnings, 51 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:25 ; elapsed = 00:00:52 . Memory (MB): peak = 2347.008 ; gain = 380.797
+INFO: [Common 17-206] Exiting Vivado at Sun May 31 17:11:16 2026...
