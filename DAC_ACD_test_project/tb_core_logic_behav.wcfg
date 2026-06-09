@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_core_logic_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_core_logic" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1200544fs"></ZoomStartTime>
+      <ZoomEndTime time="1276045fs"></ZoomEndTime>
+      <Cursor1Time time="1227344fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="152"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/tb_core_logic/clk_i" type="logic">
+      <obj_property name="ElementShortName">clk_i</obj_property>
+      <obj_property name="ObjectShortName">clk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_core_logic/rstn_i" type="logic">
+      <obj_property name="ElementShortName">rstn_i</obj_property>
+      <obj_property name="ObjectShortName">rstn_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_core_logic/arm_i" type="logic">
+      <obj_property name="ElementShortName">arm_i</obj_property>
+      <obj_property name="ObjectShortName">arm_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_core_logic/trigger_i" type="logic">
+      <obj_property name="ElementShortName">trigger_i</obj_property>
+      <obj_property name="ObjectShortName">trigger_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_core_logic/dut_ramp/dac_dat_o" type="array">
+      <obj_property name="ElementShortName">dac_dat_o[13:0]</obj_property>
+      <obj_property name="ObjectShortName">dac_dat_o[13:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_core_logic/dut_test_gen/counter" type="array">
+      <obj_property name="ElementShortName">counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_core_logic/dut_test_gen/dac_dat_o" type="array">
+      <obj_property name="ElementShortName">dac_dat_o[13:0]</obj_property>
+      <obj_property name="ObjectShortName">dac_dat_o[13:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_core_logic/dut_detector/ts_1_o" type="array">
+      <obj_property name="ElementShortName">ts_1_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ts_1_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_core_logic/dut_detector/ts_2_o" type="array">
+      <obj_property name="ElementShortName">ts_2_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ts_2_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_core_logic/dut_detector/ts_3_o" type="array">
+      <obj_property name="ElementShortName">ts_3_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ts_3_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_core_logic/dut_detector/ts_4_o" type="array">
+      <obj_property name="ElementShortName">ts_4_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ts_4_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_core_logic/dut_detector/done_o" type="logic">
+      <obj_property name="ElementShortName">done_o</obj_property>
+      <obj_property name="ObjectShortName">done_o</obj_property>
+   </wvobject>
+</wave_config>

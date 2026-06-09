@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Mon Jun  1 01:46:25 2026
+| Date             : Tue Jun  9 10:34:33 2026
 | Host             : 20190748 running 64-bit major release  (build 9200)
 | Command          : report_power -file DAC_ADC_test_top_power_routed.rpt -pb DAC_ADC_test_top_power_summary_routed.pb -rpx DAC_ADC_test_top_power_routed.rpx
 | Design           : DAC_ADC_test_top
@@ -52,16 +52,16 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.021 |       14 |       --- |             --- |
-| Slice Logic             |     0.005 |     4040 |       --- |             --- |
-|   LUT as Logic          |     0.004 |     1193 |     17600 |            6.78 |
-|   Register              |    <0.001 |     2191 |     35200 |            6.22 |
-|   CARRY4                |    <0.001 |       72 |      4400 |            1.64 |
+| Clocks                  |     0.022 |       14 |       --- |             --- |
+| Slice Logic             |     0.005 |     4664 |       --- |             --- |
+|   LUT as Logic          |     0.004 |     1437 |     17600 |            8.16 |
+|   Register              |    <0.001 |     2286 |     35200 |            6.49 |
+|   CARRY4                |    <0.001 |      142 |      4400 |            3.23 |
 |   LUT as Shift Register |    <0.001 |       48 |      6000 |            0.80 |
-|   Others                |     0.000 |      244 |       --- |             --- |
-| Signals                 |     0.007 |     3343 |       --- |             --- |
+|   Others                |     0.000 |      246 |       --- |             --- |
+| Signals                 |     0.007 |     3324 |       --- |             --- |
 | PLL                     |     0.097 |        1 |         2 |           50.00 |
-| I/O                     |     0.082 |       61 |       100 |           61.00 |
+| I/O                     |     0.081 |       47 |       100 |           47.00 |
 | XADC                    |     0.004 |        1 |       --- |             --- |
 | PS7                     |     1.315 |        1 |       --- |             --- |
 | Static Power            |     0.125 |          |           |                 |
@@ -159,17 +159,19 @@ Table of Contents
 | Name                           | Power (W) |
 +--------------------------------+-----------+
 | DAC_ADC_test_top               |     1.531 |
+|   generator_peak_timestamp     |     0.004 |
+|     peak_gen_logic             |     0.002 |
 |   i_OBUF_daisy_clk             |     0.004 |
 |   i_OBUF_daisy_dat             |     0.004 |
 |   i_hk                         |     0.002 |
-|   i_test_gen                   |     0.001 |
-|   i_timestamp                  |     0.001 |
 |   pll                          |     0.097 |
-|   ps                           |     1.342 |
+|   ps                           |     1.341 |
+|     axi_master_2               |     0.001 |
+|     axi_master_3               |     0.001 |
 |     axi_slave_gp0              |     0.002 |
-|     system_i                   |     1.338 |
-|       axi_protocol_converter_0 |     0.011 |
-|       axi_register_slice_0     |     0.003 |
+|     system_i                   |     1.337 |
+|       axi_protocol_converter_0 |     0.010 |
+|       axi_register_slice_0     |     0.002 |
 |       processing_system7       |     1.316 |
 |       xadc                     |     0.008 |
 |   sys_bus_interconnect         |     0.002 |

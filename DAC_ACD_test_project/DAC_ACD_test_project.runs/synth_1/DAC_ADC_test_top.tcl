@@ -93,8 +93,11 @@ read_verilog -library xil_defaultlib -sv {
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/imports/RedPitaya/rtl/axi4_slave.sv
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/imports/RedPitaya/rtl/interface/axi_sys_if.sv
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_ramp_gen.sv
+  D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_ramp_gen_core.sv
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen.sv
+  D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen_core.sv
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_timestamp_detector.sv
+  D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_timestamp_detector_core.sv
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/imports/RedPitaya/rtl/freq_meter.sv
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/imports/RedPitaya/rtl/interface/gpio_if.sv
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/imports/RedPitaya/rtl/red_pitaya_pll.sv

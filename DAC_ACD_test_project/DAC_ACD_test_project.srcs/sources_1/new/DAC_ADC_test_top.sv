@@ -294,7 +294,7 @@ system_controller i_sys_ctrl (
 ////////////////////////////////////////////////////////////////////////////////
 // SYS [2]: Custom Ramp Generator (DAC Channel A)
 ////////////////////////////////////////////////////////////////////////////////
-custom_ramp_gen i_ramp (
+custom_ramp_gen generator_ramp (
     .clk_i      (adc_clk),
     .rstn_i     (adc_rstn),
     .arm_i      (global_arm),     // Driven by Orchestrator
@@ -312,7 +312,7 @@ custom_ramp_gen i_ramp (
 ////////////////////////////////////////////////////////////////////////////////
 // SYS [3]: Custom Peak & Timestamp Detector (ADC Channel A)
 ////////////////////////////////////////////////////////////////////////////////
-custom_timestamp_detector i_timestamp (
+custom_timestamp_detector detector_timestamp (
     .clk_i      (adc_clk),
     .rstn_i     (adc_rstn),
     .arm_i      (global_arm),     // Driven by Orchestrator
@@ -330,7 +330,7 @@ custom_timestamp_detector i_timestamp (
 ////////////////////////////////////////////////////////////////////////////////
 // SYS [4]: Custom Test Peak Generator (DAC Channel B)
 ////////////////////////////////////////////////////////////////////////////////
-custom_test_peak_gen i_test_gen (
+custom_test_peak_gen generator_peak_timestamp (
     .clk_i      (adc_clk),
     .rstn_i     (adc_rstn),
     .arm_i      (global_arm),     // Driven by Orchestrator

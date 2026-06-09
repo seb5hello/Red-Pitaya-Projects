@@ -2,8 +2,10 @@ import requests
 import time
 
 # Replace with your Red Pitaya's local IP address
-RP_IP = "192.168.2.29" 
+# RP_IP = "192.168.2.29" 
+RP_IP = "100.83.1.106" 
 BASE_URL = f"http://{RP_IP}:5000/api"
+
 
 def configure_system():
     print("1. Configuring Ramp Generator...")
@@ -20,7 +22,8 @@ def configure_system():
         "dly_3": 450,  # Cycle 450
         "dly_4": 600,  # Cycle 600
         "peak_amp": 6000, # Amplitude above threshold
-        "base_amp": 0
+        "base_amp": 0,
+        "pulse_width": 5 # ADDED: Hold peak amplitude for 5 clock cycles
     })
 
 def run_test():
