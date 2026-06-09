@@ -20,8 +20,11 @@ def write_mem(base_addr, offset, value):
     # Cast the buffer into a C-style array of 32-bit unsigned integers
     axi_array = (ctypes.c_uint32 * (MAP_SIZE // 4)).from_buffer(mem)
     
-    # Write the value. Divide offset by 4 to convert byte-offset to array index.
+    # Write the value
     axi_array[offset // 4] = value
+    
+    # CRITICAL FIX: Explicitly delete the C-pointer to unlock the buffer
+    del axi_array
     
     mem.close()
     os.close(fd)
@@ -34,8 +37,11 @@ def read_mem(base_addr, offset):
     # Cast the buffer into a C-style array of 32-bit unsigned integers
     axi_array = (ctypes.c_uint32 * (MAP_SIZE // 4)).from_buffer(mem)
     
-    # Read the value. Divide offset by 4 to convert byte-offset to array index.
+    # Read the value
     val = axi_array[offset // 4]
+    
+    # CRITICAL FIX: Explicitly delete the C-pointer to unlock the buffer
+    del axi_array
     
     mem.close()
     os.close(fd)
