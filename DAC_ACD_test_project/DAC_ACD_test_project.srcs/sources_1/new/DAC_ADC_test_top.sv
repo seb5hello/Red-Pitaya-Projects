@@ -273,6 +273,7 @@ red_pitaya_hk #(.DWE(DWE)) i_hk (
 ////////////////////////////////////////////////////////////////////////////////
 logic global_arm;
 logic global_trigger;
+logic ramp_trigger; // NEW: Carries the cascaded trigger from Ramp Gen to downstream modules
 
 ////////////////////////////////////////////////////////////////////////////////
 // SYS [1]: Master System Controller
@@ -295,54 +296,55 @@ system_controller i_sys_ctrl (
 // SYS [2]: Custom Ramp Generator (DAC Channel A)
 ////////////////////////////////////////////////////////////////////////////////
 custom_ramp_gen i_ramp (
-    .clk_i      (adc_clk),
-    .rstn_i     (adc_rstn),
-    .arm_i      (global_arm),     // Driven by Orchestrator
-    .trigger_i  (global_trigger), // Driven by Orchestrator
-    .dac_dat_o  (dac_a),
-    .sys_addr   (sys[2].addr ),
-    .sys_wdata  (sys[2].wdata),
-    .sys_wen    (sys[2].wen  ),
-    .sys_ren    (sys[2].ren  ),
-    .sys_rdata  (sys[2].rdata),
-    .sys_err    (sys[2].err  ),
-    .sys_ack    (sys[2].ack  )
+    .clk_i       (adc_clk),
+    .rstn_i      (adc_rstn),
+    .arm_i       (global_arm),       // Driven by System Controller
+    .trigger_i   (global_trigger),   // Driven by System Controller
+    .trigger_out (ramp_trigger),     // NEW: Outputs the 1-cycle peak/valley pulse
+    .dac_dat_o   (dac_a),
+    .sys_addr    (sys[2].addr ),
+    .sys_wdata   (sys[2].wdata),
+    .sys_wen     (sys[2].wen  ),
+    .sys_ren     (sys[2].ren  ),
+    .sys_rdata   (sys[2].rdata),
+    .sys_err     (sys[2].err  ),
+    .sys_ack     (sys[2].ack  )
 );
 
 ////////////////////////////////////////////////////////////////////////////////
 // SYS [3]: Custom Peak & Timestamp Detector (ADC Channel A)
 ////////////////////////////////////////////////////////////////////////////////
 custom_timestamp_detector i_timestamp (
-    .clk_i      (adc_clk),
-    .rstn_i     (adc_rstn),
-    .arm_i      (global_arm),     // Driven by Orchestrator
-    .trigger_i  (global_trigger), // Driven by Orchestrator
-    .adc_dat_i  (adc_dat[0]),
-    .sys_addr   (sys[3].addr ),
-    .sys_wdata  (sys[3].wdata),
-    .sys_wen    (sys[3].wen  ),
-    .sys_ren    (sys[3].ren  ),
-    .sys_rdata  (sys[3].rdata),
-    .sys_err    (sys[3].err  ),
-    .sys_ack    (sys[3].ack  )
+    .clk_i       (adc_clk),
+    .rstn_i      (adc_rstn),
+    .arm_i       (global_arm),   // Reset states stay tied to the master arm
+    .trigger_i   (ramp_trigger), // NEW: Triggered by Ramp Generator peaks/valleys
+    .adc_dat_i   (adc_dat[0]),
+    .sys_addr    (sys[3].addr ),
+    .sys_wdata   (sys[3].wdata),
+    .sys_wen     (sys[3].wen  ),
+    .sys_ren     (sys[3].ren  ),
+    .sys_rdata   (sys[3].rdata),
+    .sys_err     (sys[3].err  ),
+    .sys_ack     (sys[3].ack  )
 );
 
 ////////////////////////////////////////////////////////////////////////////////
 // SYS [4]: Custom Test Peak Generator (DAC Channel B)
 ////////////////////////////////////////////////////////////////////////////////
 custom_test_peak_gen i_test_gen (
-    .clk_i      (adc_clk),
-    .rstn_i     (adc_rstn),
-    .arm_i      (global_arm),     // Driven by Orchestrator
-    .trigger_i  (global_trigger), // Driven by Orchestrator
-    .dac_dat_o  (dac_b),          // Connected to DAC B
-    .sys_addr   (sys[4].addr ),
-    .sys_wdata  (sys[4].wdata),
-    .sys_wen    (sys[4].wen  ),
-    .sys_ren    (sys[4].ren  ),
-    .sys_rdata  (sys[4].rdata),
-    .sys_err    (sys[4].err  ),
-    .sys_ack    (sys[4].ack  )
+    .clk_i       (adc_clk),
+    .rstn_i      (adc_rstn),
+    .arm_i       (global_arm),   // Reset states stay tied to the master arm
+    .trigger_i   (ramp_trigger), // NEW: Triggered by Ramp Generator peaks/valleys
+    .dac_dat_o   (dac_b),
+    .sys_addr    (sys[4].addr ),
+    .sys_wdata   (sys[4].wdata),
+    .sys_wen     (sys[4].wen  ),
+    .sys_ren     (sys[4].ren  ),
+    .sys_rdata   (sys[4].rdata),
+    .sys_err     (sys[4].err  ),
+    .sys_ack     (sys[4].ack  )
 );
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -8,6 +8,7 @@ module custom_ramp_gen (
     input  logic          rstn_i,
     input  logic          arm_i,
     input  logic          trigger_i,
+    output logic          trigger_out, // Now a 1-cycle pulse
     output logic [14-1:0] dac_dat_o,
     
     input  logic [19:0]   sys_addr,
@@ -21,8 +22,15 @@ module custom_ramp_gen (
 
 logic [13:0] min_val;
 logic [13:0] max_val;
-logic running;
 
+// State Machine Definitions
+localparam [1:0] IDLE      = 2'd0;
+localparam [1:0] RAMP_UP   = 2'd1;
+localparam [1:0] RAMP_DOWN = 2'd2;
+
+logic [1:0] state;
+
+// System Bus Write/Read Interface
 always @(posedge clk_i) begin
     if (~rstn_i) begin
         min_val <= 14'h0;
@@ -46,23 +54,38 @@ always_comb begin
 end
 assign sys_err = 1'b0;
 
-// Ramp Logic driven by external arm_i and trigger_i
+// Ramp Logic & Trigger Generation
 always @(posedge clk_i) begin
     if (~rstn_i) begin
-        dac_dat_o <= 14'h0;
-        running   <= 1'b0;
+        dac_dat_o   <= 14'h0;
+        state       <= IDLE;
+        trigger_out <= 1'b0;
     end else begin
+        // Default trigger output to 0. It will only be high for 1 cycle when explicitly set below.
+        trigger_out <= 1'b0; 
+        
         if (~arm_i) begin
-            running   <= 1'b0;
-            dac_dat_o <= min_val;
-        end else if (trigger_i && ~running) begin
-            running   <= 1'b1;
-            dac_dat_o <= min_val;
-        end else if (running) begin
+            state       <= IDLE;
+            dac_dat_o   <= min_val;
+        end else if (trigger_i && state == IDLE) begin
+            state       <= RAMP_UP;
+            dac_dat_o   <= min_val;
+            trigger_out <= 1'b1; // Pulse out when starting at the initial minimum
+        end else if (state == RAMP_UP) begin
             if (dac_dat_o >= max_val) begin
-                dac_dat_o <= min_val;
+                state       <= RAMP_DOWN;
+                dac_dat_o   <= dac_dat_o - 1;
+                trigger_out <= 1'b1; // Pulse out upon hitting max_val
             end else begin
-                dac_dat_o <= dac_dat_o + 1;
+                dac_dat_o   <= dac_dat_o + 1;
+            end
+        end else if (state == RAMP_DOWN) begin
+            if (dac_dat_o <= min_val) begin
+                state       <= RAMP_UP;
+                dac_dat_o   <= dac_dat_o + 1;
+                trigger_out <= 1'b1; // Pulse out upon returning to min_val
+            end else begin
+                dac_dat_o   <= dac_dat_o - 1;
             end
         end
     end

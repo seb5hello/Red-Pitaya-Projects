@@ -83,16 +83,28 @@ def peak_detector():
         })
 
 # --- Test Peak Generator ---
-@app.route('/api/test_gen', methods=['POST'])
+@app.route('/api/test_gen', methods=['POST', 'GET'])
 def test_gen():
-    data = request.json
-    if 'dly_1' in data: write_mem(TEST_GEN_BASE, 0x00, data['dly_1'])
-    if 'dly_2' in data: write_mem(TEST_GEN_BASE, 0x04, data['dly_2'])
-    if 'dly_3' in data: write_mem(TEST_GEN_BASE, 0x08, data['dly_3'])
-    if 'dly_4' in data: write_mem(TEST_GEN_BASE, 0x0C, data['dly_4'])
-    if 'peak_amp' in data: write_mem(TEST_GEN_BASE, 0x10, data['peak_amp'] & 0x3FFF)
-    if 'base_amp' in data: write_mem(TEST_GEN_BASE, 0x14, data['base_amp'] & 0x3FFF)
-    return jsonify({"status": "success"})
+    if request.method == 'POST':
+        data = request.json
+        if 'dly_1' in data: write_mem(TEST_GEN_BASE, 0x00, data['dly_1'])
+        if 'dly_2' in data: write_mem(TEST_GEN_BASE, 0x04, data['dly_2'])
+        if 'dly_3' in data: write_mem(TEST_GEN_BASE, 0x08, data['dly_3'])
+        if 'dly_4' in data: write_mem(TEST_GEN_BASE, 0x0C, data['dly_4'])
+        if 'peak_amp' in data: write_mem(TEST_GEN_BASE, 0x10, data['peak_amp'] & 0x3FFF)
+        if 'base_amp' in data: write_mem(TEST_GEN_BASE, 0x14, data['base_amp'] & 0x3FFF)
+        if 'pulse_width' in data: write_mem(TEST_GEN_BASE, 0x18, data['pulse_width'])
+        return jsonify({"status": "success"})
+    else:
+        return jsonify({
+            "dly_1": read_mem(TEST_GEN_BASE, 0x00),
+            "dly_2": read_mem(TEST_GEN_BASE, 0x04),
+            "dly_3": read_mem(TEST_GEN_BASE, 0x08),
+            "dly_4": read_mem(TEST_GEN_BASE, 0x0C),
+            "peak_amp": read_mem(TEST_GEN_BASE, 0x10) & 0x3FFF,
+            "base_amp": read_mem(TEST_GEN_BASE, 0x14) & 0x3FFF,
+            "pulse_width": read_mem(TEST_GEN_BASE, 0x18)
+        })
 
 if __name__ == '__main__':
     # Listen on all interfaces on port 5000

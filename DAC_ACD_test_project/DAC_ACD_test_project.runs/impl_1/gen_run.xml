@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1780270953">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1781011913">
   <File Type="BITSTR-BMM" Name="DAC_ADC_test_top_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="DAC_ADC_test_top_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="DAC_ADC_test_top_timing_summary_init.rpt"/>
@@ -1267,8 +1267,10 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
     <Filter Type="Utils"/>
-    <File Path="$PPRDIR/../generate_bin.tcl">
+    <File Path="$PSRCDIR/utils_1/imports/DAC_ACD_test_project/generate_bin.tcl">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/generate_bin.tcl"/>
+        <Attr Name="ImportTime" Val="1780271521"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -1280,9 +1282,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>

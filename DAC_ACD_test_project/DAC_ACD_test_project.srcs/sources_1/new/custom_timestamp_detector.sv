@@ -77,13 +77,20 @@ always @(posedge clk_i) begin
             done       <= 0;
             peak_count <= 0;
             ts_1 <= 0; ts_2 <= 0; ts_3 <= 0; ts_4 <= 0;
-        end else if (trigger_i && ~running && ~done) begin
+            
+        // REMOVED "~running && ~done". A new trigger always resets the timeline.
+        end else if (trigger_i) begin
             running    <= 1;
             counter    <= 0;
             peak_count <= 0;
             done       <= 0;
+            // Note: Timestamps are naturally overwritten as new peaks are found, 
+            // so we don't strictly need to zero them out here.
+            
         end else if (running) begin
             counter <= counter + 1;
+            
+            // Rising edge threshold detection
             if (adc_dat_i > threshold && prev_adc <= threshold) begin
                 case (peak_count)
                     3'd0: ts_1 <= counter;
@@ -93,6 +100,7 @@ always @(posedge clk_i) begin
                 endcase
                 
                 peak_count <= peak_count + 1;
+                
                 if (peak_count == 3'd3) begin
                     running <= 1'b0;
                     done    <= 1'b1;
@@ -101,4 +109,5 @@ always @(posedge clk_i) begin
         end
     end
 end
+
 endmodule
