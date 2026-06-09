@@ -12,28 +12,26 @@ PEAK_DET_BASE = 0x40300000
 TEST_GEN_BASE = 0x40400000
 MAP_SIZE = 4096 # 1 Page is enough for our offsets
 
-def write_mem(base_addr, offset, value):
-    """Writes a 32-bit integer atomically to the specified physical memory address."""
-    # Use os.open to explicitly request synchronous I/O (uncached)
-    fd = os.open("/dev/mem", os.O_RDWR | os.O_SYNC)
-    mem = mmap.mmap(fd, MAP_SIZE, mmap.MAP_SHARED, mmap.PROT_READ | mmap.PROT_WRITE, offset=base_addr)
-    
-    # Use pack_into to force a 32-bit atomic write on the AXI bus
-    struct.pack_into('<I', mem, offset, value)
-    
-    mem.close()
-    os.close(fd)
-
 def read_mem(base_addr, offset):
-    """Reads a 32-bit integer atomically from the specified physical memory address."""
-    fd = os.open("/dev/mem", os.O_RDWR | os.O_SYNC)
-    mem = mmap.mmap(fd, MAP_SIZE, mmap.MAP_SHARED, mmap.PROT_READ | mmap.PROT_WRITE, offset=base_addr)
-    
-    # Use unpack_from to force a 32-bit atomic read
-    val = struct.unpack_from('<I', mem, offset)[0]
-    
-    mem.close()
-    os.close(fd)
+    """Reads a 32-bit integer from the specified physical memory address."""
+    # Use "r+b" for read/write binary mode
+    with open("/dev/mem", "r+b") as f:
+        mem = mmap.mmap(f.fileno(), MAP_SIZE, mmap.MAP_SHARED, mmap.PROT_READ | mmap.PROT_WRITE, offset=base_addr)
+        mem.seek(offset)
+        # Unpack as 32-bit unsigned integer (little-endian)
+        val = struct.unpack('<I', mem.read(4))[0]
+        mem.close()
+    return val
+
+def write_mem(base_addr, offset, value):
+    """Writes a 32-bit integer to the specified physical memory address."""
+    # Use "r+b" for read/write binary mode
+    with open("/dev/mem", "r+b") as f:
+        mem = mmap.mmap(f.fileno(), MAP_SIZE, mmap.MAP_SHARED, mmap.PROT_READ | mmap.PROT_WRITE, offset=base_addr)
+        mem.seek(offset)
+        # Pack as 32-bit unsigned integer (little-endian)
+        mem.write(struct.pack('<I', value))
+        mem.close()
 
 # --- System Controller ---
 @app.route('/api/sys_ctrl', methods=['POST'])
