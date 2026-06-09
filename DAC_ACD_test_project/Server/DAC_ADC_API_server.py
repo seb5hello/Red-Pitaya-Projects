@@ -10,43 +10,36 @@ SYS_CTRL_BASE = 0x40100000
 RAMP_GEN_BASE = 0x40200000
 PEAK_DET_BASE = 0x40300000
 TEST_GEN_BASE = 0x40400000
-MAP_SIZE = 4096 # 1 Page is enough for our offsets
+MAP_SIZE = 4096
+
+# ==============================================================================
+# HARDWARE MEMORY INITIALIZATION
+# Open /dev/mem ONCE globally and keep it open. This prevents Python BufferErrors 
+# and massively speeds up the AXI bus communication.
+# ==============================================================================
+fd = os.open("/dev/mem", os.O_RDWR | os.O_SYNC)
+
+# Dictionary holding persistent memory maps for each hardware module
+mmaps = {
+    SYS_CTRL_BASE: mmap.mmap(fd, MAP_SIZE, mmap.MAP_SHARED, mmap.PROT_READ | mmap.PROT_WRITE, offset=SYS_CTRL_BASE),
+    RAMP_GEN_BASE: mmap.mmap(fd, MAP_SIZE, mmap.MAP_SHARED, mmap.PROT_READ | mmap.PROT_WRITE, offset=RAMP_GEN_BASE),
+    PEAK_DET_BASE: mmap.mmap(fd, MAP_SIZE, mmap.MAP_SHARED, mmap.PROT_READ | mmap.PROT_WRITE, offset=PEAK_DET_BASE),
+    TEST_GEN_BASE: mmap.mmap(fd, MAP_SIZE, mmap.MAP_SHARED, mmap.PROT_READ | mmap.PROT_WRITE, offset=TEST_GEN_BASE)
+}
 
 def write_mem(base_addr, offset, value):
-    """Writes a 32-bit integer atomically to the physical memory address using ctypes."""
-    fd = os.open("/dev/mem", os.O_RDWR | os.O_SYNC)
-    mem = mmap.mmap(fd, MAP_SIZE, mmap.MAP_SHARED, mmap.PROT_READ | mmap.PROT_WRITE, offset=base_addr)
-    
-    # Cast the buffer into a C-style array of 32-bit unsigned integers
-    axi_array = (ctypes.c_uint32 * (MAP_SIZE // 4)).from_buffer(mem)
-    
-    # Write the value
-    axi_array[offset // 4] = value
-    
-    # CRITICAL FIX: Explicitly delete the C-pointer to unlock the buffer
-    del axi_array
-    
-    mem.close()
-    os.close(fd)
+    """Writes a 32-bit integer atomically using an inline ctypes cast."""
+    # from_buffer evaluates the exact byte offset, writes the 32-bit value, 
+    # and immediately releases the object. No dangling pointers!
+    ctypes.c_uint32.from_buffer(mmaps[base_addr], offset).value = value
 
 def read_mem(base_addr, offset):
-    """Reads a 32-bit integer atomically from the physical memory address using ctypes."""
-    fd = os.open("/dev/mem", os.O_RDWR | os.O_SYNC)
-    mem = mmap.mmap(fd, MAP_SIZE, mmap.MAP_SHARED, mmap.PROT_READ | mmap.PROT_WRITE, offset=base_addr)
-    
-    # Cast the buffer into a C-style array of 32-bit unsigned integers
-    axi_array = (ctypes.c_uint32 * (MAP_SIZE // 4)).from_buffer(mem)
-    
-    # Read the value
-    val = axi_array[offset // 4]
-    
-    # CRITICAL FIX: Explicitly delete the C-pointer to unlock the buffer
-    del axi_array
-    
-    mem.close()
-    os.close(fd)
-    
-    return val
+    """Reads a 32-bit integer atomically using an inline ctypes cast."""
+    return ctypes.c_uint32.from_buffer(mmaps[base_addr], offset).value
+
+# ==============================================================================
+# API ROUTES
+# ==============================================================================
 
 # --- System Controller ---
 @app.route('/api/sys_ctrl', methods=['POST'])
@@ -82,7 +75,6 @@ def peak_detector():
     if request.method == 'POST':
         data = request.json
         if 'threshold' in data:
-            # Mask to 14-bits to match FPGA logic
             write_mem(PEAK_DET_BASE, 0x00, data['threshold'] & 0x3FFF)
         return jsonify({"status": "success"})
     else:
