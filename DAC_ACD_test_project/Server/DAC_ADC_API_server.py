@@ -1,6 +1,6 @@
 import os
 import mmap
-import struct
+import ctypes
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
@@ -12,26 +12,35 @@ PEAK_DET_BASE = 0x40300000
 TEST_GEN_BASE = 0x40400000
 MAP_SIZE = 4096 # 1 Page is enough for our offsets
 
-def read_mem(base_addr, offset):
-    """Reads a 32-bit integer from the specified physical memory address."""
-    # Use "r+b" for read/write binary mode
-    with open("/dev/mem", "r+b") as f:
-        mem = mmap.mmap(f.fileno(), MAP_SIZE, mmap.MAP_SHARED, mmap.PROT_READ | mmap.PROT_WRITE, offset=base_addr)
-        mem.seek(offset)
-        # Unpack as 32-bit unsigned integer (little-endian)
-        val = struct.unpack('<I', mem.read(4))[0]
-        mem.close()
-    return val
-
 def write_mem(base_addr, offset, value):
-    """Writes a 32-bit integer to the specified physical memory address."""
-    # Use "r+b" for read/write binary mode
-    with open("/dev/mem", "r+b") as f:
-        mem = mmap.mmap(f.fileno(), MAP_SIZE, mmap.MAP_SHARED, mmap.PROT_READ | mmap.PROT_WRITE, offset=base_addr)
-        mem.seek(offset)
-        # Pack as 32-bit unsigned integer (little-endian)
-        mem.write(struct.pack('<I', value))
-        mem.close()
+    """Writes a 32-bit integer atomically to the physical memory address using ctypes."""
+    fd = os.open("/dev/mem", os.O_RDWR | os.O_SYNC)
+    mem = mmap.mmap(fd, MAP_SIZE, mmap.MAP_SHARED, mmap.PROT_READ | mmap.PROT_WRITE, offset=base_addr)
+    
+    # Cast the buffer into a C-style array of 32-bit unsigned integers
+    axi_array = (ctypes.c_uint32 * (MAP_SIZE // 4)).from_buffer(mem)
+    
+    # Write the value. Divide offset by 4 to convert byte-offset to array index.
+    axi_array[offset // 4] = value
+    
+    mem.close()
+    os.close(fd)
+
+def read_mem(base_addr, offset):
+    """Reads a 32-bit integer atomically from the physical memory address using ctypes."""
+    fd = os.open("/dev/mem", os.O_RDWR | os.O_SYNC)
+    mem = mmap.mmap(fd, MAP_SIZE, mmap.MAP_SHARED, mmap.PROT_READ | mmap.PROT_WRITE, offset=base_addr)
+    
+    # Cast the buffer into a C-style array of 32-bit unsigned integers
+    axi_array = (ctypes.c_uint32 * (MAP_SIZE // 4)).from_buffer(mem)
+    
+    # Read the value. Divide offset by 4 to convert byte-offset to array index.
+    val = axi_array[offset // 4]
+    
+    mem.close()
+    os.close(fd)
+    
+    return val
 
 # --- System Controller ---
 @app.route('/api/sys_ctrl', methods=['POST'])
