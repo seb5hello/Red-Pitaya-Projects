@@ -1,6 +1,7 @@
 import os
 import mmap
-import struct
+import ctypes
+import sys
 import threading
 from flask import Flask, request, jsonify
 
@@ -105,16 +106,43 @@ def write_reg(index, offset, value):
     index = validate_index(index)
     offset = validate_offset(offset)
 
+    base_addr = AXI_TEST_BASES[index]
+    physical_addr = base_addr + offset
+
+    print(
+        f"WRITE sys[{index}] addr=0x{physical_addr:08X} "
+        f"offset=0x{offset:02X} value=0x{u32(value):08X}",
+        flush=True
+    )
+
     with lock:
-        struct.pack_into("<I", mmaps[index], offset, u32(value))
+        reg = ctypes.c_uint32.from_buffer(mmaps[index], offset)
+        reg.value = u32(value)
+        del reg
+
+    print("WRITE OK", flush=True)
 
 
 def read_reg(index, offset):
     index = validate_index(index)
     offset = validate_offset(offset)
 
+    base_addr = AXI_TEST_BASES[index]
+    physical_addr = base_addr + offset
+
+    print(
+        f"READ  sys[{index}] addr=0x{physical_addr:08X} "
+        f"offset=0x{offset:02X}",
+        flush=True
+    )
+
     with lock:
-        return struct.unpack_from("<I", mmaps[index], offset)[0]
+        reg = ctypes.c_uint32.from_buffer(mmaps[index], offset)
+        value = reg.value
+        del reg
+
+    print(f"READ OK value=0x{value:08X}", flush=True)
+    return value
 
 
 def decode_status(status):

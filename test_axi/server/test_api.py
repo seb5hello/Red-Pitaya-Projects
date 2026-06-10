@@ -223,10 +223,17 @@ def test_basic_read_write():
             "rw_reg": (0xAB00 + index) | 0x1,  # bit0 = 1, so LED should turn on
         }
 
+        print("Next write\n")
+
         write_axi_test(index, **test_cfg)
         time.sleep(0.01)
 
+        print("data was writen\n")
+
         resp = read_axi_test(index)
+
+        
+        print("data was read\n")
 
         errors += check_equal("enable", True, bool(resp.get("enable")))
         errors += check_equal("in_a", test_cfg["in_a"], resp.get("in_a"))
