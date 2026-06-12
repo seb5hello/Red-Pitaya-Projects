@@ -1,7 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 // CUSTOM MODULE: Master System Controller (Memory mapped to SYS[1])
 ////////////////////////////////////////////////////////////////////////////////
-// Offset 0x00: Master Control (Bit 0: Global Arm, Bit 1: Global Trigger)
 module system_controller (
     input  logic          clk_i,
     input  logic          rstn_i,
@@ -17,24 +16,29 @@ module system_controller (
     output logic          sys_ack
 );
 
+// System Bus Write/Read Interface
 always @(posedge clk_i) begin
     if (~rstn_i) begin
         global_arm_o     <= 1'b0;
         global_trigger_o <= 1'b0;
         sys_ack          <= 1'b0;
+        sys_rdata        <= 32'h0;
     end else begin
         sys_ack <= sys_wen | sys_ren;
+        
+        // Write Path
         if (sys_wen) begin
             if (sys_addr[19:0] == 20'h00) {global_trigger_o, global_arm_o} <= sys_wdata[1:0];
+        end
+        
+        // Read Path (Registered)
+        if (sys_ren) begin
+            if (sys_addr[19:0] == 20'h00) sys_rdata <= {30'h0, global_trigger_o, global_arm_o};
+            else sys_rdata <= 32'h0;
         end
     end
 end
 
-always_comb begin
-    sys_rdata = 32'h0;
-    if (sys_ren) begin
-        if (sys_addr[19:0] == 20'h00) sys_rdata = {30'h0, global_trigger_o, global_arm_o};
-    end
-end
 assign sys_err = 1'b0;
+
 endmodule

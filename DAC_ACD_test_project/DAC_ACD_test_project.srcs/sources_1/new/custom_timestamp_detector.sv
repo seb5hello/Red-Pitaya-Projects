@@ -1,12 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 // CUSTOM MODULE: 4-Peak Timestamp Detector (Memory mapped to SYS[3])
 ////////////////////////////////////////////////////////////////////////////////
-// Offset 0x00: Threshold (14-bit signed)
-// Offset 0x04: Status (Bit 0: Done, Bits 3:1: Current Peak Count)
-// Offset 0x08: Timestamp 1
-// Offset 0x0C: Timestamp 2
-// Offset 0x10: Timestamp 3
-// Offset 0x14: Timestamp 4
 module custom_timestamp_detector (
     input  logic          clk_i,
     input  logic          rstn_i,
@@ -31,35 +25,38 @@ logic done;
 logic [2:0] peak_count;
 logic [31:0] ts_1, ts_2, ts_3, ts_4;
 
+// System Bus Write/Read Interface
 always @(posedge clk_i) begin
     if (~rstn_i) begin
         threshold <= 14'h0;
         sys_ack   <= 1'b0;
+        sys_rdata <= 32'h0;
     end else begin
         sys_ack <= sys_wen | sys_ren;
+        
+        // Write Path
         if (sys_wen) begin
             if (sys_addr[19:0] == 20'h00) threshold <= sys_wdata[13:0];
+        end
+        
+        // Read Path (Registered)
+        if (sys_ren) begin
+            case (sys_addr[19:0])
+                20'h00:  sys_rdata <= {18'h0, threshold};
+                20'h04:  sys_rdata <= {28'h0, peak_count, done}; 
+                20'h08:  sys_rdata <= ts_1;
+                20'h0C:  sys_rdata <= ts_2;
+                20'h10:  sys_rdata <= ts_3;
+                20'h14:  sys_rdata <= ts_4;
+                default: sys_rdata <= 32'h0;
+            endcase
         end
     end
 end
 
-always_comb begin
-    sys_rdata = 32'h0;
-    if (sys_ren) begin
-        case (sys_addr[19:0])
-            20'h00: sys_rdata = {18'h0, threshold};
-            20'h04: sys_rdata = {28'h0, peak_count, done}; 
-            20'h08: sys_rdata = ts_1;
-            20'h0C: sys_rdata = ts_2;
-            20'h10: sys_rdata = ts_3;
-            20'h14: sys_rdata = ts_4;
-            default: sys_rdata = 32'h0;
-        endcase
-    end
-end
 assign sys_err = 1'b0;
 
-// Timestamp & Multi-Peak Detection Logic driven by external arm_i and trigger_i
+// Timestamp & Multi-Peak Detection Logic
 always @(posedge clk_i) begin
     if (~rstn_i) begin
         counter    <= 0;
@@ -77,16 +74,11 @@ always @(posedge clk_i) begin
             done       <= 0;
             peak_count <= 0;
             ts_1 <= 0; ts_2 <= 0; ts_3 <= 0; ts_4 <= 0;
-            
-        // REMOVED "~running && ~done". A new trigger always resets the timeline.
         end else if (trigger_i) begin
             running    <= 1;
             counter    <= 0;
             peak_count <= 0;
             done       <= 0;
-            // Note: Timestamps are naturally overwritten as new peaks are found, 
-            // so we don't strictly need to zero them out here.
-            
         end else if (running) begin
             counter <= counter + 1;
             

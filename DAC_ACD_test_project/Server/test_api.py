@@ -3,7 +3,7 @@ import time
 import sys
 
 # Replace with your Red Pitaya's local IP address
-RP_IP = "100.83.1.106" 
+RP_IP = "100.83.1.117" 
 # RP_IP = "192.168.2.29" 
 BASE_URL = f"http://{RP_IP}:5000/api"
 
@@ -135,29 +135,8 @@ def fetch_results():
 
 if __name__ == "__main__":
     try:
-        # Define the values you want to write
-        write_arm_value = True
-        write_trigger_value = False
-
-        # 1. Read and print the default value
-        default_value = read_sys_ctrl()
-        print("--- Initial State ---")
-        print(f"Default Value: {default_value}\n")
-
-        # 2. Set the write values
-        write_response = write_sys_ctrl(arm=write_arm_value, trigger=write_trigger_value)
-        print("--- Writing State ---")
-        print(f"Action: Writing arm={write_arm_value}, trigger={write_trigger_value}")
-        print(f"Server Response: {write_response}\n")
-
-        # 3. Read the values again
-        read_value = read_sys_ctrl()
-        
-        # 4. Print the final summary of all three states
-        print("--- Final Summary ---")
-        print(f"Default Value : {default_value}")
-        print(f"Written Values: {{'arm': {write_arm_value}, 'trigger': {write_trigger_value}}}")
-        print(f"Read Value    : {read_value}")
+        configure_system()
+        run_test()
 
     except requests.exceptions.ConnectionError:
         print("Error: Could not connect to the Red Pitaya. Is the server running and the IP correct?")

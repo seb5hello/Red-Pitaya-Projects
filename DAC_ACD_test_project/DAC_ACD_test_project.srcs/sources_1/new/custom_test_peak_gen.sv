@@ -1,10 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 // CUSTOM MODULE: Test Peak Generator (Memory mapped to SYS[4])
 ////////////////////////////////////////////////////////////////////////////////
-// Offset 0x00 to 0x0C: Delays for Peaks 1-4 (32-bit)
-// Offset 0x10: Peak Amplitude (14-bit)
-// Offset 0x14: Baseline Amplitude (14-bit)
-// Offset 0x18: Pulse Width (32-bit clock cycles)
 module custom_test_peak_gen (
     input  logic          clk_i,
     input  logic          rstn_i,
@@ -29,19 +25,22 @@ logic [31:0] pulse_width;
 logic [31:0] counter;
 logic running;
 
-// System Bus Write Interface
+// System Bus Write/Read Interface
 always @(posedge clk_i) begin
     if (~rstn_i) begin
-        dly_1       <= 32'd100; // Default delays
+        dly_1       <= 32'd100;
         dly_2       <= 32'd200;
         dly_3       <= 32'd300;
         dly_4       <= 32'd400;
-        peak_amp    <= 14'h3FFF; // High peak
-        base_amp    <= 14'h0000; // Zero baseline
-        pulse_width <= 32'd50;   // Default 10 cycles (80ns) to survive analog filter
+        peak_amp    <= 14'h3FFF; 
+        base_amp    <= 14'h0000;
+        pulse_width <= 32'd50;
         sys_ack     <= 1'b0;
+        sys_rdata   <= 32'h0;
     end else begin
         sys_ack <= sys_wen | sys_ren;
+        
+        // Write Path
         if (sys_wen) begin
             case (sys_addr[19:0])
                 20'h00: dly_1       <= sys_wdata;
@@ -53,28 +52,26 @@ always @(posedge clk_i) begin
                 20'h18: pulse_width <= sys_wdata;
             endcase
         end
+        
+        // Read Path (Registered)
+        if (sys_ren) begin
+            case (sys_addr[19:0])
+                20'h00:  sys_rdata <= dly_1;
+                20'h04:  sys_rdata <= dly_2;
+                20'h08:  sys_rdata <= dly_3;
+                20'h0C:  sys_rdata <= dly_4;
+                20'h10:  sys_rdata <= {18'h0, peak_amp};
+                20'h14:  sys_rdata <= {18'h0, base_amp};
+                20'h18:  sys_rdata <= pulse_width;
+                default: sys_rdata <= 32'h0;
+            endcase
+        end
     end
 end
 
-// System Bus Read Interface
-always_comb begin
-    sys_rdata = 32'h0;
-    if (sys_ren) begin
-        case (sys_addr[19:0])
-            20'h00: sys_rdata = dly_1;
-            20'h04: sys_rdata = dly_2;
-            20'h08: sys_rdata = dly_3;
-            20'h0C: sys_rdata = dly_4;
-            20'h10: sys_rdata = {18'h0, peak_amp};
-            20'h14: sys_rdata = {18'h0, base_amp};
-            20'h18: sys_rdata = pulse_width;
-            default: sys_rdata = 32'h0;
-        endcase
-    end
-end
 assign sys_err = 1'b0;
 
-// Pulse Generation Logic (Updated for Repeating Triggers)
+// Pulse Generation Logic
 always @(posedge clk_i) begin
     if (~rstn_i) begin
         dac_dat_o <= 14'h0;
@@ -85,17 +82,13 @@ always @(posedge clk_i) begin
             counter   <= 0;
             running   <= 0;
             dac_dat_o <= base_amp;
-            
-        // REMOVED "~running". A new trigger always resets the timeline.
         end else if (trigger_i) begin 
             running   <= 1;
             counter   <= 0;
             dac_dat_o <= base_amp;
-            
         end else if (running) begin
             counter <= counter + 1;
             
-            // Output peak_amp if the counter is within the dynamic pulse width window
             if ((counter >= dly_1 && counter < dly_1 + pulse_width) || 
                 (counter >= dly_2 && counter < dly_2 + pulse_width) || 
                 (counter >= dly_3 && counter < dly_3 + pulse_width) || 
