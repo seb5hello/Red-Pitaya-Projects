@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Tue Jun  9 15:35:23 2026
+| Date             : Fri Jun 12 10:45:51 2026
 | Host             : 20190748 running 64-bit major release  (build 9200)
 | Command          : report_power -file DAC_ADC_test_top_power_routed.rpt -pb DAC_ADC_test_top_power_summary_routed.pb -rpx DAC_ADC_test_top_power_routed.rpx
 | Design           : DAC_ADC_test_top
@@ -52,17 +52,16 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.020 |       14 |       --- |             --- |
-| Slice Logic             |     0.005 |     4529 |       --- |             --- |
-|   LUT as Logic          |     0.004 |     1494 |     17600 |            8.49 |
-|   Register              |    <0.001 |     2225 |     35200 |            6.32 |
+| Clocks                  |     0.021 |       14 |       --- |             --- |
+| Slice Logic             |     0.005 |     4629 |       --- |             --- |
+|   LUT as Logic          |     0.004 |     1528 |     17600 |            8.68 |
+|   Register              |    <0.001 |     2305 |     35200 |            6.55 |
 |   CARRY4                |    <0.001 |      146 |      4400 |            3.32 |
 |   LUT as Shift Register |    <0.001 |       48 |      6000 |            0.80 |
-|   F7/F8 Muxes           |    <0.001 |        9 |     17600 |            0.05 |
-|   Others                |     0.000 |      244 |       --- |             --- |
-| Signals                 |     0.007 |     3580 |       --- |             --- |
+|   Others                |     0.000 |      245 |       --- |             --- |
+| Signals                 |     0.007 |     3621 |       --- |             --- |
 | PLL                     |     0.097 |        1 |         2 |           50.00 |
-| I/O                     |     0.082 |       61 |       100 |           61.00 |
+| I/O                     |     0.081 |       61 |       100 |           61.00 |
 | XADC                    |     0.004 |        1 |       --- |             --- |
 | PS7                     |     1.315 |        1 |       --- |             --- |
 | Static Power            |     0.125 |          |           |                 |

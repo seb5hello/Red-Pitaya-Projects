@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1781011912">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1781253783">
   <File Type="PA-TCL" Name="DAC_ADC_test_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="DAC_ADC_test_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="DAC_ADC_test_top_reports.tcl"/>
@@ -17,7 +17,6 @@
         <Attr Name="ImportTime" Val="1780238420"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RedPitaya/rtl/classic/axi_master.v">
@@ -26,7 +25,6 @@
         <Attr Name="ImportTime" Val="1780042757"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RedPitaya/rtl/classic/red_pitaya_hk.v">
@@ -35,7 +33,6 @@
         <Attr Name="ImportTime" Val="1780042757"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RedPitaya/rtl/interface/axi4_if.sv">
@@ -53,7 +50,6 @@
         <Attr Name="ImportTime" Val="1780042757"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RedPitaya/rtl/interface/axi_sys_if.sv">
@@ -69,21 +65,18 @@
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/custom_test_peak_gen.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/custom_timestamp_detector.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RedPitaya/rtl/freq_meter.sv">
@@ -92,7 +85,6 @@
         <Attr Name="ImportTime" Val="1780042757"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RedPitaya/rtl/interface/gpio_if.sv">
@@ -110,7 +102,6 @@
         <Attr Name="ImportTime" Val="1780042757"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RedPitaya/prj/v0.94/rtl/red_pitaya_ps.sv">
@@ -119,7 +110,6 @@
         <Attr Name="ImportTime" Val="1780042756"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RedPitaya/rtl/sys_bus_cdc.sv">
@@ -128,7 +118,6 @@
         <Attr Name="ImportTime" Val="1780042757"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RedPitaya/rtl/interface/sys_bus_if.sv">
@@ -146,7 +135,6 @@
         <Attr Name="ImportTime" Val="1780042757"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RedPitaya/rtl/sys_bus_stub.sv">
@@ -155,21 +143,18 @@
         <Attr Name="ImportTime" Val="1780042757"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/system_controller.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/DAC_ADC_test_top.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RedPitaya/prj/v0.94/rtl/red_pitaya_top.sv">
