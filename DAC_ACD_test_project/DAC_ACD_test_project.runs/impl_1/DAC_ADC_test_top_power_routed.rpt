@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Fri Jun 12 11:42:35 2026
+| Date             : Mon Jun 15 14:44:19 2026
 | Host             : 20190748 running 64-bit major release  (build 9200)
 | Command          : report_power -file DAC_ADC_test_top_power_routed.rpt -pb DAC_ADC_test_top_power_summary_routed.pb -rpx DAC_ADC_test_top_power_routed.rpx
 | Design           : DAC_ADC_test_top
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 1.655        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.530        |
+| Dynamic (W)              | 1.529        |
 | Device Static (W)        | 0.125        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 65.9         |
@@ -53,13 +53,13 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.020 |       14 |       --- |             --- |
-| Slice Logic             |     0.005 |     4626 |       --- |             --- |
-|   LUT as Logic          |     0.004 |     1524 |     17600 |            8.66 |
-|   Register              |    <0.001 |     2302 |     35200 |            6.54 |
+| Slice Logic             |     0.005 |     4628 |       --- |             --- |
+|   LUT as Logic          |     0.004 |     1523 |     17600 |            8.65 |
+|   Register              |    <0.001 |     2303 |     35200 |            6.54 |
 |   CARRY4                |    <0.001 |      146 |      4400 |            3.32 |
 |   LUT as Shift Register |    <0.001 |       48 |      6000 |            0.80 |
 |   Others                |     0.000 |      247 |       --- |             --- |
-| Signals                 |     0.007 |     3618 |       --- |             --- |
+| Signals                 |     0.007 |     3616 |       --- |             --- |
 | PLL                     |     0.097 |        1 |         2 |           50.00 |
 | I/O                     |     0.081 |       61 |       100 |           61.00 |
 | XADC                    |     0.004 |        1 |       --- |             --- |
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.046 |       0.039 |      0.007 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.045 |       0.038 |      0.007 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.062 |       0.053 |      0.008 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.022 |       0.021 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -158,14 +158,16 @@ Table of Contents
 +--------------------------------+-----------+
 | Name                           | Power (W) |
 +--------------------------------+-----------+
-| DAC_ADC_test_top               |     1.530 |
+| DAC_ADC_test_top               |     1.529 |
 |   detector_timestamp           |     0.001 |
 |   generator_peak_timestamp     |     0.001 |
 |   i_OBUF_daisy_clk             |     0.004 |
 |   i_OBUF_daisy_dat             |     0.004 |
-|   i_hk                         |     0.002 |
+|   i_hk                         |     0.001 |
 |   pll                          |     0.097 |
 |   ps                           |     1.341 |
+|     axi_master_2               |     0.001 |
+|     axi_master_3               |     0.001 |
 |     axi_slave_gp0              |     0.002 |
 |     system_i                   |     1.337 |
 |       axi_protocol_converter_0 |     0.010 |

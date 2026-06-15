@@ -105,7 +105,7 @@ module test_bench();
         
         // 2. Load Configuration (Matching your Python API payload)
         ramp_min_val   = 14'd0;
-        ramp_max_val   = 14'd100;
+        ramp_max_val   = 14'd200;
         
         det_threshold  = 14'd80;
         

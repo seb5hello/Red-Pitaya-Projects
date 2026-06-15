@@ -273,6 +273,7 @@ red_pitaya_hk #(.DWE(DWE)) i_hk (
 ////////////////////////////////////////////////////////////////////////////////
 logic global_arm;
 logic global_trigger;
+logic ramp_trigger;
 
 ////////////////////////////////////////////////////////////////////////////////
 // SYS [1]: Master System Controller
@@ -299,6 +300,7 @@ custom_ramp_gen generator_ramp (
     .rstn_i     (adc_rstn),
     .arm_i      (global_arm),     // Driven by Orchestrator
     .trigger_i  (global_trigger), // Driven by Orchestrator
+    .trigger_out  (ramp_trigger), // output trigger at the bottom and top of the ramp
     .dac_dat_o  (dac_a),
     .sys_addr   (sys[2].addr ),
     .sys_wdata  (sys[2].wdata),
@@ -316,7 +318,7 @@ custom_timestamp_detector detector_timestamp (
     .clk_i      (adc_clk),
     .rstn_i     (adc_rstn),
     .arm_i      (global_arm),     // Driven by Orchestrator
-    .trigger_i  (global_trigger), // Driven by Orchestrator
+    .trigger_i  (ramp_trigger), // Driven by Orchestrator
     .adc_dat_i  (adc_dat[0]),
     .sys_addr   (sys[3].addr ),
     .sys_wdata  (sys[3].wdata),
@@ -334,7 +336,7 @@ custom_test_peak_gen generator_peak_timestamp (
     .clk_i      (adc_clk),
     .rstn_i     (adc_rstn),
     .arm_i      (global_arm),     // Driven by Orchestrator
-    .trigger_i  (global_trigger), // Driven by Orchestrator
+    .trigger_i  (ramp_trigger), // Driven by Orchestrator
     .dac_dat_o  (dac_b),          // Connected to DAC B
     .sys_addr   (sys[4].addr ),
     .sys_wdata  (sys[4].wdata),

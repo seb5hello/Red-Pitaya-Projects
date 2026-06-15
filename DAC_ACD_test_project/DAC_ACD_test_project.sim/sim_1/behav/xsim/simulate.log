@@ -1,0 +1,34 @@
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+[120000] System Reset complete. Applying Arm signal...
+[164000] Firing Master Trigger to Ramp Generator...
+[172000] EVENT: Cascaded Trigger fired by Ramp Gen.
+[348000] EVENT: Threshold Crossed! Peak 1 detected.
+[908000] EVENT: Threshold Crossed! Peak 2 detected.
+[1308000] EVENT: Threshold Crossed! Peak 3 detected.
+[1628000] EVENT: Threshold Crossed! Peak 4 detected.
+[1628000] All 4 Peaks Detected! Simulation Complete.
+--------------------------------------------------
+Expected Delays: 20, 90, 140, 180
+Recorded TS_1  : 21 clock cycles
+Recorded TS_2  : 91 clock cycles
+Recorded TS_3  : 141 clock cycles
+Recorded TS_4  : 181 clock cycles
+--------------------------------------------------
+[1780000] EVENT: Cascaded Trigger fired by Ramp Gen.
+[1956000] EVENT: Threshold Crossed! Peak 1 detected.
+[2516000] EVENT: Threshold Crossed! Peak 2 detected.
+[2916000] EVENT: Threshold Crossed! Peak 3 detected.
+[3236000] EVENT: Threshold Crossed! Peak 4 detected.
+[3380000] EVENT: Cascaded Trigger fired by Ramp Gen.
+[3556000] EVENT: Threshold Crossed! Peak 1 detected.
+[4116000] EVENT: Threshold Crossed! Peak 2 detected.
+[4516000] EVENT: Threshold Crossed! Peak 3 detected.
+[4836000] EVENT: Threshold Crossed! Peak 4 detected.
+[4980000] EVENT: Cascaded Trigger fired by Ramp Gen.
+[5156000] EVENT: Threshold Crossed! Peak 1 detected.
+[5716000] EVENT: Threshold Crossed! Peak 2 detected.
+[6116000] EVENT: Threshold Crossed! Peak 3 detected.
+[6436000] EVENT: Threshold Crossed! Peak 4 detected.
+[6580000] EVENT: Cascaded Trigger fired by Ramp Gen.
+$finish called at time : 6628 ns : File "D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sim_1/new/test_bench.sv" Line 155
