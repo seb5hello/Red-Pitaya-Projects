@@ -1,22 +1,22 @@
 Vivado Simulator 2020.1
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto dfed6af7457c435ebed833bbb9b2930d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_core_logic_behav xil_defaultlib.tb_core_logic xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto dfed6af7457c435ebed833bbb9b2930d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_bench_behav xil_defaultlib.test_bench xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_ramp_gen_core.sv" Line 4. Module custom_ramp_gen_core doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen_core.sv" Line 4. Module custom_test_peak_gen_core doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_timestamp_detector_core.sv" Line 4. Module custom_timestamp_detector_core doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_ramp_gen_core.sv" Line 4. Module custom_ramp_gen_core doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_test_peak_gen_core.sv" Line 4. Module custom_test_peak_gen_core doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/custom_timestamp_detector_core.sv" Line 4. Module custom_timestamp_detector_core doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/ramp_logic.sv" Line 4. Module ramp_logic doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/test_peak_logic.sv" Line 4. Module test_peak_logic doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/timestamp_logic.sv" Line 4. Module timestamp_logic doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/ramp_logic.sv" Line 4. Module ramp_logic doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/test_peak_logic.sv" Line 4. Module test_peak_logic doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/DAC_ACD_test_project.srcs/sources_1/new/timestamp_logic.sv" Line 4. Module timestamp_logic doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.custom_ramp_gen_core
-Compiling module xil_defaultlib.custom_test_peak_gen_core
-Compiling module xil_defaultlib.custom_timestamp_detector_core
-Compiling module xil_defaultlib.tb_core_logic
+Compiling module xil_defaultlib.ramp_logic
+Compiling module xil_defaultlib.test_peak_logic
+Compiling module xil_defaultlib.timestamp_logic
+Compiling module xil_defaultlib.test_bench
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_core_logic_behav
+Built simulation snapshot test_bench_behav

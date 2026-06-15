@@ -1,12 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////
-// CUSTOM MODULE WRAPPER: 4-Peak Timestamp Detector (Memory mapped to SYS[3])
+// WRAPPER MODULE: 4-Peak Timestamp Detector Bus Interface (SYS[3])
 ////////////////////////////////////////////////////////////////////////////////
-// Offset 0x00: Threshold (14-bit signed)
-// Offset 0x04: Status (Bit 0: Done, Bits 3:1: Current Peak Count)
-// Offset 0x08: Timestamp 1
-// Offset 0x0C: Timestamp 2
-// Offset 0x10: Timestamp 3
-// Offset 0x14: Timestamp 4
 module custom_timestamp_detector (
     input  logic               clk_i,
     input  logic               rstn_i,
@@ -24,65 +18,66 @@ module custom_timestamp_detector (
     output logic               sys_ack
 );
 
-// Internal Configurations (Writeable)
-logic signed [13:0] threshold;
+    // Internal Configuration Registers
+    logic signed [13:0] threshold_reg;
+    
+    // Internal Output Wires (from Core Logic)
+    logic               done_wire;
+    logic [2:0]         peak_count_wire;
+    logic [31:0]        ts_1_wire;
+    logic [31:0]        ts_2_wire;
+    logic [31:0]        ts_3_wire;
+    logic [31:0]        ts_4_wire;
 
-// Core Logic Outputs (Read-only)
-logic        done;
-logic [2:0]  peak_count;
-logic [31:0] ts_1, ts_2, ts_3, ts_4;
-
-// System Bus Write Interface
-always @(posedge clk_i) begin
-    if (~rstn_i) begin
-        threshold <= 14'h0;
-        sys_ack   <= 1'b0;
-    end else begin
-        sys_ack <= sys_wen | sys_ren;
-        if (sys_wen) begin
-            if (sys_addr[19:0] == 20'h00) threshold <= sys_wdata[13:0];
+    // -------------------------------------------------------------------------
+    // System Bus Write/Read Interface
+    // -------------------------------------------------------------------------
+    always_ff @(posedge clk_i) begin
+        if (~rstn_i) begin
+            threshold_reg <= 14'h0;
+            sys_ack       <= 1'b0;
+            sys_rdata     <= 32'h0;
+        end else begin
+            sys_ack <= sys_wen | sys_ren;
+            
+            // Write Path
+            if (sys_wen) begin
+                if (sys_addr[19:0] == 20'h00) threshold_reg <= sys_wdata[13:0];
+            end
+            
+            // Read Path (Registered)
+            if (sys_ren) begin
+                case (sys_addr[19:0])
+                    20'h00:  sys_rdata <= {18'h0, threshold_reg};
+                    20'h04:  sys_rdata <= {28'h0, peak_count_wire, done_wire}; 
+                    20'h08:  sys_rdata <= ts_1_wire;
+                    20'h0C:  sys_rdata <= ts_2_wire;
+                    20'h10:  sys_rdata <= ts_3_wire;
+                    20'h14:  sys_rdata <= ts_4_wire;
+                    default: sys_rdata <= 32'h0;
+                endcase
+            end
         end
     end
-end
 
-// System Bus Read Interface
-always @(posedge clk_i) begin
-    if (~rstn_i) begin
-        sys_rdata <= 32'h0;
-    end else begin
-        // Default to 0 unless reading
-        sys_rdata <= 32'h0; 
-        
-        if (sys_ren) begin
-            case (sys_addr[19:0])
-                20'h00: sys_rdata = {18'h0, threshold};
-                20'h04: sys_rdata = {28'h0, peak_count, done}; 
-                20'h08: sys_rdata = ts_1;
-                20'h0C: sys_rdata = ts_2;
-                20'h10: sys_rdata = ts_3;
-                20'h14: sys_rdata = ts_4;
-                default: sys_rdata = 32'h0;
-            endcase
-        end
-    end
-end
+    assign sys_err = 1'b0;
 
-assign sys_err = 1'b0;
-
-// Core Logic Instantiation
-custom_timestamp_detector_core timestamp_detector_logic (
-    .clk_i        (clk_i),
-    .rstn_i       (rstn_i),
-    .arm_i        (arm_i),
-    .trigger_i    (trigger_i),
-    .adc_dat_i    (adc_dat_i),
-    .threshold_i  (threshold),
-    .done_o       (done),
-    .peak_count_o (peak_count),
-    .ts_1_o       (ts_1),
-    .ts_2_o       (ts_2),
-    .ts_3_o       (ts_3),
-    .ts_4_o       (ts_4)
-);
+    // -------------------------------------------------------------------------
+    // Core Logic Instantiation
+    // -------------------------------------------------------------------------
+    timestamp_logic i_timestamp_logic (
+        .clk_i       (clk_i),
+        .rstn_i      (rstn_i),
+        .arm_i       (arm_i),
+        .trigger_i   (trigger_i),
+        .adc_dat_i   (adc_dat_i),
+        .threshold   (threshold_reg),
+        .done        (done_wire),
+        .peak_count  (peak_count_wire),
+        .ts_1        (ts_1_wire),
+        .ts_2        (ts_2_wire),
+        .ts_3        (ts_3_wire),
+        .ts_4        (ts_4_wire)
+    );
 
 endmodule
