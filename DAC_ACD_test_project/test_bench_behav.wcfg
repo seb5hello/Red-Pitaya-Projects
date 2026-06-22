@@ -11,12 +11,12 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="917350fs"></ZoomStartTime>
-      <ZoomEndTime time="3987351fs"></ZoomEndTime>
-      <Cursor1Time time="2182350fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="19560001fs"></ZoomEndTime>
+      <Cursor1Time time="1940000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="142"></NameColumnWidth>
+      <NameColumnWidth column_width="137"></NameColumnWidth>
       <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="14" />
@@ -65,18 +65,22 @@
    <wvobject fp_name="/test_bench/dut_timestamp/ts_1" type="array">
       <obj_property name="ElementShortName">ts_1[31:0]</obj_property>
       <obj_property name="ObjectShortName">ts_1[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_bench/dut_timestamp/ts_2" type="array">
       <obj_property name="ElementShortName">ts_2[31:0]</obj_property>
       <obj_property name="ObjectShortName">ts_2[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_bench/dut_timestamp/ts_3" type="array">
       <obj_property name="ElementShortName">ts_3[31:0]</obj_property>
       <obj_property name="ObjectShortName">ts_3[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_bench/dut_timestamp/ts_4" type="array">
       <obj_property name="ElementShortName">ts_4[31:0]</obj_property>
       <obj_property name="ObjectShortName">ts_4[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_bench/dut_timestamp/peak_count" type="array">
       <obj_property name="ElementShortName">peak_count[2:0]</obj_property>

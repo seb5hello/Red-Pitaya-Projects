@@ -37,6 +37,7 @@ module test_bench();
     logic               det_done;
     logic [2:0]         det_peak_count;
     logic [31:0]        ts_1, ts_2, ts_3, ts_4;
+    logic [31:0]        det_samples; // <--- NEW: Added samples wire
 
     // Test Peak Generator Config
     logic [31:0] test_dly_1, test_dly_2, test_dly_3, test_dly_4;
@@ -58,7 +59,7 @@ module test_bench();
         .trigger_i   (master_trigger),   // Triggered by testbench sequence
         .min_val     (ramp_min_val),
         .max_val     (ramp_max_val),
-        .trigger_out (cascaded_trigger), // Fires when ramp starts
+        .trigger_out (cascaded_trigger), // Fires when ramp starts and stops
         .dac_dat_o   (ramp_dac_out)
     );
 
@@ -93,6 +94,26 @@ module test_bench();
         .ts_3        (ts_3),
         .ts_4        (ts_4)
     );
+
+    // 4. Sampling Logic (Cascaded Trigger Receiver) <-- NEW MODULE
+    sampling_logic dut_sampling (
+        .clk_i       (clk),
+        .rstn_i      (rstn),
+        .arm_i       (global_arm),
+        .trigger_i   (cascaded_trigger), // Triggered by Ramp Gen
+        .adc_dat_i   (loopback_signal),  // Reads the internal loopback
+        .threshold   (det_threshold),
+        .samples     (det_samples)
+    );
+
+    // -------------------------------------------------------------------------
+    // Safety Watchdog Timer
+    // -------------------------------------------------------------------------
+    initial begin
+        #10000; // 10,000 ns timeout
+        $display("[%0t] ERROR: Watchdog Timeout! Simulation stuck waiting for det_done.", $time);
+        $finish;
+    end
 
     // -------------------------------------------------------------------------
     // Main Stimulus Sequence
@@ -138,10 +159,11 @@ module test_bench();
         master_trigger = 0;
         
         // 6. Monitor Execution and Wait for Completion
-        // We wait for the Timestamp Detector to assert the 'done' flag
+        // We wait for the Timestamp Detector to assert the 'done' flag (happens on 2nd cascaded_trigger)
         wait(det_done == 1'b1);
         
-        $display("[%0t] All 4 Peaks Detected! Simulation Complete.", $time);
+        $display("[%0t] --------------------------------------------------", $time);
+        $display("[%0t] Sequence Completed! (Second trigger pulse received)", $time);
         $display("--------------------------------------------------");
         $display("Expected Delays: %0d, %0d, %0d, %0d", test_dly_1, test_dly_2, test_dly_3, test_dly_4);
         $display("Recorded TS_1  : %0d clock cycles", ts_1);
@@ -149,21 +171,25 @@ module test_bench();
         $display("Recorded TS_3  : %0d clock cycles", ts_3);
         $display("Recorded TS_4  : %0d clock cycles", ts_4);
         $display("--------------------------------------------------");
+        // %b prints the 32 bits natively so you can see the exact highs and lows
+        $display("Recorded 32-Bit Samples : %b", det_samples);
+        $display("--------------------------------------------------");
         
         // Let the simulation run for a few more cycles to observe the final state
-        #5000;
+        #100;
         $finish;
     end
 
     // -------------------------------------------------------------------------
-    // Optional: Real-time event monitoring for Vivado TCL Console
+    // Real-time event monitoring for Vivado TCL Console
     // -------------------------------------------------------------------------
     always @(posedge clk) begin
         if (cascaded_trigger) 
             $display("[%0t] EVENT: Cascaded Trigger fired by Ramp Gen.", $time);
             
-        if (dut_timestamp.adc_dat_i > det_threshold && dut_timestamp.prev_adc <= det_threshold && global_arm)
-            $display("[%0t] EVENT: Threshold Crossed! Peak %0d detected.", $time, det_peak_count + 1);
+        // Use dut_timestamp internal variables to track threshold crossing exactly
+        if (dut_timestamp.adc_dat_i > det_threshold && dut_timestamp.prev_adc <= det_threshold && dut_timestamp.window_active)
+            $display("[%0t] EVENT: Threshold Crossed (Rising Edge). Peak %0d detected.", $time, dut_timestamp.peak_count + 1);
     end
 
 endmodule

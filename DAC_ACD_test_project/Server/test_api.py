@@ -59,17 +59,19 @@ def configure_system():
     print("1. Configuring Systems via AXI...")
     
     # Target Configuration Values
-    ramp_cfg = {"min_val": 0, "max_val": 8000}
-    det_cfg  = {"threshold": 4000}
+    ramp_cfg = {"min_val": 0, "max_val": 500}
+    det_cfg  = {"threshold": 2000}
     test_cfg = {
-        "dly_1": 150,
-        "dly_2": 300,
-        "dly_3": 450,
-        "dly_4": 600,
-        "peak_amp": 6000,
+        "dly_1": 50,
+        "dly_2": 400,
+        "dly_3": 500,
+        "dly_4": 800,
+        "peak_amp": 2000,
         "base_amp": 0,
         "pulse_width": 25
     }
+
+    "'{}'"
 
     # Send POST requests using the new write wrappers
     write_ramp_gen(**ramp_cfg)
