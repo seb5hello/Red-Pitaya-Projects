@@ -59,9 +59,10 @@ def configure_system():
     
     # Target Configuration Values
     ramp_cfg = {
-        "min_val": 205,    # NEW: Must be > 204
-        "max_val": 500,    # NEW: Must be < 8191
-        "n_cycles": 12500  # NEW: 10kHz at 125MHz clock (n_cycles>=12500) && (Must be > max - min)
+        "min_val": 205,    
+        "max_val": 500, 
+        "n_cycles": 25000, 
+        "continuous": 1    # NEW: 1 for infinite looping, 0 for single-shot
     }
     
     det_cfg  = {"threshold": 2000}

@@ -10,7 +10,8 @@ module ramp_logic (
     // Configuration Inputs (Driven by Bus Interface)
     input  logic [13:0]   min_val,
     input  logic [13:0]   max_val,
-    input  logic [31:0]   period_val, // NEW: Ramp period in clock cycles
+    input  logic [31:0]   period_val, 
+    input  logic          continuous_en, // NEW: Continuous mode toggle
     
     // Hardware Outputs
     output logic          trigger_out, 
@@ -22,37 +23,41 @@ module ramp_logic (
     localparam [1:0] RAMP_DOWN = 2'd2;
 
     logic [1:0]  state;
-    logic [31:0] acc;         // NEW: Phase accumulator 
-    logic [13:0] delta_v;     // NEW: Total voltage difference
+    logic [31:0] acc;         
+    logic [13:0] delta_v;     
+    
+    // -------------------------------------------------------------------------
+    // HARDWARE SAFETY LIMITS
+    // -------------------------------------------------------------------------
+    logic [13:0] safe_min_val;
+    assign safe_min_val = (min_val < 14'd205) ? 14'd205 : min_val;
+    assign delta_v = (max_val > safe_min_val) ? (max_val - safe_min_val) : 14'd1;
 
-    // Compute the total number of voltage steps for one slope
-    assign delta_v = max_val - min_val;
-
-    // Ramp Logic & Trigger Generation
+    // -------------------------------------------------------------------------
+    // RAMP LOGIC
+    // -------------------------------------------------------------------------
     always_ff @(posedge clk_i) begin
         if (~rstn_i) begin
-            dac_dat_o   <= 14'h0;
+            dac_dat_o   <= 14'd205; 
             state       <= IDLE;
             trigger_out <= 1'b0;
-            acc         <= 32'h0; // Reset accumulator
+            acc         <= 32'h0;
         end else begin
             trigger_out <= 1'b0; 
             
             if (~arm_i) begin
                 state       <= IDLE;
-                dac_dat_o   <= min_val;
+                dac_dat_o   <= safe_min_val; 
                 acc         <= 32'h0;
                 
             end else if (trigger_i && state == IDLE) begin
                 state       <= RAMP_UP;
-                dac_dat_o   <= min_val;
+                dac_dat_o   <= safe_min_val; 
                 trigger_out <= 1'b1;
-                acc         <= 32'h0; // Start accumulator at 0 for a clean slope
+                acc         <= 32'h0;
                 
             end else if (state == RAMP_UP) begin
-                // Check if accumulator threshold is met
                 if (acc + delta_v >= period_val) begin
-                    // Retain the fractional remainder for precise long-term frequency
                     acc <= acc + delta_v - period_val; 
                     
                     if (dac_dat_o >= max_val) begin
@@ -63,19 +68,23 @@ module ramp_logic (
                         dac_dat_o   <= dac_dat_o + 1;
                     end
                 end else begin
-                    // Keep accumulating step fractions
                     acc <= acc + delta_v; 
                 end
                 
             end else if (state == RAMP_DOWN) begin
-                // Check if accumulator threshold is met
                 if (acc + delta_v >= period_val) begin
                     acc <= acc + delta_v - period_val; 
                     
-                    if (dac_dat_o <= min_val) begin
-                        state       <= RAMP_UP;
-                        dac_dat_o   <= dac_dat_o + 1;
-                        trigger_out <= 1'b1;
+                    if (dac_dat_o <= safe_min_val) begin
+                        // Check if we should loop or stop
+                        if (continuous_en) begin
+                            state       <= RAMP_UP;
+                            dac_dat_o   <= dac_dat_o + 1;
+                            trigger_out <= 1'b1;
+                        end else begin
+                            state       <= IDLE;           // Stop and wait for next trigger
+                            dac_dat_o   <= safe_min_val;   // Park safely
+                        end
                     end else begin
                         dac_dat_o   <= dac_dat_o - 1;
                     end

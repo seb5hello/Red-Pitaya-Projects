@@ -22,16 +22,18 @@ module custom_ramp_gen (
     // Internal Configuration Registers
     logic [13:0] min_val_reg;
     logic [13:0] max_val_reg;
-    logic [31:0] period_reg;     // NEW: 32-bit register for ramp period (cycles per slope)
+    logic [31:0] period_reg;     
+    logic [31:0] mode_reg;       // NEW: Register for mode flags (Bit 0 = Continuous)
 
     // -------------------------------------------------------------------------
     // System Bus Write/Read Interface
     // -------------------------------------------------------------------------
     always_ff @(posedge clk_i) begin
         if (~rstn_i) begin
-            min_val_reg <= 14'h205;   // Minimum voltage
-            max_val_reg <= 14'h3FFF;  // Maximum voltage
-            period_reg  <= 32'd10000; // NEW: Default period in clock cycles
+            min_val_reg <= 14'h205;   
+            max_val_reg <= 14'h3FFF;  
+            period_reg  <= 32'd10000; 
+            mode_reg    <= 32'h0;     // Default to single-shot (0)
             sys_ack     <= 1'b0;
             sys_rdata   <= 32'h0;
         end else begin
@@ -41,7 +43,8 @@ module custom_ramp_gen (
             if (sys_wen) begin
                 if (sys_addr[19:0] == 20'h00) min_val_reg <= sys_wdata[13:0];
                 if (sys_addr[19:0] == 20'h04) max_val_reg <= sys_wdata[13:0];
-                if (sys_addr[19:0] == 20'h08) period_reg  <= sys_wdata; // NEW: Write period
+                if (sys_addr[19:0] == 20'h08) period_reg  <= sys_wdata;
+                if (sys_addr[19:0] == 20'h0C) mode_reg    <= sys_wdata; // NEW: Write mode
             end
             
             // Read Path (Registered)
@@ -49,7 +52,8 @@ module custom_ramp_gen (
                 case (sys_addr[19:0])
                     20'h00:  sys_rdata <= {18'h0, min_val_reg};
                     20'h04:  sys_rdata <= {18'h0, max_val_reg};
-                    20'h08:  sys_rdata <= period_reg;                   // NEW: Read period
+                    20'h08:  sys_rdata <= period_reg;
+                    20'h0C:  sys_rdata <= mode_reg;                     // NEW: Read mode
                     default: sys_rdata <= 32'h0;
                 endcase
             end
@@ -62,15 +66,16 @@ module custom_ramp_gen (
     // Core Logic Instantiation
     // -------------------------------------------------------------------------
     ramp_logic i_ramp_logic (
-        .clk_i       (clk_i),
-        .rstn_i      (rstn_i),
-        .arm_i       (arm_i),
-        .trigger_i   (trigger_i),
-        .min_val     (min_val_reg),
-        .max_val     (max_val_reg),
-        .period_val  (period_reg), // NEW: Passed to core logic
-        .trigger_out (trigger_out),
-        .dac_dat_o   (dac_dat_o)
+        .clk_i         (clk_i),
+        .rstn_i        (rstn_i),
+        .arm_i         (arm_i),
+        .trigger_i     (trigger_i),
+        .min_val       (min_val_reg),
+        .max_val       (max_val_reg),
+        .period_val    (period_reg),
+        .continuous_en (mode_reg[0]), // NEW: Pass continuous flag to core
+        .trigger_out   (trigger_out),
+        .dac_dat_o     (dac_dat_o)
     );
 
 endmodule

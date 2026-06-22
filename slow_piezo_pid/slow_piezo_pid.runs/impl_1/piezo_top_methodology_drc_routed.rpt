@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Mon Jun 22 12:40:54 2026
+| Date         : Mon Jun 22 15:57:02 2026
 | Host         : 20190748 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file piezo_top_methodology_drc_routed.rpt -pb piezo_top_methodology_drc_routed.pb -rpx piezo_top_methodology_drc_routed.rpx
 | Design       : piezo_top
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 69
+             Violations found: 118
 +-----------+------------------+-------------------------------------------------------------------+------------+
 | Rule      | Severity         | Description                                                       | Violations |
 +-----------+------------------+-------------------------------------------------------------------+------------+
@@ -31,6 +31,7 @@ Table of Contents
 | TIMING-7  | Critical Warning | No common node between related clocks                             | 1          |
 | TIMING-17 | Critical Warning | Non-clocked sequential cell                                       | 1          |
 | TIMING-9  | Warning          | Unknown CDC Logic                                                 | 1          |
+| TIMING-16 | Warning          | Large setup violation                                             | 49         |
 | TIMING-18 | Warning          | Missing input or output delay                                     | 24         |
 | TIMING-28 | Warning          | Auto-derived clock referenced by a timing constraint              | 3          |
 | TIMING-47 | Warning          | False path or asynchronous clock group between synchronous clocks | 2          |
@@ -58,6 +59,251 @@ Related violations: <none>
 TIMING-9#1 Warning
 Unknown CDC Logic  
 One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -2.624 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/state_reg[1]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -2.646 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[5]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -2.647 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[6]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -2.653 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[1]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -2.657 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[7]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -2.673 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[2]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -2.677 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[4]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -2.685 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[11]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -2.686 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[18]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -2.692 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[10]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -2.696 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[8]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -2.833 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[31]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -2.837 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[3]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -2.840 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[27]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -2.850 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[24]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -2.875 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[14]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -2.877 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[28]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -2.880 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[13]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -2.881 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[17]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -2.881 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[29]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -2.882 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[20]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -2.888 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[12]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -2.892 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[0]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -2.933 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[19]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -2.933 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[9]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -2.942 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[23]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -2.943 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[21]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -2.949 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[16]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#29 Warning
+Large setup violation  
+There is a large setup violation of -2.977 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[15]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#30 Warning
+Large setup violation  
+There is a large setup violation of -2.984 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[26]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#31 Warning
+Large setup violation  
+There is a large setup violation of -2.988 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[25]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#32 Warning
+Large setup violation  
+There is a large setup violation of -3.036 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[30]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#33 Warning
+Large setup violation  
+There is a large setup violation of -3.041 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/acc_reg[22]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#34 Warning
+Large setup violation  
+There is a large setup violation of -3.084 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/state_reg[0]/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#35 Warning
+Large setup violation  
+There is a large setup violation of -3.261 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/dac_dat_o_reg[0]/CE (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#36 Warning
+Large setup violation  
+There is a large setup violation of -3.261 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/dac_dat_o_reg[10]/CE (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#37 Warning
+Large setup violation  
+There is a large setup violation of -3.261 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/dac_dat_o_reg[12]/CE (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#38 Warning
+Large setup violation  
+There is a large setup violation of -3.261 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/dac_dat_o_reg[13]/CE (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#39 Warning
+Large setup violation  
+There is a large setup violation of -3.261 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/dac_dat_o_reg[2]/CE (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#40 Warning
+Large setup violation  
+There is a large setup violation of -3.261 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/dac_dat_o_reg[4]/CE (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#41 Warning
+Large setup violation  
+There is a large setup violation of -3.261 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/dac_dat_o_reg[8]/CE (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#42 Warning
+Large setup violation  
+There is a large setup violation of -3.261 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/dac_dat_o_reg[9]/CE (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#43 Warning
+Large setup violation  
+There is a large setup violation of -3.268 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/dac_dat_o_reg[11]/CE (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#44 Warning
+Large setup violation  
+There is a large setup violation of -3.268 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/dac_dat_o_reg[1]/CE (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#45 Warning
+Large setup violation  
+There is a large setup violation of -3.268 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/dac_dat_o_reg[3]/CE (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#46 Warning
+Large setup violation  
+There is a large setup violation of -3.268 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/dac_dat_o_reg[5]/CE (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#47 Warning
+Large setup violation  
+There is a large setup violation of -3.268 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/dac_dat_o_reg[6]/CE (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#48 Warning
+Large setup violation  
+There is a large setup violation of -3.268 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/dac_dat_o_reg[7]/CE (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#49 Warning
+Large setup violation  
+There is a large setup violation of -3.295 ns between generator_ramp/min_val_reg_reg[3]/C (clocked by pll_adc_clk) and generator_ramp/i_ramp_logic/trigger_out_reg/D (clocked by pll_adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning

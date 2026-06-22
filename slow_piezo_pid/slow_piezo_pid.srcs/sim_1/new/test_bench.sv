@@ -32,6 +32,7 @@ module test_bench();
     logic [13:0] ramp_max_val;
     logic [31:0] ramp_period_val; 
     logic [13:0] ramp_dac_out;    // Unused in loopback, but driven by logic
+    logic  continuos;    // Unused in loopback, but driven by logic
 
     // Timestamp Detector Config
     logic signed [13:0] det_threshold;
@@ -59,7 +60,8 @@ module test_bench();
         .trigger_i   (master_trigger),   // Triggered by testbench sequence
         .min_val     (ramp_min_val),
         .max_val     (ramp_max_val),
-        .period_val  (ramp_period_val),  
+        .period_val  (ramp_period_val), 
+        .continuous_en (continuos), // NEW: Pass continuous flag to core 
         .trigger_out (cascaded_trigger), // Fires when ramp starts and stops
         .dac_dat_o   (ramp_dac_out)
     );
@@ -115,9 +117,10 @@ module test_bench();
         master_trigger = 0;
         
         // 2. Load Configuration (Matching your Python API payload)
-        ramp_min_val   = 14'd0;
-        ramp_max_val   = 14'd200;
-        ramp_period_val= 32'd500; 
+        ramp_min_val   = 14'd205;
+        ramp_max_val   = 14'd305;
+        ramp_period_val= 32'd200; 
+        continuos = 1'b1; 
         
         det_threshold  = 14'd80;
         
