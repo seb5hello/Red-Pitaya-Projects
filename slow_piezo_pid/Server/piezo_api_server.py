@@ -87,61 +87,6 @@ def sys_ctrl():
             "trigger": (reg_val >> 1) & 0x1,
             "raw": reg_val
         })
-
-# --- 2. Custom Ramp Generator (sys[2]) ---
-@app.route('/api/ramp_gen', methods=['POST', 'GET'])
-def ramp_gen():
-    if request.method == 'POST':
-        data = request.get_json(force=True) or {}
-        
-        # Read current state to validate bounds if only partial update is sent
-        curr_min = read_reg("ramp_gen", 0x00) & 0x3FFF
-        curr_max = read_reg("ramp_gen", 0x04) & 0x3FFF
-        curr_n_cycles = read_reg("ramp_gen", 0x08)
-        
-        # Determine intended new values
-        new_min = (data['min_val'] & 0x3FFF) if 'min_val' in data else curr_min
-        new_max = (data['max_val'] & 0x3FFF) if 'max_val' in data else curr_max
-        new_n_cycles = int(data['n_cycles']) if 'n_cycles' in data else curr_n_cycles
-        
-        # Constraint 1: min_val must be larger than 204
-        if new_min < 204:
-            return jsonify({
-                "status": "error", 
-                "message": "min_val must be strictly greater than 205."
-            }), 400
-        
-        # Constraint 2: max_val must be larger than 8191
-        if new_max >= 8191:
-            return jsonify({
-                "status": "error", 
-                "message": "max_val must be strictly smaller than 8191."
-            }), 400
-            
-        # Constraint 3: n_cycles must be larger than the max-min amplitude
-        amplitude = new_max - new_min
-        if new_n_cycles <= amplitude:
-            return jsonify({
-                "status": "error", 
-                "message": f"n_cycles ({new_n_cycles}) must be larger than the amplitude difference ({amplitude})."
-            }), 400
-
-        # All checks passed, commit to hardware
-        if 'min_val' in data:
-            write_reg("ramp_gen", 0x00, new_min)
-        if 'max_val' in data:
-            write_reg("ramp_gen", 0x04, new_max)
-        if 'n_cycles' in data:
-            write_reg("ramp_gen", 0x08, new_n_cycles)
-            
-        return jsonify({"status": "success"})
-        
-    else:
-        return jsonify({
-            "min_val": read_reg("ramp_gen", 0x00) & 0x3FFF,
-            "max_val": read_reg("ramp_gen", 0x04) & 0x3FFF,
-            "n_cycles": read_reg("ramp_gen", 0x08)
-        })
     
 # --- 2. Custom Ramp Generator (sys[2]) ---
 @app.route('/api/ramp_gen', methods=['POST', 'GET'])
