@@ -32,13 +32,14 @@ module test_bench();
     logic [13:0] ramp_max_val;
     logic [31:0] ramp_period_val; 
     logic [13:0] ramp_dac_out;    // Unused in loopback, but driven by logic
-    logic  continuos;    // Unused in loopback, but driven by logic
+    logic        continuos;       
 
     // Timestamp Detector Config
     logic signed [13:0] det_threshold;
     logic               det_done;
-    logic [2:0]         det_peak_count;
+    logic [3:0]         det_peak_count; // UPDATED to 4 bits
     logic [31:0]        ts_1, ts_2, ts_3, ts_4;
+    logic [31:0]        ts_5, ts_6, ts_7, ts_8; // ADDED 4 new timestamps
 
     // Test Peak Generator Config
     logic [31:0] test_dly_1, test_dly_2, test_dly_3, test_dly_4;
@@ -54,16 +55,16 @@ module test_bench();
     
     // 1. Ramp Logic (Master Trigger Receiver)
     ramp_logic dut_ramp (
-        .clk_i       (clk),
-        .rstn_i      (rstn),
-        .arm_i       (global_arm),
-        .trigger_i   (master_trigger),   // Triggered by testbench sequence
-        .min_val     (ramp_min_val),
-        .max_val     (ramp_max_val),
-        .period_val  (ramp_period_val), 
-        .continuous_en (continuos), // NEW: Pass continuous flag to core 
-        .trigger_out (cascaded_trigger), // Fires when ramp starts and stops
-        .dac_dat_o   (ramp_dac_out)
+        .clk_i         (clk),
+        .rstn_i        (rstn),
+        .arm_i         (global_arm),
+        .trigger_i     (master_trigger),   // Triggered by testbench sequence
+        .min_val       (ramp_min_val),
+        .max_val       (ramp_max_val),
+        .period_val    (ramp_period_val), 
+        .continuous_en (continuos), 
+        .trigger_out   (cascaded_trigger), // Fires when ramp starts and stops
+        .dac_dat_o     (ramp_dac_out)
     );
 
     // 2. Test Peak Logic (Cascaded Trigger Receiver)
@@ -95,7 +96,11 @@ module test_bench();
         .ts_1        (ts_1),
         .ts_2        (ts_2),
         .ts_3        (ts_3),
-        .ts_4        (ts_4)
+        .ts_4        (ts_4),
+        .ts_5        (ts_5),
+        .ts_6        (ts_6),
+        .ts_7        (ts_7),
+        .ts_8        (ts_8)
     );
 
     // -------------------------------------------------------------------------
@@ -120,7 +125,7 @@ module test_bench();
         ramp_min_val   = 14'd205;
         ramp_max_val   = 14'd305;
         ramp_period_val= 32'd200; 
-        continuos = 1'b1; 
+        continuos      = 1'b1; 
         
         det_threshold  = 14'd80;
         
@@ -142,9 +147,13 @@ module test_bench();
         // 4. Arm the System
         @(posedge clk);
         global_arm = 1;
-        #40; // Wait a few clock cycles before triggering
         
-        $display("[%0t] Firing Master Trigger to Ramp Generator...", $time);
+        // NEW: Wait dynamically for the soft-arm sequence to finish
+        $display("[%0t] Waiting for Ramp Generator to reach min_val...", $time);
+        wait(ramp_dac_out == ramp_min_val);
+        #40; // Short buffer after reaching READY state
+        
+        $display("[%0t] System READY. Firing Master Trigger to Ramp Generator...", $time);
         
         // 5. Fire Master Trigger (1 clock cycle pulse)
         @(posedge clk);
@@ -153,21 +162,35 @@ module test_bench();
         master_trigger = 0;
         
         // 6. Monitor Execution and Wait for Completion
-        // We wait for the Timestamp Detector to assert the 'done' flag (happens on 2nd cascaded_trigger)
+        // We wait for the Timestamp Detector to assert the 'done' flag 
+        // (In the 8-peak architecture, this happens on the 3rd cascaded_trigger)
         wait(det_done == 1'b1);
         
         $display("[%0t] --------------------------------------------------", $time);
-        $display("[%0t] Sequence Completed! (Second trigger pulse received)", $time);
+        $display("[%0t] Sequence Completed! (Third trigger pulse received, data latched)", $time);
         $display("--------------------------------------------------");
         $display("Expected Delays: %0d, %0d, %0d, %0d", test_dly_1, test_dly_2, test_dly_3, test_dly_4);
         $display("Recorded TS_1  : %0d clock cycles", ts_1);
         $display("Recorded TS_2  : %0d clock cycles", ts_2);
         $display("Recorded TS_3  : %0d clock cycles", ts_3);
         $display("Recorded TS_4  : %0d clock cycles", ts_4);
+        $display("Recorded TS_5  : %0d clock cycles", ts_5);
+        $display("Recorded TS_6  : %0d clock cycles", ts_6);
+        $display("Recorded TS_7  : %0d clock cycles", ts_7);
+        $display("Recorded TS_8  : %0d clock cycles", ts_8);
         $display("--------------------------------------------------");
         
-        // Let the simulation run for a few more cycles to observe the final state
-        #100;
+        // 7. Test Soft Disarm Sequence
+        #5000;
+        $display("[%0t] Disarming system...", $time);
+        global_arm = 0;
+        
+        // NEW: Wait for the DAC to ramp all the way back down to 0
+        wait(ramp_dac_out == 14'd0);
+        $display("[%0t] System safely disarmed to 0.", $time);
+        
+        #500; // Let the simulation run for a few more cycles to observe the final state
+        
         $finish;
     end
 

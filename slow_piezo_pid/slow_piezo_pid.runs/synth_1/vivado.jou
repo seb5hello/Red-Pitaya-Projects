@@ -2,11 +2,11 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Mon Jun 22 15:53:46 2026
-# Process ID: 2896
-# Current directory: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/slow_piezo_pid/slow_piezo_pid.runs/synth_1
+# Start of session at: Wed Jun 24 08:24:37 2026
+# Process ID: 21892
+# Current directory: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/slow_piezo_pid/slow_piezo_pid.runs/synth_1
 # Command line: vivado.exe -log piezo_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source piezo_top.tcl
-# Log file: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/slow_piezo_pid/slow_piezo_pid.runs/synth_1/piezo_top.vds
-# Journal file: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/slow_piezo_pid/slow_piezo_pid.runs/synth_1\vivado.jou
+# Log file: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/slow_piezo_pid/slow_piezo_pid.runs/synth_1/piezo_top.vds
+# Journal file: C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/slow_piezo_pid/slow_piezo_pid.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source piezo_top.tcl -notrace

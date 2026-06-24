@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/slow_piezo_pid/slow_piezo_pid.runs/impl_1/piezo_top.tcl"
+  variable script "C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/slow_piezo_pid/slow_piezo_pid.runs/impl_1/piezo_top.tcl"
   variable category "vivado_impl"
 }
 
@@ -128,21 +128,21 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/slow_piezo_pid/slow_piezo_pid.cache/wt [current_project]
-  set_property parent.project_path D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/slow_piezo_pid/slow_piezo_pid.xpr [current_project]
-  set_property ip_output_repo D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/slow_piezo_pid/slow_piezo_pid.cache/ip [current_project]
+  set_property webtalk.parent_dir {C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/slow_piezo_pid/slow_piezo_pid.cache/wt} [current_project]
+  set_property parent.project_path {C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/slow_piezo_pid/slow_piezo_pid.xpr} [current_project]
+  set_property ip_output_repo {{C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/slow_piezo_pid/slow_piezo_pid.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/slow_piezo_pid/slow_piezo_pid.runs/synth_1/piezo_top.dcp
+  add_files -quiet {{C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/slow_piezo_pid/slow_piezo_pid.runs/synth_1/piezo_top.dcp}}
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/slow_piezo_pid/slow_piezo_pid.srcs/sources_1/bd/system/system.bd
+  add_files {{C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/slow_piezo_pid/slow_piezo_pid.srcs/sources_1/bd/system/system.bd}}
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/slow_piezo_pid/slow_piezo_pid.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc
-  read_xdc D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/slow_piezo_pid/slow_piezo_pid.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc
+  read_xdc {{C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/slow_piezo_pid/slow_piezo_pid.srcs/constrs_1/imports/RedPitaya/sdc/red_pitaya.xdc}}
+  read_xdc {{C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/slow_piezo_pid/slow_piezo_pid.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc}}
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
@@ -321,12 +321,12 @@ OPTRACE "read constraints: write_bitstream_post" START { }
 OPTRACE "read constraints: write_bitstream_post" END { }
 OPTRACE "Write Bitstream: post hook" START { }
   set src_rc [catch { 
-    puts "source D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/slow_piezo_pid/generate_bin.tcl"
-    source D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/slow_piezo_pid/generate_bin.tcl
+    puts "source {C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/slow_piezo_pid/generate_bin.tcl}"
+    source {C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/slow_piezo_pid/generate_bin.tcl}
   } _RESULT] 
   if {$src_rc} { 
     send_msg_id runtcl-1 error "$_RESULT"
-    send_msg_id runtcl-2 error "sourcing script D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/slow_piezo_pid/generate_bin.tcl failed"
+    send_msg_id runtcl-2 error "sourcing script {C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/slow_piezo_pid/generate_bin.tcl} failed"
     return -code error
   }
 OPTRACE "Write Bitstream: post hook" END { }

@@ -3,9 +3,9 @@ import time
 import sys
 
 # Replace with your Red Pitaya's local IP address
-RP_IP = "100.83.1.106" 
+# RP_IP = "100.83.1.106" 
 # RP_IP = "100.83.1.117" 
-# RP_IP = "192.168.2.29" 
+RP_IP = "192.168.2.29" 
 BASE_URL = f"http://{RP_IP}:5000/api"
 
 # ==============================================================================

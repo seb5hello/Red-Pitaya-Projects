@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=D:/Xilinx/Vivado/2020.1/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2020.1/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2020.1/bin
+  PATH=C:/Xilinx/Vivado/2020.1/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2020.1/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2020.1/bin
 else
-  PATH=D:/Xilinx/Vivado/2020.1/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2020.1/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2020.1/bin:$PATH
+  PATH=C:/Xilinx/Vivado/2020.1/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2020.1/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2020.1/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/slow_piezo_pid/slow_piezo_pid.runs/impl_1'
+HD_PWD='C:/Users/Gaming/Documents/fpga_projects/RedPitaya/prj/v0.94/Red Pitaya Projects/slow_piezo_pid/slow_piezo_pid.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

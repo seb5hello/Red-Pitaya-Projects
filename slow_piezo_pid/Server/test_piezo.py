@@ -12,68 +12,100 @@ BASE_URL = f"http://{RP_IP}:5000/api"
 # MODULE ABSTRACTION: READ/WRITE FUNCTIONS
 # ==============================================================================
 
-# --- 1. System Controller ---
 def write_sys_ctrl(arm, trigger):
-    """Writes the arm and trigger states to the System Controller."""
     return requests.post(f"{BASE_URL}/sys_ctrl", json={"arm": arm, "trigger": trigger}).json()
 
 def read_sys_ctrl():
-    """Reads the current state of the System Controller."""
     resp = requests.get(f"{BASE_URL}/sys_ctrl")
-    return resp.json() if resp.ok else {"error": "GET not implemented on server for this module"}
+    return resp.json() if resp.ok else {"error": "GET not implemented"}
 
-# --- 2. Ramp Generator ---
 def write_ramp_gen(**kwargs):
-    """Writes parameters (min_val, max_val, n_cycles) to the Ramp Generator."""
     return requests.post(f"{BASE_URL}/ramp_gen", json=kwargs).json()
 
 def read_ramp_gen():
-    """Reads all current settings from the Ramp Generator."""
     return requests.get(f"{BASE_URL}/ramp_gen").json()
 
-# --- 3. Peak Detector ---
 def write_peak_detector(**kwargs):
-    """Writes parameters (threshold) to the Peak Detector."""
     return requests.post(f"{BASE_URL}/peak_detector", json=kwargs).json()
 
 def read_peak_detector():
-    """Reads all current settings and status flags from the Peak Detector."""
     return requests.get(f"{BASE_URL}/peak_detector").json()
 
-# --- 4. Test Peak Generator ---
 def write_test_gen(**kwargs):
-    """Writes parameters (dly_1-4, peak_amp, base_amp, pulse_width) to the Test Gen."""
     return requests.post(f"{BASE_URL}/test_gen", json=kwargs).json()
 
 def read_test_gen():
-    """Reads all current settings from the Test Peak Generator."""
     return requests.get(f"{BASE_URL}/test_gen").json()
 
+# ==============================================================================
+# HELPER CONVERSION FUNCTIONS
+# ==============================================================================
+
+def volt_to_dac(voltage):
+    """
+    Converts a voltage value to a 13-bit integer.
+    1 Volt = 13 bits all set to 1 (8191).
+    """
+    dac_val = int(voltage * 8191)
+    # Clamp to max 13-bit unsigned value to prevent overflow errors
+    return max(0, min(8191, dac_val))
+
+def freq_to_cycles(freq_hz):
+    """
+    Converts a frequency in Hz to number of clock cycles.
+    Based on the Red Pitaya's 125 MHz clock (8 ns per cycle).
+    """
+    if freq_hz <= 0:
+        return 0
+    return int(125_000_000 / freq_hz)
 
 # ==============================================================================
 # MAIN TEST ROUTINES
 # ==============================================================================
 
 def configure_system():
-    print("1. Configuring Systems via AXI...")
+    print("1. Disarming system to ensure safe configuration...")
+    # Explicitly disarm before touching any configuration registers
+    write_sys_ctrl(arm=0, trigger=0)
     
+    print("2. Configuring Systems via AXI...")
+    
+    # --- User Input Variables ---
+    ramp_freq_hz = 5000       # Target frequency in Hz
+    min_volt = 0.025          # Target minimum voltage
+    max_volt = 0.061          # Target maximum voltage
+    threshold = 0.5
+    # ----------------------------
+
+    # Calculate hardware values
+    calc_n_cycles = freq_to_cycles(ramp_freq_hz)
+    calc_min_val = volt_to_dac(min_volt)
+    calc_max_val = volt_to_dac(max_volt)
+    calc_threshold = volt_to_dac(threshold)
+
+    print(f"ramp_freq_hz    -> Converted {ramp_freq_hz} Hz to {calc_n_cycles} cycles.")
+    print(f"min_volt        -> Converted {min_volt} V min to DAC val {calc_min_val}.")
+    print(f"max_volt        -> Converted {max_volt} V max to DAC val {calc_max_val}.")
+    print(f"threshold       -> Converted {threshold} V max to DAC val {calc_threshold}.")
+
     # Target Configuration Values
     ramp_cfg = {
-        "min_val": 205,    
-        "max_val": 500, 
-        "n_cycles": 25000, 
-        "continuous": 1    # NEW: 1 for infinite looping, 0 for single-shot
+        "min_val": calc_min_val,    
+        "max_val": calc_max_val, 
+        "n_cycles": calc_n_cycles, 
+        "continuous": 1    
     }
     
-    det_cfg  = {"threshold": 2000}
+    det_cfg  = {"threshold": calc_threshold}
+
     test_cfg = {
         "dly_1": 50,
         "dly_2": 400,
         "dly_3": 500,
         "dly_4": 800,
-        "peak_amp": 2000,
+        "peak_amp": 1000,
         "base_amp": 0,
-        "pulse_width": 25
+        "pulse_width": 3
     }
 
     # Send POST requests using the new write wrappers
@@ -85,7 +117,7 @@ def configure_system():
     write_peak_detector(**det_cfg)
     write_test_gen(**test_cfg)
 
-    print("2. Verifying Configuration...")
+    print("3. Verifying Configuration...")
     
     # Read back values via GET using the new read wrappers
     ramp_resp = read_ramp_gen()
@@ -115,40 +147,49 @@ def configure_system():
         print(" -> All variables successfully verified over AXI!")
 
 def run_test():
-    print("\n3. Arming the system (Arm=1, Trigger=0)...")
+    print("\n4. Arming the system (Arm=1, Trigger=0)...")
     write_sys_ctrl(arm=1, trigger=0)
-    time.sleep(0.1) # Brief pause to let hardware reset counters
+    time.sleep(0.1) 
     
-    print("4. Firing Trigger! (Arm=1, Trigger=1)...")
+    print("5. Firing Hardware Trigger! (Arm=1, Trigger=1)...")
     write_sys_ctrl(arm=1, trigger=1)
 
 def fetch_results():
-    print("5. Waiting for hardware to capture peaks...")
-    
-    # Wait half a second. Because of our repeating trigger architecture, 
-    # the hardware will have captured thousands of slopes in this time.
+    print("6. Waiting for hardware to capture initial peaks...")
     time.sleep(0.5) 
 
-    # Disarm the system to freeze the hardware state (stops the repeating triggers)
-    print("6. Disarming system to freeze registers...")
-    write_sys_ctrl(arm=0, trigger=0)
+    print("7. Requesting Timestamp Data via AXI Software Trigger...")
+    # Send software trigger to latch the next valid window
+    write_peak_detector(trigger=1)
     
-    # Now that the registers are frozen, we can safely read them without race conditions
-    resp = read_peak_detector()
+    # Poll until hardware confirms it has successfully latched data
+    timeout = 5.0 
+    start_time = time.time()
+    resp = {}
+    
+    print("   -> Polling for data_ready flag...")
+    while time.time() - start_time < timeout:
+        resp = read_peak_detector()
+        if resp.get("data_ready"):
+            print("   -> Success: Data successfully latched by hardware!")
+            break
+        time.sleep(0.01) # 10ms polling interval
+    else:
+        print("   -> TIMEOUT ERROR: Hardware never set data_ready flag. Did the peaks cross the threshold?")
+        
+    print("8. Disarming system to freeze registers...")
+    write_sys_ctrl(arm=0, trigger=0)
 
     print("\n--- TEST COMPLETE ---")
-    print(f"Peaks Detected in last cycle: {resp.get('peak_count')}")
-    print(f"Timestamp 1: {resp.get('ts_1')} clock cycles")
-    print(f"Timestamp 2: {resp.get('ts_2')} clock cycles")
-    print(f"Timestamp 3: {resp.get('ts_3')} clock cycles")
-    print(f"Timestamp 4: {resp.get('ts_4')} clock cycles")
+    print(f"Peaks Detected in latched window: {resp.get('peak_count', 0)}")
+    for i in range(1, 9):
+        print(f"Timestamp {i}: {resp.get(f'ts_{i}', 0):<6} clock cycles")
 
 if __name__ == "__main__":
     try:
-        write_sys_ctrl(0, 0)
         configure_system()
         run_test()
-        # fetch_results() # Added this call so the test actually reads the results
+        fetch_results() 
 
     except requests.exceptions.ConnectionError:
         print("Error: Could not connect to the Red Pitaya. Is the server running and the IP correct?")

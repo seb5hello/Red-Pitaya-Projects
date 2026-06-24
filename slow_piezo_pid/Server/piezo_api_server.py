@@ -113,7 +113,7 @@ def ramp_gen():
                 "message": "min_val must be strictly greater than 205."
             }), 400
         
-        # Constraint 2: max_val must be larger than 8191
+        # Constraint 2: max_val must be smaller than 8191
         if new_max >= 8191:
             return jsonify({
                 "status": "error", 
@@ -126,6 +126,13 @@ def ramp_gen():
             return jsonify({
                 "status": "error", 
                 "message": f"n_cycles ({new_n_cycles}) must be larger than the amplitude difference ({amplitude})."
+            }), 400
+            
+        # Constraint 4: n_cycles must be larger than 6250
+        if new_n_cycles < 6250: # Fixed the comparison operator here
+            return jsonify({
+                "status": "error", 
+                "message": f"n_cycles is too low, it must be a minimum of 6250 cycles or 20kHz for half of the triangle. You where trying to set at {new_n_cycles} cycles."
             }), 400
 
         # All checks passed, commit to hardware
@@ -153,19 +160,31 @@ def ramp_gen():
 def peak_detector():
     if request.method == 'POST':
         data = request.get_json(force=True) or {}
+        
+        # Write Configuration
         if 'threshold' in data:
             write_reg("peak_det", 0x00, data['threshold'] & 0x3FFF)
+            
+        # Write Software Trigger (Self-clears in hardware)
+        if 'trigger' in data:
+            write_reg("peak_det", 0x28, data['trigger'] & 0x1)
+            
         return jsonify({"status": "success"})
     else:
         status_reg = read_reg("peak_det", 0x04)
         return jsonify({
             "threshold": read_reg("peak_det", 0x00) & 0x3FFF,
-            "done": bool(status_reg & 0x01),
-            "peak_count": (status_reg >> 1) & 0x07,
+            "peak_count": status_reg & 0x0F,               # Bits [3:0]
+            "data_ready": bool((status_reg >> 4) & 0x01),  # Bit 4
+            "trigger_req": bool((status_reg >> 5) & 0x01), # Bit 5
             "ts_1": read_reg("peak_det", 0x08),
             "ts_2": read_reg("peak_det", 0x0C),
             "ts_3": read_reg("peak_det", 0x10),
-            "ts_4": read_reg("peak_det", 0x14)
+            "ts_4": read_reg("peak_det", 0x14),
+            "ts_5": read_reg("peak_det", 0x18),
+            "ts_6": read_reg("peak_det", 0x1C),
+            "ts_7": read_reg("peak_det", 0x20),
+            "ts_8": read_reg("peak_det", 0x24)
         })
 
 # --- 4. Test Peak Generator (sys[4]) ---

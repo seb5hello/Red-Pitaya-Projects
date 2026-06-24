@@ -332,7 +332,7 @@ custom_timestamp_detector detector_timestamp (
 ////////////////////////////////////////////////////////////////////////////////
 // SYS [4]: Custom Test Peak Generator (DAC Channel B)
 ////////////////////////////////////////////////////////////////////////////////
-custom_test_peak_gen generator_peak_timestamp (
+custom_test_peak_gen generator_test_peak (
     .clk_i      (adc_clk),
     .rstn_i     (adc_rstn),
     .arm_i      (global_arm),     // Driven by Orchestrator

@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Mon Jun 22 15:57:04 2026
-| Host             : 20190748 running 64-bit major release  (build 9200)
+| Date             : Wed Jun 24 08:26:54 2026
+| Host             : DESKTOP-VSBV2NH running 64-bit major release  (build 9200)
 | Command          : report_power -file piezo_top_power_routed.rpt -pb piezo_top_power_summary_routed.pb -rpx piezo_top_power_routed.rpx
 | Design           : piezo_top
 | Device           : xc7z010clg400-1
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.658        |
+| Total On-Chip Power (W)  | 1.659        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 1.533        |
@@ -52,20 +52,21 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.021 |       14 |       --- |             --- |
-| Slice Logic             |     0.006 |     5138 |       --- |             --- |
-|   LUT as Logic          |     0.005 |     1701 |     17600 |            9.66 |
-|   CARRY4                |    <0.001 |      172 |      4400 |            3.91 |
-|   Register              |    <0.001 |     2564 |     35200 |            7.28 |
+| Clocks                  |     0.022 |       14 |       --- |             --- |
+| Slice Logic             |     0.006 |     5800 |       --- |             --- |
+|   LUT as Logic          |     0.005 |     1800 |     17600 |           10.23 |
+|   CARRY4                |    <0.001 |      174 |      4400 |            3.95 |
+|   Register              |    <0.001 |     3114 |     35200 |            8.85 |
 |   LUT as Shift Register |    <0.001 |       48 |      6000 |            0.80 |
-|   Others                |     0.000 |      247 |       --- |             --- |
-| Signals                 |     0.008 |     4053 |       --- |             --- |
+|   F7/F8 Muxes           |    <0.001 |        1 |     17600 |           <0.01 |
+|   Others                |     0.000 |      248 |       --- |             --- |
+| Signals                 |     0.008 |     4674 |       --- |             --- |
 | PLL                     |     0.097 |        1 |         2 |           50.00 |
 | I/O                     |     0.082 |       61 |       100 |           61.00 |
 | XADC                    |     0.004 |        1 |       --- |             --- |
 | PS7                     |     1.315 |        1 |       --- |             --- |
 | Static Power            |     0.126 |          |           |                 |
-| Total                   |     1.658 |          |           |                 |
+| Total                   |     1.659 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.048 |       0.042 |      0.007 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.049 |       0.042 |      0.007 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.062 |       0.053 |      0.008 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.022 |       0.021 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -159,11 +160,11 @@ Table of Contents
 | Name                           | Power (W) |
 +--------------------------------+-----------+
 | piezo_top                      |     1.533 |
-|   detector_timestamp           |     0.002 |
-|     i_timestamp_logic          |     0.001 |
-|   generator_peak_timestamp     |     0.001 |
+|   detector_timestamp           |     0.003 |
+|     i_timestamp_logic          |     0.002 |
 |   generator_ramp               |     0.003 |
-|     i_ramp_logic               |     0.002 |
+|     i_ramp_logic               |     0.003 |
+|   generator_test_peak          |     0.001 |
 |   i_OBUF_daisy_clk             |     0.004 |
 |   i_OBUF_daisy_dat             |     0.004 |
 |   i_hk                         |     0.001 |
