@@ -5,6 +5,9 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import matplotlib.gridspec as gridspec
 from collections import deque
+import csv
+from datetime import datetime, timedelta
+import matplotlib.dates as mdates
 
 # ==============================================================================
 # NETWORK CONFIGURATION
@@ -188,11 +191,20 @@ def live_plot():
     calc_n_cycles = freq_to_cycles(RAMP_FREQ_HZ)
     window_max = 2 * calc_n_cycles
 
+    # --- Data Logging Setup ---
+    # Create a unique CSV file for this session
+    csv_filename = f"pulse_data_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+    with open(csv_filename, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        # Write the header row
+        writer.writerow(["Timestamp", "TS_1", "TS_2", "TS_3", "TS_4", "TS_5", "TS_6", "TS_7", "TS_8"])
+    
+    print(f"\n -> Saving live data to: {csv_filename}")
+
     # --- Figure 1: Main Plot (Lollipop Chart) ---
     fig_main, ax_main = plt.subplots(figsize=(10, 6))
     fig_main.canvas.manager.set_window_title("Live Pulse Detection")
     
-    # Initialize empty elements
     main_vlines = ax_main.vlines([], [], [], colors='blue', linewidth=1.2, zorder=2)
     main_scatter = ax_main.scatter([], [], c='blue', s=40, zorder=3)
     main_texts = [] 
@@ -209,11 +221,10 @@ def live_plot():
     fig_main.tight_layout()
 
     # --- Figure 2: Variation Tracking Plots (2x4 Grid) ---
-    fig_track, axes_track_matrix = plt.subplots(2, 4, figsize=(14, 6))
-    fig_track.canvas.manager.set_window_title("Timestamp Variation Tracking")
-    fig_track.subplots_adjust(hspace=0.5, wspace=0.4)
+    fig_track, axes_track_matrix = plt.subplots(2, 4, figsize=(15, 8))
+    fig_track.canvas.manager.set_window_title("Timestamp Variation Tracking (Max 3 Hours)")
+    fig_track.subplots_adjust(hspace=0.6, wspace=0.4, bottom=0.15)
     
-    # Flatten the 2x4 matrix into a simple list of 8 axes for easy looping
     axes_track = axes_track_matrix.flatten()
     lines_track = []
     
@@ -222,17 +233,19 @@ def live_plot():
         line, = ax.plot([], [], lw=2, color=f"C{i}")
         
         ax.set_title(f"TS {i+1} Variation", fontsize=10)
-        ax.set_xlabel("Instance", fontsize=8)
         ax.set_ylabel("Cycle Count", fontsize=8)
         ax.grid(True, linestyle=':', alpha=0.6)
+        
+        # Format X-axis for time
+        ax.xaxis.set_major_formatter(mdates.DateFormatter('%H:%M:%S'))
+        ax.tick_params(axis='x', rotation=45, labelsize=8)
         
         lines_track.append(line)
 
     # Data structures for rolling history
-    HISTORY_LEN = 100
-    x_data = deque(maxlen=HISTORY_LEN)
-    y_data = [deque(maxlen=HISTORY_LEN) for _ in range(8)]
-    instance_counter = [0] 
+    MAX_HISTORY_SECONDS = 3 * 3600 # 3 hours
+    x_data = []
+    y_data = [[] for _ in range(8)]
 
     def fetch_timestamps():
         requests.post(f"{BASE_URL}/peak_detector", json={"trigger": 1})
@@ -255,8 +268,14 @@ def live_plot():
     def update_plot(frame):
         timestamps = fetch_timestamps()
         y_vals = list(range(1, 9))
+        current_time = datetime.now()
         
-        # 1. Update Figure 1 (Main Plot)
+        # --- Save to CSV ---
+        with open(csv_filename, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow([current_time.isoformat()] + timestamps)
+
+        # --- 1. Update Figure 1 (Main Plot) ---
         main_scatter.set_offsets(list(zip(timestamps, y_vals)))
         
         segments = [[(x, 0), (x, y)] for x, y in zip(timestamps, y_vals)]
@@ -274,17 +293,32 @@ def live_plot():
             )
             main_texts.append(txt)
         
-        # 2. Update Figure 2 (Tracking Data)
-        curr_inst = instance_counter[0]
-        x_data.append(curr_inst)
-        instance_counter[0] += 1
-
+        # --- 2. Update Figure 2 (Tracking Data) ---
+        x_data.append(current_time)
+        
+        # Append new Y data
         for i in range(8):
             y_data[i].append(timestamps[i])
+
+        # Prune data older than 3 hours to prevent memory crashes
+        cutoff_time = current_time - timedelta(seconds=MAX_HISTORY_SECONDS)
+        while len(x_data) > 0 and x_data[0] < cutoff_time:
+            x_data.pop(0)
+            for i in range(8):
+                y_data[i].pop(0)
+
+        # Update the line charts and dynamic axes
+        for i in range(8):
             lines_track[i].set_data(x_data, y_data[i])
             
-            axes_track[i].set_xlim(max(0, curr_inst - HISTORY_LEN), max(HISTORY_LEN, curr_inst))
+            # Dynamic expanding X-axis
+            if len(x_data) > 1:
+                axes_track[i].set_xlim(x_data[0], x_data[-1])
+            else:
+                # Give it a 1-second visual buffer on the very first frame
+                axes_track[i].set_xlim(x_data[0], x_data[0] + timedelta(seconds=1))
             
+            # Dynamic Y-axis padding
             if len(y_data[i]) > 0:
                 min_y = min(y_data[i])
                 max_y = max(y_data[i])
@@ -293,17 +327,14 @@ def live_plot():
                     padding = max_y * 0.05 if max_y != 0 else 100
                 axes_track[i].set_ylim(max(0, min_y - padding), max_y + padding)
 
-        # Explicitly tell the second figure to redraw itself
         fig_track.canvas.draw_idle()
 
         return [main_scatter, main_vlines] + main_texts
 
     print("\n8. Starting live plots... Close the pop-up windows to end the script.")
     
-    # The animation loop is bound to fig_main, but updates both
     ani = animation.FuncAnimation(fig_main, update_plot, interval=100, blit=False, cache_frame_data=False)
     
-    # plt.show() will display all initialized figures and start the event loop
     plt.show()
 
 # ==============================================================================

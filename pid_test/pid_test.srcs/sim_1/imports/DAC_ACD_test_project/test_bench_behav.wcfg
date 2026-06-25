@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_bench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test_bench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="9515001fs"></ZoomEndTime>
+      <Cursor1Time time="1090000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="116"></NameColumnWidth>
+      <ValueColumnWidth column_width="116"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="19" />
+   <wvobject fp_name="/test_bench/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/rstn" type="logic">
+      <obj_property name="ElementShortName">rstn</obj_property>
+      <obj_property name="ObjectShortName">rstn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/dut_ramp/arm_i" type="logic">
+      <obj_property name="ElementShortName">arm_i</obj_property>
+      <obj_property name="ObjectShortName">arm_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/dut_ramp/trigger_i" type="logic">
+      <obj_property name="ElementShortName">trigger_i</obj_property>
+      <obj_property name="ObjectShortName">trigger_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/dut_ramp/continuous_en" type="logic">
+      <obj_property name="ElementShortName">continuous_en</obj_property>
+      <obj_property name="ObjectShortName">continuous_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/dut_ramp/period_val" type="array">
+      <obj_property name="ElementShortName">period_val[31:0]</obj_property>
+      <obj_property name="ObjectShortName">period_val[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/dut_ramp/max_val" type="array">
+      <obj_property name="ElementShortName">max_val[13:0]</obj_property>
+      <obj_property name="ObjectShortName">max_val[13:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/dut_ramp/dac_dat_o" type="array">
+      <obj_property name="ElementShortName">dac_dat_o[13:0]</obj_property>
+      <obj_property name="ObjectShortName">dac_dat_o[13:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/dut_ramp/trigger_out" type="logic">
+      <obj_property name="ElementShortName">trigger_out</obj_property>
+      <obj_property name="ObjectShortName">trigger_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/dut_timestamp/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/dut_timestamp/peak_count" type="array">
+      <obj_property name="ElementShortName">peak_count[3:0]</obj_property>
+      <obj_property name="ObjectShortName">peak_count[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/ts_1" type="array">
+      <obj_property name="ElementShortName">ts_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ts_1[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/ts_2" type="array">
+      <obj_property name="ElementShortName">ts_2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ts_2[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/ts_3" type="array">
+      <obj_property name="ElementShortName">ts_3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ts_3[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/ts_4" type="array">
+      <obj_property name="ElementShortName">ts_4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ts_4[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/ts_5" type="array">
+      <obj_property name="ElementShortName">ts_5[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ts_5[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/ts_6" type="array">
+      <obj_property name="ElementShortName">ts_6[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ts_6[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/ts_7" type="array">
+      <obj_property name="ElementShortName">ts_7[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ts_7[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench/ts_8" type="array">
+      <obj_property name="ElementShortName">ts_8[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ts_8[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
