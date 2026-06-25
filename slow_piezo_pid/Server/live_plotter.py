@@ -1,6 +1,10 @@
 import requests
 import time
 import sys
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+import matplotlib.gridspec as gridspec
+from collections import deque
 
 # ==============================================================================
 # NETWORK CONFIGURATION
@@ -176,14 +180,143 @@ def fetch_results():
     for i in range(1, 9):
         print(f"Timestamp {i}: {resp.get(f'ts_{i}', 0):<6} clock cycles")
 
+# ==============================================================================
+# LIVE PLOTTING ROUTINE
+# ==============================================================================
+
+def live_plot():
+    calc_n_cycles = freq_to_cycles(RAMP_FREQ_HZ)
+    window_max = 2 * calc_n_cycles
+
+    # --- Figure 1: Main Plot (Lollipop Chart) ---
+    fig_main, ax_main = plt.subplots(figsize=(10, 6))
+    fig_main.canvas.manager.set_window_title("Live Pulse Detection")
+    
+    # Initialize empty elements
+    main_vlines = ax_main.vlines([], [], [], colors='blue', linewidth=1.2, zorder=2)
+    main_scatter = ax_main.scatter([], [], c='blue', s=40, zorder=3)
+    main_texts = [] 
+
+    ax_main.set_xlim(0, window_max)
+    ax_main.set_ylim(0, 9.5) 
+    ax_main.set_yticks(range(1, 9))
+    ax_main.set_ylabel("Timestamp Index")
+    ax_main.set_xlabel("Clock Cycles")
+    ax_main.set_title("Live Timestamp Positions in Detection Window")
+    ax_main.grid(True, linestyle=':', alpha=0.6, zorder=0)
+    ax_main.axvline(x=calc_n_cycles, color='red', linestyle='--', linewidth=2, label='Start of 2nd Half')
+    ax_main.legend(loc="upper right")
+    fig_main.tight_layout()
+
+    # --- Figure 2: Variation Tracking Plots (2x4 Grid) ---
+    fig_track, axes_track_matrix = plt.subplots(2, 4, figsize=(14, 6))
+    fig_track.canvas.manager.set_window_title("Timestamp Variation Tracking")
+    fig_track.subplots_adjust(hspace=0.5, wspace=0.4)
+    
+    # Flatten the 2x4 matrix into a simple list of 8 axes for easy looping
+    axes_track = axes_track_matrix.flatten()
+    lines_track = []
+    
+    for i in range(8):
+        ax = axes_track[i]
+        line, = ax.plot([], [], lw=2, color=f"C{i}")
+        
+        ax.set_title(f"TS {i+1} Variation", fontsize=10)
+        ax.set_xlabel("Instance", fontsize=8)
+        ax.set_ylabel("Cycle Count", fontsize=8)
+        ax.grid(True, linestyle=':', alpha=0.6)
+        
+        lines_track.append(line)
+
+    # Data structures for rolling history
+    HISTORY_LEN = 100
+    x_data = deque(maxlen=HISTORY_LEN)
+    y_data = [deque(maxlen=HISTORY_LEN) for _ in range(8)]
+    instance_counter = [0] 
+
+    def fetch_timestamps():
+        requests.post(f"{BASE_URL}/peak_detector", json={"trigger": 1})
+        
+        timeout = 2.0 
+        start_time = time.time()
+        
+        while time.time() - start_time < timeout:
+            try:
+                resp = requests.get(f"{BASE_URL}/peak_detector").json()
+                if resp.get("data_ready"):
+                    return [resp.get(f"ts_{i}", 0) for i in range(1, 9)]
+            except requests.exceptions.RequestException:
+                pass 
+            time.sleep(0.01) 
+            
+        print("Warning: Fetch timeout. No peaks detected or connection lost.")
+        return [0] * 8 
+
+    def update_plot(frame):
+        timestamps = fetch_timestamps()
+        y_vals = list(range(1, 9))
+        
+        # 1. Update Figure 1 (Main Plot)
+        main_scatter.set_offsets(list(zip(timestamps, y_vals)))
+        
+        segments = [[(x, 0), (x, y)] for x, y in zip(timestamps, y_vals)]
+        main_vlines.set_segments(segments)
+        
+        for txt in main_texts:
+            txt.remove()
+        main_texts.clear()
+        
+        for x, y in zip(timestamps, y_vals):
+            txt = ax_main.text(
+                x, y + 0.25, f"{x} cyc", 
+                ha='center', va='bottom', fontsize=9, 
+                fontweight='bold', color='darkblue'
+            )
+            main_texts.append(txt)
+        
+        # 2. Update Figure 2 (Tracking Data)
+        curr_inst = instance_counter[0]
+        x_data.append(curr_inst)
+        instance_counter[0] += 1
+
+        for i in range(8):
+            y_data[i].append(timestamps[i])
+            lines_track[i].set_data(x_data, y_data[i])
+            
+            axes_track[i].set_xlim(max(0, curr_inst - HISTORY_LEN), max(HISTORY_LEN, curr_inst))
+            
+            if len(y_data[i]) > 0:
+                min_y = min(y_data[i])
+                max_y = max(y_data[i])
+                padding = (max_y - min_y) * 0.05
+                if padding == 0: 
+                    padding = max_y * 0.05 if max_y != 0 else 100
+                axes_track[i].set_ylim(max(0, min_y - padding), max_y + padding)
+
+        # Explicitly tell the second figure to redraw itself
+        fig_track.canvas.draw_idle()
+
+        return [main_scatter, main_vlines] + main_texts
+
+    print("\n8. Starting live plots... Close the pop-up windows to end the script.")
+    
+    # The animation loop is bound to fig_main, but updates both
+    ani = animation.FuncAnimation(fig_main, update_plot, interval=100, blit=False, cache_frame_data=False)
+    
+    # plt.show() will display all initialized figures and start the event loop
+    plt.show()
+
+# ==============================================================================
+# MAIN EXECUTION
+# ==============================================================================
+
 if __name__ == "__main__":
     try:
-        
         write_sys_ctrl(arm=0, trigger=0)
         configure_system()
         run_test()
-
         fetch_results() 
+        live_plot()
 
     except requests.exceptions.ConnectionError:
         print("Error: Could not connect to the Red Pitaya. Is the server running and the IP correct?")
