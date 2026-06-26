@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.runs/system_axi_register_slice_0_0_synth_1'
+HD_PWD='D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_test/pid_test.runs/system_axi_register_slice_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

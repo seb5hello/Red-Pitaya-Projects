@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xB50CE62D094301D7",
+      "boundary_crc": "0xB50CE62D9A956F23",
       "device": "xc7z010clg400-1",
       "name": "system",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -758,7 +758,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "200000000",
+            "value": "125000000",
             "value_src": "user_prop"
           },
           "FREQ_TOLERANCE_HZ": {
@@ -1043,7 +1043,7 @@
             "value": "50.000000"
           },
           "PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ": {
-            "value": "200.000000"
+            "value": "125.000000"
           },
           "PCW_ACT_PCAP_PERIPHERAL_FREQMHZ": {
             "value": "200.000000"
@@ -1121,7 +1121,7 @@
             "value": "50000000"
           },
           "PCW_CLK3_FREQ": {
-            "value": "200000000"
+            "value": "125000000"
           },
           "PCW_DDR_HPRLPR_QUEUE_PARTITION": {
             "value": "HPR(0)/LPR(32)"
@@ -1295,7 +1295,7 @@
             "value": "250"
           },
           "PCW_FPGA3_PERIPHERAL_FREQMHZ": {
-            "value": "200"
+            "value": "125"
           },
           "PCW_FPGA_FCLK0_ENABLE": {
             "value": "1"
@@ -2110,6 +2110,36 @@
       }
     },
     "interface_nets": {
+      "s_axi_hp2_1": {
+        "interface_ports": [
+          "S_AXI_HP2",
+          "processing_system7/S_AXI_HP2"
+        ]
+      },
+      "processing_system7_CAN_1": {
+        "interface_ports": [
+          "CAN1",
+          "processing_system7/CAN_1"
+        ]
+      },
+      "processing_system7_CAN_0": {
+        "interface_ports": [
+          "CAN0",
+          "processing_system7/CAN_0"
+        ]
+      },
+      "s_axi_hp3_1": {
+        "interface_ports": [
+          "S_AXI_HP3",
+          "processing_system7/S_AXI_HP3"
+        ]
+      },
+      "s_axi_hp0_1": {
+        "interface_ports": [
+          "S_AXI_HP0",
+          "processing_system7/S_AXI_HP0"
+        ]
+      },
       "Vaux9_1": {
         "interface_ports": [
           "Vaux9",
@@ -2122,34 +2152,10 @@
           "processing_system7/M_AXI_GP0"
         ]
       },
-      "Vaux0_1": {
-        "interface_ports": [
-          "Vaux0",
-          "xadc/Vaux0"
-        ]
-      },
       "Vaux8_1": {
         "interface_ports": [
           "Vaux8",
           "xadc/Vaux8"
-        ]
-      },
-      "Vaux1_1": {
-        "interface_ports": [
-          "Vaux1",
-          "xadc/Vaux1"
-        ]
-      },
-      "Vp_Vn_1": {
-        "interface_ports": [
-          "Vp_Vn",
-          "xadc/Vp_Vn"
-        ]
-      },
-      "axi_protocol_converter_0_M_AXI": {
-        "interface_ports": [
-          "axi_protocol_converter_0/M_AXI",
-          "xadc/s_axi_lite"
         ]
       },
       "processing_system7_0_fixed_io": {
@@ -2158,10 +2164,34 @@
           "processing_system7/FIXED_IO"
         ]
       },
+      "Vp_Vn_1": {
+        "interface_ports": [
+          "Vp_Vn",
+          "xadc/Vp_Vn"
+        ]
+      },
       "processing_system7_SPI_0": {
         "interface_ports": [
           "SPI0",
           "processing_system7/SPI_0"
+        ]
+      },
+      "Vaux0_1": {
+        "interface_ports": [
+          "Vaux0",
+          "xadc/Vaux0"
+        ]
+      },
+      "axi_protocol_converter_0_M_AXI": {
+        "interface_ports": [
+          "axi_protocol_converter_0/M_AXI",
+          "xadc/s_axi_lite"
+        ]
+      },
+      "Vaux1_1": {
+        "interface_ports": [
+          "Vaux1",
+          "xadc/Vaux1"
         ]
       },
       "processing_system7_0_ddr": {
@@ -2170,16 +2200,10 @@
           "processing_system7/DDR"
         ]
       },
-      "axi_register_slice_0_M_AXI": {
+      "s_axi_hp1_1": {
         "interface_ports": [
-          "axi_register_slice_0/M_AXI",
-          "axi_protocol_converter_0/S_AXI"
-        ]
-      },
-      "processing_system7_0_M_AXI_GP1": {
-        "interface_ports": [
-          "axi_register_slice_0/S_AXI",
-          "processing_system7/M_AXI_GP1"
+          "S_AXI_HP1",
+          "processing_system7/S_AXI_HP1"
         ]
       },
       "processing_system7_GPIO_0": {
@@ -2188,40 +2212,16 @@
           "processing_system7/GPIO_0"
         ]
       },
-      "s_axi_hp1_1": {
+      "processing_system7_0_M_AXI_GP1": {
         "interface_ports": [
-          "S_AXI_HP1",
-          "processing_system7/S_AXI_HP1"
+          "axi_register_slice_0/S_AXI",
+          "processing_system7/M_AXI_GP1"
         ]
       },
-      "s_axi_hp0_1": {
+      "axi_register_slice_0_M_AXI": {
         "interface_ports": [
-          "S_AXI_HP0",
-          "processing_system7/S_AXI_HP0"
-        ]
-      },
-      "s_axi_hp3_1": {
-        "interface_ports": [
-          "S_AXI_HP3",
-          "processing_system7/S_AXI_HP3"
-        ]
-      },
-      "s_axi_hp2_1": {
-        "interface_ports": [
-          "S_AXI_HP2",
-          "processing_system7/S_AXI_HP2"
-        ]
-      },
-      "processing_system7_CAN_0": {
-        "interface_ports": [
-          "CAN0",
-          "processing_system7/CAN_0"
-        ]
-      },
-      "processing_system7_CAN_1": {
-        "interface_ports": [
-          "CAN1",
-          "processing_system7/CAN_1"
+          "axi_register_slice_0/M_AXI",
+          "axi_protocol_converter_0/S_AXI"
         ]
       }
     },

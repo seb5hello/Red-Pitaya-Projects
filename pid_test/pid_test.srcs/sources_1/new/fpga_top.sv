@@ -298,6 +298,7 @@ system_controller i_sys_ctrl (
 pid_top pid_test_instance (
     .clk_i      (adc_clk),
     .rstn_i     (adc_rstn),
+    .arm_i      (global_arm),
     .sys_addr   (sys[2].addr ),
     .sys_wdata  (sys[2].wdata),
     .sys_wen    (sys[2].wen  ),

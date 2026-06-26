@@ -3,13 +3,13 @@ set_property SRC_FILE_INFO {cfile:D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Proje
 set_property SRC_FILE_INFO {cfile:D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_test/pid_test.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc rfile:../../../pid_test.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc id:3} [current_design]
 current_instance ps/system_i/processing_system7
 set_property src_info {type:SCOPED_XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
-create_clock -period 20.000 [get_ports {}]
+create_clock -period 8.000 [get_ports {}]
 set_property src_info {type:SCOPED_XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
 create_clock -period 8.000 [get_ports {}]
 set_property src_info {type:SCOPED_XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
-create_clock -period 4.000 [get_ports {}]
+create_clock -period 20.000 [get_ports {}]
 set_property src_info {type:SCOPED_XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
-create_clock -period 5.000 [get_ports {}]
+create_clock -period 4.000 [get_ports {}]
 current_instance
 set_property src_info {type:XDC file:2 line:19 export:INPUT save:INPUT read:READ} [current_design]
 set_property IOB        TRUE     [get_ports {adc_dat_i[*][*]}]

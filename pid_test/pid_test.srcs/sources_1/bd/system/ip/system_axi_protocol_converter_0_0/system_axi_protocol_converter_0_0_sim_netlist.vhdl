@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Sun May 31 17:02:39 2026
+-- Date        : Fri Jun 26 14:15:53 2026
 -- Host        : 20190748 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/default_project/redpitaya.srcs/sources_1/bd/system/ip/system_axi_protocol_converter_0_0/system_axi_protocol_converter_0_0_sim_netlist.vhdl
+--               d:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_test/pid_test.srcs/sources_1/bd/system/ip/system_axi_protocol_converter_0_0/system_axi_protocol_converter_0_0_sim_netlist.vhdl
 -- Design      : system_axi_protocol_converter_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -98,11 +98,23 @@ architecture STRUCTURE of system_axi_protocol_converter_0_0_axi_protocol_convert
   signal p_1_in : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal \^sel_first_reg_0\ : STD_LOGIC;
   signal \NLW_axaddr_incr_reg[11]_i_4_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \axaddr_incr[0]_i_1\ : label is "soft_lutpair122";
+  attribute SOFT_HLUTNM of \axaddr_incr[10]_i_1\ : label is "soft_lutpair118";
+  attribute SOFT_HLUTNM of \axaddr_incr[11]_i_2\ : label is "soft_lutpair117";
+  attribute SOFT_HLUTNM of \axaddr_incr[1]_i_1\ : label is "soft_lutpair122";
+  attribute SOFT_HLUTNM of \axaddr_incr[2]_i_1\ : label is "soft_lutpair121";
+  attribute SOFT_HLUTNM of \axaddr_incr[3]_i_1\ : label is "soft_lutpair121";
+  attribute SOFT_HLUTNM of \axaddr_incr[4]_i_1\ : label is "soft_lutpair120";
+  attribute SOFT_HLUTNM of \axaddr_incr[5]_i_1\ : label is "soft_lutpair119";
+  attribute SOFT_HLUTNM of \axaddr_incr[6]_i_1\ : label is "soft_lutpair120";
+  attribute SOFT_HLUTNM of \axaddr_incr[7]_i_1\ : label is "soft_lutpair119";
+  attribute SOFT_HLUTNM of \axaddr_incr[8]_i_1\ : label is "soft_lutpair118";
+  attribute SOFT_HLUTNM of \axaddr_incr[9]_i_1\ : label is "soft_lutpair117";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \axaddr_incr_reg[11]_i_4\ : label is 35;
   attribute ADDER_THRESHOLD of \axaddr_incr_reg[3]_i_3\ : label is 35;
   attribute ADDER_THRESHOLD of \axaddr_incr_reg[7]_i_3\ : label is 35;
-  attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \axlen_cnt[1]_i_2\ : label is "soft_lutpair114";
   attribute SOFT_HLUTNM of \axlen_cnt[3]_i_2\ : label is "soft_lutpair116";
   attribute SOFT_HLUTNM of \axlen_cnt[5]_i_2\ : label is "soft_lutpair116";
@@ -2438,8 +2450,10 @@ architecture STRUCTURE of system_axi_protocol_converter_0_0_axi_protocol_convert
   signal \memory_reg[3][3]_srl4_n_0\ : STD_LOGIC;
   signal \^sel\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \cnt_read[0]_i_1\ : label is "soft_lutpair118";
-  attribute SOFT_HLUTNM of \cnt_read[1]_i_1\ : label is "soft_lutpair118";
+  attribute SOFT_HLUTNM of \FSM_sequential_state[0]_i_2\ : label is "soft_lutpair124";
+  attribute SOFT_HLUTNM of bvalid_i_i_3 : label is "soft_lutpair124";
+  attribute SOFT_HLUTNM of \cnt_read[0]_i_1\ : label is "soft_lutpair125";
+  attribute SOFT_HLUTNM of \cnt_read[1]_i_1\ : label is "soft_lutpair125";
   attribute srl_bus_name : string;
   attribute srl_bus_name of \memory_reg[3][0]_srl4\ : label is "inst/\gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3] ";
   attribute srl_name : string;
@@ -2900,16 +2914,16 @@ architecture STRUCTURE of \system_axi_protocol_converter_0_0_axi_protocol_conver
   signal \cnt_read[0]_i_1_n_0\ : STD_LOGIC;
   signal \cnt_read[1]_i_1_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \cnt_read[0]_i_1\ : label is "soft_lutpair119";
-  attribute SOFT_HLUTNM of \cnt_read[1]_i_1\ : label is "soft_lutpair119";
-  attribute SOFT_HLUTNM of m_axi_bready_INST_0 : label is "soft_lutpair120";
+  attribute SOFT_HLUTNM of \cnt_read[0]_i_1\ : label is "soft_lutpair126";
+  attribute SOFT_HLUTNM of \cnt_read[1]_i_1\ : label is "soft_lutpair126";
+  attribute SOFT_HLUTNM of m_axi_bready_INST_0 : label is "soft_lutpair127";
   attribute srl_bus_name : string;
   attribute srl_bus_name of \memory_reg[3][0]_srl4\ : label is "inst/\gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bresp_fifo_0/memory_reg[3] ";
   attribute srl_name : string;
   attribute srl_name of \memory_reg[3][0]_srl4\ : label is "inst/\gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bresp_fifo_0/memory_reg[3][0]_srl4 ";
   attribute srl_bus_name of \memory_reg[3][1]_srl4\ : label is "inst/\gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bresp_fifo_0/memory_reg[3] ";
   attribute srl_name of \memory_reg[3][1]_srl4\ : label is "inst/\gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bresp_fifo_0/memory_reg[3][1]_srl4 ";
-  attribute SOFT_HLUTNM of mhandshake_r_i_1 : label is "soft_lutpair120";
+  attribute SOFT_HLUTNM of mhandshake_r_i_1 : label is "soft_lutpair127";
 begin
 bvalid_i_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -4533,8 +4547,8 @@ architecture STRUCTURE of system_axi_protocol_converter_0_0_axi_protocol_convert
   attribute ADDER_THRESHOLD of \axaddr_wrap_reg[3]_i_2\ : label is 35;
   attribute ADDER_THRESHOLD of \axaddr_wrap_reg[7]_i_2\ : label is 35;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of s_axburst_eq0_i_1 : label is "soft_lutpair117";
-  attribute SOFT_HLUTNM of s_axburst_eq1_i_1 : label is "soft_lutpair117";
+  attribute SOFT_HLUTNM of s_axburst_eq0_i_1 : label is "soft_lutpair123";
+  attribute SOFT_HLUTNM of s_axburst_eq1_i_1 : label is "soft_lutpair123";
 begin
   \axaddr_wrap_reg[11]_0\(11 downto 0) <= \^axaddr_wrap_reg[11]_0\(11 downto 0);
 \axaddr_offset_r_reg[0]\: unisim.vcomponents.FDRE
@@ -11827,12 +11841,12 @@ architecture STRUCTURE of system_axi_protocol_converter_0_0_axi_protocol_convert
   signal shandshake_r : STD_LOGIC;
   signal \^si_rs_bvalid\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \bresp_cnt[1]_i_1\ : label is "soft_lutpair123";
-  attribute SOFT_HLUTNM of \bresp_cnt[2]_i_1\ : label is "soft_lutpair123";
-  attribute SOFT_HLUTNM of \bresp_cnt[3]_i_1\ : label is "soft_lutpair121";
-  attribute SOFT_HLUTNM of \bresp_cnt[4]_i_1\ : label is "soft_lutpair121";
-  attribute SOFT_HLUTNM of \bresp_cnt[6]_i_1\ : label is "soft_lutpair122";
-  attribute SOFT_HLUTNM of \bresp_cnt[7]_i_2\ : label is "soft_lutpair122";
+  attribute SOFT_HLUTNM of \bresp_cnt[1]_i_1\ : label is "soft_lutpair130";
+  attribute SOFT_HLUTNM of \bresp_cnt[2]_i_1\ : label is "soft_lutpair130";
+  attribute SOFT_HLUTNM of \bresp_cnt[3]_i_1\ : label is "soft_lutpair128";
+  attribute SOFT_HLUTNM of \bresp_cnt[4]_i_1\ : label is "soft_lutpair128";
+  attribute SOFT_HLUTNM of \bresp_cnt[6]_i_1\ : label is "soft_lutpair129";
+  attribute SOFT_HLUTNM of \bresp_cnt[7]_i_2\ : label is "soft_lutpair129";
 begin
   si_rs_bvalid <= \^si_rs_bvalid\;
 bid_fifo_0: entity work.system_axi_protocol_converter_0_0_axi_protocol_converter_v2_1_21_b2s_simple_fifo
@@ -14363,7 +14377,7 @@ architecture STRUCTURE of system_axi_protocol_converter_0_0 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of aclk : signal is "xilinx.com:signal:clock:1.0 CLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME CLK, FREQ_HZ 200000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_FCLK_CLK3, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET ARESETN, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME CLK, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_FCLK_CLK3, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET ARESETN, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of aresetn : signal is "xilinx.com:signal:reset:1.0 RST RST";
   attribute X_INTERFACE_PARAMETER of aresetn : signal is "XIL_INTERFACENAME RST, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT";
   attribute X_INTERFACE_INFO of m_axi_arready : signal is "xilinx.com:interface:aximm:1.0 M_AXI ARREADY";
@@ -14373,7 +14387,7 @@ architecture STRUCTURE of system_axi_protocol_converter_0_0 is
   attribute X_INTERFACE_INFO of m_axi_bready : signal is "xilinx.com:interface:aximm:1.0 M_AXI BREADY";
   attribute X_INTERFACE_INFO of m_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI BVALID";
   attribute X_INTERFACE_INFO of m_axi_rready : signal is "xilinx.com:interface:aximm:1.0 M_AXI RREADY";
-  attribute X_INTERFACE_PARAMETER of m_axi_rready : signal is "XIL_INTERFACENAME M_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 200000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_FCLK_CLK3, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of m_axi_rready : signal is "XIL_INTERFACENAME M_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 125000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_FCLK_CLK3, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI RVALID";
   attribute X_INTERFACE_INFO of m_axi_wready : signal is "xilinx.com:interface:aximm:1.0 M_AXI WREADY";
   attribute X_INTERFACE_INFO of m_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI WVALID";
@@ -14385,7 +14399,7 @@ architecture STRUCTURE of system_axi_protocol_converter_0_0 is
   attribute X_INTERFACE_INFO of s_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI BVALID";
   attribute X_INTERFACE_INFO of s_axi_rlast : signal is "xilinx.com:interface:aximm:1.0 S_AXI RLAST";
   attribute X_INTERFACE_INFO of s_axi_rready : signal is "xilinx.com:interface:aximm:1.0 S_AXI RREADY";
-  attribute X_INTERFACE_PARAMETER of s_axi_rready : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI3, FREQ_HZ 200000000, ID_WIDTH 12, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 16, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_FCLK_CLK3, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s_axi_rready : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI3, FREQ_HZ 125000000, ID_WIDTH 12, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 16, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_FCLK_CLK3, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI RVALID";
   attribute X_INTERFACE_INFO of s_axi_wlast : signal is "xilinx.com:interface:aximm:1.0 S_AXI WLAST";
   attribute X_INTERFACE_INFO of s_axi_wready : signal is "xilinx.com:interface:aximm:1.0 S_AXI WREADY";

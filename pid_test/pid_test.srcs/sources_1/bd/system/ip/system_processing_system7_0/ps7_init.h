@@ -91,7 +91,7 @@ extern unsigned long  * ps7_peripherals_init_data;
 #define FPGA0_FREQ  125000000
 #define FPGA1_FREQ  250000000
 #define FPGA2_FREQ  50000000
-#define FPGA3_FREQ  200000000
+#define FPGA3_FREQ  125000000
 
 
 /* For delay calculation using global registers*/

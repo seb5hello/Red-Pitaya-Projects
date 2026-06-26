@@ -14,6 +14,6 @@ create_clock -name S_AXI_HP3_aclk -period 4 [get_ports S_AXI_HP3_aclk]
 create_clock -name processing_system7_FCLK_CLK0 -period 8 [get_pins processing_system7/FCLK_CLK0]
 create_clock -name processing_system7_FCLK_CLK1 -period 4 [get_pins processing_system7/FCLK_CLK1]
 create_clock -name processing_system7_FCLK_CLK2 -period 20 [get_pins processing_system7/FCLK_CLK2]
-create_clock -name processing_system7_FCLK_CLK3 -period 5 [get_pins processing_system7/FCLK_CLK3]
+create_clock -name processing_system7_FCLK_CLK3 -period 8 [get_pins processing_system7/FCLK_CLK3]
 
 ################################################################################

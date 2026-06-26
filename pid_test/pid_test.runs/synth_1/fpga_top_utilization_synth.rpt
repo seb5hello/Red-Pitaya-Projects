@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Thu Jun 25 18:32:06 2026
+| Date         : Fri Jun 26 14:17:04 2026
 | Host         : 20190748 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file fpga_top_utilization_synth.rpt -pb fpga_top_utilization_synth.pb
 | Design       : fpga_top
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  662 |     0 |     17600 |  3.76 |
-|   LUT as Logic          |  662 |     0 |     17600 |  3.76 |
+| Slice LUTs*             |  675 |     0 |     17600 |  3.84 |
+|   LUT as Logic          |  675 |     0 |     17600 |  3.84 |
 |   LUT as Memory         |    0 |     0 |      6000 |  0.00 |
 | Slice Registers         | 1101 |     0 |     35200 |  3.13 |
 |   Register as Flip Flop | 1101 |     0 |     35200 |  3.13 |
@@ -149,15 +149,15 @@ Table of Contents
 |  Ref Name | Used | Functional Category |
 +-----------+------+---------------------+
 | FDRE      |  871 |        Flop & Latch |
+| LUT2      |  244 |                 LUT |
 | FDCE      |  223 |        Flop & Latch |
-| LUT2      |  221 |                 LUT |
 | LUT3      |  188 |                 LUT |
 | LUT6      |  153 |                 LUT |
 | LUT5      |  134 |                 LUT |
 | LUT4      |  125 |                 LUT |
-| CARRY4    |   62 |          CarryLogic |
+| CARRY4    |   65 |          CarryLogic |
 | OBUF      |   33 |                  IO |
-| LUT1      |   24 |                 LUT |
+| LUT1      |   25 |                 LUT |
 | ODDR      |   20 |                  IO |
 | BUFG      |   11 |               Clock |
 | IBUF      |   10 |                  IO |

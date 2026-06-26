@@ -2084,7 +2084,7 @@ output bit S_AXI_HP3_RVALID
      FCLK_CLK3 = 1'b0;
   end
 
-  always #(2.5) FCLK_CLK3 <= ~FCLK_CLK3;
+  always #(4.0) FCLK_CLK3 <= ~FCLK_CLK3;
 
   always@(posedge FCLK_CLK3)
   begin

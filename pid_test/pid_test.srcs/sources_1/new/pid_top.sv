@@ -3,6 +3,7 @@
 module pid_top(
     input  logic               clk_i,
     input  logic               rstn_i,
+    input  logic               arm_i,
     
     // System Bus Interface
     input  logic [19:0]        sys_addr,
@@ -26,13 +27,10 @@ module pid_top(
     logic               trigger_req;
     logic               pid_ready;
     logic signed [13:0] dac_out_wire;
-
-    // -------------------------------------------------------------------------
-    // Calculate Error
-    // -------------------------------------------------------------------------
-    // The PID calculates based on the differential between target and current
-    logic signed [31:0] error_calc;
-    assign error_calc = target_ts_reg - current_ts_reg;
+    
+      // Calculate Error
+     logic signed [31:0] error_calc;
+     assign error_calc = target_ts_reg - current_ts_reg;
 
     // -------------------------------------------------------------------------
     // System Bus Write/Read Interface & Synchronization
@@ -95,21 +93,43 @@ module pid_top(
     // -------------------------------------------------------------------------
     // Instantiate PID Logic
     // -------------------------------------------------------------------------
+//    pid_logic #(
+//        .MAX_INT(500000),      
+//        .MIN_INT(-500000),     
+//        .MAX_OUT(8191),        
+//        .MIN_OUT(-8192)        
+//    ) i_pid_logic (
+//        .clk          (clk_i),
+//        // --- FIX: Combine system reset and arm signal ---
+//        .rst_n        (rstn_i & arm_i), 
+//        // ------------------------------------------------
+//        .data_valid_i (trigger_req),
+        
+//        .setpoint_i   (target_ts_reg), 
+//        .actual_i     (current_ts_reg), 
+
+//        .kp_i         (kp_reg),
+//        .ki_i         (ki_reg),
+//        .kd_i         (kd_reg),
+//        .dac_out_o    (dac_out_wire),
+//        .ready_o      (pid_ready)
+//    );
+
     pid_logic #(
-        .MAX_INT(32'sd500000),
-        .MIN_INT(-32'sd500000),
-        .MAX_OUT(14'sd32767),
-        .MIN_OUT(-14'sd32768)
-    ) i_pid_logic (
-        .clk          (clk_i),
-        .rst_n        (rstn_i),
-        .data_valid_i (trigger_req),
-        .error_i      (error_calc),
-        .kp_i         (kp_reg),
-        .ki_i         (ki_reg),
-        .kd_i         (kd_reg),
-        .dac_out_o    (dac_out_wire),
-        .ready_o      (pid_ready)
+         .MAX_INT(500000),      // Plain 32-bit integer
+         .MIN_INT(-500000),     // Plain 32-bit integer
+         .MAX_OUT(8191),        // Safe maximum
+         .MIN_OUT(-8192)        // Safe minimum, no double-negative casting
+     ) i_pid_logic (
+         .clk          (clk_i),
+         .rst_n        (rstn_i & arm_i),
+         .data_valid_i (trigger_req),
+         .error_i      (error_calc),
+         .kp_i         (kp_reg),
+         .ki_i         (ki_reg),
+         .kd_i         (kd_reg),
+         .dac_out_o    (dac_out_wire),
+         .ready_o      (pid_ready)
     );
 
 endmodule

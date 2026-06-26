@@ -242,7 +242,7 @@ processing_system7_v5_5_tlm :: processing_system7_v5_5_tlm (sc_core::sc_module_n
         ,FCLK_CLK0_clk("FCLK_CLK0_clk", sc_time(8000.0,sc_core::SC_PS))//clock period in picoseconds = 1000000/freq(in MZ)
         ,FCLK_CLK1_clk("FCLK_CLK1_clk", sc_time(4000.0,sc_core::SC_PS))//clock period in picoseconds = 1000000/freq(in MZ)
         ,FCLK_CLK2_clk("FCLK_CLK2_clk", sc_time(20000.0,sc_core::SC_PS))//clock period in picoseconds = 1000000/freq(in MZ)
-        ,FCLK_CLK3_clk("FCLK_CLK3_clk", sc_time(5000.0,sc_core::SC_PS))//clock period in picoseconds = 1000000/freq(in MZ)
+        ,FCLK_CLK3_clk("FCLK_CLK3_clk", sc_time(8000.0,sc_core::SC_PS))//clock period in picoseconds = 1000000/freq(in MZ)
     ,prop(_prop)
     {
         //creating instances of xtlm slave sockets
