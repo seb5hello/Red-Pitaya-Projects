@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat Jun 27 22:40:08 2026
+# Process ID: 15544
+# Current directory: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.sim/sim_1/behav/xsim/xsim.dir/test_bench_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.sim/sim_1/behav/xsim/xsim.dir/test_bench_behav/webtalk/xsim_webtalk.tcl -notrace

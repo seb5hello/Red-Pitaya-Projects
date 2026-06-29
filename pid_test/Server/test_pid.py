@@ -94,7 +94,9 @@ def run_hardware_tests():
         print(f"Error: Could not find '{INPUT_FILE}'.")
 
 if __name__ == "__main__":
+    print(f"Disarming PID...")
     write_sys_ctrl(0,0)
+    print(f"Arming PID...")
     write_sys_ctrl(1,1)
     run_hardware_tests()
     print(f"\nTesting complete. Output saved to {OUTPUT_FILE}.")
