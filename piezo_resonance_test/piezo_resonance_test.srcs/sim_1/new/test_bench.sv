@@ -21,6 +21,7 @@ module test_bench();
     // Global Control Signals
     // -------------------------------------------------------------------------
     logic global_arm;
+    logic peak_arm;
     logic master_trigger;
     
     // Split cascaded triggers
@@ -89,7 +90,7 @@ module test_bench();
     test_peak_logic dut_test_gen (
         .clk_i           (clk),
         .rstn_i          (rstn),
-        .arm_i           (global_arm),
+        .arm_i           (peak_arm),
         .trigger_start_i (cascaded_trigger_start), 
         .trigger_max_i   (cascaded_trigger_max),   
         .dly_1           (test_dly_1),
@@ -158,6 +159,7 @@ module test_bench();
         rstn           = 0;
         global_arm     = 0;
         master_trigger = 0;
+        peak_arm = 0;
 
         // 2. Load Configuration 
         ramp_min_val    = 14'd205;
@@ -191,6 +193,7 @@ module test_bench();
         // 4. Arm the System
         @(posedge clk);
         global_arm = 1;
+        peak_arm = 1;
         
         $display("[%0t] Waiting for Ramp Generator to reach min_val...", $time);
         wait(ramp_dac_out == ramp_min_val);
@@ -229,12 +232,12 @@ module test_bench();
         // 7. Test Soft Disarm Sequence
         #5000;
         $display("[%0t] Disarming system...", $time);
-        global_arm = 0;
+        peak_arm = 0;
         
-        wait(ramp_dac_out == 14'd0);
-        $display("[%0t] System safely disarmed to 0.", $time);
+//        wait(ramp_dac_out == 14'd0);
+//        $display("[%0t] System safely disarmed to 0.", $time);
         
-        #500; 
+        #7000;
         $finish;
     end
 

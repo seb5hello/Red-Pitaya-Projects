@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Mon Jun 29 13:10:32 2026
+| Date             : Mon Jun 29 15:11:21 2026
 | Host             : 20190748 running 64-bit major release  (build 9200)
 | Command          : report_power -file piezo_top_power_routed.rpt -pb piezo_top_power_summary_routed.pb -rpx piezo_top_power_routed.rpx
 | Design           : piezo_top
@@ -52,15 +52,15 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.023 |       14 |       --- |             --- |
-| Slice Logic             |     0.005 |     7556 |       --- |             --- |
-|   LUT as Logic          |     0.004 |     2583 |     17600 |           14.68 |
+| Clocks                  |     0.022 |       14 |       --- |             --- |
+| Slice Logic             |     0.005 |     7593 |       --- |             --- |
+|   LUT as Logic          |     0.004 |     2601 |     17600 |           14.78 |
 |   CARRY4                |    <0.001 |      194 |      4400 |            4.41 |
 |   Register              |    <0.001 |     3902 |     35200 |           11.09 |
 |   F7/F8 Muxes           |    <0.001 |       78 |     17600 |            0.44 |
 |   LUT as Shift Register |    <0.001 |       48 |      6000 |            0.80 |
 |   Others                |     0.000 |      250 |       --- |             --- |
-| Signals                 |     0.006 |     5805 |       --- |             --- |
+| Signals                 |     0.006 |     5847 |       --- |             --- |
 | PLL                     |     0.097 |        1 |         2 |           50.00 |
 | I/O                     |     0.082 |       61 |       100 |           61.00 |
 | XADC                    |     0.002 |        1 |       --- |             --- |
@@ -170,7 +170,7 @@ Table of Contents
 |   i_OBUF_daisy_dat             |     0.004 |
 |   i_hk                         |     0.001 |
 |   pll                          |     0.097 |
-|   ps                           |     1.331 |
+|   ps                           |     1.332 |
 |     axi_slave_gp0              |     0.002 |
 |     system_i                   |     1.328 |
 |       axi_protocol_converter_0 |     0.006 |

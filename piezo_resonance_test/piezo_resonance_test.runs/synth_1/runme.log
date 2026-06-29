@@ -20,9 +20,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 14748
+INFO: [Synth 8-7075] Helper process launched with PID 13912
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1012.238 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1012.246 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'piezo_top' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/new/piezo_top.sv:40]
 	Parameter GITH bound to: 160'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -241,21 +241,21 @@ INFO: [Synth 8-6157] synthesizing module 'axi4_slave' [D:/Xilinx/RedPitaya/prj/v
 	Parameter SW bound to: 32'b00000000000000000000000000000100 
 INFO: [Synth 8-6155] done synthesizing module 'axi4_slave' (7#1) [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/imports/RedPitaya/rtl/axi4_slave.sv:49]
 INFO: [Synth 8-6157] synthesizing module 'system' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/bd/system/synth/system.v:13]
-INFO: [Synth 8-6157] synthesizing module 'system_axi_protocol_converter_0_0' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/.Xil/Vivado-12276-20190748/realtime/system_axi_protocol_converter_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_axi_protocol_converter_0_0' (8#1) [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/.Xil/Vivado-12276-20190748/realtime/system_axi_protocol_converter_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_protocol_converter_0_0' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/.Xil/Vivado-15924-20190748/realtime/system_axi_protocol_converter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_protocol_converter_0_0' (8#1) [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/.Xil/Vivado-15924-20190748/realtime/system_axi_protocol_converter_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'system_axi_protocol_converter_0_0' is unconnected for instance 'axi_protocol_converter_0' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/bd/system/synth/system.v:1112]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'system_axi_protocol_converter_0_0' is unconnected for instance 'axi_protocol_converter_0' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/bd/system/synth/system.v:1112]
 WARNING: [Synth 8-7023] instance 'axi_protocol_converter_0' of module 'system_axi_protocol_converter_0_0' has 59 connections declared, but only 57 given [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/bd/system/synth/system.v:1112]
-INFO: [Synth 8-6157] synthesizing module 'system_axi_register_slice_0_0' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/.Xil/Vivado-12276-20190748/realtime/system_axi_register_slice_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_axi_register_slice_0_0' (9#1) [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/.Xil/Vivado-12276-20190748/realtime/system_axi_register_slice_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_proc_sys_reset_0' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/.Xil/Vivado-12276-20190748/realtime/system_proc_sys_reset_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_proc_sys_reset_0' (10#1) [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/.Xil/Vivado-12276-20190748/realtime/system_proc_sys_reset_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_register_slice_0_0' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/.Xil/Vivado-15924-20190748/realtime/system_axi_register_slice_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_register_slice_0_0' (9#1) [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/.Xil/Vivado-15924-20190748/realtime/system_axi_register_slice_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_proc_sys_reset_0' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/.Xil/Vivado-15924-20190748/realtime/system_proc_sys_reset_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_proc_sys_reset_0' (10#1) [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/.Xil/Vivado-15924-20190748/realtime/system_proc_sys_reset_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'system_proc_sys_reset_0' is unconnected for instance 'proc_sys_reset' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/bd/system/synth/system.v:1249]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'system_proc_sys_reset_0' is unconnected for instance 'proc_sys_reset' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/bd/system/synth/system.v:1249]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'system_proc_sys_reset_0' is unconnected for instance 'proc_sys_reset' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/bd/system/synth/system.v:1249]
 WARNING: [Synth 8-7023] instance 'proc_sys_reset' of module 'system_proc_sys_reset_0' has 10 connections declared, but only 7 given [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/bd/system/synth/system.v:1249]
-INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/.Xil/Vivado-12276-20190748/realtime/system_processing_system7_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0' (11#1) [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/.Xil/Vivado-12276-20190748/realtime/system_processing_system7_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/.Xil/Vivado-15924-20190748/realtime/system_processing_system7_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0' (11#1) [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/.Xil/Vivado-15924-20190748/realtime/system_processing_system7_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'system_processing_system7_0' is unconnected for instance 'processing_system7' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/bd/system/synth/system.v:1257]
 WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'system_processing_system7_0' is unconnected for instance 'processing_system7' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/bd/system/synth/system.v:1257]
 WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'system_processing_system7_0' is unconnected for instance 'processing_system7' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/bd/system/synth/system.v:1257]
@@ -289,8 +289,8 @@ WARNING: [Synth 8-7071] port 'S_AXI_HP3_WCOUNT' of module 'system_processing_sys
 WARNING: [Synth 8-7071] port 'S_AXI_HP3_RACOUNT' of module 'system_processing_system7_0' is unconnected for instance 'processing_system7' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/bd/system/synth/system.v:1257]
 WARNING: [Synth 8-7071] port 'S_AXI_HP3_WACOUNT' of module 'system_processing_system7_0' is unconnected for instance 'processing_system7' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/bd/system/synth/system.v:1257]
 WARNING: [Synth 8-7023] instance 'processing_system7' of module 'system_processing_system7_0' has 354 connections declared, but only 322 given [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/bd/system/synth/system.v:1257]
-INFO: [Synth 8-6157] synthesizing module 'system_xadc_0' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/.Xil/Vivado-12276-20190748/realtime/system_xadc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'system_xadc_0' (12#1) [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/.Xil/Vivado-12276-20190748/realtime/system_xadc_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'system_xadc_0' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/.Xil/Vivado-15924-20190748/realtime/system_xadc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'system_xadc_0' (12#1) [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/.Xil/Vivado-15924-20190748/realtime/system_xadc_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'channel_out' of module 'system_xadc_0' is unconnected for instance 'xadc' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/bd/system/synth/system.v:1580]
 WARNING: [Synth 8-7071] port 'busy_out' of module 'system_xadc_0' is unconnected for instance 'xadc' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/bd/system/synth/system.v:1580]
 WARNING: [Synth 8-7071] port 'eoc_out' of module 'system_xadc_0' is unconnected for instance 'xadc' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/bd/system/synth/system.v:1580]
@@ -474,8 +474,8 @@ INFO: [Synth 8-6157] synthesizing module 'timestamp_logic' [D:/Xilinx/RedPitaya/
 	Parameter IDLE bound to: 2'b00 
 	Parameter DETECT_UP bound to: 2'b01 
 	Parameter DETECT_DOWN bound to: 2'b10 
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/new/timestamp_logic.sv:92]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/new/timestamp_logic.sv:108]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/new/timestamp_logic.sv:96]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/new/timestamp_logic.sv:112]
 INFO: [Synth 8-6155] done synthesizing module 'timestamp_logic' (26#1) [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/new/timestamp_logic.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'timestamp_filter' [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/new/timestamp_filter.sv:4]
 	Parameter IDLE bound to: 3'b000 
@@ -509,18 +509,18 @@ INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [D:/Xilinx/Vivado/2020.1/scrip
 INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (31#1) [D:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:46328]
 INFO: [Synth 8-6155] done synthesizing module 'piezo_top' (32#1) [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/sources_1/new/piezo_top.sv:40]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1012.238 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1012.246 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1012.238 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1012.246 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1012.238 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1012.246 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.200 . Memory (MB): peak = 1012.238 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.195 . Memory (MB): peak = 1012.246 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -602,22 +602,22 @@ Parsing XDC File [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resona
 Finished Parsing XDC File [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1048.152 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1048.172 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1048.152 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 1048.172 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'ps/system_i/xadc' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1048.152 ; gain = 35.914
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1048.172 ; gain = 35.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1048.152 ; gain = 35.914
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1048.172 ; gain = 35.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -890,7 +890,7 @@ Applied set_property DONT_TOUCH = true for ps/system_i/processing_system7. (cons
 Applied set_property DONT_TOUCH = true for ps/system_i/xadc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for ps/system_i/xlconstant. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1048.152 ; gain = 35.914
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1048.172 ; gain = 35.926
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ramp_logic'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'timestamp_logic'
@@ -925,7 +925,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'timestamp_filter'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1048.152 ; gain = 35.914
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1048.172 ; gain = 35.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -979,7 +979,7 @@ Detailed RTL Component Info :
 	   2 Input    2 Bit        Muxes := 19    
 	   3 Input    2 Bit        Muxes := 3     
 	   5 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 133   
+	   2 Input    1 Bit        Muxes := 141   
 	   3 Input    1 Bit        Muxes := 7     
 	   6 Input    1 Bit        Muxes := 5     
 	   8 Input    1 Bit        Muxes := 15    
@@ -1000,26 +1000,26 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1048.152 ; gain = 35.914
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1048.172 ; gain = 35.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 70 of D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc. [D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.srcs/constrs_1/imports/RedPitaya/prj/v0.94/sdc/red_pitaya.xdc:70]
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1048.152 ; gain = 35.914
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1048.172 ; gain = 35.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1048.152 ; gain = 35.914
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1048.172 ; gain = 35.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1078.660 ; gain = 66.422
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1079.387 ; gain = 67.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1038,37 +1038,37 @@ Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4560] design has 9 instantiated BUFGs while the available bufg limit from the part is 8
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1084.375 ; gain = 72.137
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1085.090 ; gain = 72.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1084.375 ; gain = 72.137
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1085.090 ; gain = 72.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1084.375 ; gain = 72.137
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1085.090 ; gain = 72.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1084.375 ; gain = 72.137
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1085.090 ; gain = 72.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1084.375 ; gain = 72.137
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1085.090 ; gain = 72.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1084.375 ; gain = 72.137
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1085.090 ; gain = 72.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1098,11 +1098,11 @@ Report Cell Usage:
 |7     |CARRY4                          |   176|
 |8     |DNA_PORT                        |     1|
 |9     |LUT1                            |    90|
-|10    |LUT2                            |   477|
-|11    |LUT3                            |   151|
-|12    |LUT4                            |   764|
-|13    |LUT5                            |   271|
-|14    |LUT6                            |   641|
+|10    |LUT2                            |   479|
+|11    |LUT3                            |   177|
+|12    |LUT4                            |   765|
+|13    |LUT5                            |   283|
+|14    |LUT6                            |   637|
 |15    |MUXF7                           |    78|
 |16    |ODDR                            |    20|
 |17    |PLLE2_ADV                       |     1|
@@ -1114,18 +1114,18 @@ Report Cell Usage:
 |23    |OBUFDS                          |     2|
 +------+--------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1084.375 ; gain = 72.137
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1085.090 ; gain = 72.844
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:48 . Memory (MB): peak = 1084.375 ; gain = 36.223
-Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1084.375 ; gain = 72.137
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:46 . Memory (MB): peak = 1085.090 ; gain = 36.918
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1085.090 ; gain = 72.844
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.156 . Memory (MB): peak = 1084.375 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.141 . Memory (MB): peak = 1085.090 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 278 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1092.520 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1085.090 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 2 instances
@@ -1133,9 +1133,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 188 Infos, 128 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:14 . Memory (MB): peak = 1092.520 ; gain = 80.281
+synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 1085.090 ; gain = 72.844
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1/piezo_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file piezo_top_utilization_synth.rpt -pb piezo_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Jun 29 13:08:27 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 29 15:09:43 2026...
