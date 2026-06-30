@@ -363,7 +363,7 @@ custom_ramp_gen generator_ramp (
     .trigger_start_o  (ramp_trigger_start), 
     .trigger_max_o    (ramp_trigger_max), 
     
-    .dac_dat_o        (dac_ramp),
+    .dac_dat_o        (dac_a),
     .sys_addr         (sys[2].addr ),
     .sys_wdata        (sys[2].wdata),
     .sys_wen          (sys[2].wen  ),
@@ -408,8 +408,8 @@ custom_timestamp_detector detector_timestamp (
 ////////////////////////////////////////////////////////////////////////////////
 // SYS [4]: Custom Test Peak Generator (DAC Channel B)
 ////////////////////////////////////////////////////////////////////////////////
-assign dac_a = dac_ramp;//(mode < 0)? (dac_peak_gen):(dac_ramp);
-assign dac_b = dac_pid;//(mode < 0)? (dac_pid):(dac_peak_gen);
+//assign dac_a = dac_ramp;//(mode < 0)? (dac_peak_gen):(dac_ramp);
+//assign dac_b = dac_pid;//(mode < 0)? (dac_pid):(dac_peak_gen);
 
 custom_test_peak_gen generator_test_peak (
     .clk_i            (adc_clk),
@@ -462,7 +462,7 @@ pid_top pid_test_instance (
     .trigger_i     (hw_pid_trigger),
     .current_ts_reg(timestamp_pid),
     .ts_select     (timestamp_select),
-    .dac_dat_o     (dac_pid),
+    .dac_dat_o     (dac_b),
     .sys_addr      (sys[5].addr ),
     .sys_wdata     (sys[5].wdata),
     .sys_wen       (sys[5].wen  ),
