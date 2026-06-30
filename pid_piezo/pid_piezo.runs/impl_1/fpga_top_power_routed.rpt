@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Tue Jun 30 12:35:17 2026
+| Date             : Tue Jun 30 14:13:00 2026
 | Host             : 20190748 running 64-bit major release  (build 9200)
 | Command          : report_power -file fpga_top_power_routed.rpt -pb fpga_top_power_summary_routed.pb -rpx fpga_top_power_routed.rpx
 | Design           : fpga_top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.662        |
+| Total On-Chip Power (W)  | 1.660        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.536        |
+| Dynamic (W)              | 1.534        |
 | Device Static (W)        | 0.126        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 65.8         |
-| Junction Temperature (C) | 44.2         |
+| Max Ambient (C)          | 65.9         |
+| Junction Temperature (C) | 44.1         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,22 +52,22 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.025 |       14 |       --- |             --- |
-| Slice Logic             |     0.007 |     9042 |       --- |             --- |
-|   LUT as Logic          |     0.006 |     3245 |     17600 |           18.44 |
-|   CARRY4                |    <0.001 |      291 |      4400 |            6.61 |
-|   Register              |    <0.001 |     4386 |     35200 |           12.46 |
-|   F7/F8 Muxes           |    <0.001 |      106 |     17600 |            0.60 |
+| Clocks                  |     0.023 |       14 |       --- |             --- |
+| Slice Logic             |     0.007 |     8470 |       --- |             --- |
+|   LUT as Logic          |     0.006 |     2888 |     17600 |           16.41 |
+|   CARRY4                |    <0.001 |      203 |      4400 |            4.61 |
+|   Register              |    <0.001 |     4352 |     35200 |           12.36 |
 |   LUT as Shift Register |    <0.001 |       48 |      6000 |            0.80 |
-|   Others                |     0.000 |      258 |       --- |             --- |
-| Signals                 |     0.009 |     6909 |       --- |             --- |
+|   F7/F8 Muxes           |    <0.001 |       93 |     17600 |            0.53 |
+|   Others                |     0.000 |      256 |       --- |             --- |
+| Signals                 |     0.009 |     6688 |       --- |             --- |
 | PLL                     |     0.097 |        1 |         2 |           50.00 |
 | DSPs                    |    <0.001 |        2 |        80 |            2.50 |
 | I/O                     |     0.082 |       61 |       100 |           61.00 |
 | XADC                    |     0.002 |        1 |       --- |             --- |
 | PS7                     |     1.314 |        1 |       --- |             --- |
 | Static Power            |     0.126 |          |           |                 |
-| Total                   |     1.662 |          |           |                 |
+| Total                   |     1.660 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.055 |       0.048 |      0.007 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.053 |       0.046 |      0.007 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.062 |       0.053 |      0.008 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.022 |       0.021 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -160,24 +160,22 @@ Table of Contents
 +--------------------------------+-----------+
 | Name                           | Power (W) |
 +--------------------------------+-----------+
-| fpga_top                       |     1.536 |
-|   detector_timestamp           |     0.008 |
-|     i_timestamp_filter         |     0.004 |
+| fpga_top                       |     1.534 |
+|   detector_timestamp           |     0.007 |
+|     i_timestamp_filter         |     0.003 |
 |     i_timestamp_logic          |     0.003 |
 |   generator_ramp               |     0.003 |
 |     i_ramp_logic               |     0.003 |
-|   generator_test_peak          |     0.001 |
 |   i_OBUF_daisy_clk             |     0.004 |
 |   i_OBUF_daisy_dat             |     0.004 |
 |   i_hk                         |     0.001 |
 |   pid_test_instance            |     0.006 |
 |     i_pid_logic                |     0.004 |
-|     i_piezo_soft_output        |     0.001 |
 |   pll                          |     0.097 |
 |   ps                           |     1.332 |
 |     axi_slave_gp0              |     0.002 |
-|     system_i                   |     1.328 |
-|       axi_protocol_converter_0 |     0.006 |
+|     system_i                   |     1.329 |
+|       axi_protocol_converter_0 |     0.007 |
 |       axi_register_slice_0     |     0.002 |
 |       processing_system7       |     1.314 |
 |       xadc                     |     0.005 |

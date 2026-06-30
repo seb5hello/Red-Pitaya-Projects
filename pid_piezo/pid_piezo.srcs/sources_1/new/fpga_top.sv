@@ -408,8 +408,8 @@ custom_timestamp_detector detector_timestamp (
 ////////////////////////////////////////////////////////////////////////////////
 // SYS [4]: Custom Test Peak Generator (DAC Channel B)
 ////////////////////////////////////////////////////////////////////////////////
-assign dac_a = (mode < 0)? (dac_peak_gen):(dac_ramp);
-assign dac_b = (mode < 0)? (dac_pid):(dac_peak_gen);
+assign dac_a = dac_ramp;//(mode < 0)? (dac_peak_gen):(dac_ramp);
+assign dac_b = dac_pid;//(mode < 0)? (dac_pid):(dac_peak_gen);
 
 custom_test_peak_gen generator_test_peak (
     .clk_i            (adc_clk),

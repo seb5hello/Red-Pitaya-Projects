@@ -20,14 +20,14 @@ BASE_URL = f"http://{RP_IP}:5000/api"
 # ==============================================================================
 RAMP_FREQ_HZ = 6000       
 MIN_VOLT = 0.025          
-MAX_VOLT = 0.061          
+MAX_VOLT = 0.090          
 THRESHOLD_VOLT = 0.5      
 
 # Peak Detector Settings
-DET_OFFSET_CYCLES = 100   
+DET_OFFSET_CYCLES = 0   
 FILTER_MODE = 1           
-EXPECTED_PEAKS = 2        
-MERGE_THRESHOLD = 10       
+EXPECTED_PEAKS = 1        
+MERGE_THRESHOLD = 100       
 
 # Test Generator Settings
 TEST_DLY_1 = 50
@@ -45,7 +45,7 @@ PID_KD = -10
 TARGET_TS = 12500         
 TS_SELECT = 0             
 
-PID_OFFSET = 4000         
+PID_OFFSET = 0         
 PID_MAX_OUT = 8191        
 PID_MIN_OUT = -8191       
 
