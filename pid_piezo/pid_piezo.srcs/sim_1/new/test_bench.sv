@@ -1,11 +1,10 @@
 `timescale 1ns / 1ps
 
 ////////////////////////////////////////////////////////////////////////////////
-// RED PITAYA CUSTOM ARCHITECTURE: Simulation Testbench (Mirrored & Filtered)
+// RED PITAYA CUSTOM ARCHITECTURE: Simulation Testbench (Mirrored & Filtered + PID)
 ////////////////////////////////////////////////////////////////////////////////
 
 module test_bench();
-
     // -------------------------------------------------------------------------
     // Clock and Reset Setup (125 MHz = 8ns period)
     // -------------------------------------------------------------------------
@@ -21,11 +20,12 @@ module test_bench();
     // Global Control Signals
     // -------------------------------------------------------------------------
     logic global_arm;
+    logic peak_arm;
     logic master_trigger;
     
     // Split cascaded triggers
     logic cascaded_trigger_start; 
-    logic cascaded_trigger_max;   
+    logic cascaded_trigger_max;
 
     // -------------------------------------------------------------------------
     // Module Configuration Parameters
@@ -39,18 +39,18 @@ module test_bench();
 
     // Timestamp Detector Config
     logic signed [13:0] det_threshold;
-    logic [31:0]        det_offset_val; 
+    logic [31:0]        det_offset_val;
     logic               raw_done;
-    logic               det_preempted;  
-    logic [3:0]         raw_peak_count; 
+    logic               det_preempted;
+    logic [3:0]         raw_peak_count;
+    
     logic [31:0]        raw_ts_1, raw_ts_2, raw_ts_3, raw_ts_4;
     logic [31:0]        raw_ts_5, raw_ts_6, raw_ts_7, raw_ts_8;
 
-    // NEW: Filter Config & Outputs
+    // Filter Config & Outputs
     logic [1:0]         filter_mode;
     logic [3:0]         expected_peaks;
     logic [31:0]        merge_threshold;
-    
     logic               filter_done;
     logic               pid_trigger;
     logic [1:0]         filter_status;
@@ -65,6 +65,17 @@ module test_bench();
     
     // Internal Loopback (DAC B out -> ADC A in)
     logic signed [13:0] loopback_signal;
+
+    // NEW: PID Controller Config
+    logic signed [13:0] pid_kp, pid_ki, pid_kd;
+    logic signed [13:0] pid_offset, pid_max_out, pid_min_out;
+    logic signed [31:0] pid_target_ts;
+    logic signed [31:0] pid_error;
+    logic signed [13:0] pid_dac_out;
+    logic               pid_ready;
+
+    // Simulate the ts_select multiplexer (locking onto the first filtered timestamp)
+    assign pid_error = pid_target_ts - filt_ts_1;
 
     // -------------------------------------------------------------------------
     // Device Under Test (DUT) Instantiations
@@ -89,7 +100,7 @@ module test_bench();
     test_peak_logic dut_test_gen (
         .clk_i           (clk),
         .rstn_i          (rstn),
-        .arm_i           (global_arm),
+        .arm_i           (peak_arm),
         .trigger_start_i (cascaded_trigger_start), 
         .trigger_max_i   (cascaded_trigger_max),   
         .dly_1           (test_dly_1),
@@ -114,12 +125,12 @@ module test_bench();
         .offset_val      (det_offset_val),         
         .done            (raw_done),
         .preempted_o     (det_preempted),          
-        .peak_count_out  (raw_peak_count),         
+        .peak_count_out  (raw_peak_count), 
         .ts_1 (raw_ts_1), .ts_2 (raw_ts_2), .ts_3 (raw_ts_3), .ts_4 (raw_ts_4),
         .ts_5 (raw_ts_5), .ts_6 (raw_ts_6), .ts_7 (raw_ts_7), .ts_8 (raw_ts_8)
     );
 
-    // 4. NEW: Timestamp Filter (Smart Sweep)
+    // 4. Timestamp Filter (Smart Sweep)
     timestamp_filter dut_filter (
         .clk_i           (clk),
         .rstn_i          (rstn),
@@ -141,6 +152,25 @@ module test_bench();
         .filt_ts_5 (filt_ts_5), .filt_ts_6 (filt_ts_6), .filt_ts_7 (filt_ts_7), .filt_ts_8 (filt_ts_8)
     );
 
+    // 5. NEW: PID Controller
+    pid_logic #(
+        .MAX_INT(500000),
+        .MIN_INT(-500000)
+    ) dut_pid (
+        .clk          (clk),
+        .rst_n        (rstn & global_arm),
+        .data_valid_i (pid_trigger),
+        .error_i      (pid_error),
+        .kp_i         (pid_kp),
+        .ki_i         (pid_ki),
+        .kd_i         (pid_kd),
+        .offset_i     (pid_offset),
+        .max_out_i    (pid_max_out),
+        .min_out_i    (pid_min_out),
+        .dac_out_o    (pid_dac_out),
+        .ready_o      (pid_ready)
+    );
+
     // -------------------------------------------------------------------------
     // Safety Watchdog Timer
     // -------------------------------------------------------------------------
@@ -158,13 +188,14 @@ module test_bench();
         rstn           = 0;
         global_arm     = 0;
         master_trigger = 0;
+        peak_arm       = 0;
 
         // 2. Load Configuration 
         ramp_min_val    = 14'd205;
         ramp_max_val    = 14'd305;
         ramp_period_val = 32'd200; 
-        continuos       = 1'b1; 
-        
+        continuos       = 1'b1;
+
         det_threshold   = 14'd50;
         det_offset_val  = 32'd0; 
         
@@ -180,23 +211,34 @@ module test_bench();
         // Filter Configuration
         filter_mode     = 2'd2;     // 2 = Smart Sweep
         expected_peaks  = 4'd3;     // We expect 3 real peaks up, 3 down = 6 total
-        merge_threshold = 32'd10;    // Any peak <= 5 cycles from previous is a bounce
+        merge_threshold = 32'd10;   // Any peak <= 10 cycles from previous is a bounce
+
+        // NEW: PID Configuration
+        pid_kp        = 14'sd150;
+        pid_ki        = 14'sd25;
+        pid_kd        = -14'sd10;
+        pid_offset    = 14'sd4000;  // Start baseline at 4000
+        pid_max_out   = 14'sd8191;
+        pid_min_out   = -14'sd8191;
+        pid_target_ts = 32'sd30;    // Target the timestamp at cycle 30
 
         // 3. Release Reset
         #100;
         rstn = 1;
         #20;
         $display("[%0t] System Reset complete. Applying Arm signal...", $time);
-        
+
         // 4. Arm the System
         @(posedge clk);
         global_arm = 1;
-        
+        peak_arm = 1;
+
         $display("[%0t] Waiting for Ramp Generator to reach min_val...", $time);
         wait(ramp_dac_out == ramp_min_val);
-        #40; 
-        
+        #40;
+
         $display("[%0t] System READY. Firing Master Trigger to Ramp Generator...", $time);
+
         // 5. Fire Master Trigger 
         @(posedge clk);
         master_trigger = 1;
@@ -204,12 +246,13 @@ module test_bench();
         master_trigger = 0;
         
         // 6. Monitor Execution and Wait for Completion
-        // We now wait for the FILTER to finish, not just the raw detector
         wait(filter_done == 1'b1);
         
+        // Wait a few extra cycles for PID logic to finish computing
+        wait(pid_ready == 1'b1);
+        
         $display("[%0t] --------------------------------------------------", $time);
-        $display("[%0t] Detection & Filtering Window Completed!", $time);
-        $display("PID Trigger Fired : %b", pid_trigger);
+        $display("[%0t] Detection, Filtering, & PID Window Completed!", $time);
         $display("Filter Status Flag: %b (00=OK, 01=BYPASS, 10=TOO_FEW, 11=TOO_MANY)", filter_status);
         $display("Preempted Flag    : %b", det_preempted);
         $display("--------------------------------------------------");
@@ -220,21 +263,16 @@ module test_bench();
         $display("FILTERED TS_2  : %0d clock cycles", filt_ts_2);
         $display("FILTERED TS_3  : %0d clock cycles", filt_ts_3);
         $display("FILTERED TS_4  : %0d clock cycles", filt_ts_4);
-        $display("FILTERED TS_5  : %0d clock cycles", filt_ts_5);
-        $display("FILTERED TS_6  : %0d clock cycles", filt_ts_6);
-        $display("FILTERED TS_7  : %0d clock cycles", filt_ts_7);
-        $display("FILTERED TS_8  : %0d clock cycles", filt_ts_8);
         $display("--------------------------------------------------");
-        
+        $display("PID TARGET     : %0d", pid_target_ts);
+        $display("PID ERROR      : %0d", pid_error);
+        $display("PID DAC OUT    : %0d", pid_dac_out);
+        $display("--------------------------------------------------");
+
         // 7. Test Soft Disarm Sequence
         #5000;
-        $display("[%0t] Disarming system...", $time);
-        global_arm = 0;
         
-        wait(ramp_dac_out == 14'd0);
-        $display("[%0t] System safely disarmed to 0.", $time);
-        
-        #500; 
+        #10000;
         $finish;
     end
 
@@ -244,6 +282,7 @@ module test_bench();
     always @(posedge clk) begin
         if (cascaded_trigger_start) 
             $display("[%0t] EVENT: Cascaded Trigger START fired.", $time);
+        
         if (cascaded_trigger_max) 
             $display("[%0t] EVENT: Cascaded Trigger MAX fired.", $time);
             
@@ -251,7 +290,7 @@ module test_bench();
             $display("[%0t] EVENT: Raw Detection Finished. Hitting Filter...", $time);
             
         if (pid_trigger)
-            $display("[%0t] EVENT: PID Trigger Pulsed!", $time);
+            $display("[%0t] EVENT: PID Trigger Pulsed. Starting PID calc...", $time);
     end
 
 endmodule

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/impl_1'
+HD_PWD='D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
-EAStep vivado -log piezo_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source piezo_top.tcl -notrace
+/bin/touch .write_bitstream.begin.rst
+EAStep vivado -log fpga_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source fpga_top.tcl -notrace
 
 

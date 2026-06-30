@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Jun 30 11:19:26 2026
+# Process ID: 9104
+# Current directory: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17256 D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\pid_piezo\pid_piezo.xpr
+# Log file: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/vivado.log
+# Journal file: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.xpr
+launch_simulation
+source tb_pid_soft_out.tcl
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+current_wave_config {Untitled 1}
+add_wave {{/tb_pid_soft_out/dut_pid/data_valid_i}} 
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 100 us
+current_wave_config {Untitled 1}
+add_wave {{/tb_pid_soft_out/dut_soft_out/dac_out_o}} 
+current_wave_config {Untitled 1}
+add_wave {{/tb_pid_soft_out/dut_pid/error_i}} 
+current_wave_config {Untitled 1}
+add_wave {{/tb_pid_soft_out/dut_pid/ready_o}} 
+current_wave_config {Untitled 1}
+add_wave {{/tb_pid_soft_out/dut_pid/dac_out_o}} 
+save_wave_config {D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.sim/tb_pid_soft_out_behav.wcfg}
+add_files -fileset sim_1 -norecurse D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.sim/tb_pid_soft_out_behav.wcfg
+set_property xsim.view {D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/tb_core_logic_behav.wcfg D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/test_bench_behav.wcfg D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.sim/tb_pid_soft_out_behav.wcfg} [get_filesets sim_1]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+add_files -fileset utils_1 -norecurse D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/generate_bin.tcl
+set_property STEPS.WRITE_BITSTREAM.TCL.POST [ get_files D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/generate_bin.tcl -of [get_fileset utils_1] ] [get_runs impl_1]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1

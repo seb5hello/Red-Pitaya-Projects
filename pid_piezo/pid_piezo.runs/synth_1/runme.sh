@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/piezo_resonance_test/piezo_resonance_test.runs/synth_1'
+HD_PWD='D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log piezo_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source piezo_top.tcl
+EAStep vivado -log fpga_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fpga_top.tcl

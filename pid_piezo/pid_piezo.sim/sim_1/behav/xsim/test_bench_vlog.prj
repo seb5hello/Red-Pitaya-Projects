@@ -1,10 +1,31 @@
 # compile verilog/system verilog design source files
-sv xil_defaultlib  --include "../../../../piezo_resonance_test.srcs/sources_1/bd/system/ipshared/ec67/hdl" --include "../../../../piezo_resonance_test.srcs/sources_1/bd/system/ipshared/6b56/hdl" --include "D:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
-"../../../../piezo_resonance_test.srcs/sources_1/new/ramp_logic.sv" \
-"../../../../piezo_resonance_test.srcs/sources_1/new/test_peak_logic.sv" \
-"../../../../piezo_resonance_test.srcs/sources_1/new/timestamp_filter.sv" \
-"../../../../piezo_resonance_test.srcs/sources_1/new/timestamp_logic.sv" \
-"../../../../piezo_resonance_test.srcs/sim_1/new/test_bench.sv" \
+verilog fifo_generator_v13_2_5  --include "../../../../pid_piezo.srcs/sources_1/bd/system/ipshared/ec67/hdl" --include "../../../../pid_piezo.srcs/sources_1/bd/system/ipshared/6b56/hdl" --include "D:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+"../../../../pid_piezo.srcs/sources_1/bd/system/ipshared/276e/simulation/fifo_generator_vlog_beh.v" \
+"../../../../pid_piezo.srcs/sources_1/bd/system/ipshared/276e/hdl/fifo_generator_v13_2_rfs.v" \
+
+verilog xil_defaultlib  --include "../../../../pid_piezo.srcs/sources_1/bd/system/ipshared/ec67/hdl" --include "../../../../pid_piezo.srcs/sources_1/bd/system/ipshared/6b56/hdl" --include "D:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+"../../../../pid_piezo.ip_user_files/bd/system/ip/system_axi_protocol_converter_0_0/sim/system_axi_protocol_converter_0_0.v" \
+"../../../../pid_piezo.ip_user_files/bd/system/ip/system_xadc_0/system_xadc_0.v" \
+"../../../../pid_piezo.ip_user_files/bd/system/ip/system_processing_system7_0/sim/system_processing_system7_0.v" \
+"../../../../pid_piezo.ip_user_files/bd/system/ip/system_axi_register_slice_0_0/sim/system_axi_register_slice_0_0.v" \
+"../../../../pid_piezo.ip_user_files/bd/system/ip/system_xlconstant_0/sim/system_xlconstant_0.v" \
+"../../../../pid_piezo.ip_user_files/bd/system/sim/system.v" \
+
+sv xil_defaultlib  --include "../../../../pid_piezo.srcs/sources_1/bd/system/ipshared/ec67/hdl" --include "../../../../pid_piezo.srcs/sources_1/bd/system/ipshared/6b56/hdl" --include "D:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+"../../../../pid_piezo.srcs/sources_1/imports/RedPitaya/rtl/interface/axi4_if.sv" \
+"../../../../pid_piezo.srcs/sources_1/imports/RedPitaya/rtl/interface/axi_sys_if.sv" \
+"../../../../pid_piezo.srcs/sources_1/imports/RedPitaya/rtl/interface/gpio_if.sv" \
+"../../../../pid_piezo.srcs/sources_1/new/pid_logic.sv" \
+"../../../../pid_piezo.srcs/sources_1/new/ramp_logic.sv" \
+"../../../../pid_piezo.srcs/sources_1/imports/RedPitaya/rtl/interface/sys_bus_if.sv" \
+"../../../../pid_piezo.srcs/sources_1/new/test_peak_logic.sv" \
+"../../../../pid_piezo.srcs/sources_1/new/timestamp_filter.sv" \
+"../../../../pid_piezo.srcs/sources_1/new/timestamp_logic.sv" \
+"../../../../pid_piezo.srcs/sources_1/imports/RedPitaya/rtl/evn_pkg.sv" \
+"../../../../pid_piezo.srcs/sources_1/imports/RedPitaya/rtl/interface/spi_if.sv" \
+"../../../../pid_piezo.srcs/sources_1/imports/RedPitaya/rtl/interface/axi4_stream_if.sv" \
+"../../../../pid_piezo.srcs/sources_1/imports/RedPitaya/rtl/interface/axi4_lite_if.sv" \
+"../../../../pid_piezo.srcs/sim_1/new/test_bench.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

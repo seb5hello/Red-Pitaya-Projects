@@ -1,0 +1,185 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Jun 30 11:19:26 2026
+# Process ID: 9104
+# Current directory: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17256 D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\pid_piezo\pid_piezo.xpr
+# Log file: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/vivado.log
+# Journal file: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.vho'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/ip/asg_dat_fifo/asg_dat_fifo.veo'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/ip/asg_dat_fifo/simulation/fifo_generator_vlog_beh.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/ip/asg_dat_fifo/hdl/fifo_generator_v13_2_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/ip/asg_dat_fifo/hdl/fifo_generator_v13_2_rfs.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/ip/asg_dat_fifo/sim/asg_dat_fifo.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'asg_dat_fifo' generated file not found 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/ip/asg_dat_fifo/doc/fifo_generator_v13_2_changelog.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/ip/sync_fifo/sync_fifo.vho'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/ip/sync_fifo/sync_fifo.veo'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/ip/sync_fifo/simulation/fifo_generator_vlog_beh.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/ip/sync_fifo/hdl/fifo_generator_v13_2_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/ip/sync_fifo/hdl/fifo_generator_v13_2_rfs.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/ip/sync_fifo/sim/sync_fifo.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'sync_fifo' generated file not found 'd:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/ip/sync_fifo/doc/fifo_generator_v13_2_changelog.txt'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:09 . Memory (MB): peak = 1012.133 ; gain = 0.000
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2020.1/data/xsim/xsim.ini' copied to run dir:'D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-20] The project contains locked or custom IPs. The pre-compiled version of these IPs will not be referenced and the sources from these IP libraries will be compiled locally.
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_pid_soft_out' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_7 -L processing_system7_vip_v1_0_9 -L xilinx_vip -prj tb_pid_soft_out_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/new/piezo_soft_output.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module piezo_soft_output
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sim_1/new/tb_pid_soft_out.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_pid_soft_out
+"xvhdl --incr --relax -prj tb_pid_soft_out_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.sim/sim_1/behav/xsim'
+"xelab -wto d0f9ee74f7c248468ab5cd56e371bf0d --incr --debug typical --relax --mt 2 -L generic_baseblocks_v2_1_0 -L fifo_generator_v13_2_5 -L axi_data_fifo_v2_1_20 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_21 -L axi_protocol_converter_v2_1_21 -L xil_defaultlib -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L axi_vip_v1_1_7 -L processing_system7_vip_v1_0_9 -L xlconstant_v1_1_7 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_pid_soft_out_behav xil_defaultlib.tb_pid_soft_out xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto d0f9ee74f7c248468ab5cd56e371bf0d --incr --debug typical --relax --mt 2 -L generic_baseblocks_v2_1_0 -L fifo_generator_v13_2_5 -L axi_data_fifo_v2_1_20 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_21 -L axi_protocol_converter_v2_1_21 -L xil_defaultlib -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L axi_vip_v1_1_7 -L processing_system7_vip_v1_0_9 -L xlconstant_v1_1_7 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_pid_soft_out_behav xil_defaultlib.tb_pid_soft_out xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pid_logic(MAX_INT=500000,MIN_INT...
+Compiling module xil_defaultlib.piezo_soft_output
+Compiling module xil_defaultlib.tb_pid_soft_out
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_pid_soft_out_behav
+
+****** Webtalk v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.sim/sim_1/behav/xsim/xsim.dir/tb_pid_soft_out_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Jun 30 11:20:22 2026...
+run_program: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 1649.559 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_pid_soft_out_behav -key {Behavioral:sim_1:Functional:tb_pid_soft_out} -tclbatch {tb_pid_soft_out.tcl} -protoinst "protoinst_files/system.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/system.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/system.protoinst for the following reason(s):
+There are no instances of module "system" in the design.
+
+Time resolution is 1 ps
+source tb_pid_soft_out.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+# run 2000ns
+===============================================================
+[0] STARTING PID + SOFT OUTPUT TESTBENCH
+===============================================================
+
+--- TEST 1: Arming PID (No Trigger) ---
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_pid_soft_out_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 2000ns
+launch_simulation: Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1649.559 ; gain = 0.000
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_pid_soft_out/dut_pid/data_valid_i}} 
+run 10 us
+run 10 us
+run 10 us
+[64188000] DAC Output Settled at: 2000
+ -> PASS: Piezo safely slewed up to baseline offset.
+
+--- TEST 2: Error changes, no trigger sent ---
+ -> PASS: Ignored error without trigger.
+
+--- TEST 3: Error is 100, trigger sent ---
+[66268000] DAC Output Settled at: 2000
+ -> FAIL: Expected 2150.
+
+--- TEST 4: Error stays 100, trigger sent again ---
+run 10 us
+[72724000] DAC Output Settled at: 2200
+ -> PASS: Integrator accumulated correctly. Slewed to new target.
+
+--- TEST 5: Graceful Soft Disarm (arm_i goes low) ---
+run 10 us
+run 10 us
+run 100 us
+[143708000] DAC Output Settled at: 0
+ -> PASS: DAC successfully and safely slewed down to 0.
+
+===============================================================
+[144708000] TESTBENCH COMPLETE.
+===============================================================
+$finish called at time : 144708 ns : File "D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sim_1/new/tb_pid_soft_out.sv" Line 177
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_pid_soft_out/dut_soft_out/dac_out_o}} 
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_pid_soft_out/dut_pid/error_i}} 
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_pid_soft_out/dut_pid/ready_o}} 
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_pid_soft_out/dut_pid/dac_out_o}} 
+save_wave_config {D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.sim/tb_pid_soft_out_behav.wcfg}
+add_files -fileset sim_1 -norecurse D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.sim/tb_pid_soft_out_behav.wcfg
+set_property xsim.view {D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/tb_core_logic_behav.wcfg D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/DAC_ACD_test_project/test_bench_behav.wcfg D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.sim/tb_pid_soft_out_behav.wcfg} [get_filesets sim_1]
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Tue Jun 30 12:30:52 2026] Launched synth_1...
+Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.runs/synth_1/runme.log
+[Tue Jun 30 12:30:52 2026] Launched impl_1...
+Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:08 ; elapsed = 00:00:21 . Memory (MB): peak = 1649.559 ; gain = 0.000
+add_files -fileset utils_1 -norecurse D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/generate_bin.tcl
+set_property STEPS.WRITE_BITSTREAM.TCL.POST [ get_files D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/generate_bin.tcl -of [get_fileset utils_1] ] [get_runs impl_1]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\pid_piezo\pid_piezo.srcs\sim_1\new\tb_pid_soft_out.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Xilinx\RedPitaya\prj\v0.94\Red-Pitaya-Projects\pid_piezo\pid_piezo.srcs\sources_1\new\fpga_top.sv:]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Tue Jun 30 12:39:27 2026] Launched impl_1...
+Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 1649.559 ; gain = 0.000

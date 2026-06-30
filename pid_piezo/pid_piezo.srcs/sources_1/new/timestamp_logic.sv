@@ -71,6 +71,10 @@ module timestamp_logic (
             done                <= 1'b0;
             preempted_o         <= 1'b0;
             peak_count_out      <= 0;
+            
+            ts_1_int <= 0; ts_2_int <= 0; ts_3_int <= 0; ts_4_int <= 0;
+            ts_5_int <= 0; ts_6_int <= 0; ts_7_int <= 0; ts_8_int <= 0;
+            
             ts_1 <= 0; ts_2 <= 0; ts_3 <= 0; ts_4 <= 0;
             ts_5 <= 0; ts_6 <= 0; ts_7 <= 0; ts_8 <= 0;
         end else begin
@@ -112,6 +116,9 @@ module timestamp_logic (
                         window_active       <= 1'b1;
                         counter             <= 0;
                         peak_count_internal <= 0;
+                        
+                        ts_1_int <= 0; ts_2_int <= 0; ts_3_int <= 0; ts_4_int <= 0;
+                        ts_5_int <= 0; ts_6_int <= 0; ts_7_int <= 0; ts_8_int <= 0;
                     end
                 end
                 
@@ -129,9 +136,15 @@ module timestamp_logic (
                         counter             <= 0;
                         peak_count_internal <= 0;
                         
+                        // FIX: Explicitly clear the shadow registers so ghost peaks don't bleed!
+                        ts_1_int <= 0; ts_2_int <= 0; ts_3_int <= 0; ts_4_int <= 0;
+                        ts_5_int <= 0; ts_6_int <= 0; ts_7_int <= 0; ts_8_int <= 0;
+                        
                     end else if (trigger_max_pe) begin
                         state            <= DETECT_DOWN;
                         offset_countdown <= offset_val;
+                        
+                        // FIX: Removed the code that erased ts_x_int here so we retain UP peaks!
                     end
                 end
                 
@@ -148,6 +161,10 @@ module timestamp_logic (
                         state               <= DETECT_UP;
                         counter             <= 0;
                         peak_count_internal <= 0;
+                        
+                        // FIX: Explicitly clear the shadow registers so ghost peaks don't bleed!
+                        ts_1_int <= 0; ts_2_int <= 0; ts_3_int <= 0; ts_4_int <= 0;
+                        ts_5_int <= 0; ts_6_int <= 0; ts_7_int <= 0; ts_8_int <= 0;
                         
                     end else begin
                         if (offset_countdown == 0) begin

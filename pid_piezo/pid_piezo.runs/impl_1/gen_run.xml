@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1782731222">
-  <File Type="BITSTR-BMM" Name="piezo_top_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="piezo_top_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="piezo_top_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="piezo_top_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="piezo_top.tcl"/>
-  <File Type="OPT-TIMING" Name="piezo_top_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="piezo_top_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="piezo_top_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="piezo_top_reports.tcl"/>
-  <File Type="OPT-DRC" Name="piezo_top_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="piezo_top.hwdef"/>
-  <File Type="PWROPT-DCP" Name="piezo_top_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="piezo_top_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="piezo_top_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="piezo_top_placed.dcp"/>
-  <File Type="PLACE-IO" Name="piezo_top_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="piezo_top_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="piezo_top_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="piezo_top_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="piezo_top_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="piezo_top_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="piezo_top_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="piezo_top_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="piezo_top_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="piezo_top.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="piezo_top_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="piezo_top_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="piezo_top_drc_physopted.rpt"/>
-  <File Type="BITSTR-MSK" Name="piezo_top.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="piezo_top_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="piezo_top_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="piezo_top_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="piezo_top_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="piezo_top_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="piezo_top_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="piezo_top_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="piezo_top.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="piezo_top_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="piezo_top_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="piezo_top_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="piezo_top_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="piezo_top_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="piezo_top_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="piezo_top_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="piezo_top_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="piezo_top_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="piezo_top_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="piezo_top_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="piezo_top_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="piezo_top_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="piezo_top_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="piezo_top_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="piezo_top_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="piezo_top_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="piezo_top_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="piezo_top_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="piezo_top_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="piezo_top_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="piezo_top.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="piezo_top_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-RBT" Name="piezo_top.rbt"/>
-  <File Type="BITSTR-NKY" Name="piezo_top.nky"/>
-  <File Type="PDI-FILE" Name="piezo_top.pdi"/>
-  <File Type="RCFI_FILE" Name="piezo_top.rcfi"/>
-  <File Type="CFI_FILE" Name="piezo_top.cfi"/>
-  <File Type="RNPI_FILE" Name="piezo_top.rnpi"/>
-  <File Type="NPI_FILE" Name="piezo_top.npi"/>
-  <File Type="RBD_FILE" Name="piezo_top.rbd"/>
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1782815433">
+  <File Type="BITSTR-BMM" Name="fpga_top_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="fpga_top_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="fpga_top_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="fpga_top_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="fpga_top.tcl"/>
+  <File Type="OPT-TIMING" Name="fpga_top_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="fpga_top_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="fpga_top_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="fpga_top_reports.tcl"/>
+  <File Type="OPT-DRC" Name="fpga_top_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="fpga_top.hwdef"/>
+  <File Type="PWROPT-DCP" Name="fpga_top_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="fpga_top_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="fpga_top_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="fpga_top_placed.dcp"/>
+  <File Type="PLACE-IO" Name="fpga_top_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="fpga_top_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="fpga_top_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="fpga_top_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="fpga_top_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="fpga_top_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="fpga_top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="fpga_top_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="fpga_top_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="fpga_top.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="fpga_top_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="fpga_top_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="fpga_top_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="fpga_top.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="fpga_top_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="fpga_top_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="fpga_top_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="fpga_top_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="fpga_top_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="fpga_top_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="fpga_top_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="fpga_top.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="fpga_top_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="fpga_top_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="fpga_top_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="fpga_top_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="fpga_top_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="fpga_top_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="fpga_top_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="fpga_top_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="fpga_top_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="fpga_top_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="fpga_top_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="fpga_top_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="fpga_top_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="fpga_top_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="fpga_top_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="fpga_top_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="fpga_top_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="fpga_top_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="fpga_top_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="fpga_top_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="fpga_top_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="fpga_top.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="fpga_top_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="fpga_top.rbt"/>
+  <File Type="BITSTR-NKY" Name="fpga_top.nky"/>
+  <File Type="PDI-FILE" Name="fpga_top.pdi"/>
+  <File Type="RCFI_FILE" Name="fpga_top.rcfi"/>
+  <File Type="CFI_FILE" Name="fpga_top.cfi"/>
+  <File Type="RNPI_FILE" Name="fpga_top.rnpi"/>
+  <File Type="NPI_FILE" Name="fpga_top.npi"/>
+  <File Type="RBD_FILE" Name="fpga_top.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="piezo_top.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="piezo_top.sysdef"/>
-  <File Type="BG-BGN" Name="piezo_top.bgn"/>
-  <File Type="BG-DRC" Name="piezo_top.drc"/>
-  <File Type="RDI-RDI" Name="piezo_top.vdi"/>
+  <File Type="BITSTR-LTX" Name="fpga_top.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="fpga_top.sysdef"/>
+  <File Type="BG-BGN" Name="fpga_top.bgn"/>
+  <File Type="BG-DRC" Name="fpga_top.drc"/>
+  <File Type="RDI-RDI" Name="fpga_top.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
@@ -166,6 +166,19 @@
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/pid_logic.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/pid_top.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/ramp_logic.sv">
@@ -261,10 +274,8 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/piezo_top.sv">
+    <File Path="$PSRCDIR/sources_1/new/fpga_top.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../slow_piezo_pid/slow_piezo_pid.srcs/sources_1/new/piezo_top.sv"/>
-        <Attr Name="ImportTime" Val="1782288384"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
@@ -281,7 +292,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RedPitaya/rtl/evn_pkg.sv">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../rtl/evn_pkg.sv"/>
         <Attr Name="ImportTime" Val="1780042757"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -291,7 +301,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RedPitaya/rtl/interface/spi_if.sv">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../rtl/interface/spi_if.sv"/>
         <Attr Name="ImportTime" Val="1780042757"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -901,7 +910,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RedPitaya/rtl/interface/axi4_stream_if.sv">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../rtl/interface/axi4_stream_if.sv"/>
         <Attr Name="ImportTime" Val="1780042757"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -911,7 +919,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/RedPitaya/rtl/interface/axi4_lite_if.sv">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../rtl/interface/axi4_lite_if.sv"/>
         <Attr Name="ImportTime" Val="1780042757"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -1269,10 +1276,16 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/piezo_soft_output.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="piezo_top"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="fpga_top"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -1314,7 +1327,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -1323,7 +1338,7 @@
     <Step Id="phys_opt_design"/>
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
-    <Step Id="write_bitstream" PostStepTclHook="$PPRDIR/../piezo_resonance_test/piezo_resonance_test.srcs/utils_1/imports/slow_piezo_pid/generate_bin.tcl"/>
+    <Step Id="write_bitstream" PostStepTclHook="$PPRDIR/generate_bin.tcl"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="system_axi_protocol_converter_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_axi_register_slice_0_0"/>

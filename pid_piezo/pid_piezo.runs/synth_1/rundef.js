@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log piezo_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source piezo_top.tcl" );
+         "-log fpga_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fpga_top.tcl" );
 
 
 

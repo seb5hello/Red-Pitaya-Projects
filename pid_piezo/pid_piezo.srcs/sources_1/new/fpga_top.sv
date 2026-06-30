@@ -363,7 +363,7 @@ custom_ramp_gen generator_ramp (
     .trigger_start_o  (ramp_trigger_start), 
     .trigger_max_o    (ramp_trigger_max), 
     
-    .dac_dat_o        (dac_a),
+    .dac_dat_o        (dac_ramp),
     .sys_addr         (sys[2].addr ),
     .sys_wdata        (sys[2].wdata),
     .sys_wen          (sys[2].wen  ),
@@ -387,13 +387,13 @@ custom_timestamp_detector detector_timestamp (
     
     .adc_dat_i          (adc_dat[0]),
     
-//    // Hardware Outputs to route to PID module
-//    .pid_trigger_o      (hw_pid_trigger),
-//    .filt_peak_count_o  (hw_filt_peak_count),
-//    .filt_ts_1_o        (hw_ts_1), .filt_ts_2_o (hw_ts_2),
-//    .filt_ts_3_o        (hw_ts_3), .filt_ts_4_o (hw_ts_4),
-//    .filt_ts_5_o        (hw_ts_5), .filt_ts_6_o (hw_ts_6),
-//    .filt_ts_7_o        (hw_ts_7), .filt_ts_8_o (hw_ts_8),
+    // Hardware Outputs to route to PID module
+    .pid_trigger_o      (hw_pid_trigger),
+    .filt_peak_count_o  (hw_filt_peak_count),
+    .filt_ts_1_o        (hw_ts_1), .filt_ts_2_o (hw_ts_2),
+    .filt_ts_3_o        (hw_ts_3), .filt_ts_4_o (hw_ts_4),
+    .filt_ts_5_o        (hw_ts_5), .filt_ts_6_o (hw_ts_6),
+    .filt_ts_7_o        (hw_ts_7), .filt_ts_8_o (hw_ts_8),
     
     // AXI Bus
     .sys_addr           (sys[3].addr ),
@@ -408,6 +408,9 @@ custom_timestamp_detector detector_timestamp (
 ////////////////////////////////////////////////////////////////////////////////
 // SYS [4]: Custom Test Peak Generator (DAC Channel B)
 ////////////////////////////////////////////////////////////////////////////////
+assign dac_a = (mode < 0)? (dac_peak_gen):(dac_ramp);
+assign dac_b = (mode < 0)? (dac_pid):(dac_peak_gen);
+
 custom_test_peak_gen generator_test_peak (
     .clk_i            (adc_clk),
     .rstn_i           (adc_rstn),
@@ -417,7 +420,7 @@ custom_test_peak_gen generator_test_peak (
     .trigger_start_i  (ramp_trigger_start), 
     .trigger_max_i    (ramp_trigger_max), 
       
-    .dac_dat_o        (dac_b),          
+    .dac_dat_o        (dac_peak_gen),          
     .sys_addr         (sys[4].addr ),
     .sys_wdata        (sys[4].wdata),
     .sys_wen          (sys[4].wen  ),
@@ -430,17 +433,43 @@ custom_test_peak_gen generator_test_peak (
 ////////////////////////////////////////////////////////////////////////////////
 // SYS [5]: TEST PID CONTROLLER (DAC Channel B)
 ////////////////////////////////////////////////////////////////////////////////
+logic        pid_switch;
+logic [3:0]  timestamp_select; // Added missing semicolon
+logic [31:0] timestamp_pid;
+
+always_comb begin
+  // Default assignments to prevent latch inference
+  pid_switch    = 0;
+  timestamp_pid = 32'd0; 
+
+  case(timestamp_select)
+    4'd0: begin pid_switch = 1; timestamp_pid = hw_ts_1; end
+    4'd1: begin pid_switch = 1; timestamp_pid = hw_ts_2; end
+    4'd2: begin pid_switch = 1; timestamp_pid = hw_ts_3; end
+    4'd3: begin pid_switch = 1; timestamp_pid = hw_ts_4; end
+    4'd4: begin pid_switch = 1; timestamp_pid = hw_ts_5; end
+    4'd5: begin pid_switch = 1; timestamp_pid = hw_ts_6; end
+    4'd6: begin pid_switch = 1; timestamp_pid = hw_ts_7; end
+    4'd7: begin pid_switch = 1; timestamp_pid = hw_ts_8; end
+    default: begin pid_switch = 0; timestamp_pid = 32'd0; end
+  endcase
+end
+
 pid_top pid_test_instance (
-    .clk_i      (adc_clk),
-    .rstn_i     (adc_rstn),
-    .arm_i      (pid_arm),
-    .sys_addr   (sys[5].addr ),
-    .sys_wdata  (sys[5].wdata),
-    .sys_wen    (sys[5].wen  ),
-    .sys_ren    (sys[5].ren  ),
-    .sys_rdata  (sys[5].rdata),
-    .sys_err    (sys[5].err  ),
-    .sys_ack    (sys[5].ack  )
+    .clk_i         (adc_clk),
+    .rstn_i        (adc_rstn & pid_switch),
+    .arm_i         (pid_arm),
+    .trigger_i     (hw_pid_trigger),
+    .current_ts_reg(timestamp_pid),
+    .ts_select     (timestamp_select),
+    .dac_dat_o     (dac_pid),
+    .sys_addr      (sys[5].addr ),
+    .sys_wdata     (sys[5].wdata),
+    .sys_wen       (sys[5].wen  ),
+    .sys_ren       (sys[5].ren  ),
+    .sys_rdata     (sys[5].rdata),
+    .sys_err       (sys[5].err  ),
+    .sys_ack       (sys[5].ack  )
 );
 
 ////////////////////////////////////////////////////////////////////////////////
