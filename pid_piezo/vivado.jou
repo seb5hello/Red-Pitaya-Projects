@@ -45,3 +45,10 @@ set_property STEPS.WRITE_BITSTREAM.TCL.POST [ get_files D:/Xilinx/RedPitaya/prj/
 reset_run impl_1 -prev_step 
 launch_runs impl_1 -to_step write_bitstream -jobs 6
 wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_run impl_1

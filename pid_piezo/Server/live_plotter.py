@@ -19,8 +19,8 @@ BASE_URL = f"http://{RP_IP}:5000/api"
 # GLOBAL HARDWARE CONFIGURATION PARAMETERS
 # ==============================================================================
 RAMP_FREQ_HZ = 6000       
-MIN_VOLT = 0.025          
-MAX_VOLT = 0.090          
+MIN_VOLT = 0.110         
+MAX_VOLT = 0.160          
 THRESHOLD_VOLT = 0.5      
 
 # Peak Detector Settings
@@ -42,12 +42,12 @@ TEST_PULSE_WIDTH = 3
 PID_KP = 150              
 PID_KI = 25               
 PID_KD = -10              
-TARGET_TS = 12500         
+TARGET_TS = 10000         
 TS_SELECT = 0             
 
-PID_OFFSET = 0         
+PID_OFFSET = 205         
 PID_MAX_OUT = 8191        
-PID_MIN_OUT = -8191       
+PID_MIN_OUT = 205       
 
 # Piezo Soft Output Limiter (Cycles to wait before +/- 1)
 PID_STEP_CYCLES = 2       
@@ -425,9 +425,9 @@ if __name__ == "__main__":
         configure_system()
         run_test()
         fetch_results() 
-        # live_plot()
+        live_plot()
         # run_pid()
-        # soft_disarm()
+        soft_disarm()
 
     except requests.exceptions.ConnectionError:
         print("Error: Could not connect to the Red Pitaya. Is the server running and the IP correct?")

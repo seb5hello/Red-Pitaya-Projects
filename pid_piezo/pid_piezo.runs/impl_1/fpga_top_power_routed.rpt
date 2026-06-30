@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Tue Jun 30 14:27:04 2026
+| Date             : Tue Jun 30 16:11:12 2026
 | Host             : 20190748 running 64-bit major release  (build 9200)
 | Command          : report_power -file fpga_top_power_routed.rpt -pb fpga_top_power_summary_routed.pb -rpx fpga_top_power_routed.rpx
 | Design           : fpga_top
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.661        |
+| Total On-Chip Power (W)  | 1.662        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 1.536        |
@@ -52,22 +52,22 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.024 |       14 |       --- |             --- |
-| Slice Logic             |     0.007 |     8520 |       --- |             --- |
-|   LUT as Logic          |     0.006 |     2919 |     17600 |           16.59 |
+| Clocks                  |     0.025 |       14 |       --- |             --- |
+| Slice Logic             |     0.007 |     8519 |       --- |             --- |
+|   LUT as Logic          |     0.006 |     2905 |     17600 |           16.51 |
 |   CARRY4                |    <0.001 |      203 |      4400 |            4.61 |
 |   Register              |    <0.001 |     4378 |     35200 |           12.44 |
 |   LUT as Shift Register |    <0.001 |       48 |      6000 |            0.80 |
 |   F7/F8 Muxes           |    <0.001 |       93 |     17600 |            0.53 |
 |   Others                |     0.000 |      256 |       --- |             --- |
-| Signals                 |     0.009 |     6720 |       --- |             --- |
+| Signals                 |     0.009 |     6719 |       --- |             --- |
 | PLL                     |     0.097 |        1 |         2 |           50.00 |
 | DSPs                    |    <0.001 |        2 |        80 |            2.50 |
 | I/O                     |     0.082 |       61 |       100 |           61.00 |
 | XADC                    |     0.002 |        1 |       --- |             --- |
 | PS7                     |     1.314 |        1 |       --- |             --- |
 | Static Power            |     0.126 |          |           |                 |
-| Total                   |     1.661 |          |           |                 |
+| Total                   |     1.662 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.054 |       0.047 |      0.007 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.054 |       0.048 |      0.007 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.062 |       0.053 |      0.008 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.022 |       0.021 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -172,7 +172,7 @@ Table of Contents
 |   pid_test_instance            |     0.006 |
 |     i_pid_logic                |     0.004 |
 |   pll                          |     0.097 |
-|   ps                           |     1.333 |
+|   ps                           |     1.332 |
 |     axi_slave_gp0              |     0.002 |
 |     system_i                   |     1.329 |
 |       axi_protocol_converter_0 |     0.007 |

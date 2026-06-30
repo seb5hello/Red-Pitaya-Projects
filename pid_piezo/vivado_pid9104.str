@@ -1579,3 +1579,301 @@ dismissDialog("Generate Bitstream"); // bz (cs)
 dismissDialog("Bitstream Generation Completed"); // ag (cs)
 // Elapsed time: 19 seconds
 collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.sv)]", 1); // B (F, cs)
+// WARNING: HEventQueue.dispatchEvent() is taking  3620539 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,022 MB. GUI used memory: 82 MB. Current time: 6/30/26, 1:53:23 PM CEST
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 5146 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.sv)]", 1); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.sv)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.sv)]", 1, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+// Elapsed time: 11 seconds
+selectCodeEditor("fpga_top.sv", 225, 114); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 225, 114, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("fpga_top.sv", 171, 145); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 133, 134); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 418, 142); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 418, 142, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "fpga_top.sv", 'c'); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 138, 137); // bP (w, cs)
+typeControlKey((HResource) null, "fpga_top.sv", 'v'); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 179, 142); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 179, 142, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("fpga_top.sv", 283, 157); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 283, 157, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "fpga_top.sv", 'c'); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 133, 160); // bP (w, cs)
+typeControlKey((HResource) null, "fpga_top.sv", 'v'); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 219, 138); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("fpga_top.sv", 270, 238); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 171, 176); // bP (w, cs)
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectCodeEditor("fpga_top.sv", 171, 175, false, false, false, true, false); // bP (w, cs) - Popup Trigger
+selectCodeEditor("fpga_top.sv", 77, 164); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 236, 261); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 188, 269); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 188, 269, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("fpga_top.sv", 292, 306); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 307, 319); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 307, 319); // bP (w, cs)
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cs): Launch Runs: addNotify
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cD' command handler elapsed time: 5 seconds
+dismissDialog("Launch Runs"); // f (cs)
+// bz (cs):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a (bz)
+// Tcl Message: [Tue Jun 30 14:08:31 2026] Launched synth_1... Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.runs/synth_1/runme.log [Tue Jun 30 14:08:31 2026] Launched impl_1... Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 80 seconds
+selectCodeEditor("fpga_top.sv", 260, 132); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 253, 140); // bP (w, cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 175 seconds
+selectCodeEditor("fpga_top.sv", 173, 382); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 173, 382, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("fpga_top.sv", 172, 417); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 172, 417, false, false, false, false, true); // bP (w, cs) - Double Click
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 120 seconds
+dismissDialog("Bitstream Generation Completed"); // ag (cs)
+// Elapsed time: 203 seconds
+selectCodeEditor("fpga_top.sv", 170, 222); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 170, 222, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("fpga_top.sv", 98, 79); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 98, 79, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 23 seconds
+selectCodeEditor("fpga_top.sv", 261, 242); // bP (w, cs)
+// Elapsed time: 73 seconds
+selectCodeEditor("fpga_top.sv", 260, 290); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 165, 163); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 145, 134); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 145, 134, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("fpga_top.sv", 273, 141); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 273, 141, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 23 seconds
+selectCodeEditor("fpga_top.sv", 258, 264); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 258, 264, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 60 seconds
+selectCodeEditor("fpga_top.sv", 62, 247); // bP (w, cs)
+// Elapsed time: 10 seconds
+selectCodeEditor("fpga_top.sv", 232, 135); // bP (w, cs)
+// Elapsed time: 12 seconds
+selectCodeEditor("fpga_top.sv", 136, 146); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 167, 139); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 167, 139, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("fpga_top.sv", 114, 202); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 69, 202); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 69, 202, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "fpga_top.sv", 'c'); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 235, 326); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 235, 326, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "fpga_top.sv", 'v'); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 87, 96); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 87, 96, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "fpga_top.sv", 'c'); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 208, 367); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 208, 367, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("fpga_top.sv", 205, 388); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 205, 388, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "fpga_top.sv", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("fpga_top.sv", 77, 78); // bP (w, cs)
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectCodeEditor("fpga_top.sv", 149, 145); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 149, 145, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("fpga_top.sv", 118, 153); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 181, 307); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 224, 378); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 101, 326); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 101, 326, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("fpga_top.sv", 325, 318); // bP (w, cs)
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cs): Launch Runs: addNotify
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cD' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (cs)
+// bz (cs):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Jun 30 14:23:22 2026] Launched synth_1... Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.runs/synth_1/runme.log [Tue Jun 30 14:23:22 2026] Launched impl_1... Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,022 MB. GUI used memory: 80 MB. Current time: 6/30/26, 2:23:24 PM CEST
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectCodeEditor("fpga_top.sv", 0, 103); // bP (w, cs)
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 41 seconds
+selectCodeEditor("fpga_top.sv", 35, 358); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 52, 75, true, false, false, false, false); // bP (w, cs) - Shift Key
+selectCodeEditor("fpga_top.sv", 52, 77); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 100, 242, true, false, false, false, false); // bP (w, cs) - Shift Key
+selectCodeEditor("fpga_top.sv", 100, 242); // bP (w, cs)
+// Elapsed time: 10 seconds
+selectCodeEditor("fpga_top.sv", 147, 214); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 90, 248); // bP (w, cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 111 seconds
+selectCodeEditor("fpga_top.sv", 153, 227); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 157, 45); // bP (w, cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// Elapsed time: 66 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bz (cs):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a (bz)
+// [Engine Memory]: 1,156 MB (+113078kb) [03:08:05]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,156 MB. GUI used memory: 81 MB. Current time: 6/30/26, 2:27:39 PM CEST
+selectCodeEditor("fpga_top.sv", 223, 220); // bP (w, cs)
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: FLOORPLAN_MODIFY
+// HMemoryUtils.trashcanNow. Engine heap size: 1,655 MB. GUI used memory: 81 MB. Current time: 6/30/26, 2:27:54 PM CEST
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,657 MB. GUI used memory: 81 MB. Current time: 6/30/26, 2:27:54 PM CEST
+// [Engine Memory]: 1,657 MB (+464430kb) [03:08:22]
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 0.5s
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 1,742 MB (+2443kb) [03:08:23]
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 2s
+// Device: addNotify
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  3687 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z010clg400-1 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.223 . Memory (MB): peak = 1649.559 ; gain = 0.000 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 323 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2020.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.936 . Memory (MB): peak = 1877.824 ; gain = 0.000 
+// Tcl Message: Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.936 . Memory (MB): peak = 1877.824 ; gain = 0.000 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1877.824 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 2 instances were transformed.   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 2 instances  
+// Device view-level: 0,0
+// [GUI Memory]: 172 MB (+3879kb) [03:08:27]
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: open_run: Time (s): cpu = 00:00:35 ; elapsed = 00:00:27 . Memory (MB): peak = 1976.312 ; gain = 326.754 
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// Elapsed time: 23 seconds
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aL (aI, cs)
+// [Engine Memory]: 1,839 MB (+9727kb) [03:08:33]
+// [GUI Memory]: 180 MB (+183kb) [03:08:34]
+// WARNING: HEventQueue.dispatchEvent() is taking  3940 ms.
+// TclEventType: TIMING_SUMMARY_UPDATED
+// [Engine Memory]: 1,946 MB (+15908kb) [03:08:36]
+// WARNING: HEventQueue.dispatchEvent() is taking  1426 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,953 MB. GUI used memory: 139 MB. Current time: 6/30/26, 2:28:10 PM CEST
+dismissDialog("Open Implemented Design"); // bz (cs)
+// Elapsed time: 52 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fpga_top.sv", 3); // m (l, cs)
+// [GUI Memory]: 195 MB (+6309kb) [03:09:29]
+// Elapsed time: 18 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL (aI, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.sv)]", 1); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.sv), generator_ramp : custom_ramp_gen (custom_ramp_gen.sv)]", 7, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (fpga_top.sv), generator_ramp : custom_ramp_gen (custom_ramp_gen.sv)]", 7, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+// Elapsed time: 205 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fpga_top.sv", 3); // m (l, cs)
+// Elapsed time: 10 seconds
+selectCodeEditor("fpga_top.sv", 98, 134); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 232, 170); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 250, 149); // bP (w, cs)
+selectCodeEditor("fpga_top.sv", 221, 138); // bP (w, cs)

@@ -7,6 +7,7 @@ module tb_pid_soft_out();
     // -------------------------------------------------------------------------
     logic clk;
     logic rst_n;
+    logic global_arm;
     logic arm_i;
     
     initial begin
@@ -40,8 +41,8 @@ module tb_pid_soft_out();
         .SHIFT_VAL(10)
     ) dut_pid (
         .clk          (clk),
-        .rst_n        (rst_n & arm_i), // PID math clears instantly on disarm
-        .data_valid_i (trigger),
+        .rst_n        (rst_n & global_arm), // PID math clears instantly on disarm
+        .data_valid_i (trigger & arm_i),
         .error_i      (error_i),
         .kp_i         (kp_i),
         .ki_i         (ki_i),
@@ -104,6 +105,7 @@ module tb_pid_soft_out();
         arm_i   = 0;
         trigger = 0;
         error_i = 0;
+        global_arm = 0;
         
         kp_i = 14'sd1024;  // P-Gain = 1.0
         ki_i = 14'sd512;   // I-Gain = 0.5
@@ -124,7 +126,7 @@ module tb_pid_soft_out();
         #100;
         $display("\n--- TEST 1: Arming PID (No Trigger) ---");
         rst_n = 1; 
-        arm_i = 1; // Assert arm_i to start normal operations
+        global_arm = 1;
         wait_for_settle();
         if (dac_out_o == 2000) $display(" -> PASS: Piezo safely slewed up to baseline offset.");
         else $display(" -> FAIL: Did not settle at offset.");
@@ -133,6 +135,7 @@ module tb_pid_soft_out();
         // TEST 2: Error changes, no trigger
         // ---------------------------------------------------------------------
         #500;
+        arm_i = 1; // Assert arm_i to start normal operations
         $display("\n--- TEST 2: Error changes, no trigger sent ---");
         error_i = 32'sd100; 
         #1000; 

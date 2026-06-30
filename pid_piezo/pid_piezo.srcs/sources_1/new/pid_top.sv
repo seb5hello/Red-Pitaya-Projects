@@ -3,6 +3,7 @@
 module pid_top(
     input  logic               clk_i,
     input  logic               rstn_i,
+    input  logic               global_arm,
     input  logic               arm_i,
     
     input  logic               trigger_i,
@@ -115,8 +116,8 @@ module pid_top(
          .MIN_INT(-500000)      
      ) i_pid_logic (
          .clk          (clk_i),
-         .rst_n        (rstn_i & arm_i),
-         .data_valid_i (trigger_i),
+         .rst_n        (rstn_i & global_arm),
+         .data_valid_i (trigger_i & arm_i),
          .error_i      (error_calc),
          .kp_i         (kp_reg),
          .ki_i         (ki_reg),
@@ -137,7 +138,7 @@ module pid_top(
     ) i_piezo_soft_output (
         .clk           (clk_i),
         .rst_n         (rstn_i), // <-- Changed: Now uses true reset only
-        .arm_i         (arm_i),  // <-- Added: Passes arm status directly
+        .arm_i         (global_arm),  // <-- Added: Passes arm status directly
         
         .target_val_i  (pid_target_wire),
         .pid_ready_i   (pid_ready_wire),

@@ -183,3 +183,45 @@ launch_runs impl_1 -to_step write_bitstream -jobs 6
 [Tue Jun 30 12:39:27 2026] Launched impl_1...
 Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.runs/impl_1/runme.log
 launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 1649.559 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Tue Jun 30 14:08:31 2026] Launched synth_1...
+Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.runs/synth_1/runme.log
+[Tue Jun 30 14:08:31 2026] Launched impl_1...
+Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Tue Jun 30 14:23:22 2026] Launched synth_1...
+Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.runs/synth_1/runme.log
+[Tue Jun 30 14:23:22 2026] Launched impl_1...
+Run output will be captured here: D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.223 . Memory (MB): peak = 1649.559 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 323 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.936 . Memory (MB): peak = 1877.824 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.936 . Memory (MB): peak = 1877.824 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1877.824 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 2 instances
+
+open_run: Time (s): cpu = 00:00:35 ; elapsed = 00:00:27 . Memory (MB): peak = 1976.312 ; gain = 326.754
+open_report: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2116.113 ; gain = 138.125

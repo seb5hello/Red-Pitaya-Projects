@@ -379,7 +379,7 @@ custom_ramp_gen generator_ramp (
 custom_timestamp_detector detector_timestamp (
     .clk_i              (adc_clk),
     .rstn_i             (adc_rstn),
-    .arm_i              (detector_arm),   
+    .arm_i              (detector_arm),
     
     // Map the split triggers from the ramp generator
     .trigger_start_i    (ramp_trigger_start), 
@@ -459,6 +459,7 @@ pid_top pid_test_instance (
     .clk_i         (adc_clk),
     .rstn_i        (adc_rstn & pid_switch),
     .arm_i         (pid_arm),
+    .global_arm    (ramp_arm),
     .trigger_i     (hw_pid_trigger),
     .current_ts_reg(timestamp_pid),
     .ts_select     (timestamp_select),
