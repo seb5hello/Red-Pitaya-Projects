@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_system_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_system" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="2651972000fs"></ZoomEndTime>
+      <Cursor1Time time="1212372000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="73"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="24" />
+   <wvobject fp_name="/tb_system/pid_top_inst/clk_i" type="logic">
+      <obj_property name="ElementShortName">clk_i</obj_property>
+      <obj_property name="ObjectShortName">clk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/pid_top_inst/pid_ready_wire" type="logic">
+      <obj_property name="ElementShortName">pid_ready_wire</obj_property>
+      <obj_property name="ObjectShortName">pid_ready_wire</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/system_controller_inst/mode_o" type="array">
+      <obj_property name="ElementShortName">mode_o[2:0]</obj_property>
+      <obj_property name="ObjectShortName">mode_o[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/system_controller_inst/global_trigger_o" type="logic">
+      <obj_property name="ElementShortName">global_trigger_o</obj_property>
+      <obj_property name="ObjectShortName">global_trigger_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/exp_n_io" type="array">
+      <obj_property name="ElementShortName">exp_n_io[7:0]</obj_property>
+      <obj_property name="ObjectShortName">exp_n_io[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/ramp_top_inst/dac_dat_o" type="array">
+      <obj_property name="ElementShortName">dac_dat_o[13:0]</obj_property>
+      <obj_property name="ObjectShortName">dac_dat_o[13:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/test_peak_inst/dac_dat_o" type="array">
+      <obj_property name="ElementShortName">dac_dat_o[13:0]</obj_property>
+      <obj_property name="ObjectShortName">dac_dat_o[13:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/timestamp_top_inst/raw_ts_1" type="array">
+      <obj_property name="ElementShortName">raw_ts_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">raw_ts_1[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/timestamp_top_inst/raw_ts_2" type="array">
+      <obj_property name="ElementShortName">raw_ts_2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">raw_ts_2[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/timestamp_top_inst/filt_ts_1_o" type="array">
+      <obj_property name="ElementShortName">filt_ts_1_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">filt_ts_1_o[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/timestamp_top_inst/filt_ts_2_o" type="array">
+      <obj_property name="ElementShortName">filt_ts_2_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">filt_ts_2_o[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/pid_top_inst/current_ts_reg" type="array">
+      <obj_property name="ElementShortName">current_ts_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">current_ts_reg[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/pid_top_inst/global_arm" type="logic">
+      <obj_property name="ElementShortName">global_arm</obj_property>
+      <obj_property name="ObjectShortName">global_arm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/pid_top_inst/arm_i" type="logic">
+      <obj_property name="ElementShortName">arm_i</obj_property>
+      <obj_property name="ObjectShortName">arm_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/pid_top_inst/trigger_i" type="logic">
+      <obj_property name="ElementShortName">trigger_i</obj_property>
+      <obj_property name="ObjectShortName">trigger_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/pid_top_inst/filtered_trigger_reg" type="logic">
+      <obj_property name="ElementShortName">filtered_trigger_reg</obj_property>
+      <obj_property name="ObjectShortName">filtered_trigger_reg</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/pid_top_inst/error_calc" type="array">
+      <obj_property name="ElementShortName">error_calc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">error_calc[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/pid_top_inst/dac_dat_o" type="array">
+      <obj_property name="ElementShortName">dac_dat_o[13:0]</obj_property>
+      <obj_property name="ObjectShortName">dac_dat_o[13:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/pid_top_inst/pid_ready_wire" type="logic">
+      <obj_property name="ElementShortName">pid_ready_wire</obj_property>
+      <obj_property name="ObjectShortName">pid_ready_wire</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/pid_top_inst/trigger_seen_flag" type="logic">
+      <obj_property name="ElementShortName">trigger_seen_flag</obj_property>
+      <obj_property name="ObjectShortName">trigger_seen_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/pid_top_inst/trigger_req" type="logic">
+      <obj_property name="ElementShortName">trigger_req</obj_property>
+      <obj_property name="ObjectShortName">trigger_req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/pid_top_inst/sampled_error_reg" type="array">
+      <obj_property name="ElementShortName">sampled_error_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sampled_error_reg[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/pid_top_inst/sampled_dac_reg" type="array">
+      <obj_property name="ElementShortName">sampled_dac_reg[13:0]</obj_property>
+      <obj_property name="ObjectShortName">sampled_dac_reg[13:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_system/pid_top_inst/trigger_seen_flag_reg" type="logic">
+      <obj_property name="ElementShortName">trigger_seen_flag_reg</obj_property>
+      <obj_property name="ObjectShortName">trigger_seen_flag_reg</obj_property>
+   </wvobject>
+</wave_config>

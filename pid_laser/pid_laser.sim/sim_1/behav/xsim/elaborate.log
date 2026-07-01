@@ -1,0 +1,22 @@
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto fed0e104115144cc817f61865d6a9486 --incr --debug typical --relax --mt 2 -L generic_baseblocks_v2_1_0 -L fifo_generator_v13_2_5 -L axi_data_fifo_v2_1_20 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_21 -L axi_protocol_converter_v2_1_21 -L xil_defaultlib -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L axi_vip_v1_1_7 -L processing_system7_vip_v1_0_9 -L xlconstant_v1_1_7 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_system_behav xil_defaultlib.tb_system xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.system_controller
+Compiling module xil_defaultlib.ramp_logic
+Compiling module xil_defaultlib.ramp_top
+Compiling module xil_defaultlib.test_peak_logic
+Compiling module xil_defaultlib.timestamp_logic
+Compiling module xil_defaultlib.timestamp_filter
+Compiling module xil_defaultlib.timestamp_top
+Compiling module xil_defaultlib.pid_logic(MAX_INT=500000,MIN_INT...
+Compiling module xil_defaultlib.pid_top
+Compiling module xil_defaultlib.tb_system
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_system_behav
