@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
 
@@ -91,9 +92,6 @@ read_verilog -library xil_defaultlib -sv {
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/imports/RedPitaya/rtl/interface/axi4_if.sv
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/imports/RedPitaya/rtl/axi4_slave.sv
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/imports/RedPitaya/rtl/interface/axi_sys_if.sv
-  D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/new/custom_ramp_gen.sv
-  D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/new/custom_test_peak_gen.sv
-  D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/new/custom_timestamp_detector.sv
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/imports/RedPitaya/rtl/freq_meter.sv
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/imports/RedPitaya/rtl/interface/gpio_if.sv
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/new/pid_logic.sv
@@ -106,7 +104,6 @@ read_verilog -library xil_defaultlib -sv {
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/imports/RedPitaya/rtl/sys_bus_interconnect.sv
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/imports/RedPitaya/rtl/sys_bus_stub.sv
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/new/system_controller.sv
-  D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/new/test_peak_logic.sv
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/new/timestamp_filter.sv
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/new/timestamp_logic.sv
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/new/fpga_top.sv
@@ -115,6 +112,8 @@ read_verilog -library xil_defaultlib -sv {
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/imports/RedPitaya/rtl/interface/axi4_stream_if.sv
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/imports/RedPitaya/rtl/interface/axi4_lite_if.sv
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/new/piezo_soft_output.sv
+  D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/new/ramp_top.sv
+  D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/new/timestamp_top.sv
 }
 read_verilog -library xil_defaultlib {
   D:/Xilinx/RedPitaya/prj/v0.94/Red-Pitaya-Projects/pid_piezo/pid_piezo.srcs/sources_1/imports/RedPitaya/rtl/classic/axi_master.v

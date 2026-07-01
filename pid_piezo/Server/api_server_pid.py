@@ -13,8 +13,7 @@ MODULE_BASES = {
     "sys_ctrl": 0x40100000, # sys[1]
     "ramp_gen": 0x40200000, # sys[2]
     "peak_det": 0x40300000, # sys[3]
-    "test_gen": 0x40400000, # sys[4]
-    "pid_ctrl": 0x40500000  # sys[5]
+    "pid_ctrl": 0x40400000, # sys[4]
 }
 
 MAP_SIZE = 4096
@@ -183,36 +182,15 @@ def peak_detector():
             "ts_8": read_reg("peak_det", 0x5C)
         })
 
-# --- 4. Test Peak Generator (sys[4]) ---
-@app.route('/api/test_gen', methods=['POST', 'GET'])
-def test_gen():
-    if request.method == 'POST':
-        data = request.get_json(force=True) or {}
-        if 'dly_1' in data: write_reg("test_gen", 0x00, data['dly_1'])
-        if 'dly_2' in data: write_reg("test_gen", 0x04, data['dly_2'])
-        if 'dly_3' in data: write_reg("test_gen", 0x08, data['dly_3'])
-        if 'dly_4' in data: write_reg("test_gen", 0x0C, data['dly_4'])
-        if 'peak_amp' in data: write_reg("test_gen", 0x10, data['peak_amp'] & 0x3FFF)
-        if 'base_amp' in data: write_reg("test_gen", 0x14, data['base_amp'] & 0x3FFF)
-        if 'pulse_width' in data: write_reg("test_gen", 0x18, data['pulse_width'])
-        return jsonify({"status": "success"})
-    else:
-        return jsonify({
-            "dly_1": read_reg("test_gen", 0x00),
-            "dly_2": read_reg("test_gen", 0x04),
-            "dly_3": read_reg("test_gen", 0x08),
-            "dly_4": read_reg("test_gen", 0x0C),
-            "peak_amp": read_reg("test_gen", 0x10) & 0x3FFF,
-            "base_amp": read_reg("test_gen", 0x14) & 0x3FFF,
-            "pulse_width": read_reg("test_gen", 0x18)
-        })
-
 # --- 5. PID Controller (sys[5]) ---
 @app.route('/api/pid_ctrl', methods=['POST', 'GET'])
 def pid_ctrl():
     if request.method == 'POST':
         data = request.get_json(force=True) or {}
         
+        # Software trigger to sample the current error and output
+        if 'trigger_req' in data: write_reg("pid_ctrl", 0x00, data['trigger_req'] & 0x1)
+
         if 'kp' in data: write_reg("pid_ctrl", 0x04, data['kp'] & 0x3FFF)
         if 'ki' in data: write_reg("pid_ctrl", 0x08, data['ki'] & 0x3FFF)
         if 'kd' in data: write_reg("pid_ctrl", 0x0C, data['kd'] & 0x3FFF)
@@ -232,7 +210,14 @@ def pid_ctrl():
         def to_signed(val, bits=32):
             return val if val < (1 << (bits - 1)) else val - (1 << bits)
             
+        status_reg = read_reg("pid_ctrl", 0x00)
+
         return jsonify({
+            # Status and Sampling registers
+            "trigger_req": status_reg & 0x01,
+            "pid_ready": (status_reg >> 1) & 0x01,
+            
+            # PID Configuration
             "kp": to_signed(read_reg("pid_ctrl", 0x04)),
             "ki": to_signed(read_reg("pid_ctrl", 0x08)),
             "kd": to_signed(read_reg("pid_ctrl", 0x0C)),
@@ -243,7 +228,11 @@ def pid_ctrl():
             "max_out": to_signed(read_reg("pid_ctrl", 0x1C)),
             "min_out": to_signed(read_reg("pid_ctrl", 0x20)),
             
-            "step_cycles": read_reg("pid_ctrl", 0x24)
+            "step_cycles": read_reg("pid_ctrl", 0x24),
+            
+            # Data outputs (latched when trigger_req is sent)
+            "sampled_error": to_signed(read_reg("pid_ctrl", 0x28)),
+            "sampled_dac_out": to_signed(read_reg("pid_ctrl", 0x2C)) # 32-bit since it's sign-extended in verilog
         })
 
 if __name__ == '__main__':

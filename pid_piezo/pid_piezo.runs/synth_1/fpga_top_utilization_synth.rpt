@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Tue Jun 30 16:07:56 2026
+| Date         : Wed Jul  1 13:12:46 2026
 | Host         : 20190748 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file fpga_top_utilization_synth.rpt -pb fpga_top_utilization_synth.pb
 | Design       : fpga_top
@@ -30,13 +30,13 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 2424 |     0 |     17600 | 13.77 |
-|   LUT as Logic          | 2424 |     0 |     17600 | 13.77 |
+| Slice LUTs*             | 2342 |     0 |     17600 | 13.31 |
+|   LUT as Logic          | 2342 |     0 |     17600 | 13.31 |
 |   LUT as Memory         |    0 |     0 |      6000 |  0.00 |
-| Slice Registers         | 3476 |     0 |     35200 |  9.88 |
-|   Register as Flip Flop | 3476 |     0 |     35200 |  9.88 |
+| Slice Registers         | 3317 |     0 |     35200 |  9.42 |
+|   Register as Flip Flop | 3317 |     0 |     35200 |  9.42 |
 |   Register as Latch     |    0 |     0 |     35200 |  0.00 |
-| F7 Muxes                |   93 |     0 |      8800 |  1.06 |
+| F7 Muxes                |   79 |     0 |      8800 |  0.90 |
 | F8 Muxes                |    0 |     0 |      4400 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -56,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 1     |          Yes |           - |          Set |
 | 284   |          Yes |           - |        Reset |
-| 83    |          Yes |         Set |            - |
-| 3108  |          Yes |       Reset |            - |
+| 73    |          Yes |         Set |            - |
+| 2959  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -91,7 +91,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   63 |     0 |       100 | 63.00 |
+| Bonded IOB                  |   64 |     0 |       100 | 64.00 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         2 |  0.00 |
@@ -148,18 +148,18 @@ Table of Contents
 +-----------+------+---------------------+
 |  Ref Name | Used | Functional Category |
 +-----------+------+---------------------+
-| FDRE      | 3108 |        Flop & Latch |
-| LUT6      |  855 |                 LUT |
-| LUT4      |  737 |                 LUT |
-| LUT5      |  418 |                 LUT |
-| LUT2      |  365 |                 LUT |
-| LUT3      |  306 |                 LUT |
+| FDRE      | 2959 |        Flop & Latch |
+| LUT6      |  791 |                 LUT |
+| LUT4      |  739 |                 LUT |
+| LUT5      |  412 |                 LUT |
+| LUT2      |  369 |                 LUT |
+| LUT3      |  285 |                 LUT |
 | FDCE      |  284 |        Flop & Latch |
-| CARRY4    |  185 |          CarryLogic |
+| CARRY4    |  184 |          CarryLogic |
 | LUT1      |  170 |                 LUT |
-| MUXF7     |   93 |               MuxFx |
-| FDSE      |   83 |        Flop & Latch |
-| OBUF      |   33 |                  IO |
+| MUXF7     |   79 |               MuxFx |
+| FDSE      |   73 |        Flop & Latch |
+| OBUF      |   34 |                  IO |
 | IBUF      |   24 |                  IO |
 | ODDR      |   20 |                  IO |
 | BUFG      |   11 |               Clock |

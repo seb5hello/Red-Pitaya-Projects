@@ -271,7 +271,7 @@ red_pitaya_hk #(.DWE(DWE)) i_hk (
 ////////////////////////////////////////////////////////////////////////////////
 // Global Orchestration Signals
 ////////////////////////////////////////////////////////////////////////////////
-logic signed [2:0] mode;
+logic [2:0] mode;
 logic global_trigger;
 
 // Split Ramp Triggers
@@ -280,52 +280,45 @@ logic ramp_trigger_max;
 
 logic ramp_arm;
 logic detector_arm;
-logic generator_arm;
 logic pid_arm;
+logic pid_on;
 
 // Mode to Arm Signal Decoder
 always_comb begin
     // Default state: all off
     ramp_arm      = 1'b0;
     detector_arm  = 1'b0;
-    generator_arm = 1'b0;
     pid_arm       = 1'b0;
+    pid_on        = 1'b0;
 
     case (mode)
-        -3'sd2: begin
-            // Mode -2: Arm ramp, detector, and generator
-            ramp_arm      = 1'b1;
-            detector_arm  = 1'b1;
-            generator_arm = 1'b1;
-            pid_arm       = 1'b1;
-        end
-        -3'sd1: begin
-            // Mode -1: Arm ramp, detector, and generator
-            ramp_arm      = 1'b1;
-            detector_arm  = 1'b1;
-            generator_arm = 1'b1;
-            pid_arm       = 1'b0;
-        end
         3'sd0: begin
             // Mode 0: All arm signals off
             ramp_arm      = 1'b0;
             detector_arm  = 1'b0;
-            generator_arm = 1'b0;
             pid_arm       = 1'b0;
+            pid_on        = 1'b0;
         end
         3'sd1: begin
             // Mode 1: Arm ramp, detector
             ramp_arm      = 1'b1;
             detector_arm  = 1'b1;
-            generator_arm = 1'b0;
             pid_arm       = 1'b0;
+            pid_on        = 1'b0;
         end
         3'sd2: begin
             // Mode 2: Arm ramp, detector, and pid
             ramp_arm      = 1'b1;
             detector_arm  = 1'b1;
-            generator_arm = 1'b0;
             pid_arm       = 1'b1;
+            pid_on        = 1'b0;
+        end
+        3'sd3: begin
+            // Mode 2: Arm ramp, detector, and pid
+            ramp_arm      = 1'b1;
+            detector_arm  = 1'b1;
+            pid_arm       = 1'b1;
+            pid_on        = 1'b1;
         end
         default: begin
             // Other modes to be implemented later fall back to default (0)
@@ -336,7 +329,7 @@ end
 ////////////////////////////////////////////////////////////////////////////////
 // SYS [1]: Master System Controller
 ////////////////////////////////////////////////////////////////////////////////
-system_controller i_sys_ctrl (
+system_controller system_controller_inst (
     .clk_i            (adc_clk),
     .rstn_i           (adc_rstn),
     .mode_o           (mode),
@@ -353,7 +346,7 @@ system_controller i_sys_ctrl (
 ////////////////////////////////////////////////////////////////////////////////
 // SYS [2]: Custom Ramp Generator (DAC Channel A)
 ////////////////////////////////////////////////////////////////////////////////
-custom_ramp_gen generator_ramp (
+ramp_top ramp_top_inst (
     .clk_i            (adc_clk),
     .rstn_i           (adc_rstn),
     .arm_i            (ramp_arm),       
@@ -373,10 +366,13 @@ custom_ramp_gen generator_ramp (
     .sys_ack          (sys[2].ack  )
 );
 
+// Drive the Click Shield TRIG OUT (DIO0_N) high when either ramp trigger is high
+assign exp_n_io[0] = ramp_trigger_start | ramp_trigger_max;
+
 ////////////////////////////////////////////////////////////////////////////////
 // SYS [3]: Custom Peak & Timestamp Detector (ADC Channel A)
 ////////////////////////////////////////////////////////////////////////////////
-custom_timestamp_detector detector_timestamp (
+timestamp_top timestamp_top_inst (
     .clk_i              (adc_clk),
     .rstn_i             (adc_rstn),
     .arm_i              (detector_arm),
@@ -406,32 +402,7 @@ custom_timestamp_detector detector_timestamp (
 );
 
 ////////////////////////////////////////////////////////////////////////////////
-// SYS [4]: Custom Test Peak Generator (DAC Channel B)
-////////////////////////////////////////////////////////////////////////////////
-//assign dac_a = dac_ramp;//(mode < 0)? (dac_peak_gen):(dac_ramp);
-//assign dac_b = dac_pid;//(mode < 0)? (dac_pid):(dac_peak_gen);
-
-custom_test_peak_gen generator_test_peak (
-    .clk_i            (adc_clk),
-    .rstn_i           (adc_rstn),
-    .arm_i            (generator_arm),  
-    
-    // Map the split triggers from the ramp generator
-    .trigger_start_i  (ramp_trigger_start), 
-    .trigger_max_i    (ramp_trigger_max), 
-      
-    .dac_dat_o        (dac_peak_gen),          
-    .sys_addr         (sys[4].addr ),
-    .sys_wdata        (sys[4].wdata),
-    .sys_wen          (sys[4].wen  ),
-    .sys_ren          (sys[4].ren  ),
-    .sys_rdata        (sys[4].rdata),
-    .sys_err          (sys[4].err  ),
-    .sys_ack          (sys[4].ack  )
-);
-
-////////////////////////////////////////////////////////////////////////////////
-// SYS [5]: TEST PID CONTROLLER (DAC Channel B)
+// SYS [4]: TEST PID CONTROLLER (DAC Channel B)
 ////////////////////////////////////////////////////////////////////////////////
 logic        pid_switch;
 logic [3:0]  timestamp_select; // Added missing semicolon
@@ -455,29 +426,29 @@ always_comb begin
   endcase
 end
 
-pid_top pid_test_instance (
+pid_top pid_top_inst (
     .clk_i         (adc_clk),
     .rstn_i        (adc_rstn & pid_switch),
-    .arm_i         (pid_arm),
-    .global_arm    (ramp_arm),
+    .global_arm    (pid_arm),
+    .arm_i         (pid_on),
     .trigger_i     (hw_pid_trigger),
     .current_ts_reg(timestamp_pid),
     .ts_select     (timestamp_select),
     .dac_dat_o     (dac_b),
-    .sys_addr      (sys[5].addr ),
-    .sys_wdata     (sys[5].wdata),
-    .sys_wen       (sys[5].wen  ),
-    .sys_ren       (sys[5].ren  ),
-    .sys_rdata     (sys[5].rdata),
-    .sys_err       (sys[5].err  ),
-    .sys_ack       (sys[5].ack  )
+    .sys_addr      (sys[4].addr ),
+    .sys_wdata     (sys[4].wdata),
+    .sys_wen       (sys[4].wen  ),
+    .sys_ren       (sys[4].ren  ),
+    .sys_rdata     (sys[4].rdata),
+    .sys_err       (sys[4].err  ),
+    .sys_ack       (sys[4].ack  )
 );
 
 ////////////////////////////////////////////////////////////////////////////////
 // SYS [5-7]: Unused Bus Stubs (Updated to start from 5)
 ////////////////////////////////////////////////////////////////////////////////
 generate
-for (genvar i=6; i<8; i++) begin: for_sys
+for (genvar i=5; i<8; i++) begin: for_sys
   sys_bus_stub sys_bus_stub_i (sys[i]);
 end
 endgenerate

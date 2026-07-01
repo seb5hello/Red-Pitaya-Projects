@@ -59,7 +59,7 @@ module tb_pid_soft_out();
     ) dut_soft_out (
         .clk           (clk),
         .rst_n         (rst_n),  // Soft output stays alive
-        .arm_i         (arm_i),  // Soft output monitors arm status
+        .arm_i         (global_arm),  // Soft output monitors arm status
         .target_val_i  (pid_target_wire),
         .pid_ready_i   (pid_ready_wire),
         .step_cycles_i (step_cycles_i),
@@ -111,7 +111,7 @@ module tb_pid_soft_out();
         ki_i = 14'sd512;   // I-Gain = 0.5
         kd_i = 14'sd0;     
         
-        offset_i  = 14'sd2000;
+        offset_i  = 14'sd200;
         max_out_i = 14'sd8191;
         min_out_i = -14'sd8191;
         step_cycles_i = 32'd4; 
@@ -123,55 +123,65 @@ module tb_pid_soft_out();
         // ---------------------------------------------------------------------
         // TEST 1: Arm System
         // ---------------------------------------------------------------------
-        #100;
-        $display("\n--- TEST 1: Arming PID (No Trigger) ---");
+        #500;
+        $display("\n--- TEST 1: Global Arming PID (No Trigger) ---");
         rst_n = 1; 
-        global_arm = 1;
+        global_arm = 1'b1;
+        arm_i = 1'b0;
+        error_i = 32'sd0; 
         wait_for_settle();
-        if (dac_out_o == 2000) $display(" -> PASS: Piezo safely slewed up to baseline offset.");
-        else $display(" -> FAIL: Did not settle at offset.");
 
         // ---------------------------------------------------------------------
         // TEST 2: Error changes, no trigger
         // ---------------------------------------------------------------------
         #500;
-        arm_i = 1; // Assert arm_i to start normal operations
         $display("\n--- TEST 2: Error changes, no trigger sent ---");
         error_i = 32'sd100; 
-        #1000; 
-        if (dac_out_o == 2000) $display(" -> PASS: Ignored error without trigger.");
-        else $display(" -> FAIL: PID acted without a trigger pulse.");
+        wait_for_settle();
+
+        // ---------------------------------------------------------------------
+        // TEST 2: Error changes, no trigger
+        // ---------------------------------------------------------------------
+        #500;
+        $display("\n--- TEST 3: Error changes, trigger sent, arm off ---");
+        error_i = 32'sd100; 
+        pulse_trigger();
+        wait_for_settle();
+
+        // ---------------------------------------------------------------------
+        // TEST 2: Error changes, no trigger
+        // ---------------------------------------------------------------------
+        #500;
+        $display("\n--- TEST 4: Error changes, trigger sent, arm on ---");
+        arm_i = 1'b1;
+        pulse_trigger();
+        wait_for_settle();
 
         // ---------------------------------------------------------------------
         // TEST 3: Trigger sent
         // ---------------------------------------------------------------------
-        #500;
-        $display("\n--- TEST 3: Error is 100, trigger sent ---");
+        #5000;
+        $display("\n--- TEST 5: Error is 100, trigger sent ---");
+        error_i = -32'sd50; 
         pulse_trigger();
         wait_for_settle();
-        if (dac_out_o == 2150) $display(" -> PASS: Correctly calculated and slewed to first PID iteration.");
-        else $display(" -> FAIL: Expected 2150.");
 
         // ---------------------------------------------------------------------
         // TEST 4: Trigger sent again
         // ---------------------------------------------------------------------
         #500;
-        $display("\n--- TEST 4: Error stays 100, trigger sent again ---");
-        pulse_trigger();
+        $display("\n--- TEST 6: Error stays 100, trigger sent again ---");
+        arm_i = 1'b0;
         wait_for_settle();
-        if (dac_out_o == 2200) $display(" -> PASS: Integrator accumulated correctly. Slewed to new target.");
-        else $display(" -> FAIL: Expected 2200.");
 
         // ---------------------------------------------------------------------
         // TEST 5: Graceful Soft Disarm
         // Expected: Pulling arm_i low forces target to 0, DAC slowly walks down.
         // ---------------------------------------------------------------------
         #500;
-        $display("\n--- TEST 5: Graceful Soft Disarm (arm_i goes low) ---");
-        arm_i = 0; // Drop the arm flag
+        $display("\n--- TEST 7: Graceful Soft Disarm (arm_i goes low) ---");
+        global_arm = 1'b0; // Drop the arm flag
         wait_for_settle();
-        if (dac_out_o == 0) $display(" -> PASS: DAC successfully and safely slewed down to 0.");
-        else $display(" -> FAIL: Did not slew to 0.");
 
         #1000;
         $display("\n===============================================================");

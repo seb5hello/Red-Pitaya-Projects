@@ -41,8 +41,10 @@ module pid_logic  #(
     localparam CALC_D  = 3'd3;
     localparam ACCUM_I = 3'd4;
     localparam OUTPUT  = 3'd5;
+    localparam CLAMP_OUT = 3'd7;
 
     reg [2:0] state;
+    reg signed [DATA_WIDTH+1:0] pid_sum_reg;
 
     // --------------------------------------------------------
     // Persistent State Registers
@@ -161,19 +163,23 @@ module pid_logic  #(
                     // Extend the dynamic offset input to 34 bits
                     automatic logic signed [DATA_WIDTH+1:0] ext_offset = { {PAD_OUT{offset_i[OUT_WIDTH-1]}}, offset_i };
                     
-                    // Final sum includes the baseline offset
-                    automatic logic signed [DATA_WIDTH+1:0] pid_sum = ext_p + ext_i + ext_d + ext_offset;
-
+                    // Latch the sum into a register (Cycle 1)
+                    pid_sum_reg <= ext_p + ext_i + ext_d + ext_offset;
+                    state       <= CLAMP_OUT;
+                end
+                
+                CLAMP_OUT: begin
                     // Extend dynamic limits to 34 bits for safe comparison
                     automatic logic signed [DATA_WIDTH+1:0] ext_max_out = { {PAD_OUT{max_out_i[OUT_WIDTH-1]}}, max_out_i };
                     automatic logic signed [DATA_WIDTH+1:0] ext_min_out = { {PAD_OUT{min_out_i[OUT_WIDTH-1]}}, min_out_i };
-
-                    if (pid_sum > ext_max_out) 
+                    
+                    // Compare the registered sum (Cycle 2)
+                    if (pid_sum_reg > ext_max_out) 
                         dac_out_o <= max_out_i;
-                    else if (pid_sum < ext_min_out) 
+                    else if (pid_sum_reg < ext_min_out) 
                         dac_out_o <= min_out_i;
                     else 
-                        dac_out_o <= pid_sum[OUT_WIDTH-1:0];
+                        dac_out_o <= pid_sum_reg[OUT_WIDTH-1:0];
                         
                     state <= IDLE;
                 end
