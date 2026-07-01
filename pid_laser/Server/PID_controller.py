@@ -8,7 +8,6 @@ from collections import deque
 import csv
 from datetime import datetime, timedelta
 import matplotlib.dates as mdates
-import threading # Add this to your imports at the top
 
 # ==============================================================================
 # NETWORK CONFIGURATION
@@ -235,8 +234,8 @@ def live_plot():
     csv_filename = f"pulse_data_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
     with open(csv_filename, mode='w', newline='') as file:
         writer = csv.writer(file)
-        # Added PID_Error and PID_DAC headers
-        writer.writerow(["Timestamp", "Peak_Count", "PID_Error", "PID_DAC", "TS_1", "TS_2", "TS_3", "TS_4", "TS_5", "TS_6", "TS_7", "TS_8"])
+        # Added Trigger_Seen to the logging headers
+        writer.writerow(["Timestamp", "Peak_Count", "PID_Error", "PID_DAC", "Trigger_Seen", "TS_1", "TS_2", "TS_3", "TS_4", "TS_5", "TS_6", "TS_7", "TS_8"])
     
     print(f"\n -> Saving live data to: {csv_filename}")
 
@@ -291,14 +290,15 @@ def live_plot():
     # --- Figure 3: PID Error & Output Tracking ---
     fig_pid, (ax_error, ax_dac) = plt.subplots(2, 1, figsize=(10, 8))
     fig_pid.canvas.manager.set_window_title("Live PID Status")
-    fig_pid.subplots_adjust(hspace=0.4)
+    # Compress plots to make room for the CLI box
+    fig_pid.subplots_adjust(hspace=0.4, bottom=0.2)
 
     # Error Plot setup
     line_error, = ax_error.plot([], [], lw=2, color='red')
     ax_error.set_title("PID Error (Target - Current TS)", fontsize=10, fontweight='bold')
     ax_error.set_ylabel("Error (Clock Cycles)", fontsize=9)
     ax_error.grid(True, linestyle=':', alpha=0.6)
-    ax_error.axhline(y=0, color='black', linestyle='-', linewidth=1, alpha=0.5) # Zero line
+    ax_error.axhline(y=0, color='black', linestyle='-', linewidth=1, alpha=0.5) 
     ax_error.xaxis.set_major_formatter(mdates.DateFormatter('%H:%M:%S'))
     ax_error.tick_params(axis='x', rotation=45, labelsize=8)
 
@@ -310,6 +310,55 @@ def live_plot():
     ax_dac.xaxis.set_major_formatter(mdates.DateFormatter('%H:%M:%S'))
     ax_dac.tick_params(axis='x', rotation=45, labelsize=8)
 
+    # --- NEW: Interactive Matplotlib Text Box ---
+    ax_cmd_box = fig_pid.add_axes([0.2, 0.05, 0.6, 0.075])
+    cmd_box = TextBox(ax_cmd_box, 'Tuning Cmd:\n(e.g., "kp 20") ', textalignment='left')
+
+    def submit_command(expression):
+        """Callback fired whenever 'Enter' is pressed in the text box."""
+        try:
+            raw_input = expression.strip().lower()
+            if not raw_input: 
+                return
+                
+            cmd_parts = raw_input.split()
+            if len(cmd_parts) != 2:
+                print(" -> Invalid format. Use: <parameter> <value>")
+                cmd_box.set_val("") 
+                return
+                
+            cmd = cmd_parts[0]
+            val = int(cmd_parts[1])
+            
+            if cmd == 'kp':
+                write_pid_ctrl(kp=val)
+                print(f" -> Success: Kp updated to {val}")
+            elif cmd == 'ki':
+                write_pid_ctrl(ki=val)
+                print(f" -> Success: Ki updated to {val}")
+            elif cmd == 'kd':
+                write_pid_ctrl(kd=val)
+                print(f" -> Success: Kd updated to {val}")
+            elif cmd == 'target':
+                # Safety check: prevent massive steps from breaking the optical lock
+                curr_target = read_pid_ctrl().get('target_ts', 0)
+                if abs(val - curr_target) > 2000:
+                    print(f" -> SAFETY LIMIT: Target step > 2000 cycles. Step denied to prevent piezo jump.")
+                else:
+                    write_pid_ctrl(target_ts=val)
+                    print(f" -> Success: Target TS updated to {val}")
+            else:
+                print(f" -> Unknown parameter '{cmd}'")
+                
+        except ValueError:
+            print(" -> Invalid value. Please enter a valid integer.")
+        except Exception as e:
+            print(f" -> Hardware Error: {e}")
+            
+        cmd_box.set_val("")
+
+    cmd_box.on_submit(submit_command)
+
     # Data structures for rolling history
     MAX_HISTORY_SECONDS = 3 * 3600 # 3 hours
     x_data = []
@@ -319,7 +368,7 @@ def live_plot():
     y_data_dac = []
 
     def fetch_data():
-        # Trigger Peak Detector and PID sampler at roughly the same time
+        # Trigger Peak Detector and PID sampler simultaneously
         requests.post(f"{BASE_URL}/peak_detector", json={"trigger": 1})
         requests.post(f"{BASE_URL}/pid_ctrl", json={"trigger_req": 1})
         
@@ -330,6 +379,7 @@ def live_plot():
         timestamps = [0] * 8
         pid_error = 0
         pid_dac = 0
+        pid_trigger_seen = 0
 
         # Wait for peak detector data
         while time.time() - start_time < timeout:
@@ -348,20 +398,24 @@ def live_plot():
             pid_resp = requests.get(f"{BASE_URL}/pid_ctrl").json()
             pid_error = pid_resp.get("sampled_error", 0)
             pid_dac = pid_resp.get("sampled_dac_out", 0)
+            pid_trigger_seen = pid_resp.get("trigger_seen", 0) 
         except requests.exceptions.RequestException:
             pass
 
-        return peak_count, timestamps, pid_error, pid_dac
+        return peak_count, timestamps, pid_error, pid_dac, pid_trigger_seen
 
     def update_plot(frame):
-        peak_count, timestamps, pid_error, pid_dac = fetch_data()
+        peak_count, timestamps, pid_error, pid_dac, pid_trigger_seen = fetch_data()
         y_vals = list(range(1, 9))
         current_time = datetime.now()
         
+        if pid_trigger_seen == 0:
+            print(f"[{current_time.strftime('%H:%M:%S')}] WARNING: PID missed trigger in active window!")
+
         # Update CSV
         with open(csv_filename, mode='a', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow([current_time.isoformat(), peak_count, pid_error, pid_dac] + timestamps)
+            writer.writerow([current_time.isoformat(), peak_count, pid_error, pid_dac, pid_trigger_seen] + timestamps)
 
         # --- Update Main Plot ---
         main_scatter.set_offsets(list(zip(timestamps, y_vals)))
@@ -451,66 +505,14 @@ def live_plot():
         fig_track.canvas.draw_idle()
         fig_pid.canvas.draw_idle()
 
-        return [main_scatter, main_vlines] + main_texts
+        # Added cmd_box to return list to prevent Matplotlib garbage collection
+        return [main_scatter, main_vlines, cmd_box] + main_texts
 
     print("\n8. Starting live plots... Close the pop-up windows to end the script.")
     
     ani = animation.FuncAnimation(fig_main, update_plot, interval=100, blit=False, cache_frame_data=False)
     
     plt.show()
-
-def live_tuning_cli():
-    """Background thread to accept tuning commands while plots run."""
-    print("\n" + "="*50)
-    print(" LIVE TUNING CLI ACTIVE")
-    print(" Commands: 'kp <val>', 'ki <val>', 'kd <val>', 'target <val>'")
-    print(" Example : 'kp 15' (Type 'help' for more, 'q' to hide)")
-    print("="*50 + "\n")
-    
-    while True:
-        try:
-            # Block and wait for user input
-            raw_input = input("PID_Tuner>> ").strip().lower()
-            if not raw_input: 
-                continue
-                
-            cmd_parts = raw_input.split()
-            cmd = cmd_parts[0]
-            
-            if cmd in ['q', 'quit', 'exit']:
-                print(" -> CLI minimized. Close matplotlib windows to fully exit.")
-                break
-            elif cmd == 'help':
-                print(" -> Valid parameters: kp, ki, kd, target")
-                continue
-                
-            if len(cmd_parts) != 2:
-                print(" -> Invalid format. Use: <parameter> <value>")
-                continue
-                
-            # Parse the value
-            val = int(cmd_parts[1])
-            
-            # Route to the correct hardware abstraction
-            if cmd == 'kp':
-                write_pid_ctrl(kp=val)
-                print(f" -> Success: Kp updated to {val}")
-            elif cmd == 'ki':
-                write_pid_ctrl(ki=val)
-                print(f" -> Success: Ki updated to {val}")
-            elif cmd == 'kd':
-                write_pid_ctrl(kd=val)
-                print(f" -> Success: Kd updated to {val}")
-            elif cmd == 'target':
-                write_pid_ctrl(target_ts=val)
-                print(f" -> Success: Target TS updated to {val} cycles")
-            else:
-                print(f" -> Unknown parameter '{cmd}'")
-                
-        except ValueError:
-            print(" -> Invalid value. Please enter a valid integer.")
-        except Exception as e:
-            print(f" -> Network/Hardware Error: {e}")
 
 # ==============================================================================
 # MAIN EXECUTION
@@ -524,11 +526,6 @@ if __name__ == "__main__":
         fetch_results() 
         pid_on()
         
-        # --- START LIVE TUNING THREAD ---
-        cli_thread = threading.Thread(target=live_tuning_cli, daemon=True)
-        cli_thread.start()
-        
-        # Start blocking animation
         live_plot() 
         
         pid_idle()
