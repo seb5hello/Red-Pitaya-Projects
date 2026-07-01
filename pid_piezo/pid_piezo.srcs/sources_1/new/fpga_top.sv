@@ -372,6 +372,11 @@ assign exp_n_io[0] = ramp_trigger_start | ramp_trigger_max;
 ////////////////////////////////////////////////////////////////////////////////
 // SYS [3]: Custom Peak & Timestamp Detector (ADC Channel A)
 ////////////////////////////////////////////////////////////////////////////////
+logic        hw_pid_trigger;
+logic [3:0]  hw_filt_peak_count;
+logic [31:0] hw_ts_1, hw_ts_2, hw_ts_3, hw_ts_4;
+logic [31:0] hw_ts_5, hw_ts_6, hw_ts_7, hw_ts_8;
+
 timestamp_top timestamp_top_inst (
     .clk_i              (adc_clk),
     .rstn_i             (adc_rstn),
@@ -405,7 +410,7 @@ timestamp_top timestamp_top_inst (
 // SYS [4]: TEST PID CONTROLLER (DAC Channel B)
 ////////////////////////////////////////////////////////////////////////////////
 logic        pid_switch;
-logic [3:0]  timestamp_select; // Added missing semicolon
+logic [3:0]  timestamp_select; 
 logic [31:0] timestamp_pid;
 
 always_comb begin

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Wed Jul  1 14:29:56 2026
+| Date         : Wed Jul  1 14:54:13 2026
 | Host         : 20190748 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file fpga_top_methodology_drc_routed.rpt -pb fpga_top_methodology_drc_routed.pb -rpx fpga_top_methodology_drc_routed.rpx
 | Design       : fpga_top
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 164
+             Violations found: 163
 +-----------+------------------+-------------------------------------------------------------------+------------+
 | Rule      | Severity         | Description                                                       | Violations |
 +-----------+------------------+-------------------------------------------------------------------+------------+
@@ -31,7 +31,7 @@ Table of Contents
 | TIMING-7  | Critical Warning | No common node between related clocks                             | 1          |
 | TIMING-17 | Critical Warning | Non-clocked sequential cell                                       | 1          |
 | DPIR-1    | Warning          | Asynchronous driver check                                         | 83         |
-| LUTAR-1   | Warning          | LUT drives async reset alert                                      | 2          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                                      | 1          |
 | SYNTH-13  | Warning          | combinational multiplier                                          | 2          |
 | TIMING-9  | Warning          | Unknown CDC Logic                                                 | 1          |
 | TIMING-18 | Warning          | Missing input or output delay                                     | 32         |
@@ -474,25 +474,6 @@ DSP pid_top_inst/i_pid_logic/mult_out__0 input pin pid_top_inst/i_pid_logic/mult
 Related violations: <none>
 
 LUTAR-1#1 Warning
-LUT drives async reset alert  
-LUT cell pid_top_inst/i_piezo_soft_output/safe_target[13]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) pid_top_inst/i_piezo_soft_output/dac_out_o_reg[0]/CLR,
-pid_top_inst/i_piezo_soft_output/dac_out_o_reg[10]/CLR,
-pid_top_inst/i_piezo_soft_output/dac_out_o_reg[11]/CLR,
-pid_top_inst/i_piezo_soft_output/dac_out_o_reg[12]/CLR,
-pid_top_inst/i_piezo_soft_output/dac_out_o_reg[13]/CLR,
-pid_top_inst/i_piezo_soft_output/dac_out_o_reg[1]/CLR,
-pid_top_inst/i_piezo_soft_output/dac_out_o_reg[2]/CLR,
-pid_top_inst/i_piezo_soft_output/dac_out_o_reg[3]/CLR,
-pid_top_inst/i_piezo_soft_output/dac_out_o_reg[4]/CLR,
-pid_top_inst/i_piezo_soft_output/dac_out_o_reg[5]/CLR,
-pid_top_inst/i_piezo_soft_output/dac_out_o_reg[6]/CLR,
-pid_top_inst/i_piezo_soft_output/dac_out_o_reg[7]/CLR,
-pid_top_inst/i_piezo_soft_output/dac_out_o_reg[8]/CLR,
-pid_top_inst/i_piezo_soft_output/dac_out_o_reg[9]/CLR,
-pid_top_inst/i_piezo_soft_output/delay_cnt_reg[0]/CLR (the first 15 of 61 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#2 Warning
 LUT drives async reset alert  
 LUT cell system_controller_inst/FSM_sequential_state[2]_i_2__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) pid_top_inst/i_pid_logic/FSM_sequential_state_reg[0]/CLR,
 pid_top_inst/i_pid_logic/FSM_sequential_state_reg[1]/CLR,

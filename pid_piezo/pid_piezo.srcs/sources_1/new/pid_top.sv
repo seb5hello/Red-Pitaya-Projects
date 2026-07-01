@@ -43,6 +43,7 @@ module pid_top(
     // Internal Wires
     logic               pid_ready_wire;
     logic signed [13:0] pid_target_wire; 
+    logic signed [31:0] error_calc;
 
     // -------------------------------------------------------------------------
     // System Bus Write/Read Interface & Synchronization
@@ -88,7 +89,7 @@ module pid_top(
                 endcase
             end else if (trigger_req && pid_ready_wire) begin // <-- UPDATED: Waits for PID ready
                 // Auto-clear trigger flag & latch values
-                sampled_error_reg <= current_ts_reg;
+                sampled_error_reg <= error_calc;
                 sampled_dac_reg   <= pid_target_wire;         // <-- UPDATED: Samples PID target
                 trigger_req       <= 1'b0;
             end
@@ -124,7 +125,6 @@ module pid_top(
     // -------------------------------------------------------------------------
     // Instantiate PID Logic (Calculates Target)
     // -------------------------------------------------------------------------
-    logic signed [31:0] error_calc;
     logic               filtered_trigger;
     logic               filtered_trigger_reg; // 1-cycle pipeline delay
 
