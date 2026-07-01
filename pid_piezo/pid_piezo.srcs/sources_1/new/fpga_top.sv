@@ -414,21 +414,21 @@ always_comb begin
   timestamp_pid = 32'd0; 
 
   case(timestamp_select)
-    4'd0: begin pid_switch = 1; timestamp_pid = hw_ts_1; end
-    4'd1: begin pid_switch = 1; timestamp_pid = hw_ts_2; end
-    4'd2: begin pid_switch = 1; timestamp_pid = hw_ts_3; end
-    4'd3: begin pid_switch = 1; timestamp_pid = hw_ts_4; end
-    4'd4: begin pid_switch = 1; timestamp_pid = hw_ts_5; end
-    4'd5: begin pid_switch = 1; timestamp_pid = hw_ts_6; end
-    4'd6: begin pid_switch = 1; timestamp_pid = hw_ts_7; end
-    4'd7: begin pid_switch = 1; timestamp_pid = hw_ts_8; end
-    default: begin pid_switch = 0; timestamp_pid = 32'd0; end
+    4'd0: begin timestamp_pid = hw_ts_1; end
+    4'd1: begin timestamp_pid = hw_ts_2; end
+    4'd2: begin timestamp_pid = hw_ts_3; end
+    4'd3: begin timestamp_pid = hw_ts_4; end
+    4'd4: begin timestamp_pid = hw_ts_5; end
+    4'd5: begin timestamp_pid = hw_ts_6; end
+    4'd6: begin timestamp_pid = hw_ts_7; end
+    4'd7: begin timestamp_pid = hw_ts_8; end
+    default: begin timestamp_pid = 32'd0; end
   endcase
 end
 
 pid_top pid_top_inst (
     .clk_i         (adc_clk),
-    .rstn_i        (adc_rstn & pid_switch),
+    .rstn_i        (adc_rstn),
     .global_arm    (pid_arm),
     .arm_i         (pid_on),
     .trigger_i     (hw_pid_trigger),

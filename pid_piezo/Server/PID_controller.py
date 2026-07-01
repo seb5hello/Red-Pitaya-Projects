@@ -12,32 +12,32 @@ import matplotlib.dates as mdates
 # ==============================================================================
 # NETWORK CONFIGURATION
 # ==============================================================================
-RP_IP = "100.83.1.119" 
+RP_IP = "100.83.1.117" 
 # RP_IP = "192.168.2.29" 
 BASE_URL = f"http://{RP_IP}:5000/api"
 
 # ==============================================================================
 # GLOBAL HARDWARE CONFIGURATION PARAMETERS
 # ==============================================================================
-RAMP_FREQ_HZ = 6000       
-MIN_VOLT = 0.110         
-MAX_VOLT = 0.160          
+RAMP_FREQ_HZ = 6000    
+MAX_VOLT = 0.110           
+MIN_VOLT = 0.060           
 THRESHOLD_VOLT = 0.5      
 
 # Peak Detector Settings
 DET_OFFSET_CYCLES = 0   
-FILTER_MODE = 1           
+FILTER_MODE = 0           
 EXPECTED_PEAKS = 1        
 MERGE_THRESHOLD = 100       
 
 # PID Controller Settings
-PID_KP = 150              
-PID_KI = 25               
-PID_KD = -10              
+PID_KP = 10              
+PID_KI = 0               
+PID_KD = 0              
 TARGET_TS = 10000         
 TS_SELECT = 0             
 
-PID_OFFSET = 205         
+PID_OFFSET = 2000         
 PID_MAX_OUT = 8191        
 PID_MIN_OUT = 205       
 
@@ -457,8 +457,8 @@ if __name__ == "__main__":
         fetch_results() 
         pid_on()
         # live_plot()
-        # pid_idle()
-        # soft_disarm()
+        pid_idle()
+        soft_disarm()
 
     except requests.exceptions.ConnectionError:
         print("Error: Could not connect to the Red Pitaya. Is the server running and the IP correct?")
